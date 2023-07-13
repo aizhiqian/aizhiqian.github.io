@@ -1,0 +1,541 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>【Hexo博客搭建】将其部署到 GitHub Pages（二）：如何初始化并部署？ | XiaoYang の Blog</title><meta name="author" content="AiGuoHou"><meta name="copyright" content="AiGuoHou"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="将 Hexo 部署到 GitHub Pages，初始化工程、生成静态文件并与远程仓库建立关联。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【Hexo博客搭建】将其部署到 GitHub Pages（二）：如何初始化并部署？">
+<meta property="og:url" content="https://aizhiqian.github.io/posts/f642b107/">
+<meta property="og:site_name" content="XiaoYang の Blog">
+<meta property="og:description" content="将 Hexo 部署到 GitHub Pages，初始化工程、生成静态文件并与远程仓库建立关联。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www.helloimg.com/images/2023/05/31/omL4Hm.png">
+<meta property="article:published_time" content="2023-05-31T14:24:23.000Z">
+<meta property="article:modified_time" content="2023-07-13T08:56:26.910Z">
+<meta property="article:author" content="AiGuoHou">
+<meta property="article:tag" content="hexo">
+<meta property="article:tag" content="搭建">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.helloimg.com/images/2023/05/31/omL4Hm.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://aizhiqian.github.io/posts/f642b107/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin=""/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://file.crazywong.com/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://file.crazywong.com/npm/node-snackbar@latest/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://file.crazywong.com/npm/@fancyapps/ui@latest/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-HEW1SJ10QH"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-HEW1SJ10QH');
+</script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: {"appId":"5S7GRIQ3T3","apiKey":"913ceaabe3454727ddee2ca2a58eb3a4","indexName":"my-hexo-blog","hits":{"per_page":6},"languages":{"input_placeholder":"搜索文章","hits_empty":"找不到您查询的内容：${query}","hits_stats":"找到 ${hits} 条结果，用时 ${time} 毫秒"}},
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":400},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"top-right"},
+  source: {
+    justifiedGallery: {
+      js: 'https://file.crazywong.com/npm/flickr-justified-gallery@latest/dist/fjGallery.min.js',
+      css: 'https://file.crazywong.com/npm/flickr-justified-gallery@latest/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: true,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '【Hexo博客搭建】将其部署到 GitHub Pages（二）：如何初始化并部署？',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-07-13 16:56:26'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="preconnect" href="https://file.crazywong.com"><style type="text/css">.card-announcement .social-button{margin:.6rem 0 0 0;text-align:center}.card-announcement .social-button a{display:block;background-color:var(--btn-bg);color:var(--btn-color);text-align:center;line-height:2.4;margin:4px 0}.card-announcement .social-button a:hover{background-color:var(--btn-hover-color)}</style><link rel="stylesheet" type="text/css" href="https://file.crazywong.com/npm/js-heo@1.0.13/mainColor/heoMainColor.css"><link rel="stylesheet" type="text/css" href="https://file.crazywong.com/npm/js-heo@1.0.13/poem/poem.css"><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="XiaoYang の Blog" type="application/atom+xml">
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><script>(()=>{
+  const $loadingBox = document.getElementById('loading-box')
+  const $body = document.body
+  const preloader = {
+    endLoading: () => {
+      $body.style.overflow = ''
+      $loadingBox.classList.add('loaded')
+    },
+    initLoading: () => {
+      $body.style.overflow = 'hidden'
+      $loadingBox.classList.remove('loaded')
+    }
+  }
+
+  preloader.initLoading()
+  window.addEventListener('load',() => { preloader.endLoading() })
+
+  if (true) {
+    document.addEventListener('pjax:send', () => { preloader.initLoading() })
+    document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+  }
+})()</script><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "/img/loading.gif" data-lazy-src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">22</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">15</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa-solid fa-house fa-bounce"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fa-fw fa-solid fa-compass fa-beat"></i><span> 目录</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fa-solid fa-box-archive fa-flip"></i><span> 时间轴</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa-solid fa-tags fa-shake"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fa-regular fa-folder-open fa-fade"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fa-fw fa-solid fa-compact-disc fa-spin"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fa-solid fa-music fa-bounce"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/photo/"><i class="fa-fw fa-solid fa-images fa-fade"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fa-solid fa-video fa-flip"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa-solid fa-link fa-shake"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa-solid fa-heart fa-flip"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://www.helloimg.com/images/2023/05/31/omL4Hm.png')"><nav id="nav"><span id="blog-info"><a href="/" title="XiaoYang の Blog"><span class="site-name">XiaoYang の Blog</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa-solid fa-house fa-bounce"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fa-fw fa-solid fa-compass fa-beat"></i><span> 目录</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fa-solid fa-box-archive fa-flip"></i><span> 时间轴</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa-solid fa-tags fa-shake"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fa-regular fa-folder-open fa-fade"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fa-fw fa-solid fa-compact-disc fa-spin"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fa-solid fa-music fa-bounce"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/photo/"><i class="fa-fw fa-solid fa-images fa-fade"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fa-solid fa-video fa-flip"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa-solid fa-link fa-shake"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa-solid fa-heart fa-flip"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">【Hexo博客搭建】将其部署到 GitHub Pages（二）：如何初始化并部署？</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-05-31T14:24:23.000Z" title="发表于 2023-05-31 22:24:23">2023-05-31</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-07-13T08:56:26.910Z" title="更新于 2023-07-13 16:56:26">2023-07-13</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%95%99%E7%A8%8B/">教程</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">4k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>18分钟</span></span><span class="post-meta-separator">|</span><span id="" data-flag-title="【Hexo博客搭建】将其部署到 GitHub Pages（二）：如何初始化并部署？"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="twikoo_visitors"><i class="fa-solid fa-spinner fa-spin"></i></span></span><span class="post-meta-separator">|</span><span class="post-meta-commentcount"><i class="far fa-comments fa-fw post-meta-icon"></i><span class="post-meta-label">评论数:</span><a href="/posts/f642b107/#post-comment"><span id="twikoo-count"><i class="fa-solid fa-spinner fa-spin"></i></span></a></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1>系列目录</h1>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://blog.csdn.net/y3332664073/article/details/130844780">【Hexo博客搭建】将其部署到 GitHub Pages（一）：前期要做哪些准备？</a></p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://blog.csdn.net/y3332664073/article/details/130845075">【Hexo博客搭建】将其部署到 GitHub Pages（二）：如何初始化并部署？</a></p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://blog.csdn.net/y3332664073/article/details/130846008">【Hexo博客搭建】将其部署到 GitHub Pages（三）：怎么写作以及更新？</a></p>
+<blockquote>
+<p><strong>简介：</strong> 本系列文章属于半笔记半教程的零基础小白入门文，教你将 Hexo 部署到 GitHub Pages 的前期需要做哪些准备，跟着此系列文章最终可以获得自己的静态博客网站。流程很长，分成不同的篇幅，此为本系列的第二篇。</p>
+</blockquote>
+<h1>前言</h1>
+<blockquote>
+<p>本系列文章属于半笔记半教程的零基础小白入门文，教你将 Hexo 部署到了 GitHub Pages，从而获得自己的静态博客网站。流程很长，分成不同的篇幅，此为本系列的第二篇。</p>
+</blockquote>
+<h1>步骤</h1>
+<h2 id="六、初始化-Hexo-工程">六、初始化 Hexo 工程</h2>
+<p>注意：接下来应该是你自己的自定义的目录，请不要完全复制粘贴我的！</p>
+<p>比如说我是Windows用户，想把我的网站代码储存在</p>
+<p>电脑 E 盘的 <em><strong>Hexo</strong></em> 文件夹下</p>
+<p>那么我要先在E盘建立相应的文件夹，然后再继续操作。</p>
+<p>由于cmd终端最开始默认在C盘操作，我得先切换到E盘，那么我要输入 <em><strong>E:</strong></em>  然后回车,即：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Microsoft Windows [版本 10.0.19042.1165]</span><br><span class="line">(c) Microsoft Corporation。保留所有权利。</span><br><span class="line"></span><br><span class="line">C:\Users\10272&gt;E:</span><br><span class="line"></span><br><span class="line">E:\&gt;</span><br></pre></td></tr></table></figure>
+<p>然后此时，我要通过 <em><strong>cd</strong></em>  进入我本地电脑打算存储网站代码的文件夹目录。（或者右键文件夹 Git Bash Here），即 <em><strong>Hexo</strong></em> 文件夹里</p>
+<p>也就是说我需要输入 <em><strong>cd Hexo</strong></em> 然后回车，我会看到：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">E:\&gt;cd Hexo</span><br><span class="line"></span><br><span class="line">E:\Hexo&gt;</span><br></pre></td></tr></table></figure>
+<p>好了成功进入，接下来输入下方代码，再按回车：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><code>hexo</code> ：正是因为我们之前安装了 <code>hexo-cli</code> 这一个包，所以我们可以在终端中使用 <code>hexo</code> 这一命令。</p>
+<p><code>init</code> ：用来初始化博客的模版文件。后面跟的是你要新建的文件夹比如我的是：<em><strong>blog</strong></em></p>
+</blockquote>
+<p>然后我会看到</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">E:\Hexo&gt;hexo init blog</span><br><span class="line">INFO  Cloning hexo-starter https://github.com/hexojs/hexo-starter.git</span><br><span class="line">[32mINFO [39m Install dependencies</span><br><span class="line">added 242 packages from 207 contributors in 105.871s</span><br><span class="line">15 packages are looking for funding</span><br><span class="line">  run `npm fund` for details</span><br><span class="line">INFO  Start blogging with Hexo!</span><br><span class="line">E:\Hexo&gt;</span><br></pre></td></tr></table></figure>
+<p>下面通过 <em><strong>cd</strong></em>  进入我的博客文件夹，</p>
+<p>即输入 <em>cd blog</em> 后按回车，我会看到：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">E:\Hexo&gt;cd blog</span><br><span class="line">E:\Hexo\blog&gt;</span><br></pre></td></tr></table></figure>
+<p>现在我就是处于 E:\Hexo\blog 文件夹下操作了，</p>
+<p>现在在这个文件夹内默认安装所有 <code>package.json</code> 文件中提到的包，</p>
+<p>即输入  <em><strong>npm install</strong></em>  然后回车，我会看到：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">E:\Hexo\blog&gt;npm install</span><br><span class="line">npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.3.2 (node_modules\fsevents):</span><br><span class="line">npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.3.2: wanted &#123;&quot;os&quot;:&quot;darwin&quot;,&quot;arch&quot;:&quot;any&quot;&#125; (current: &#123;&quot;os&quot;:&quot;win32&quot;,&quot;arch&quot;:&quot;x64&quot;&#125;)</span><br><span class="line">audited 243 packages in 4.956s</span><br><span class="line">15 packages are looking for funding</span><br><span class="line">  run `npm fund` for details</span><br><span class="line">found 0 vulnerabilities</span><br><span class="line">E:\Hexo\blog&gt;</span><br></pre></td></tr></table></figure>
+<p>这时候，我的 blog 文件夹里面会多出一堆文件，</p>
+<p>文件夹结构应该大致是这样：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── source</span><br><span class="line">|  ├── _drafts</span><br><span class="line">|  └── _posts</span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure>
+<p>现在我们输入  <em><strong>hexo server</strong></em>  然后回车，会看到：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">E:\Hexo\blog&gt;hexo server</span><br><span class="line">INFO  Validating config</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  Hexo is running at http://localhost:4000 . Press Ctrl+C to stop.</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><code>server</code> 代表开启本地的 Hexo 服务器，这时你就可以打开浏览器，在地址栏中输入 <code>localhost:4000</code> 就可以看到本地的网页了。</p>
+</blockquote>
+<p><img src= "/img/loading.gif" data-lazy-src="https://www.helloimg.com/images/2023/05/31/omAytt.png" alt="Hexo自动生成的博客页面"></p>
+<p>这个网页就是Hexo为你自动生成的博客页面。</p>
+<p>按  <em><kbd>Ctrl</kbd>+<kbd>C</kbd></em>  中断服务器的运行，</p>
+<p>系统提示  <em><strong>终止批处理操作吗(Y/N)?</strong></em>  输入 <em><strong>Y</strong></em> 然后回车。</p>
+<p>至此，基础的模版页面便已经搭建好了。</p>
+<h2 id="七、生成静态文件">七、生成静态文件</h2>
+<p>到现在，我们的工作都是在本地进行，想必你也很想放到线上与小伙伴们分享。这便轮到了 GitHub Pages 的出场，不过 GitHub Pages 只支持纯静态文件。</p>
+<p>所以我们需要使用下面一行命令先来生成站点的静态文件。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">（如果进行多次生成，为了避免受错误缓存影响，最好使用 hexo clean 先清除一遍。）</span><br><span class="line">hexo generate</span><br><span class="line">（上方命令也可以缩写为 hexo g）</span><br></pre></td></tr></table></figure>
+<p>输入后回车，我会看到：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">E:\Hexo\blog&gt;hexo g</span><br><span class="line">INFO  Validating config</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  Files loaded in 209 ms</span><br><span class="line">INFO  Generated: archives/index.html</span><br><span class="line">INFO  Generated: archives/2021/index.html</span><br><span class="line">INFO  Generated: archives/2021/08/index.html</span><br><span class="line">(node:20772) Warning: Accessing non-existent property &#x27;lineno&#x27; of module exports inside circular dependency</span><br><span class="line">(Use `node --trace-warnings ...` to show where the warning was created)</span><br><span class="line">(node:20772) Warning: Accessing non-existent property &#x27;column&#x27; of module exports inside circular dependency</span><br><span class="line">(node:20772) Warning: Accessing non-existent property &#x27;filename&#x27; of module exports inside circular dependency</span><br><span class="line">(node:20772) Warning: Accessing non-existent property &#x27;lineno&#x27; of module exports inside circular dependency</span><br><span class="line">(node:20772) Warning: Accessing non-existent property &#x27;column&#x27; of module exports inside circular dependency</span><br><span class="line">(node:20772) Warning: Accessing non-existent property &#x27;filename&#x27; of module exports inside circular dependency</span><br><span class="line">INFO  Generated: index.html</span><br><span class="line">INFO  Generated: fancybox/jquery.fancybox.min.css</span><br><span class="line">INFO  Generated: js/script.js</span><br><span class="line">INFO  Generated: 2021/08/25/hello-world/index.html</span><br><span class="line">INFO  Generated: css/style.css</span><br><span class="line">INFO  Generated: css/fonts/fontawesome-webfont.woff2</span><br><span class="line">INFO  Generated: css/fonts/fontawesome-webfont.woff</span><br><span class="line">INFO  Generated: fancybox/jquery.fancybox.min.js</span><br><span class="line">INFO  Generated: css/fonts/fontawesome-webfont.ttf</span><br><span class="line">INFO  Generated: css/fonts/FontAwesome.otf</span><br><span class="line">INFO  Generated: css/fonts/fontawesome-webfont.eot</span><br><span class="line">INFO  Generated: js/jquery-3.4.1.min.js</span><br><span class="line">INFO  Generated: css/images/banner.jpg</span><br><span class="line">INFO  Generated: css/fonts/fontawesome-webfont.svg</span><br><span class="line">INFO  17 files generated in 1.98 s</span><br><span class="line">E:\Hexo\blog&gt;</span><br></pre></td></tr></table></figure>
+<p>此时我的文件夹目录下会出现 <em><strong>public</strong></em>  这个文件夹，里面存放的就是我的站点的静态文件。</p>
+<h2 id="八、与远程仓库建立关联">八、与远程仓库建立关联</h2>
+<p>接下来我们将本地的仓库与此前在 GitHub 上建立的仓库建立关联。</p>
+<p>输入  <em><strong>git init</strong></em>  初始化 Git 仓库，只需要执行一次即可，看到：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">E:\Hexo\blog&gt;git init</span><br><span class="line">Initialized empty Git repository in E:/Hexo/blog/.git/</span><br></pre></td></tr></table></figure>
+<p>在将其部署到 GitHub Pages 上之前，我们最好先建立一个分支。</p>
+<blockquote>
+<p>什么是分支？</p>
+<p>Git 提供了版本管理功能，其中还有一个分支功能，你现在可以简单地将其理解为平行世界。</p>
+</blockquote>
+<p><em><strong><a target="_blank" rel="noopener external nofollow noreferrer" href="http://xn--eqr924avxo.github.io">用户名.github.io</a></strong></em> 部署后，GitHub Pages 将默认使用你的 main分支（以前叫 master分支，一个意思，主要分支的意思）作为静态文件部署。所以我们最好新建一个 hexo 分支（命名无所谓）用来存储 Hexo 地源代码，main 分支则用来存储部署后的静态文件。为了方便，不想其他名字了，这个分支我就起名叫 hexo 吧。</p>
+<p>新建该分支的命令语句是  <em><strong>git checkout -b hexo</strong></em>  ，然后回车，可以看到：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">E:\Hexo\blog&gt;git checkout -b hexo</span><br><span class="line">Switched to a new branch &#x27;hexo&#x27;</span><br><span class="line">E:\Hexo\blog&gt;</span><br></pre></td></tr></table></figure>
+<p>这时便成功建立了一个 hexo 分支。（此后的工作都将在 hexo 分支下进行）</p>
+<p>你可以通过 <strong><code>git branch -v</code></strong> 来查看当前有哪些分支，使用 <strong><code>git checkout 分支名</code></strong> 来切换到对应的分支。</p>
+<blockquote>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.yunyoujun.cn/note/git-learn-note/">Git 学习笔记</a></p>
+</blockquote>
+<h2 id="九、部署到-GitHub-Pages">九、部署到 GitHub Pages</h2>
+<p>为了更方便的部署到 GitHub Pages，Hexo 提供了 <code>hexo-deployer-git</code> 插件。</p>
+<p>老规矩，安装该插件，要输入下面命令，</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<p>回车后可以看到</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">E:\Hexo\blog&gt;npm install hexo-deployer-git --save</span><br><span class="line">npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.3.2 (node_modules\fsevents):</span><br><span class="line">npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.3.2: wanted &#123;&quot;os&quot;:&quot;darwin&quot;,&quot;arch&quot;:&quot;any&quot;&#125; (current: &#123;&quot;os&quot;:&quot;win32&quot;,&quot;arch&quot;:&quot;x64&quot;&#125;)</span><br><span class="line">+ hexo-deployer-git@3.0.0</span><br><span class="line">added 1 package from 1 contributor and audited 244 packages in 8.166s</span><br><span class="line">15 packages are looking for funding</span><br><span class="line">  run `npm fund` for details</span><br><span class="line">found 0 vulnerabilities</span><br><span class="line">E:\Hexo\blog&gt;</span><br></pre></td></tr></table></figure>
+<p>下面对  <em><strong>blog</strong></em> 文件夹下的  <em><strong>_config.yml</strong></em>  文件进行配置。</p>
+<p>右键  <em><strong>_config.yml</strong></em>  ，打开方式选VS Code（或者直接用VS Code打开该文件），</p>
+<p>滑到最下面，把关于</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/one-command-deployment</span><br><span class="line">deploy:&#x27; &#x27;</span><br></pre></td></tr></table></figure>
+<p>的这段代码补充为</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/one-command-deployment</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/aizhiqian/aizhiqian.github.io.git   #仓库地址</span><br><span class="line">  branch: main  # 默认使用 master 分支(Github现在改名为main分支)</span><br><span class="line">  message: Update Hexo Static Content # 你可以自定义此次部署更新的说明说明</span><br></pre></td></tr></table></figure>
+<p><kbd>Ctrl</kbd>+<kbd>S</kbd>保存，退出VS Code，部署！</p>
+<p>终端里输入命令  <em><strong>hexo deploy</strong></em>  后（或者缩写为  <em><strong>hexo d</strong></em>  ）回车，我的电脑显示：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">E:\Hexo\blog&gt;hexo deploy</span><br><span class="line">INFO  Validating config</span><br><span class="line">INFO  Deploying: git</span><br><span class="line">INFO  Setting up Git deployment...</span><br><span class="line">Initialized empty Git repository in E:/Hexo/blog/.deploy_git/.git/</span><br><span class="line">Author identity unknown</span><br><span class="line">*** Please tell me who you are.</span><br><span class="line">Run</span><br><span class="line">  git config --global user.email &quot;you@example.com&quot;</span><br><span class="line">  git config --global user.name &quot;Your Name&quot;</span><br><span class="line">to set your account&#x27;s default identity.</span><br><span class="line">Omit --global to set the identity only in this repository.</span><br><span class="line">fatal: unable to auto-detect email address (got &#x27;10272@DESKTOP-N3PNS7C.(none)&#x27;)</span><br><span class="line">FATAL &#123;</span><br><span class="line">  err: Error: Spawn failed</span><br><span class="line">      at ChildProcess.&lt;anonymous&gt; (E:\Hexo\blog\node_modules\hexo-util\lib\spawn.js:51:21)      at ChildProcess.emit (events.js:400:28)</span><br><span class="line">      at ChildProcess.cp.emit (E:\Hexo\blog\node_modules\cross-spawn\lib\enoent.js:34:29)</span><br><span class="line">      at Process.ChildProcess._handle.onexit (internal/child_process.js:277:12) &#123;</span><br><span class="line">    code: 128</span><br><span class="line">  &#125;</span><br><span class="line">&#125; Something&#x27;s wrong. Maybe you can find the solution here: %s https://hexo.io/docs/troubleshooting.html</span><br><span class="line">E:\Hexo\blog&gt;</span><br></pre></td></tr></table></figure>
+<p>是的，部署出错（FATAL）了,“ Please tell me who you are.”</p>
+<p>原来是创建git文件夹的时候信息不完善导致的，</p>
+<p>它提示我需要运行（Run）下面两行程序，来设置我帐户的默认标识。</p>
+<p>git config --global user.email “<a href="mailto:you@example.com" rel="external nofollow noreferrer">you@example.com</a>”</p>
+<p>git config --global <a target="_blank" rel="noopener external nofollow noreferrer" href="http://user.name">user.name</a> “Your Name”</p>
+<blockquote>
+<p>注意双引号前有空格，邮箱随便填也可以，比如QQ邮箱啥的，</p>
+<p>我用的这个邮箱查找路径是：点击Github主页右上角头像，点击settings，点击Emails，然后就能找到Github的这个邮箱了</p>
+</blockquote>
+<p>那么我分别输入这两个命令按回车，可见下方代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">E:\Hexo\blog&gt;git config --global user.email &quot;你的邮箱&quot;</span><br><span class="line">E:\Hexo\blog&gt;git config --global user.name &quot;用户名&quot;</span><br><span class="line">E:\Hexo\blog&gt;</span><br></pre></td></tr></table></figure>
+<p>再用命令  *<strong>git config -l*</strong>  查看所有的配置信息</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">E:\Hexo\blog&gt;git config -l</span><br><span class="line">diff.astextplain.textconv=astextplain</span><br><span class="line">filter.lfs.clean=git-lfs clean -- %f</span><br><span class="line">filter.lfs.smudge=git-lfs smudge -- %f</span><br><span class="line">filter.lfs.process=git-lfs filter-process</span><br><span class="line">filter.lfs.required=true</span><br><span class="line">http.sslbackend=openssl</span><br><span class="line">http.sslcainfo=E:/Git/mingw64/ssl/certs/ca-bundle.crt</span><br><span class="line">core.autocrlf=true</span><br><span class="line">core.fscache=true</span><br><span class="line">core.symlinks=false</span><br><span class="line">pull.rebase=false</span><br><span class="line">credential.helper=manager-core</span><br><span class="line">credential.https://dev.azure.com.usehttppath=true</span><br><span class="line">init.defaultbranch=master</span><br><span class="line">user.email=你的邮箱</span><br><span class="line">user.name=用户名</span><br><span class="line">core.repositoryformatversion=0</span><br><span class="line">core.filemode=false</span><br><span class="line">core.bare=false</span><br><span class="line">core.logallrefupdates=true</span><br><span class="line">core.symlinks=false</span><br><span class="line">core.ignorecase=true</span><br><span class="line">E:\Hexo\blog&gt;</span><br></pre></td></tr></table></figure>
+<p>可以看见下面这两条信息，代表信息以及完善上去了</p>
+<blockquote>
+<p>user.email=你的邮箱</p>
+<p>user.name=用户名</p>
+</blockquote>
+<p>那我们接着部署吧！</p>
+<p>终端里输入命令  <em><strong>hexo deploy</strong></em>  后（或者缩写为  <em><strong>hexo d</strong></em>  ）回车，我的电脑再次报错：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">E:\Hexo\blog&gt;hexo deploy</span><br><span class="line">INFO  Validating config</span><br><span class="line">INFO  Deploying: git</span><br><span class="line">INFO  Clearing .deploy_git folder...</span><br><span class="line">INFO  Copying files from public folder...</span><br><span class="line">INFO  Copying files from extend dirs...</span><br><span class="line">warning: LF will be replaced by CRLF in 2021/08/25/hello-world/index.html.</span><br><span class="line">The file will have its original line endings in your working directory</span><br><span class="line">warning: LF will be replaced by CRLF in archives/2021/08/index.html.</span><br><span class="line">The file will have its original line endings in your working directory</span><br><span class="line">warning: LF will be replaced by CRLF in archives/2021/index.html.</span><br><span class="line">The file will have its original line endings in your working directory</span><br><span class="line">warning: LF will be replaced by CRLF in archives/index.html.</span><br><span class="line">The file will have its original line endings in your working directory</span><br><span class="line">warning: LF will be replaced by CRLF in css/fonts/fontawesome-webfont.svg.</span><br><span class="line">The file will have its original line endings in your working directory</span><br><span class="line">warning: LF will be replaced by CRLF in css/style.css.</span><br><span class="line">The file will have its original line endings in your working directory</span><br><span class="line">warning: LF will be replaced by CRLF in fancybox/jquery.fancybox.min.js.</span><br><span class="line">The file will have its original line endings in your working directory</span><br><span class="line">warning: LF will be replaced by CRLF in index.html.</span><br><span class="line">The file will have its original line endings in your working directory</span><br><span class="line">warning: LF will be replaced by CRLF in js/jquery-3.4.1.min.js.</span><br><span class="line">The file will have its original line endings in your working directory</span><br><span class="line">warning: LF will be replaced by CRLF in js/script.js.</span><br><span class="line">The file will have its original line endings in your working directory</span><br><span class="line">[master (root-commit) a9fc5f8] Update Hexo Static Content</span><br><span class="line"> 17 files changed, 5174 insertions(+)</span><br><span class="line"> create mode 100644 2021/08/25/hello-world/index.html</span><br><span class="line"> create mode 100644 archives/2021/08/index.html</span><br><span class="line"> create mode 100644 archives/2021/index.html</span><br><span class="line"> create mode 100644 archives/index.html</span><br><span class="line"> create mode 100644 css/fonts/FontAwesome.otf</span><br><span class="line"> create mode 100644 css/fonts/fontawesome-webfont.eot</span><br><span class="line"> create mode 100644 css/fonts/fontawesome-webfont.svg</span><br><span class="line"> create mode 100644 css/fonts/fontawesome-webfont.ttf</span><br><span class="line"> create mode 100644 css/fonts/fontawesome-webfont.woff</span><br><span class="line"> create mode 100644 css/fonts/fontawesome-webfont.woff2</span><br><span class="line"> create mode 100644 css/images/banner.jpg</span><br><span class="line"> create mode 100644 css/style.css</span><br><span class="line"> create mode 100644 fancybox/jquery.fancybox.min.css</span><br><span class="line"> create mode 100644 fancybox/jquery.fancybox.min.js</span><br><span class="line"> create mode 100644 index.html</span><br><span class="line"> create mode 100644 js/jquery-3.4.1.min.js</span><br><span class="line"> create mode 100644 js/script.js</span><br><span class="line">fatal: unable to access &#x27;https://github.com/Barry-Flynn/blog/&#x27;: OpenSSL SSL_read: Connection was reset, errno 10054</span><br><span class="line">FATAL &#123;</span><br><span class="line">  err: Error: Spawn failed</span><br><span class="line">      at ChildProcess.&lt;anonymous&gt; (E:\Hexo\blog\node_modules\hexo-util\lib\spawn.js:51:21)      at ChildProcess.emit (events.js:400:28)</span><br><span class="line">      at ChildProcess.cp.emit (E:\Hexo\blog\node_modules\cross-spawn\lib\enoent.js:34:29)</span><br><span class="line">      at Process.ChildProcess._handle.onexit (internal/child_process.js:277:12) &#123;</span><br><span class="line">    code: 128</span><br><span class="line">  &#125;</span><br><span class="line">&#125; Something&#x27;s wrong. Maybe you can find the solution here: %s https://hexo.io/docs/troubleshooting.html</span><br><span class="line">E:\Hexo\blog&gt;</span><br></pre></td></tr></table></figure>
+<p>又报错了？我很晕。问了群里大佬，说可能是国内的墙导致的网络问题。好吧，免费的那个什么软件工具果然不太靠谱。解决该问题并重新连接后第三次输入命令  <em><strong>hexo deploy</strong></em>  ，回车</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">E:\Hexo\blog&gt;hexo deploy</span><br><span class="line">INFO  Validating config</span><br><span class="line">INFO  Deploying: git</span><br><span class="line">INFO  Clearing .deploy_git folder...</span><br><span class="line">INFO  Copying files from public folder...</span><br><span class="line">INFO  Copying files from extend dirs...</span><br><span class="line">warning: LF will be replaced by CRLF in 2021/08/25/hello-world/index.html.</span><br><span class="line">The file will have its original line endings in your working directory</span><br><span class="line">warning: LF will be replaced by CRLF in archives/2021/08/index.html.</span><br><span class="line">The file will have its original line endings in your working directory</span><br><span class="line">warning: LF will be replaced by CRLF in archives/2021/index.html.</span><br><span class="line">The file will have its original line endings in your working directory</span><br><span class="line">warning: LF will be replaced by CRLF in archives/index.html.</span><br><span class="line">The file will have its original line endings in your working directory</span><br><span class="line">warning: LF will be replaced by CRLF in css/fonts/fontawesome-webfont.svg.</span><br><span class="line">The file will have its original line endings in your working directory</span><br><span class="line">warning: LF will be replaced by CRLF in css/style.css.</span><br><span class="line">The file will have its original line endings in your working directory</span><br><span class="line">warning: LF will be replaced by CRLF in fancybox/jquery.fancybox.min.js.</span><br><span class="line">The file will have its original line endings in your working directory</span><br><span class="line">warning: LF will be replaced by CRLF in index.html.</span><br><span class="line">The file will have its original line endings in your working directory</span><br><span class="line">warning: LF will be replaced by CRLF in js/jquery-3.4.1.min.js.</span><br><span class="line">The file will have its original line endings in your working directory</span><br><span class="line">warning: LF will be replaced by CRLF in js/script.js.</span><br><span class="line">The file will have its original line endings in your working directory</span><br><span class="line">On branch master</span><br><span class="line">nothing to commit, working tree clean</span><br><span class="line">info: please complete authentication in your browser...</span><br><span class="line">Enumerating objects: 31, done.</span><br><span class="line">Counting objects: 100% (31/31), done.</span><br><span class="line">Delta compression using up to 4 threads</span><br><span class="line">Compressing objects: 100% (25/25), done.</span><br><span class="line">Writing objects: 100% (31/31), 882.21 KiB | 4.98 MiB/s, done.</span><br><span class="line">Total 31 (delta 3), reused 0 (delta 0), pack-reused 0</span><br><span class="line">remote: Resolving deltas: 100% (3/3), done.</span><br><span class="line">To https://github.com/Barry-Flynn/blog</span><br><span class="line"> + 4b62927...a9fc5f8 HEAD -&gt; main (forced update)</span><br><span class="line">Branch &#x27;master&#x27; set up to track remote branch &#x27;main&#x27; from &#x27;https://github.com/Barry-Flynn/blog&#x27;.</span><br><span class="line">[32mINFO [39m Deploy done: [35mgit[39m</span><br><span class="line">E:\Hexo\blog&gt;</span><br></pre></td></tr></table></figure>
+<p>成功了！Ohhhhhhhhhhh~</p>
+<p>等待完成后，打开网址 <code>https://用户名.github.io</code> 就能看到你的线上网站了！</p>
+<blockquote>
+<p>使用 https，http 可能无法正常打开。HTTPS 是多了安全加密的 HTTP，Chrome 浏览器已经默认会显示 <code>http</code> 链接为不安全。</p>
+<p>为了安全，建议开启强制 https 跳转。<code>项目地址页面 -&gt; Settings -&gt; Options -&gt; GitHub Pages -&gt; Enforce HTTPS</code>。（翻到下面）</p>
+<p>此时，http 网址会自动重定向到 https</p>
+</blockquote>
+<h2 id="十、备份与自动部署">十、备份与自动部署</h2>
+<p>我们当前只是将生成的静态文件部署到了云端。</p>
+<p>为了以防万一，我们应该将网站的源代码文件也推送到 GitHub 仓库备份。</p>
+<p>输入下方代码按回车，与远程 Git 仓库建立连接，只此一次即可</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin https://github.com/用户名/用户名.github.io</span><br></pre></td></tr></table></figure>
+<p>若输入错误，可以运行输入  <em><strong>git remote rm origin</strong></em>  删除远程地址，</p>
+<p>然后再输入一遍正确的命令与远程 Git 仓库建立连接，之后就行了。</p>
+<p>接下来准备提交，这三句命令将是你以后每次备份所需要输入。</p>
+<p>（括号内为注释，不用输入哈！）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">（添加到缓存区）</span><br><span class="line">git add .</span><br><span class="line">（这次做了什么更改，简单描述下即可）</span><br><span class="line">git commit -m &#x27;backup&#x27;</span><br><span class="line">（第一次提交时，你可能需先运行下面命令设置一下默认提交分支）</span><br><span class="line">（git push --set-upstream origin hexo）</span><br><span class="line">（推送至远程仓库）</span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>之后写文章可以在该项目下写，与之前一样，只不过这里同时管理了两个分支。</p>
+<p>main -负责展示静态网页</p>
+<p>hexo -备份本地hexo文件</p>
+</blockquote>
+<blockquote>
+<p>main分支更新</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>hexo分支更新</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add . #添加所有文件到暂存区</span><br><span class="line">git commit -m &quot;新增博客文章&quot;  #提交</span><br><span class="line">git push origin hexo #推送hexo分支到Github</span><br></pre></td></tr></table></figure>
+<h1>总结</h1>
+<p>好了，这就是本篇文章：</p>
+<blockquote>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://blog.csdn.net/y3332664073/article/details/130845075">【Hexo博客搭建】将其部署到 GitHub Pages（二）：如何初始化并部署？</a></p>
+</blockquote>
+<p>的全部内容了，更多内容会很快写出来，尽情期待。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://aizhiqian.github.io">AiGuoHou</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://aizhiqian.github.io/posts/f642b107/">https://aizhiqian.github.io/posts/f642b107/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow noreferrer" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://aizhiqian.github.io" target="_blank">XiaoYang の Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/hexo/">hexo</a><a class="post-meta__tags" href="/tags/%E6%90%AD%E5%BB%BA/">搭建</a></div><div class="post_share"><div class="social-share" data-image="https://www.helloimg.com/images/2023/05/31/omL4Hm.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://file.crazywong.com/npm/butterfly-extsrc@latest/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://file.crazywong.com/npm/butterfly-extsrc@latest/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src= "/img/loading.gif" data-lazy-src="/img/wechat.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src= "/img/loading.gif" data-lazy-src="/img/alipay.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/d2331f54/" title="【Hexo博客搭建】将其部署到 GitHub Pages（三）：怎么写作以及更新？"><img class="cover" src= "/img/loading.gif" data-lazy-src="https://www.helloimg.com/images/2023/05/31/omLA7h.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">【Hexo博客搭建】将其部署到 GitHub Pages（三）：怎么写作以及更新？</div></div></a></div><div class="next-post pull-right"><a href="/posts/7e0916a3/" title="【Hexo博客搭建】将其部署到 GitHub Pages（一）：前期要做哪些准备？"><img class="cover" src= "/img/loading.gif" data-lazy-src="https://www.helloimg.com/images/2023/05/31/omLtP0.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">【Hexo博客搭建】将其部署到 GitHub Pages（一）：前期要做哪些准备？</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/posts/7e0916a3/" title="【Hexo博客搭建】将其部署到 GitHub Pages（一）：前期要做哪些准备？"><img class="cover" src= "/img/loading.gif" data-lazy-src="https://www.helloimg.com/images/2023/05/31/omLtP0.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-05-31</div><div class="title">【Hexo博客搭建】将其部署到 GitHub Pages（一）：前期要做哪些准备？</div></div></a></div><div><a href="/posts/d2331f54/" title="【Hexo博客搭建】将其部署到 GitHub Pages（三）：怎么写作以及更新？"><img class="cover" src= "/img/loading.gif" data-lazy-src="https://www.helloimg.com/images/2023/05/31/omLA7h.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-05-31</div><div class="title">【Hexo博客搭建】将其部署到 GitHub Pages（三）：怎么写作以及更新？</div></div></a></div><div><a href="/posts/b2c9bae0/" title="更换设备时部署hexo博客的步骤(自用)"><img class="cover" src= "/img/loading.gif" data-lazy-src="https://file.crazywong.com/gh/aizhiqian/hexo_resources@main/cover_and_img/6.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-07-02</div><div class="title">更换设备时部署hexo博客的步骤(自用)</div></div></a></div><div><a href="/posts/79e1771/" title="记录Windows部署hexo博客的步骤"><img class="cover" src= "/img/loading.gif" data-lazy-src="https://file.crazywong.com/gh/aizhiqian/hexo_resources@main/cover_and_img/5.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-07-01</div><div class="title">记录Windows部署hexo博客的步骤</div></div></a></div><div><a href="/posts/ca2ce3bc/" title="Hexo自定义字体"><img class="cover" src= "/img/loading.gif" data-lazy-src="https://file.crazywong.com/gh/aizhiqian/hexo_resources@main/cover_and_img/2.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-07-04</div><div class="title">Hexo自定义字体</div></div></a></div><div><a href="/posts/75895afb/" title="博客一图流"><img class="cover" src= "/img/loading.gif" data-lazy-src="https://file.crazywong.com/gh/aizhiqian/hexo_resources@main/cover_and_img/7.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-07-04</div><div class="title">博客一图流</div></div></a></div></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "/img/loading.gif" data-lazy-src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">AiGuoHou</div><div class="author-info__description">记录生活</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">22</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">15</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><a id="card-info-btn" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/aizhiqian"><i class="fa-brands fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/aizhiqian" rel="external nofollow noreferrer" target="_blank" title="Github"><i class="fa-brands fa-github fa-beat-fade" style="color: #24292e;"></i></a><a class="social-icon" href="https://www.youtube.com/@aiguohou" rel="external nofollow noreferrer" target="_blank" title="YouTube"><i class="fa-brands fa-youtube fa-bounce" style="color: #ff0000;"></i></a><a class="social-icon" href="https://space.bilibili.com/696732872" rel="external nofollow noreferrer" target="_blank" title="Bilibili"><i class="fa-brands fa-bilibili fa-fade" style="color: #ff5ca1;"></i></a><a class="social-icon" href="https://pan.aiguohou1.repl.co" rel="external nofollow noreferrer" target="_blank" title="AList"><i class="fa-solid fa-cloud-arrow-down fa-flip" style="color: #26a9ea;"></i></a><a class="social-icon" href="https://aizhiqian.github.io/atom.xml" target="_blank" title="RSS"><i class="fa-solid fa-rss fa-shake" style="color: #000000;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">Welcome to my Blog! 本站共有三个站点同步更新 <div class="social-button"> <a class="button--animated" href="https://blog11.eu.org/" rel="external nofollow noreferrer" target="_blank">Vercel Pages 👍</a> <a class="button--animated" href="https://aizhiqian.gitee.io/" rel="external nofollow noreferrer" target="_blank">Gitee Pages 👍</a> <a class="button--animated" href="https://aizhiqian.github.io/" target="_blank">GitHub Pages 👍</a> </div></div></div><div class="card-widget" id="card-poem"><div id="poem_sentence"></div><div id="poem_info"><div id="poem_dynasty"></div><div id="poem_author"></div></div></div><script src="https://cdn.jsdelivr.net/npm/js-heo@1.0.11/poem/jinrishici.js" charset="utf-8"></script><script type="text/javascript">jinrishici.load(function(result) {
+var sentence = document.querySelector("#poem_sentence")
+var author = document.querySelector("#poem_author")
+var dynasty = document.querySelector("#poem_dynasty")
+
+var sentenceText = result.data.content
+sentenceText = sentenceText.substr(0, sentenceText.length - 1);
+sentence.innerHTML = sentenceText
+dynasty.innerHTML = result.data.origin.dynasty
+author.innerHTML = result.data.origin.author + '《' + result.data.origin.title + '》'
+});</script><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">系列目录</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">2.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">3.</span> <span class="toc-text">步骤</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E5%88%9D%E5%A7%8B%E5%8C%96-Hexo-%E5%B7%A5%E7%A8%8B"><span class="toc-number">3.1.</span> <span class="toc-text">六、初始化 Hexo 工程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%83%E3%80%81%E7%94%9F%E6%88%90%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6"><span class="toc-number">3.2.</span> <span class="toc-text">七、生成静态文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AB%E3%80%81%E4%B8%8E%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E5%BB%BA%E7%AB%8B%E5%85%B3%E8%81%94"><span class="toc-number">3.3.</span> <span class="toc-text">八、与远程仓库建立关联</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B9%9D%E3%80%81%E9%83%A8%E7%BD%B2%E5%88%B0-GitHub-Pages"><span class="toc-number">3.4.</span> <span class="toc-text">九、部署到 GitHub Pages</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%81%E3%80%81%E5%A4%87%E4%BB%BD%E4%B8%8E%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2"><span class="toc-number">3.5.</span> <span class="toc-text">十、备份与自动部署</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">4.</span> <span class="toc-text">总结</span></a></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2023 By AiGuoHou</div><div class="footer_custom_text">Hi, welcome to my <a href="https://aizhiqian.github.io/">blog</a>!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button><button id="go-down" type="button" title="直达底部" onclick="btf.scrollToDest(document.body.scrollHeight, 500)"><i class="fas fa-arrow-down"></i></button></div></div><div><script src="https://file.crazywong.com/npm/hexo-theme-butterfly@latest/source/js/utils.min.js"></script><script src="https://file.crazywong.com/npm/hexo-theme-butterfly@latest/source/js/main.min.js"></script><script src="https://file.crazywong.com/npm/hexo-theme-butterfly@latest/source/js/tw_cn.min.js"></script><script src="https://file.crazywong.com/npm/@fancyapps/ui@latest/dist/fancybox/fancybox.umd.min.js"></script><script src="https://file.crazywong.com/npm/instant.page@latest/instantpage.min.js" type="module"></script><script src="https://file.crazywong.com/npm/vanilla-lazyload@latest/dist/lazyload.iife.min.js"></script><script src="https://file.crazywong.com/npm/node-snackbar@latest/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://file.crazywong.com/npm/pangu@latest/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><div class="js-pjax"><script>(() => {
+  const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+  if ($mermaid.length === 0) return
+  const runMermaid = () => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+    Array.from($mermaid).forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
+      const mermaidID = 'mermaid-' + index
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+
+      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+
+      const renderV10 = () => {
+        renderFn.then(({svg}) => {
+          mermaidSrc.insertAdjacentHTML('afterend', svg)
+        })
+      }
+
+      const renderV9 = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+      }
+
+      typeof renderFn === 'string' ? renderV9(renderFn) : renderV10()
+    })
+  }
+
+  const loadMermaid = () => {
+    window.loadMermaid ? runMermaid() : getScript('https://file.crazywong.com/npm/mermaid@latest/dist/mermaid.min.js').then(runMermaid)
+  }
+
+  btf.addModeChange('mermaid', runMermaid)
+
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script><script>(()=>{
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://twikoo.aiguohou.eu.org/',
+      region: '',
+      onCommentLoaded: function () {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      }
+    }, null))
+  }
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'https://twikoo.aiguohou.eu.org/',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(function (res) {
+      countELement.textContent = res[0].count
+    }).catch(function (err) {
+      console.error(err);
+    });
+  }
+
+  const runFn = () => {
+    init()
+    GLOBAL_CONFIG_SITE.isPost && getCount()
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') {
+      setTimeout(runFn,0)
+      return
+    } 
+    getScript('https://file.crazywong.com/npm/twikoo@latest/dist/twikoo.all.min.js').then(runFn)
+  }
+
+  if ('Twikoo' === 'Twikoo' || !false) {
+    if (false) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo()
+  } else {
+    window.loadOtherComment = () => {
+      loadTwikoo()
+    }
+  }
+})()</script></div><script defer src="/_vercel/insights/script.js"></script><script async src="/js/title.js"></script><canvas class="fireworks" mobile="false"></canvas><script src="https://file.crazywong.com/npm/butterfly-extsrc@latest/dist/fireworks.min.js"></script><script src="https://file.crazywong.com/npm/butterfly-extsrc@latest/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script src="https://file.crazywong.com/npm/pjax@latest/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: true,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', 'G-HEW1SJ10QH', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><div id="algolia-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="search-wrap"><div id="algolia-search-input"></div><hr/><div id="algolia-search-results"><div id="algolia-hits"></div><div id="algolia-pagination"></div><div id="algolia-info"><div class="algolia-stats"></div><div class="algolia-poweredBy"></div></div></div></div></div><div id="search-mask"></div><script src="https://file.crazywong.com/npm/algoliasearch@latest/dist/algoliasearch-lite.umd.min.js"></script><script src="https://file.crazywong.com/npm/instantsearch.js@latest/dist/instantsearch.production.min.js"></script><script src="https://file.crazywong.com/npm/hexo-theme-butterfly@latest/source/js/search/algolia.min.js"></script></div></div></body></html>

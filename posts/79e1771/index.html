@@ -1,0 +1,605 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>记录Windows部署hexo博客的步骤 | XiaoYang の Blog</title><meta name="author" content="AiGuoHou"><meta name="copyright" content="AiGuoHou"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="记录自己在Windows上部署hexo博客的详细过程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="记录Windows部署hexo博客的步骤">
+<meta property="og:url" content="https://aizhiqian.github.io/posts/79e1771/">
+<meta property="og:site_name" content="XiaoYang の Blog">
+<meta property="og:description" content="记录自己在Windows上部署hexo博客的详细过程">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://file.crazywong.com/gh/aizhiqian/hexo_resources@main/cover_and_img/5.jpg">
+<meta property="article:published_time" content="2023-07-01T15:48:10.000Z">
+<meta property="article:modified_time" content="2023-07-13T08:56:26.910Z">
+<meta property="article:author" content="AiGuoHou">
+<meta property="article:tag" content="hexo">
+<meta property="article:tag" content="搭建">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://file.crazywong.com/gh/aizhiqian/hexo_resources@main/cover_and_img/5.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://aizhiqian.github.io/posts/79e1771/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin=""/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://file.crazywong.com/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://file.crazywong.com/npm/node-snackbar@latest/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://file.crazywong.com/npm/@fancyapps/ui@latest/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-HEW1SJ10QH"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-HEW1SJ10QH');
+</script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: {"appId":"5S7GRIQ3T3","apiKey":"913ceaabe3454727ddee2ca2a58eb3a4","indexName":"my-hexo-blog","hits":{"per_page":6},"languages":{"input_placeholder":"搜索文章","hits_empty":"找不到您查询的内容：${query}","hits_stats":"找到 ${hits} 条结果，用时 ${time} 毫秒"}},
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":400},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"top-right"},
+  source: {
+    justifiedGallery: {
+      js: 'https://file.crazywong.com/npm/flickr-justified-gallery@latest/dist/fjGallery.min.js',
+      css: 'https://file.crazywong.com/npm/flickr-justified-gallery@latest/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: true,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '记录Windows部署hexo博客的步骤',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-07-13 16:56:26'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="preconnect" href="https://file.crazywong.com"><style type="text/css">.card-announcement .social-button{margin:.6rem 0 0 0;text-align:center}.card-announcement .social-button a{display:block;background-color:var(--btn-bg);color:var(--btn-color);text-align:center;line-height:2.4;margin:4px 0}.card-announcement .social-button a:hover{background-color:var(--btn-hover-color)}</style><link rel="stylesheet" type="text/css" href="https://file.crazywong.com/npm/js-heo@1.0.13/mainColor/heoMainColor.css"><link rel="stylesheet" type="text/css" href="https://file.crazywong.com/npm/js-heo@1.0.13/poem/poem.css"><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="XiaoYang の Blog" type="application/atom+xml">
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><script>(()=>{
+  const $loadingBox = document.getElementById('loading-box')
+  const $body = document.body
+  const preloader = {
+    endLoading: () => {
+      $body.style.overflow = ''
+      $loadingBox.classList.add('loaded')
+    },
+    initLoading: () => {
+      $body.style.overflow = 'hidden'
+      $loadingBox.classList.remove('loaded')
+    }
+  }
+
+  preloader.initLoading()
+  window.addEventListener('load',() => { preloader.endLoading() })
+
+  if (true) {
+    document.addEventListener('pjax:send', () => { preloader.initLoading() })
+    document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+  }
+})()</script><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "/img/loading.gif" data-lazy-src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">22</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">15</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa-solid fa-house fa-bounce"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fa-fw fa-solid fa-compass fa-beat"></i><span> 目录</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fa-solid fa-box-archive fa-flip"></i><span> 时间轴</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa-solid fa-tags fa-shake"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fa-regular fa-folder-open fa-fade"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fa-fw fa-solid fa-compact-disc fa-spin"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fa-solid fa-music fa-bounce"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/photo/"><i class="fa-fw fa-solid fa-images fa-fade"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fa-solid fa-video fa-flip"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa-solid fa-link fa-shake"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa-solid fa-heart fa-flip"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://file.crazywong.com/gh/aizhiqian/hexo_resources@main/cover_and_img/5.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="XiaoYang の Blog"><span class="site-name">XiaoYang の Blog</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa-solid fa-house fa-bounce"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fa-fw fa-solid fa-compass fa-beat"></i><span> 目录</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fa-solid fa-box-archive fa-flip"></i><span> 时间轴</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa-solid fa-tags fa-shake"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fa-regular fa-folder-open fa-fade"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fa-fw fa-solid fa-compact-disc fa-spin"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fa-solid fa-music fa-bounce"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/photo/"><i class="fa-fw fa-solid fa-images fa-fade"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fa-solid fa-video fa-flip"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa-solid fa-link fa-shake"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa-solid fa-heart fa-flip"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">记录Windows部署hexo博客的步骤</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-07-01T15:48:10.000Z" title="发表于 2023-07-01 23:48:10">2023-07-01</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-07-13T08:56:26.910Z" title="更新于 2023-07-13 16:56:26">2023-07-13</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%95%99%E7%A8%8B/">教程</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">2.6k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>10分钟</span></span><span class="post-meta-separator">|</span><span id="" data-flag-title="记录Windows部署hexo博客的步骤"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="twikoo_visitors"><i class="fa-solid fa-spinner fa-spin"></i></span></span><span class="post-meta-separator">|</span><span class="post-meta-commentcount"><i class="far fa-comments fa-fw post-meta-icon"></i><span class="post-meta-label">评论数:</span><a href="/posts/79e1771/#post-comment"><span id="twikoo-count"><i class="fa-solid fa-spinner fa-spin"></i></span></a></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><div class="note green icon-padding flat"><i class="note-icon fas fa-bullhorn"></i><p>👋  Hello，大家好！今天给大家分享在GitHub和Gitee双平台同时搭建 Hexo 的详细过程。</p>
+<p>🦋  仅供参考！</p>
+</div>
+<h1>前期工具准备</h1>
+<h2 id="安装-VS-Code">安装 VS Code</h2>
+<p>在安装Git之前，我建议先安装 VS Code。因为安装 Git Bash 时，可以设置 VS Code 作为默认编辑器。Visual Studio Code，简称 VS Code。目前最为强大易用的编辑器，轻量且快速。</p>
+<blockquote>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://code.visualstudio.com/Download"><strong>链接直达</strong></a></p>
+</blockquote>
+<h2 id="安装-Git">安装 Git</h2>
+<p>你可以直接去官网下载Git并安装，如果国内网速太慢可以“科学上网”或者从其他平台下载。安装时一路next到底就行了，也可以在网上找教程，我不再多说。</p>
+<blockquote>
+<p><strong>可参考安装教程</strong><br>
+<a target="_blank" rel="noopener external nofollow noreferrer" href="https://blog.csdn.net/mukes/article/details/115693833">Git 详细安装教程（详解 Git 安装过程的每一个步骤）</a></p>
+</blockquote>
+<h2 id="安装-Node-js">安装 Node.js</h2>
+<p>建议下载长期支持版，而非当前发布版，因为如果是最新版，容易出现一些奇妙的 bug。</p>
+<blockquote>
+<p><strong>可参考安装教程</strong><br>
+<a target="_blank" rel="noopener external nofollow noreferrer" href="https://blog.csdn.net/qq_42006801/article/details/124830995?ops_request_misc=%7B%22request%5Fid%22%3A%22168489482216800182783090%22%2C%22scm%22%3A%2220140713.130102334..%22%7D&amp;request_id=168489482216800182783090&amp;biz_id=0&amp;spm=1018.2226.3001.4187">Node.js安装与配置（详细步骤）</a><br>
+<a target="_blank" rel="noopener external nofollow noreferrer" href="https://blog.csdn.net/weixin_44893902/article/details/121788104?ops_request_misc=%7B%22request%5Fid%22%3A%22168489482216800182783090%22%2C%22scm%22%3A%2220140713.130102334..%22%7D&amp;request_id=168489482216800182783090&amp;biz_id=0&amp;spm=1018.2226.3001.4187">node.js安装及环境配置超详细教程【Windows系统安装包方式】</a></p>
+</blockquote>
+<p>国内使用 npm 可能很慢，你可以“科学上网”，或者考虑切换为 taobao 镜像源，即手动输入以下内容后按回车（也可以<kbd>Ctrl</kbd>+<kbd>C</kbd>和<kbd>Ctrl</kbd>+<kbd>V</kbd>复制以下代码按回车）：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> registry https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+<h1>建立仓库</h1>
+<blockquote>
+<p>双平台都要建立仓库</p>
+</blockquote>
+<div class="tabs" id="build"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#build-1"><i class="fa-brands fa-github"></i>GitHub</button></li><li class="tab"><button type="button" data-href="#build-2">Gitee</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="build-1"><p>新建一个 <code>用户名.github.io</code> 仓库用来存放静态博客页面，仓库类型是 <code>public</code></p>
+<p>再建一个 <code>hexo</code> 仓库用来存放 <code>Hexo</code> 博客的源码，这个仓库的类型是 <code>private</code></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="build-2"><p>新建一个 <code>用户名</code> 仓库用来存放静态博客页面，仓库类型是 <code>public</code></p>
+<blockquote>
+<p>注意：仓库名称和路径均填<code>用户名</code></p>
+</blockquote>
+<p>再建一个 <code>hexo</code> 仓库用来存放 <code>Hexo</code> 博客的源码，这个仓库的类型是 <code>private</code></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div>
+<h1>生成SSH密钥</h1>
+<h2 id="生成新的-SSH-公钥">生成新的 SSH 公钥</h2>
+<blockquote>
+<p>Windows 用户建议使用 <strong>Windows PowerShell</strong> 或者 <strong>Git Bash</strong>，最好是 <strong>Git Bash</strong> ，在 <strong>命令提示符(cmd)</strong> 下无 <code>cat</code> 和 <code>ls</code> 命令。</p>
+</blockquote>
+<h3 id="通过命令-ssh-keygen-生成-SSH-Key：">通过命令 <code>ssh-keygen</code> 生成 SSH Key：</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t ed25519 -C <span class="string">&quot;your_email@example.com&quot;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>-t</code> key 类型</li>
+<li><code>-C</code> 注释</li>
+</ul>
+<p>输出，如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">Generating public/private ed25519 key pair.</span><br><span class="line">Enter file in which to save the key (/home/git/.ssh/id_ed25519):</span><br><span class="line">Enter passphrase (empty for no passphrase):</span><br><span class="line">Enter same passphrase again:</span><br><span class="line">Your identification has been saved in /home/git/.ssh/id_ed25519</span><br><span class="line">Your public key has been saved in /home/git/.ssh/id_ed25519.pub</span><br><span class="line">The key fingerprint is:</span><br><span class="line">SHA256:ohDd0OK5WG2dx4gST/j35HjvlJlGHvihyY+Msl6IC8I your_email@example.com</span><br><span class="line">The key&#x27;s randomart image is:</span><br><span class="line">+--[ED25519 256]--+</span><br><span class="line">|    .o           |</span><br><span class="line">|   .+oo          |</span><br><span class="line">|  ...O.o +       |</span><br><span class="line">|   .= * = +.     |</span><br><span class="line">|  .o +..S*. +    |</span><br><span class="line">|. ...o o..+* *   |</span><br><span class="line">|.E. o . ..+.O    |</span><br><span class="line">| . . ... o =.    |</span><br><span class="line">|    ..oo. o.o    |</span><br><span class="line">+----[SHA256]-----+</span><br></pre></td></tr></table></figure>
+<ul>
+<li>中间通过三次<strong>回车键</strong>确定</li>
+</ul>
+<h3 id="查看生成的-SSH-公钥和私钥：">查看生成的 SSH 公钥和私钥：</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ls</span> ~/.ssh/</span><br></pre></td></tr></table></figure>
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">id_ed25519  id_ed25519.pub</span><br></pre></td></tr></table></figure>
+<ul>
+<li>私钥文件 <code>id_ed25519</code></li>
+<li>公钥文件 <code>id_ed25519.pub</code></li>
+</ul>
+<h3 id="读取公钥文件：">读取公钥文件：</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cat</span> ~/.ssh/id_ed25519.pub</span><br></pre></td></tr></table></figure>
+<p>输出，如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-ed25519 AAAA***5B your_email@example.com</span><br></pre></td></tr></table></figure>
+<h2 id="向帐户添加新的-SSH-密钥">向帐户添加新的 SSH 密钥</h2>
+<h3 id="将-SSH-公钥复制到剪贴板：">将 SSH 公钥复制到剪贴板：</h3>
+<p>如果您的 SSH 公钥文件与示例代码不同，请修改文件名以匹配您当前的设置。 在复制密钥时，请勿添加任何新行或空格。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">clip &lt; ~/.ssh/id_ed25519.pub</span><br></pre></td></tr></table></figure>
+<h3 id="添加公钥">添加公钥</h3>
+<blockquote>
+<p>注：可以在GitHub和Gitee使用同一对密钥</p>
+</blockquote>
+<div class="tabs" id="add-public-key"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#add-public-key-1"><i class="fa-brands fa-github"></i>GitHub</button></li><li class="tab"><button type="button" data-href="#add-public-key-2">Gitee</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="add-public-key-1"><ol>
+<li>在任何页面的右上角，单击个人资料照片，然后单击“<strong>Settings</strong>”。</li>
+<li>在边栏的“Access”部分中，单击 “ <strong>SSH and GPG keys</strong>”。</li>
+<li>单击“<a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/settings/ssh/new"><strong>New SSH key</strong></a>”或“ <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/settings/ssh/new"><strong>Add SSH key</strong></a>” 。</li>
+<li>在 &quot;Title&quot;字段中，为新密钥添加描述性标签。 例如，如果使用的是个人笔记本电脑，则可以将此密钥称为”个人笔记本电脑”。</li>
+<li>选择密钥类型（身份验证或签名）。 有关提交签名的详细信息，请参阅“<a target="_blank" rel="noopener external nofollow noreferrer" href="https://docs.github.com/zh/authentication/managing-commit-signature-verification/about-commit-signature-verification">关于提交签名验证</a>”。</li>
+<li>在“Key”字段中，粘贴公钥。</li>
+<li>单击“ <strong>Add SSH key</strong> ”。</li>
+</ol>
+<p><img src= "/img/loading.gif" data-lazy-src="https://file.crazywong.com/gh/aizhiqian/image@main/202307012327384.png" alt=""></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="add-public-key-2"><p>用户可以通过主页右上角 <strong>「个人设置」-&gt;「安全设置」-&gt;「SSH 公钥」-&gt;「<a target="_blank" rel="noopener external nofollow noreferrer" href="https://gitee.com/profile/sshkeys">添加公钥</a>」</strong> ，添加生成的 public key 添加到当前账户中。</p>
+<blockquote>
+<p>需要注意： <strong>添加公钥需要验证用户密码</strong></p>
+</blockquote>
+<p><img src= "/img/loading.gif" data-lazy-src="https://file.crazywong.com/gh/aizhiqian/image@main/202307012327382.png" alt=""></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div>
+<h2 id="测试-SSH-连接">测试 SSH 连接</h2>
+<blockquote>
+<p>设置 SSH 密钥并将其添加到你的帐户后，可以测试连接</p>
+</blockquote>
+<div class="tabs" id="ssh-test"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#ssh-test-1"><i class="fa-brands fa-github"></i>GitHub</button></li><li class="tab"><button type="button" data-href="#ssh-test-2">Gitee</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="ssh-test-1"><ul>
+<li>
+<p>打开Git Bash</p>
+</li>
+<li>
+<p>输入以下内容：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+<p>您可能会看到类似如下的警告：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">&gt; </span><span class="language-bash">The authenticity of host <span class="string">&#x27;github.com (IP ADDRESS)&#x27;</span> can<span class="string">&#x27;t be established.</span></span></span><br><span class="line"><span class="meta prompt_">&gt; </span><span class="language-bash"><span class="string">ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.</span></span></span><br><span class="line"><span class="meta prompt_">&gt; </span><span class="language-bash"><span class="string">Are you sure you want to continue connecting (yes/no)?</span></span></span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>验证所看到消息中的指纹是否与 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://docs.github.com/zh/authentication/keeping-your-account-and-data-secure/githubs-ssh-key-fingerprints">GitHub 的公钥指纹</a>匹配。 如果是，则键入 <code>yes</code>：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hi USERNAME! You&#x27;ve successfully authenticated, but GitHub does not provide shell access.</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>验证生成的消息包含您的用户名。 如果收到“权限被拒绝”消息，请参阅“<a target="_blank" rel="noopener external nofollow noreferrer" href="https://docs.github.com/zh/authentication/troubleshooting-ssh/error-permission-denied-publickey">错误：权限被拒绝（公钥）</a>”。</p>
+</li>
+</ul><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="ssh-test-2"><ul>
+<li>
+<p>打开Git Bash</p>
+</li>
+<li>
+<p>输入以下内容：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@gitee.com</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>您将看到以下内容：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hi USERNAME! You&#x27;ve successfully authenticated, but GITEE.COM does not provide shell access.</span><br></pre></td></tr></table></figure>
+</li>
+</ul><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div>
+<h1>配置密钥</h1>
+<div class="tabs" id="configure-key"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#configure-key-1"><i class="fa-brands fa-github"></i>GitHub</button></li><li class="tab"><button type="button" data-href="#configure-key-2">Gitee</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="configure-key-1"><p>复制 <code>id_ed25519</code> 私钥文件内容，在 <code>hexo</code> 仓库 <code>Settings</code> -&gt; <code>Secrets and variables</code> -&gt;<code>Actions</code> -&gt;<code>New repository secret</code> 页面上添加。</p>
+<ul>
+<li>
+<p>在 <code>Name</code> 输入框填写 <code>HEXO_DEPLOY_PRI</code></p>
+</li>
+<li>
+<p>在 <code>Secret</code> 输入框填写 <code>id_ed25519</code> 私钥文件内容</p>
+</li>
+</ul>
+<p><img src= "/img/loading.gif" data-lazy-src="https://file.crazywong.com/gh/aizhiqian/image@main/202307020047127.png" alt=""></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="configure-key-2"><p><strong>不需要</strong></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div>
+<h1>安装 Hexo</h1>
+<blockquote>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io/zh-cn/index.html">官网：https://hexo.io/zh-cn/index.html</a></p>
+</blockquote>
+<p>打开 <strong>Windows Terminal</strong> ，输入以下命令后回车：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo<span class="literal">-cli</span> <span class="literal">-g</span></span><br></pre></td></tr></table></figure>
+<p>然后等待一会进度条走完，没报错就代表安装成功。进度条卡住不动可能还是国内网络问题，“科学上网”哦</p>
+<h2 id="初始化-Hexo-工程">初始化 Hexo 工程</h2>
+<p>在E盘建立 <strong>Hexo</strong> 文件夹，自定义建立</p>
+<p>然后 <em><strong>cd</strong></em> 到此文件夹，如</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> E:\Hexo</span><br></pre></td></tr></table></figure>
+<p>成功进入后，接下来输入下方代码，再按回车：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><code>init</code> ：用来初始化博客的模版文件。后面跟的是你要新建的文件夹比如我的是：<em><strong>blog</strong></em></p>
+</blockquote>
+<p>然后进入我的博客文件夹，输入</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> blog</span><br></pre></td></tr></table></figure>
+<p>安装所有 <code>package.json</code> 文件中提到的包,输入</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
+<p>这时候，我的 blog 文件夹里面会多出一堆文件，文件夹结构应该大致是这样：</p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── source</span><br><span class="line">|  ├── _drafts</span><br><span class="line">|  └── _posts</span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure>
+<p>现在我们输入</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+<p>会看到：</p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">E:\Hexo\blog&gt;hexo server</span><br><span class="line">INFO  Validating config</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  Hexo is running at http://localhost:4000 . Press Ctrl+C to stop.</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><code>server</code> 代表开启本地的 Hexo 服务器，这时你就可以打开浏览器，在地址栏中输入 <code>localhost:4000</code> 就可以看到本地的网页了。</p>
+</blockquote>
+<p><img src= "/img/loading.gif" data-lazy-src="https://www.helloimg.com/images/2023/05/31/omAytt.png" alt="Hexo自动生成的博客页面"></p>
+<p>这个网页就是Hexo为你自动生成的博客页面。</p>
+<p>按  <em><kbd>Ctrl</kbd>+<kbd>C</kbd></em>  中断服务器的运行。至此，基础的模版页面便已经搭建好了。</p>
+<h2 id="与远程仓库建立关联">与远程仓库建立关联</h2>
+<p>接下来我们将本地的仓库与此前在 GitHub 上建立的仓库建立关联。</p>
+<p>输入 <strong>git init</strong> 初始化 Git 仓库，只需要执行一次即可，看到：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">E:\Hexo\blog&gt;git init</span><br><span class="line">Initialized empty Git repository <span class="keyword">in</span> E:/Hexo/blog/.git/</span><br></pre></td></tr></table></figure>
+<p>然后分别输入以下两个命令按回车：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">E:\Hexo\blog&gt;git config <span class="literal">--global</span> user.email <span class="string">&quot;你的GitHub邮箱&quot;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">E:\Hexo\blog&gt;git config <span class="literal">--global</span> user.name <span class="string">&quot;用户名&quot;</span></span><br></pre></td></tr></table></figure>
+<p>输入下方代码按回车，与远程 Git 仓库建立连接，只此一次即可</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin git@github.com:用户名/hexo.git</span><br></pre></td></tr></table></figure>
+<p>切换到分支</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout <span class="literal">-b</span> main</span><br></pre></td></tr></table></figure>
+<h2 id="部署到GitHub-Pages和Gitee-Pages">部署到GitHub Pages和Gitee Pages</h2>
+<p>首先安装 <code>hexo-deployer-git</code> 插件，输入：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo<span class="literal">-deployer-git</span> <span class="literal">--save</span></span><br></pre></td></tr></table></figure>
+<p>下面对 <em><strong>blog</strong></em> 文件夹下的 <em><strong>_config.yml</strong></em> 文件进行配置。</p>
+<p>滑到最下面，把关于</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/one-command-deployment</span></span><br><span class="line"><span class="string">deploy:&#x27;</span> <span class="string">&#x27;</span></span><br></pre></td></tr></table></figure>
+<p>的这段代码补充为</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/one-command-deployment</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> </span><br><span class="line">  	<span class="attr">github:</span> <span class="string">git@github.com:用户名/用户名.github.io.git</span></span><br><span class="line">  	<span class="attr">gitee:</span> <span class="string">git@gitee.com:用户名/用户名.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
+<p>然后终端输入以下命令开始部署：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+<p>等待完成后，进入 <strong><a target="_blank" rel="noopener external nofollow noreferrer" href="http://xn--eqr924avxo.github.io">用户名.github.io</a></strong> 仓库，依次点击<code>Settings -&gt; Pages </code>，然后选择下拉 None 选择 <strong>master</strong> 分支，再点击 <strong>save</strong> 按钮。</p>
+<p>等待一会，打开网址 <code>https://用户名.github.io</code> 就能看到你的线上网站了！</p>
+<blockquote>
+<p>对于Gitee的 <code>用户名</code> 仓库进行类似的操作</p>
+</blockquote>
+<h1>使用 GitHub Actions 实现自动化</h1>
+<p>在 <code>blog</code> 根目录下创建 <code>.github/workflows/deploy.yml</code> 文件，<code>deploy.yml</code> 的内容如下：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">自动部署到GitHub</span> <span class="string">Pages、Gitee</span> <span class="string">Pages、Vercel</span></span><br><span class="line"></span><br><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="comment"># 触发条件1：main 分支收到 push 后执行任务。</span></span><br><span class="line">  <span class="attr">push:</span></span><br><span class="line">    <span class="attr">branches:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">main</span></span><br><span class="line">  <span class="comment"># 触发条件2：手动按钮</span></span><br><span class="line">  <span class="attr">workflow_dispatch:</span></span><br><span class="line"></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">pages:</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    <span class="attr">permissions:</span></span><br><span class="line">      <span class="attr">contents:</span> <span class="string">write</span></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">uses:</span> <span class="string">actions/checkout@v2</span></span><br><span class="line"></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Use</span> <span class="string">Node.js</span> <span class="number">18.</span><span class="string">x</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/setup-node@v2</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">node-version:</span> <span class="string">&quot;18&quot;</span></span><br><span class="line"></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Cache</span> <span class="string">NPM</span> <span class="string">dependencies</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/cache@v2</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">path:</span> <span class="string">node_modules</span></span><br><span class="line">          <span class="attr">key:</span> <span class="string">$&#123;&#123;</span> <span class="string">runner.OS</span> <span class="string">&#125;&#125;-npm-cache</span></span><br><span class="line">          <span class="attr">restore-keys:</span> <span class="string">|</span></span><br><span class="line"><span class="string">            $&#123;&#123; runner.OS &#125;&#125;-npm-cache</span></span><br><span class="line"><span class="string"></span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Configuration</span> <span class="string">environment</span></span><br><span class="line">        <span class="attr">env:</span></span><br><span class="line">          <span class="attr">HEXO_DEPLOY_PRI:</span> <span class="string">$&#123;&#123;secrets.HEXO_DEPLOY_PRI&#125;&#125;</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line"><span class="string">          mkdir -p ~/.ssh/</span></span><br><span class="line"><span class="string">          echo &quot;$HEXO_DEPLOY_PRI&quot; &gt; ~/.ssh/id_ed25519</span></span><br><span class="line"><span class="string">          chmod 600 ~/.ssh/id_ed25519</span></span><br><span class="line"><span class="string">          ssh-keyscan -t ed25519 github.com &gt;&gt; ~/.ssh/known_hosts</span></span><br><span class="line"><span class="string">          ssh-keyscan -t ed25519 gitee.com &gt;&gt; ~/.ssh/known_hosts</span></span><br><span class="line"><span class="string">          git config --global user.name 用户名</span></span><br><span class="line"><span class="string">          git config --global user.email 你的GitHub邮箱</span></span><br><span class="line"><span class="string"></span>          </span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">安装</span> <span class="string">Hexo</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">npm</span> <span class="string">install</span> <span class="string">hexo-cli</span> <span class="string">-g</span></span><br><span class="line"></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Install</span> <span class="string">Dependencies</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">npm</span> <span class="string">install</span></span><br><span class="line"></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Build</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line"><span class="string">          hexo clean</span></span><br><span class="line"><span class="string">          hexo generate</span></span><br><span class="line"><span class="string">          hexo deploy</span></span><br><span class="line"><span class="string"></span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Sync</span> <span class="string">to</span> <span class="string">Gitee</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">wearerequired/git-mirror-action@master</span></span><br><span class="line">        <span class="attr">env:</span></span><br><span class="line">          <span class="comment"># 注意在 Settings-&gt;Secrets 配置 HEXO_DEPLOY_PRI</span></span><br><span class="line">          <span class="attr">SSH_PRIVATE_KEY:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.HEXO_DEPLOY_PRI</span> <span class="string">&#125;&#125;</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="comment"># 注意替换为你的 GitHub 存放源码地址</span></span><br><span class="line">          <span class="attr">source-repo:</span> <span class="string">git@github.com:用户名/hexo.git</span></span><br><span class="line">          <span class="comment"># 注意替换为你的 Gitee 存放源码地址</span></span><br><span class="line">          <span class="attr">destination-repo:</span> <span class="string">git@gitee.com:用户名/hexo.git</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>从而实现使用 <strong>GitHub Actions</strong> 自动部署hexo博客到GitHub Pages和Gitee Pages，并将源码也自动同步一份到Gitee账户的 <code>hexo</code> 仓库中</p>
+<h1>总结</h1>
+<p>以后每次更新博客时都可以走以下几步</p>
+<h2 id="写作部分">写作部分</h2>
+<p>1、打开 <strong>Windows Terminal</strong> 进入存放博客代码文件夹</p>
+<p>2、创建文章：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo n <span class="string">&quot;文章标题&quot;</span></span><br></pre></td></tr></table></figure>
+<p>3、使用vscode打开新建的.md文件编写内容</p>
+<h2 id="部署">部署</h2>
+<p>push源码到 GitHub 的 <code>hexo</code> 仓库后，即可利用 <strong>GitHub Actions</strong> 实现自动部署</p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m &quot;自定义信息&quot;</span><br><span class="line">git push origin main</span><br></pre></td></tr></table></figure>
+<h1>注意事项</h1>
+<h2 id="添加屏蔽项">添加屏蔽项</h2>
+<ol>
+<li>push源码之前，要先添加屏蔽项，打开 <code>blog/.gitignore</code>，输入以下内容：</li>
+</ol>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">.DS_Store</span><br><span class="line">Thumbs.db</span><br><span class="line">db.json</span><br><span class="line">*.log</span><br><span class="line">node_modules/</span><br><span class="line">public/</span><br><span class="line">.deploy*/</span><br><span class="line">.deploy_git*/</span><br><span class="line">_multiconfig.yml</span><br><span class="line">themes/butterfly/.git</span><br></pre></td></tr></table></figure>
+<p>如果不是 <code>butterfly</code> 主题，记得替换最后一行内容为你自己当前使用的主题。</p>
+<ol start="2">
+<li>可能遇到的bug</li>
+</ol>
+<p>因为 <code>butterfly</code> 主题文件夹下的<code>.git</code>文件夹的存在，那么主题文件夹会被识别子项目。从而无法被上传到源码仓库。若是遇到添加屏蔽项，但是还是无法正常上传主题文件夹的情况。请删除或者先把 <code>blog/themes/butterfly/.git</code> 移动到非博客文件夹目录下，然后再进行 <strong>push</strong> 三部曲，之后你可以考虑把移走的<code>.git</code>放回来，用作以后主题升级。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://aizhiqian.github.io">AiGuoHou</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://aizhiqian.github.io/posts/79e1771/">https://aizhiqian.github.io/posts/79e1771/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow noreferrer" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://aizhiqian.github.io" target="_blank">XiaoYang の Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/hexo/">hexo</a><a class="post-meta__tags" href="/tags/%E6%90%AD%E5%BB%BA/">搭建</a></div><div class="post_share"><div class="social-share" data-image="https://file.crazywong.com/gh/aizhiqian/hexo_resources@main/cover_and_img/5.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://file.crazywong.com/npm/butterfly-extsrc@latest/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://file.crazywong.com/npm/butterfly-extsrc@latest/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src= "/img/loading.gif" data-lazy-src="/img/wechat.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src= "/img/loading.gif" data-lazy-src="/img/alipay.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/b2c9bae0/" title="更换设备时部署hexo博客的步骤(自用)"><img class="cover" src= "/img/loading.gif" data-lazy-src="https://file.crazywong.com/gh/aizhiqian/hexo_resources@main/cover_and_img/6.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">更换设备时部署hexo博客的步骤(自用)</div></div></a></div><div class="next-post pull-right"><a href="/posts/518bbe0a/" title="python脚本实现批量重命名"><img class="cover" src= "/img/loading.gif" data-lazy-src="https://file.crazywong.com/gh/aizhiqian/image@main/202307011744698.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">python脚本实现批量重命名</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/posts/7e0916a3/" title="【Hexo博客搭建】将其部署到 GitHub Pages（一）：前期要做哪些准备？"><img class="cover" src= "/img/loading.gif" data-lazy-src="https://www.helloimg.com/images/2023/05/31/omLtP0.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-05-31</div><div class="title">【Hexo博客搭建】将其部署到 GitHub Pages（一）：前期要做哪些准备？</div></div></a></div><div><a href="/posts/d2331f54/" title="【Hexo博客搭建】将其部署到 GitHub Pages（三）：怎么写作以及更新？"><img class="cover" src= "/img/loading.gif" data-lazy-src="https://www.helloimg.com/images/2023/05/31/omLA7h.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-05-31</div><div class="title">【Hexo博客搭建】将其部署到 GitHub Pages（三）：怎么写作以及更新？</div></div></a></div><div><a href="/posts/f642b107/" title="【Hexo博客搭建】将其部署到 GitHub Pages（二）：如何初始化并部署？"><img class="cover" src= "/img/loading.gif" data-lazy-src="https://www.helloimg.com/images/2023/05/31/omL4Hm.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-05-31</div><div class="title">【Hexo博客搭建】将其部署到 GitHub Pages（二）：如何初始化并部署？</div></div></a></div><div><a href="/posts/b2c9bae0/" title="更换设备时部署hexo博客的步骤(自用)"><img class="cover" src= "/img/loading.gif" data-lazy-src="https://file.crazywong.com/gh/aizhiqian/hexo_resources@main/cover_and_img/6.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-07-02</div><div class="title">更换设备时部署hexo博客的步骤(自用)</div></div></a></div><div><a href="/posts/ca2ce3bc/" title="Hexo自定义字体"><img class="cover" src= "/img/loading.gif" data-lazy-src="https://file.crazywong.com/gh/aizhiqian/hexo_resources@main/cover_and_img/2.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-07-04</div><div class="title">Hexo自定义字体</div></div></a></div><div><a href="/posts/75895afb/" title="博客一图流"><img class="cover" src= "/img/loading.gif" data-lazy-src="https://file.crazywong.com/gh/aizhiqian/hexo_resources@main/cover_and_img/7.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-07-04</div><div class="title">博客一图流</div></div></a></div></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "/img/loading.gif" data-lazy-src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">AiGuoHou</div><div class="author-info__description">记录生活</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">22</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">15</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><a id="card-info-btn" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/aizhiqian"><i class="fa-brands fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/aizhiqian" rel="external nofollow noreferrer" target="_blank" title="Github"><i class="fa-brands fa-github fa-beat-fade" style="color: #24292e;"></i></a><a class="social-icon" href="https://www.youtube.com/@aiguohou" rel="external nofollow noreferrer" target="_blank" title="YouTube"><i class="fa-brands fa-youtube fa-bounce" style="color: #ff0000;"></i></a><a class="social-icon" href="https://space.bilibili.com/696732872" rel="external nofollow noreferrer" target="_blank" title="Bilibili"><i class="fa-brands fa-bilibili fa-fade" style="color: #ff5ca1;"></i></a><a class="social-icon" href="https://pan.aiguohou1.repl.co" rel="external nofollow noreferrer" target="_blank" title="AList"><i class="fa-solid fa-cloud-arrow-down fa-flip" style="color: #26a9ea;"></i></a><a class="social-icon" href="https://aizhiqian.github.io/atom.xml" target="_blank" title="RSS"><i class="fa-solid fa-rss fa-shake" style="color: #000000;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">Welcome to my Blog! 本站共有三个站点同步更新 <div class="social-button"> <a class="button--animated" href="https://blog11.eu.org/" rel="external nofollow noreferrer" target="_blank">Vercel Pages 👍</a> <a class="button--animated" href="https://aizhiqian.gitee.io/" rel="external nofollow noreferrer" target="_blank">Gitee Pages 👍</a> <a class="button--animated" href="https://aizhiqian.github.io/" target="_blank">GitHub Pages 👍</a> </div></div></div><div class="card-widget" id="card-poem"><div id="poem_sentence"></div><div id="poem_info"><div id="poem_dynasty"></div><div id="poem_author"></div></div></div><script src="https://cdn.jsdelivr.net/npm/js-heo@1.0.11/poem/jinrishici.js" charset="utf-8"></script><script type="text/javascript">jinrishici.load(function(result) {
+var sentence = document.querySelector("#poem_sentence")
+var author = document.querySelector("#poem_author")
+var dynasty = document.querySelector("#poem_dynasty")
+
+var sentenceText = result.data.content
+sentenceText = sentenceText.substr(0, sentenceText.length - 1);
+sentence.innerHTML = sentenceText
+dynasty.innerHTML = result.data.origin.dynasty
+author.innerHTML = result.data.origin.author + '《' + result.data.origin.title + '》'
+});</script><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">前期工具准备</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85-VS-Code"><span class="toc-number">1.1.</span> <span class="toc-text">安装 VS Code</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85-Git"><span class="toc-number">1.2.</span> <span class="toc-text">安装 Git</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85-Node-js"><span class="toc-number">1.3.</span> <span class="toc-text">安装 Node.js</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">2.</span> <span class="toc-text">建立仓库</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">3.</span> <span class="toc-text">生成SSH密钥</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%9F%E6%88%90%E6%96%B0%E7%9A%84-SSH-%E5%85%AC%E9%92%A5"><span class="toc-number">3.1.</span> <span class="toc-text">生成新的 SSH 公钥</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%9A%E8%BF%87%E5%91%BD%E4%BB%A4-ssh-keygen-%E7%94%9F%E6%88%90-SSH-Key%EF%BC%9A"><span class="toc-number">3.1.1.</span> <span class="toc-text">通过命令 ssh-keygen 生成 SSH Key：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E7%94%9F%E6%88%90%E7%9A%84-SSH-%E5%85%AC%E9%92%A5%E5%92%8C%E7%A7%81%E9%92%A5%EF%BC%9A"><span class="toc-number">3.1.2.</span> <span class="toc-text">查看生成的 SSH 公钥和私钥：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%BB%E5%8F%96%E5%85%AC%E9%92%A5%E6%96%87%E4%BB%B6%EF%BC%9A"><span class="toc-number">3.1.3.</span> <span class="toc-text">读取公钥文件：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%91%E5%B8%90%E6%88%B7%E6%B7%BB%E5%8A%A0%E6%96%B0%E7%9A%84-SSH-%E5%AF%86%E9%92%A5"><span class="toc-number">3.2.</span> <span class="toc-text">向帐户添加新的 SSH 密钥</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%86-SSH-%E5%85%AC%E9%92%A5%E5%A4%8D%E5%88%B6%E5%88%B0%E5%89%AA%E8%B4%B4%E6%9D%BF%EF%BC%9A"><span class="toc-number">3.2.1.</span> <span class="toc-text">将 SSH 公钥复制到剪贴板：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E5%85%AC%E9%92%A5"><span class="toc-number">3.2.2.</span> <span class="toc-text">添加公钥</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95-SSH-%E8%BF%9E%E6%8E%A5"><span class="toc-number">3.3.</span> <span class="toc-text">测试 SSH 连接</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">4.</span> <span class="toc-text">配置密钥</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">5.</span> <span class="toc-text">安装 Hexo</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96-Hexo-%E5%B7%A5%E7%A8%8B"><span class="toc-number">5.1.</span> <span class="toc-text">初始化 Hexo 工程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8E%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E5%BB%BA%E7%AB%8B%E5%85%B3%E8%81%94"><span class="toc-number">5.2.</span> <span class="toc-text">与远程仓库建立关联</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2%E5%88%B0GitHub-Pages%E5%92%8CGitee-Pages"><span class="toc-number">5.3.</span> <span class="toc-text">部署到GitHub Pages和Gitee Pages</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">6.</span> <span class="toc-text">使用 GitHub Actions 实现自动化</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">7.</span> <span class="toc-text">总结</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%99%E4%BD%9C%E9%83%A8%E5%88%86"><span class="toc-number">7.1.</span> <span class="toc-text">写作部分</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2"><span class="toc-number">7.2.</span> <span class="toc-text">部署</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">8.</span> <span class="toc-text">注意事项</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E5%B1%8F%E8%94%BD%E9%A1%B9"><span class="toc-number">8.1.</span> <span class="toc-text">添加屏蔽项</span></a></li></ol></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2023 By AiGuoHou</div><div class="footer_custom_text">Hi, welcome to my <a href="https://aizhiqian.github.io/">blog</a>!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button><button id="go-down" type="button" title="直达底部" onclick="btf.scrollToDest(document.body.scrollHeight, 500)"><i class="fas fa-arrow-down"></i></button></div></div><div><script src="https://file.crazywong.com/npm/hexo-theme-butterfly@latest/source/js/utils.min.js"></script><script src="https://file.crazywong.com/npm/hexo-theme-butterfly@latest/source/js/main.min.js"></script><script src="https://file.crazywong.com/npm/hexo-theme-butterfly@latest/source/js/tw_cn.min.js"></script><script src="https://file.crazywong.com/npm/@fancyapps/ui@latest/dist/fancybox/fancybox.umd.min.js"></script><script src="https://file.crazywong.com/npm/instant.page@latest/instantpage.min.js" type="module"></script><script src="https://file.crazywong.com/npm/vanilla-lazyload@latest/dist/lazyload.iife.min.js"></script><script src="https://file.crazywong.com/npm/node-snackbar@latest/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://file.crazywong.com/npm/pangu@latest/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><div class="js-pjax"><script>(() => {
+  const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+  if ($mermaid.length === 0) return
+  const runMermaid = () => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+    Array.from($mermaid).forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
+      const mermaidID = 'mermaid-' + index
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+
+      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+
+      const renderV10 = () => {
+        renderFn.then(({svg}) => {
+          mermaidSrc.insertAdjacentHTML('afterend', svg)
+        })
+      }
+
+      const renderV9 = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+      }
+
+      typeof renderFn === 'string' ? renderV9(renderFn) : renderV10()
+    })
+  }
+
+  const loadMermaid = () => {
+    window.loadMermaid ? runMermaid() : getScript('https://file.crazywong.com/npm/mermaid@latest/dist/mermaid.min.js').then(runMermaid)
+  }
+
+  btf.addModeChange('mermaid', runMermaid)
+
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script><script>(()=>{
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://twikoo.aiguohou.eu.org/',
+      region: '',
+      onCommentLoaded: function () {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      }
+    }, null))
+  }
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'https://twikoo.aiguohou.eu.org/',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(function (res) {
+      countELement.textContent = res[0].count
+    }).catch(function (err) {
+      console.error(err);
+    });
+  }
+
+  const runFn = () => {
+    init()
+    GLOBAL_CONFIG_SITE.isPost && getCount()
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') {
+      setTimeout(runFn,0)
+      return
+    } 
+    getScript('https://file.crazywong.com/npm/twikoo@latest/dist/twikoo.all.min.js').then(runFn)
+  }
+
+  if ('Twikoo' === 'Twikoo' || !false) {
+    if (false) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo()
+  } else {
+    window.loadOtherComment = () => {
+      loadTwikoo()
+    }
+  }
+})()</script></div><script defer src="/_vercel/insights/script.js"></script><script async src="/js/title.js"></script><canvas class="fireworks" mobile="false"></canvas><script src="https://file.crazywong.com/npm/butterfly-extsrc@latest/dist/fireworks.min.js"></script><script src="https://file.crazywong.com/npm/butterfly-extsrc@latest/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script src="https://file.crazywong.com/npm/pjax@latest/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: true,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', 'G-HEW1SJ10QH', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><div id="algolia-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="search-wrap"><div id="algolia-search-input"></div><hr/><div id="algolia-search-results"><div id="algolia-hits"></div><div id="algolia-pagination"></div><div id="algolia-info"><div class="algolia-stats"></div><div class="algolia-poweredBy"></div></div></div></div></div><div id="search-mask"></div><script src="https://file.crazywong.com/npm/algoliasearch@latest/dist/algoliasearch-lite.umd.min.js"></script><script src="https://file.crazywong.com/npm/instantsearch.js@latest/dist/instantsearch.production.min.js"></script><script src="https://file.crazywong.com/npm/hexo-theme-butterfly@latest/source/js/search/algolia.min.js"></script></div></div></body></html>

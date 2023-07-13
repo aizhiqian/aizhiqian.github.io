@@ -1,0 +1,464 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>博客美化教程合集 | XiaoYang の Blog</title><meta name="author" content="AiGuoHou"><meta name="copyright" content="AiGuoHou"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="直达底部按钮 点击查看教程在[BlogRoot]\themes\butterfly\layout\includes\rightside.pug做以下修改: 12345button#go-up(type&#x3D;&quot;button&quot; title&#x3D;_p(&quot;rightside.back_to_top&quot;))  i.fas.fa-arrow-up+button#go-down(t">
+<meta property="og:type" content="article">
+<meta property="og:title" content="博客美化教程合集">
+<meta property="og:url" content="https://aizhiqian.github.io/posts/672b4a87/">
+<meta property="og:site_name" content="XiaoYang の Blog">
+<meta property="og:description" content="直达底部按钮 点击查看教程在[BlogRoot]\themes\butterfly\layout\includes\rightside.pug做以下修改: 12345button#go-up(type&#x3D;&quot;button&quot; title&#x3D;_p(&quot;rightside.back_to_top&quot;))  i.fas.fa-arrow-up+button#go-down(t">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://file.crazywong.com/gh/aizhiqian/hexo_resources@main/cover_and_img/8.jpg">
+<meta property="article:published_time" content="2023-07-04T10:29:25.000Z">
+<meta property="article:modified_time" content="2023-07-13T08:56:26.910Z">
+<meta property="article:author" content="AiGuoHou">
+<meta property="article:tag" content="美化">
+<meta property="article:tag" content="hexo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://file.crazywong.com/gh/aizhiqian/hexo_resources@main/cover_and_img/8.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://aizhiqian.github.io/posts/672b4a87/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin=""/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://file.crazywong.com/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://file.crazywong.com/npm/node-snackbar@latest/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://file.crazywong.com/npm/@fancyapps/ui@latest/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-HEW1SJ10QH"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-HEW1SJ10QH');
+</script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: {"appId":"5S7GRIQ3T3","apiKey":"913ceaabe3454727ddee2ca2a58eb3a4","indexName":"my-hexo-blog","hits":{"per_page":6},"languages":{"input_placeholder":"搜索文章","hits_empty":"找不到您查询的内容：${query}","hits_stats":"找到 ${hits} 条结果，用时 ${time} 毫秒"}},
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":400},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"top-right"},
+  source: {
+    justifiedGallery: {
+      js: 'https://file.crazywong.com/npm/flickr-justified-gallery@latest/dist/fjGallery.min.js',
+      css: 'https://file.crazywong.com/npm/flickr-justified-gallery@latest/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: true,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '博客美化教程合集',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-07-13 16:56:26'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="preconnect" href="https://file.crazywong.com"><style type="text/css">.card-announcement .social-button{margin:.6rem 0 0 0;text-align:center}.card-announcement .social-button a{display:block;background-color:var(--btn-bg);color:var(--btn-color);text-align:center;line-height:2.4;margin:4px 0}.card-announcement .social-button a:hover{background-color:var(--btn-hover-color)}</style><link rel="stylesheet" type="text/css" href="https://file.crazywong.com/npm/js-heo@1.0.13/mainColor/heoMainColor.css"><link rel="stylesheet" type="text/css" href="https://file.crazywong.com/npm/js-heo@1.0.13/poem/poem.css"><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="XiaoYang の Blog" type="application/atom+xml">
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><script>(()=>{
+  const $loadingBox = document.getElementById('loading-box')
+  const $body = document.body
+  const preloader = {
+    endLoading: () => {
+      $body.style.overflow = ''
+      $loadingBox.classList.add('loaded')
+    },
+    initLoading: () => {
+      $body.style.overflow = 'hidden'
+      $loadingBox.classList.remove('loaded')
+    }
+  }
+
+  preloader.initLoading()
+  window.addEventListener('load',() => { preloader.endLoading() })
+
+  if (true) {
+    document.addEventListener('pjax:send', () => { preloader.initLoading() })
+    document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+  }
+})()</script><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "/img/loading.gif" data-lazy-src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">22</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">15</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa-solid fa-house fa-bounce"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fa-fw fa-solid fa-compass fa-beat"></i><span> 目录</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fa-solid fa-box-archive fa-flip"></i><span> 时间轴</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa-solid fa-tags fa-shake"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fa-regular fa-folder-open fa-fade"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fa-fw fa-solid fa-compact-disc fa-spin"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fa-solid fa-music fa-bounce"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/photo/"><i class="fa-fw fa-solid fa-images fa-fade"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fa-solid fa-video fa-flip"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa-solid fa-link fa-shake"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa-solid fa-heart fa-flip"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://file.crazywong.com/gh/aizhiqian/hexo_resources@main/cover_and_img/8.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="XiaoYang の Blog"><span class="site-name">XiaoYang の Blog</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa-solid fa-house fa-bounce"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fa-fw fa-solid fa-compass fa-beat"></i><span> 目录</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fa-solid fa-box-archive fa-flip"></i><span> 时间轴</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa-solid fa-tags fa-shake"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fa-regular fa-folder-open fa-fade"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fa-fw fa-solid fa-compact-disc fa-spin"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fa-solid fa-music fa-bounce"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/photo/"><i class="fa-fw fa-solid fa-images fa-fade"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fa-solid fa-video fa-flip"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa-solid fa-link fa-shake"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa-solid fa-heart fa-flip"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">博客美化教程合集</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-07-04T10:29:25.000Z" title="发表于 2023-07-04 18:29:25">2023-07-04</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-07-13T08:56:26.910Z" title="更新于 2023-07-13 16:56:26">2023-07-13</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%95%99%E7%A8%8B/">教程</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%95%99%E7%A8%8B/%E5%8D%9A%E5%AE%A2/">博客</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">5.4k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>31分钟</span></span><span class="post-meta-separator">|</span><span id="" data-flag-title="博客美化教程合集"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="twikoo_visitors"><i class="fa-solid fa-spinner fa-spin"></i></span></span><span class="post-meta-separator">|</span><span class="post-meta-commentcount"><i class="far fa-comments fa-fw post-meta-icon"></i><span class="post-meta-label">评论数:</span><a href="/posts/672b4a87/#post-comment"><span id="twikoo-count"><i class="fa-solid fa-spinner fa-spin"></i></span></a></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="直达底部按钮">直达底部按钮</h2>
+<details class="toggle" style="border: 1px solid #e8fafe"><summary class="toggle-button" style="background-color: #e8fafe;color: #444444">点击查看教程</summary><div class="toggle-content"><p>在<code>[BlogRoot]\themes\butterfly\layout\includes\rightside.pug</code>做以下修改:</p>
+<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">button#go-up(type=&quot;button&quot; title=_p(&quot;rightside.back_to_top&quot;))</span><br><span class="line">  i.fas.fa-arrow-up</span><br><span class="line"></span><br><span class="line"><span class="addition">+button#go-down(type=&quot;button&quot; title=&quot;直达底部&quot; onclick=&quot;btf.scrollToDest(document.body.scrollHeight, 500)&quot;)</span></span><br><span class="line"><span class="addition">+  i.fas.fa-arrow-down</span></span><br></pre></td></tr></table></figure></div></details>
+<h2 id="网站恶搞标题">网站恶搞标题</h2>
+<details class="toggle" style="border: 1px solid #e8fafe"><summary class="toggle-button" style="background-color: #e8fafe;color: #444444">点击查看教程</summary><div class="toggle-content"><div class="hide-block"><button type="button" class="hide-button" style="background-color: #39C5BB;color: #FFFFFF">预览效果
+    </button><div class="hide-content"><p><img src= "/img/loading.gif" data-lazy-src="https://file.crazywong.com/gh/aizhiqian/image@main/202307041754884.webp" alt=""></p>
+</div></div>
+<ol>
+<li>
+<p>新建文件<code>[BlogRoot]\source\js\title.js</code>，写入以下内容：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//动态标题</span></span><br><span class="line"><span class="keyword">var</span> <span class="title class_">OriginTitile</span> = <span class="variable language_">document</span>.<span class="property">title</span>;</span><br><span class="line"><span class="keyword">var</span> titleTime;</span><br><span class="line"><span class="variable language_">document</span>.<span class="title function_">addEventListener</span>(<span class="string">&#x27;visibilitychange&#x27;</span>, <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">if</span> (<span class="variable language_">document</span>.<span class="property">hidden</span>) &#123;</span><br><span class="line">    <span class="comment">//离开当前页面时标签显示内容</span></span><br><span class="line">    <span class="variable language_">document</span>.<span class="property">title</span> = <span class="string">&#x27;👀跑哪里去了~&#x27;</span>;</span><br><span class="line">    <span class="built_in">clearTimeout</span>(titleTime);</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="comment">//返回当前页面时标签显示内容</span></span><br><span class="line">    <span class="variable language_">document</span>.<span class="property">title</span> = <span class="string">&#x27;🐖抓到你啦～&#x27;</span>;</span><br><span class="line">    <span class="comment">//两秒后变回正常标题</span></span><br><span class="line">    titleTime = <span class="built_in">setTimeout</span>(<span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">      <span class="variable language_">document</span>.<span class="property">title</span> = <span class="title class_">OriginTitile</span>;</span><br><span class="line">    &#125;, <span class="number">2000</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>在主题配置文件<code>_config.butterfly.yml</code>引入该文件：</p>
+<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">inject: </span><br><span class="line">  bottom: </span><br><span class="line"><span class="addition">+    - &lt;script async src=&quot;/js/title.js&quot;&gt;&lt;/script&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>重启项目：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo cl &amp;&amp; hexo s</span><br></pre></td></tr></table></figure></li>
+</ol>
+</div></details>
+<h2 id="随机壁纸API汇总">随机壁纸API汇总</h2>
+<details class="toggle" style="border: 1px solid #e8fafe"><summary class="toggle-button" style="background-color: #e8fafe;color: #444444">点击查看教程</summary><div class="toggle-content"><p>网上可以查到很多随机壁纸的API，但是很多都用不了或者是图片质量比较低，于是今天汇总了一些目前可以用的随机壁纸API，其中列出来的图片质量都是比较高的，可以放心食用，本站随机壁纸API模块用的都是这部分API。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//IMGAPI</span></span><br><span class="line"><span class="attr">https</span>:<span class="comment">//imgapi.cn/api.php</span></span><br><span class="line"><span class="comment">// 必应每日壁纸</span></span><br><span class="line"><span class="keyword">let</span> bingDayBg = screen.<span class="property">width</span> &lt;= <span class="number">768</span> ? <span class="string">&quot;url(https://bing.img.run/m.php)&quot;</span> : <span class="string">&quot;url(https://bing.img.run/1920x1080.php)&quot;</span>;</span><br><span class="line"><span class="comment">// 必应历史壁纸</span></span><br><span class="line"><span class="keyword">let</span> bingHistoryBg = screen.<span class="property">width</span> &lt;= <span class="number">768</span> ? <span class="string">&quot;url(https://bing.img.run/rand_m.php)&quot;</span> : <span class="string">&quot;url(https://bing.img.run/rand.php)&quot;</span>;</span><br><span class="line"><span class="comment">// EEE.DOG动漫壁纸</span></span><br><span class="line"><span class="keyword">let</span> <span class="title class_">EEEDog</span> = <span class="string">&quot;url(https://api.yimian.xyz/img?type=moe&amp;size=1920x1080)&quot;</span>;</span><br><span class="line"><span class="comment">// seovx随机美图</span></span><br><span class="line"><span class="keyword">let</span> seovx = <span class="string">&quot;url(https://cdn.seovx.com/?mom=302)&quot;</span>;</span><br><span class="line"><span class="comment">// picsum随机壁纸</span></span><br><span class="line"><span class="keyword">let</span> picsum = <span class="string">&quot;url(https://picsum.photos/1920/1080.webp)&quot;</span>;</span><br><span class="line"><span class="comment">// 小歪二次元壁纸</span></span><br><span class="line"><span class="keyword">let</span> waiDongman = <span class="string">&quot;url(https://api.ixiaowai.cn/api/api.php)&quot;</span>;</span><br><span class="line"><span class="comment">//  小歪高清壁纸</span></span><br><span class="line"><span class="keyword">let</span> waiBizhi = <span class="string">&quot;url(https://api.ixiaowai.cn/gqapi/gqapi.php)&quot;</span>;</span><br><span class="line"><span class="comment">// 博天随机壁纸</span></span><br><span class="line"><span class="keyword">let</span> btstu = <span class="string">&quot;url(http://api.btstu.cn/sjbz/?lx=suiji)&quot;</span>;</span><br><span class="line"><span class="comment">// tuapi动漫壁纸</span></span><br><span class="line"><span class="keyword">let</span> tuapi = <span class="string">&quot;url(https://tuapi.eees.cc/api.php?category=dongman)&quot;</span>;</span><br><span class="line"><span class="comment">// unsplash随机壁纸 https://source.unsplash.com/random/1920x1080/daily (weekly)</span></span><br><span class="line"><span class="keyword">let</span> unsplash = <span class="string">&quot;url(https://source.unsplash.com/random/1920x1080/)&quot;</span>;</span><br></pre></td></tr></table></figure>
+<p>API链接就是引号引着的部分，具体的参数可以到相应官网查看API文档，这部分已经通过测试，到目前为止都是可用的，并且壁纸质量比较高；尤其是<code>必应</code>、<code>unsplash</code>、<code>picsum</code>这几个API的图片质量十分高，赶紧给你的网站换上随机壁纸吧！</p>
+</div></details>
+<h2 id="语雀同款链接卡片">语雀同款链接卡片</h2>
+<details class="toggle" style="border: 1px solid #e8fafe"><summary class="toggle-button" style="background-color: #e8fafe;color: #444444">点击查看教程</summary><div class="toggle-content"><div class="hide-block"><button type="button" class="hide-button" style="background-color: #39C5BB;color: #FFFFFF">预览效果
+    </button><div class="hide-content"><p><img src= "/img/loading.gif" data-lazy-src="https://file.crazywong.com/gh/aizhiqian/image@main/202307042305705.png" alt=""></p>
+</div></div>
+<h3 id="源码">源码</h3>
+<h4 id="link-js">link.js</h4>
+<p>在 <code>\themes\butterfly\scripts\tag</code> 文件夹下面新建 <code>link.js</code> 并粘贴如下代码：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * link</span></span><br><span class="line"><span class="comment"> * &#123;% link url,title,favicon,desc %&#125;</span></span><br><span class="line"><span class="comment"> * &#123;% link 链接,标题,图标,介绍 %&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">&#x27;use strict&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> defaultIcon = <span class="string">&#x27;&lt;svg t=&quot;1670307855063&quot; viewBox=&quot;0 0 1024 1024&quot; version=&quot;1.1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; p-id=&quot;19066&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;&lt;path d=&quot;M504.064 516.608m-384.256 0a384.256 384.256 0 1 0 768.512 0 384.256 384.256 0 1 0-768.512 0Z&quot; fill=&quot;#009CF5&quot; p-id=&quot;19068&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M746.112 270.464L472.448 485.12l63.104 63.104L750.08 274.56c2.304-2.688-1.28-6.144-3.968-4.096z&quot; fill=&quot;#FF4C3A&quot; p-id=&quot;19069&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M262.016 762.752l273.664-214.528-63.104-63.104-214.656 273.536c-2.176 2.688 1.28 6.144 4.096 4.096z&quot; fill=&quot;#FFFFFF&quot; p-id=&quot;19070&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M505.216 155.136c-3.2 0-5.888 2.56-5.888 5.888v53.504c0 3.2 2.56 5.888 5.888 5.888s5.888-2.56 5.888-5.888v-53.504c-0.128-3.2-2.688-5.888-5.888-5.888zM442.368 160.512c-3.2 0.512-5.376 3.584-4.736 6.784l9.344 52.736c0.512 3.2 3.584 5.376 6.784 4.736 3.2-0.512 5.376-3.584 4.736-6.784l-9.344-52.736c-0.512-3.2-3.584-5.376-6.784-4.736zM396.288 234.368c1.152 3.072 4.48 4.608 7.552 3.456 3.072-1.152 4.608-4.48 3.456-7.552l-18.304-50.304c-1.152-3.072-4.48-4.608-7.552-3.456-3.072 1.152-4.608 4.48-3.456 7.552l18.304 50.304zM348.928 257.408c1.664 2.816 5.248 3.712 7.936 2.176s3.712-5.248 2.176-7.936l-26.752-46.336c-1.664-2.816-5.248-3.712-7.936-2.176-2.816 1.664-3.712 5.248-2.176 7.936l26.752 46.336zM306.304 288.256c2.048 2.432 5.76 2.816 8.192 0.768 2.432-2.048 2.816-5.76 0.768-8.192l-34.432-40.96c-2.048-2.432-5.76-2.816-8.192-0.768-2.432 2.048-2.816 5.76-0.768 8.192l34.432 40.96zM269.696 326.144c2.432 2.048 6.144 1.792 8.192-0.768 2.048-2.432 1.792-6.144-0.768-8.192l-40.96-34.432c-2.432-2.048-6.144-1.792-8.192 0.768-2.048 2.432-1.792 6.144 0.768 8.192l40.96 34.432zM193.792 342.912l46.336 26.752c2.816 1.664 6.4 0.64 7.936-2.176 1.664-2.816 0.64-6.4-2.176-8.064L199.552 332.8c-2.816-1.664-6.4-0.64-7.936 2.176-1.664 2.688-0.64 6.272 2.176 7.936zM168.32 399.488l50.304 18.304c3.072 1.152 6.4-0.512 7.552-3.456 1.152-3.072-0.512-6.4-3.456-7.552l-50.304-18.304c-3.072-1.152-6.4 0.512-7.552 3.456-1.152 3.072 0.384 6.4 3.456 7.552zM207.872 457.344l-52.736-9.344c-3.2-0.512-6.272 1.536-6.784 4.736-0.512 3.2 1.536 6.272 4.736 6.784l52.736 9.344c3.2 0.512 6.272-1.536 6.784-4.736 0.512-3.2-1.536-6.272-4.736-6.784zM201.984 509.568H148.48c-3.2 0-5.888 2.56-5.888 5.888 0 3.2 2.56 5.888 5.888 5.888h53.504c3.2 0 5.888-2.56 5.888-5.888 0-3.2-2.56-5.888-5.888-5.888zM205.44 562.176l-52.736 9.344c-3.2 0.512-5.376 3.584-4.736 6.784 0.512 3.2 3.584 5.376 6.784 4.736l52.736-9.344c3.2-0.512 5.376-3.584 4.736-6.784s-3.584-5.248-6.784-4.736zM217.856 613.376l-50.304 18.304c-3.072 1.152-4.608 4.48-3.456 7.552 1.152 3.072 4.48 4.608 7.552 3.456l50.304-18.304c3.072-1.152 4.608-4.48 3.456-7.552-1.152-3.072-4.48-4.608-7.552-3.456zM238.976 661.504l-46.336 26.752c-2.816 1.664-3.712 5.248-2.176 8.064 1.664 2.816 5.248 3.712 8.064 2.176l46.336-26.752c2.816-1.664 3.712-5.248 2.176-8.064-1.664-2.816-5.248-3.712-8.064-2.176zM268.16 705.408l-40.96 34.432c-2.432 2.048-2.816 5.76-0.768 8.192 2.048 2.432 5.76 2.816 8.192 0.768l40.96-34.432c2.432-2.048 2.816-5.76 0.768-8.192-1.92-2.56-5.632-2.816-8.192-0.768zM304.512 743.424l-34.432 40.96c-2.048 2.432-1.792 6.144 0.768 8.192 2.432 2.048 6.144 1.792 8.192-0.768l34.432-40.96c2.048-2.432 1.792-6.144-0.768-8.192-2.304-1.92-6.016-1.664-8.192 0.768zM347.008 774.656l-26.752 46.336c-1.664 2.816-0.64 6.4 2.176 7.936 2.816 1.664 6.4 0.64 8.064-2.176l26.752-46.336c1.664-2.816 0.64-6.4-2.176-7.936-2.816-1.536-6.4-0.64-8.064 2.176zM394.24 798.08l-18.304 50.304c-1.152 3.072 0.512 6.4 3.456 7.552 3.072 1.152 6.4-0.512 7.552-3.456l18.304-50.304c1.152-3.072-0.512-6.4-3.456-7.552-3.072-1.152-6.528 0.384-7.552 3.456zM440.192 872.32c3.2 0.512 6.272-1.536 6.784-4.736l9.344-52.736c0.512-3.2-1.536-6.272-4.736-6.784-3.2-0.512-6.272 1.536-6.784 4.736l-9.344 52.736c-0.64 3.2 1.536 6.272 4.736 6.784zM502.912 878.08c3.2 0 5.888-2.56 5.888-5.888v-53.504c0-3.2-2.56-5.888-5.888-5.888-3.2 0-5.888 2.56-5.888 5.888v53.504c0 3.2 2.688 5.888 5.888 5.888zM549.632 815.232l9.344 52.736c0.512 3.2 3.584 5.376 6.784 4.736 3.2-0.512 5.376-3.584 4.736-6.784l-9.344-52.736c-0.512-3.2-3.584-5.376-6.784-4.736-3.2 0.512-5.248 3.584-4.736 6.784zM600.832 802.816l18.304 50.304c1.152 3.072 4.48 4.608 7.552 3.456 3.072-1.152 4.608-4.48 3.456-7.552L611.84 798.72c-1.152-3.072-4.48-4.608-7.552-3.456-3.072 1.152-4.608 4.48-3.456 7.552zM649.088 781.696l26.752 46.336c1.664 2.816 5.248 3.712 8.064 2.176 2.816-1.664 3.712-5.248 2.176-8.064l-26.88-46.336c-1.664-2.816-5.248-3.712-8.064-2.176-2.816 1.664-3.712 5.248-2.048 8.064zM692.864 752.384l34.432 40.96c2.048 2.432 5.76 2.816 8.192 0.768 2.432-2.048 2.816-5.76 0.768-8.192l-34.432-40.96c-2.048-2.432-5.76-2.816-8.192-0.768-2.56 2.048-2.816 5.76-0.768 8.192zM730.88 716.032l40.96 34.432c2.432 2.048 6.144 1.792 8.192-0.768 2.048-2.432 1.792-6.144-0.768-8.192l-40.96-34.432c-2.432-2.048-6.144-1.792-8.192 0.768-1.92 2.432-1.664 6.144 0.768 8.192zM762.112 673.664l46.336 26.752c2.816 1.664 6.4 0.64 8.064-2.176 1.664-2.816 0.64-6.4-2.176-7.936L768 663.552c-2.816-1.664-6.4-0.64-8.064 2.176-1.536 2.688-0.64 6.272 2.176 7.936zM785.536 626.432l50.304 18.304c3.072 1.152 6.4-0.512 7.552-3.456 1.152-3.072-0.512-6.4-3.456-7.552l-50.304-18.304c-3.072-1.152-6.4 0.512-7.552 3.456-1.152 3.072 0.384 6.4 3.456 7.552zM800.256 575.872l52.736 9.344c3.2 0.512 6.272-1.536 6.784-4.736 0.512-3.2-1.536-6.272-4.736-6.784l-52.736-9.344c-3.2-0.512-6.272 1.536-6.784 4.736-0.512 3.2 1.536 6.272 4.736 6.784zM800.256 517.76c0 3.2 2.56 5.888 5.888 5.888h53.504c3.2 0 5.888-2.56 5.888-5.888 0-3.2-2.56-5.888-5.888-5.888h-53.504c-3.328 0-5.888 2.56-5.888 5.888zM802.688 471.04l52.736-9.344c3.2-0.512 5.376-3.584 4.736-6.784-0.512-3.2-3.584-5.376-6.784-4.736l-52.736 9.344c-3.2 0.512-5.376 3.584-4.736 6.784 0.512 3.2 3.584 5.248 6.784 4.736zM790.272 419.84l50.304-18.304c3.072-1.152 4.608-4.48 3.456-7.552-1.152-3.072-4.48-4.608-7.552-3.456l-50.304 18.304c-3.072 1.152-4.608 4.48-3.456 7.552 1.152 2.944 4.48 4.608 7.552 3.456zM769.152 371.584l46.336-26.752c2.816-1.664 3.712-5.248 2.176-7.936-1.664-2.816-5.248-3.712-8.064-2.176l-46.336 26.752c-2.816 1.664-3.712 5.248-2.176 8.064 1.664 2.688 5.248 3.712 8.064 2.048zM739.84 327.808l40.96-34.432c2.432-2.048 2.816-5.76 0.768-8.192-2.048-2.432-5.76-2.816-8.192-0.768l-40.96 34.432c-2.432 2.048-2.816 5.76-0.768 8.192 2.048 2.56 5.76 2.816 8.192 0.768zM703.488 289.664l34.432-40.96c2.048-2.432 1.792-6.144-0.768-8.192-2.432-2.048-6.144-1.792-8.192 0.768l-34.432 40.96c-2.048 2.432-1.792 6.144 0.768 8.192 2.432 2.048 6.144 1.792 8.192-0.768zM661.12 258.56l26.752-46.336c1.664-2.816 0.64-6.4-2.176-7.936-2.816-1.664-6.4-0.64-8.064 2.176l-26.752 46.336c-1.664 2.816-0.64 6.4 2.176 7.936 2.816 1.536 6.4 0.64 8.064-2.176zM613.888 235.136l18.304-50.304c1.152-3.072-0.512-6.4-3.456-7.552-3.072-1.152-6.4 0.512-7.552 3.456L602.88 231.168c-1.152 3.072 0.512 6.4 3.456 7.552 3.072 1.024 6.4-0.512 7.552-3.584zM556.544 225.152c3.2 0.512 6.272-1.536 6.784-4.736l9.344-52.736c0.512-3.2-1.536-6.272-4.736-6.784-3.2-0.512-6.272 1.536-6.784 4.736l-9.344 52.736c-0.512 3.2 1.536 6.144 4.736 6.784zM273.536 290.432c2.432 2.432 6.528 2.432 8.96 0 2.432-2.432 2.432-6.528 0-8.96l-21.12-21.12c-2.432-2.432-6.528-2.432-8.96 0-2.432 2.432-2.432 6.528 0 8.96l21.12 21.12zM237.824 333.824c2.944 2.048 6.912 1.28 8.832-1.536 2.048-2.944 1.28-6.912-1.536-8.832l-24.448-17.152c-2.944-2.048-6.912-1.28-8.832 1.536s-1.28 6.912 1.536 8.832l24.448 17.152zM183.04 370.176l27.136 12.672c3.2 1.536 7.04 0.128 8.448-3.072 1.536-3.2 0.128-7.04-3.072-8.448l-27.136-12.672c-3.2-1.536-7.04-0.128-8.448 3.072-1.536 3.2-0.128 7.04 3.072 8.448zM194.688 423.68l-28.928-7.68c-3.456-0.896-6.912 1.152-7.808 4.48-0.896 3.456 1.152 6.912 4.48 7.808l28.928 7.68c3.456 0.896 6.912-1.152 7.808-4.48 0.896-3.456-1.152-6.912-4.48-7.808zM183.168 478.72l-29.824-2.56c-3.456-0.256-6.656 2.304-6.912 5.76-0.256 3.456 2.304 6.656 5.76 6.912l29.824 2.56c3.456 0.256 6.656-2.304 6.912-5.76 0.384-3.456-2.176-6.528-5.76-6.912zM181.504 535.04l-29.824 2.56c-3.456 0.256-6.144 3.456-5.76 6.912 0.256 3.456 3.456 6.144 6.912 5.76l29.824-2.56c3.456-0.256 6.144-3.456 5.76-6.912-0.256-3.456-3.328-6.016-6.912-5.76zM191.36 590.72l-28.928 7.68c-3.456 0.896-5.376 4.352-4.48 7.808 0.896 3.456 4.352 5.376 7.808 4.48l28.928-7.68c3.456-0.896 5.376-4.352 4.48-7.808-0.896-3.328-4.352-5.376-7.808-4.48zM207.232 644.224l-27.136 12.672c-3.2 1.536-4.608 5.248-3.072 8.448 1.536 3.2 5.248 4.608 8.448 3.072l27.136-12.672c3.2-1.536 4.608-5.248 3.072-8.448-1.408-3.2-5.248-4.48-8.448-3.072zM233.984 693.888l-24.448 17.152c-2.944 2.048-3.584 6.016-1.536 8.832 2.048 2.944 6.016 3.584 8.832 1.536l24.448-17.152c2.944-2.048 3.584-6.016 1.536-8.832-2.048-2.944-6.016-3.584-8.832-1.536zM310.912 775.552L293.76 800c-2.048 2.944-1.28 6.912 1.536 8.832 2.944 2.048 6.912 1.28 8.832-1.536l17.152-24.448c2.048-2.944 1.28-6.912-1.536-8.832-2.816-2.048-6.912-1.408-8.832 1.536zM349.184 840.704c3.2 1.536 7.04 0.128 8.448-3.072l12.672-27.136c1.536-3.2 0.128-7.04-3.072-8.448-3.2-1.536-7.04-0.128-8.448 3.072l-12.672 27.136c-1.408 3.2-0.128 6.912 3.072 8.448zM407.808 862.72c3.456 0.896 6.912-1.152 7.808-4.48l7.68-28.928c0.896-3.456-1.152-6.912-4.48-7.808-3.456-0.896-6.912 1.152-7.808 4.48l-7.68 28.928c-0.896 3.328 1.152 6.912 4.48 7.808zM469.376 874.112c3.456 0.256 6.656-2.304 6.912-5.76l2.56-29.824c0.256-3.456-2.304-6.656-5.76-6.912-3.456-0.256-6.656 2.304-6.912 5.76l-2.56 29.824c-0.256 3.584 2.304 6.656 5.76 6.912zM522.496 839.168l2.56 29.824c0.256 3.456 3.456 6.144 6.912 5.76 3.456-0.256 6.144-3.456 5.76-6.912l-2.56-29.824c-0.256-3.456-3.456-6.144-6.912-5.76-3.456 0.256-6.016 3.328-5.76 6.912zM578.176 830.976l7.68 28.928c0.896 3.456 4.352 5.376 7.808 4.48 3.456-0.896 5.376-4.352 4.48-7.808l-7.68-28.928c-0.896-3.456-4.352-5.376-7.808-4.48-3.328 0.896-5.376 4.48-4.48 7.808zM631.68 813.312l12.672 27.136c1.536 3.2 5.248 4.608 8.448 3.072 3.2-1.536 4.608-5.248 3.072-8.448l-12.672-27.136c-1.536-3.2-5.248-4.608-8.448-3.072-3.2 1.536-4.48 5.248-3.072 8.448zM681.344 786.688l17.152 24.448c2.048 2.944 6.016 3.584 8.832 1.536 2.944-2.048 3.584-6.016 1.536-8.832l-17.152-24.448c-2.048-2.944-6.016-3.584-8.832-1.536-2.944 1.92-3.584 5.888-1.536 8.832zM725.504 751.744l21.12 21.12c2.432 2.432 6.528 2.432 8.96 0 2.432-2.432 2.432-6.528 0-8.96l-21.12-21.12c-2.432-2.432-6.528-2.432-8.96 0-2.432 2.432-2.432 6.528 0 8.96zM763.008 709.76l24.448 17.152c2.944 2.048 6.912 1.28 8.832-1.536 2.048-2.944 1.28-6.912-1.536-8.832l-24.448-17.152c-2.944-2.048-6.912-1.28-8.832 1.536-2.048 2.816-1.408 6.784 1.536 8.832zM792.576 661.888l27.136 12.672c3.2 1.536 7.04 0.128 8.448-3.072 1.536-3.2 0.128-7.04-3.072-8.448l-27.136-12.672c-3.2-1.536-7.04-0.128-8.448 3.072-1.536 3.2-0.128 6.912 3.072 8.448zM813.44 609.536l28.928 7.68c3.456 0.896 6.912-1.152 7.808-4.48 0.896-3.456-1.152-6.912-4.48-7.808l-28.928-7.68c-3.456-0.896-6.912 1.152-7.808 4.48-0.896 3.456 1.024 6.912 4.48 7.808zM824.832 554.368l29.824 2.56c3.456 0.256 6.656-2.304 6.912-5.76 0.256-3.456-2.304-6.656-5.76-6.912l-29.824-2.56c-3.456-0.256-6.656 2.304-6.912 5.76-0.256 3.584 2.304 6.656 5.76 6.912zM826.624 498.176l29.824-2.56c3.456-0.256 6.144-3.456 5.76-6.912-0.256-3.456-3.456-6.144-6.912-5.76l-29.824 2.56c-3.456 0.256-6.144 3.456-5.76 6.912 0.256 3.456 3.328 6.016 6.912 5.76zM818.432 442.368l28.928-7.68c3.456-0.896 5.376-4.352 4.48-7.808-0.896-3.456-4.352-5.376-7.808-4.48l-28.928 7.68c-3.456 0.896-5.376 4.352-4.48 7.808 0.896 3.456 4.48 5.376 7.808 4.48zM800.768 388.992l27.136-12.672c3.2-1.536 4.608-5.248 3.072-8.448-1.536-3.2-5.248-4.608-8.448-3.072l-27.136 12.672c-3.2 1.536-4.608 5.248-3.072 8.448 1.536 3.072 5.248 4.48 8.448 3.072zM774.144 339.328l24.448-17.152c2.944-2.048 3.584-6.016 1.536-8.832-2.048-2.944-6.016-3.584-8.832-1.536L766.848 328.96c-2.944 2.048-3.584 6.016-1.536 8.832 1.92 2.816 5.888 3.584 8.832 1.536zM697.216 257.664l17.152-24.448c2.048-2.944 1.28-6.912-1.536-8.832-2.944-2.048-6.912-1.28-8.832 1.536l-17.152 24.448c-2.048 2.944-1.28 6.912 1.536 8.832 2.816 2.048 6.784 1.408 8.832-1.536zM658.944 192.512c-3.2-1.536-7.04-0.128-8.448 3.072l-12.672 27.136c-1.536 3.2-0.128 7.04 3.072 8.448 3.2 1.536 7.04 0.128 8.448-3.072l12.672-27.136c1.408-3.2 0-7.04-3.072-8.448zM600.192 170.496c-3.456-0.896-6.912 1.152-7.808 4.48l-7.68 28.928c-0.896 3.456 1.152 6.912 4.48 7.808 3.456 0.896 6.912-1.152 7.808-4.48l7.68-28.928c1.024-3.328-1.024-6.912-4.48-7.808zM534.912 201.6c3.456 0.256 6.656-2.304 6.912-5.76l2.56-29.824c0.256-3.456-2.304-6.656-5.76-6.912-3.456-0.256-6.656 2.304-6.912 5.76l-2.56 29.824c-0.256 3.456 2.304 6.528 5.76 6.912zM476.032 158.464c-3.456 0.256-6.144 3.456-5.76 6.912l2.56 29.824c0.256 3.456 3.456 6.144 6.912 5.76 3.456-0.256 6.144-3.456 5.76-6.912l-2.56-29.824c-0.256-3.456-3.328-6.016-6.912-5.76zM422.144 173.312c-0.896-3.456-4.352-5.376-7.808-4.48-3.456 0.896-5.376 4.352-4.48 7.808l7.68 28.928c0.896 3.456 4.352 5.376 7.808 4.48 3.456-0.896 5.376-4.352 4.48-7.808l-7.68-28.928zM376.448 219.776l-12.672-27.136c-1.536-3.2-5.248-4.608-8.448-3.072-3.2 1.536-4.608 5.248-3.072 8.448L364.8 225.28c1.536 3.2 5.248 4.608 8.448 3.072 3.2-1.536 4.608-5.376 3.2-8.576zM316.416 253.824c2.048 2.944 6.016 3.584 8.832 1.536 2.944-2.048 3.584-6.016 1.536-8.832l-17.152-24.448c-2.048-2.944-6.016-3.584-8.832-1.536-2.944 2.048-3.584 6.016-1.536 8.832l17.152 24.448z&quot; fill=&quot;#FFFFFF&quot; p-id=&quot;19071&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">link</span>(<span class="params">args</span>) &#123;</span><br><span class="line">    args = args.<span class="title function_">join</span>(<span class="string">&#x27; &#x27;</span>).<span class="title function_">split</span>(<span class="string">&#x27;,&#x27;</span>);</span><br><span class="line">    <span class="comment">// 获取参数</span></span><br><span class="line">    <span class="keyword">let</span> url = (args[<span class="number">0</span>] || <span class="string">&#x27;&#x27;</span>).<span class="title function_">trim</span>(),</span><br><span class="line">        title = (args[<span class="number">1</span>] || <span class="string">&#x27;点击直达链接&#x27;</span>).<span class="title function_">trim</span>(),</span><br><span class="line">        favicon = (args[<span class="number">2</span>] ? <span class="string">`&lt;img src=&quot;<span class="subst">$&#123;args[<span class="number">2</span>]&#125;</span>&quot; class=&quot;no-lightbox&quot;&gt;`</span> : defaultIcon).<span class="title function_">trim</span>(),</span><br><span class="line">        desc = (args[<span class="number">3</span>] || <span class="string">&#x27;&#x27;</span>).<span class="title function_">trim</span>()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="string">`&lt;a href=&quot;<span class="subst">$&#123;url&#125;</span>&quot; <span class="subst">$&#123;url.includes(<span class="string">&#x27;http&#x27;</span>)?<span class="string">&#x27;target=&quot;_blank&quot;&#x27;</span>:<span class="string">&#x27;&#x27;</span>&#125;</span> title=&quot;<span class="subst">$&#123;title&#125;</span>&quot; referrerPolicy=&quot;no-referrer&quot; class=&quot;link_card&quot;&gt;&lt;div class=&quot;link_icon&quot;&gt;<span class="subst">$&#123;favicon&#125;</span>&lt;/div&gt;&lt;div class=&quot;link_content&quot;&gt;&lt;div class=&quot;link_title&quot;&gt;<span class="subst">$&#123;title&#125;</span>&lt;/div&gt;<span class="subst">$&#123;desc?<span class="string">`&lt;div class=&quot;link_desc&quot;&gt;<span class="subst">$&#123;desc&#125;</span>&lt;/div&gt;`</span>:<span class="string">&#x27;&#x27;</span>&#125;</span>&lt;/div&gt;&lt;/a&gt;`</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">hexo.<span class="property">extend</span>.<span class="property">tag</span>.<span class="title function_">register</span>(<span class="string">&#x27;link&#x27;</span>, link, &#123; <span class="attr">ends</span>: <span class="literal">false</span> &#125;)</span><br></pre></td></tr></table></figure>
+<h4 id="link-styl">link.styl</h4>
+<p>在 <code>\themes\butterfly\source\css\_tags</code> 文件夹下面新建 <code>link.styl</code> 并粘贴如下代码：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.link_card</span></span><br><span class="line">  <span class="attribute">display</span>: flex</span><br><span class="line">  margin: <span class="number">10px</span> <span class="number">0</span></span><br><span class="line">  color: <span class="built_in">var</span>(--font-color) <span class="meta">!important</span></span><br><span class="line">  text-decoration: none <span class="meta">!important</span></span><br><span class="line">  background: <span class="built_in">var</span>(--reward-pop)</span><br><span class="line">  border-radius: <span class="number">10px</span></span><br><span class="line">  padding: <span class="number">12px</span></span><br><span class="line">  &amp;:hover</span><br><span class="line">    background: <span class="number">#4976f5</span></span><br><span class="line">    color: white <span class="meta">!important</span></span><br><span class="line">  .link_icon,.link_content</span><br><span class="line">    height: <span class="number">4rem</span></span><br><span class="line">  .link_icon</span><br><span class="line">    img,svg</span><br><span class="line">      height: <span class="number">4rem</span></span><br><span class="line">      width: <span class="number">4rem</span></span><br><span class="line">  .link_content</span><br><span class="line">    margin-left: <span class="number">1rem</span></span><br><span class="line">    width: <span class="built_in">calc</span>(<span class="number">100%</span> - <span class="number">6rem</span>)</span><br><span class="line">    overflow: hidden</span><br><span class="line">    line-height: <span class="number">1.5</span></span><br><span class="line">    display: flex</span><br><span class="line">    flex-direction: column</span><br><span class="line">    justify-content: center</span><br><span class="line">    .link_title</span><br><span class="line">      font-weight: bold</span><br><span class="line">      font-size: <span class="number">1.2rem</span></span><br><span class="line">    .link_title,.link_desc</span><br><span class="line">      word-break: break-all</span><br><span class="line">      overflow:hidden</span><br><span class="line">      text-overflow: ellipsis</span><br><span class="line">    &amp;:<span class="built_in">not</span>(:<span class="built_in">has</span>(.link_desc)) .link_title</span><br><span class="line">      display:-webkit-box</span><br><span class="line">      -webkit-box-orient:vertical</span><br><span class="line">      -webkit-line-clamp:<span class="number">2</span></span><br><span class="line">    .link_desc</span><br><span class="line">      opacity: .<span class="number">6</span></span><br><span class="line">    .link_desc,&amp;:<span class="built_in">has</span>(.link_desc) .link_title</span><br><span class="line">      white-space: nowrap</span><br></pre></td></tr></table></figure>
+<h3 id="参数">参数</h3>
+<p>注意：<code>内容不能有英文逗号</code>，不然会出bug</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 使用html是为了高亮代码，不必在意 --&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 参数如下： --&gt;</span></span><br><span class="line">&#123;% link 链接,标题,图标,介绍 %&#125;</span><br><span class="line"><span class="comment">&lt;!-- 示例如下： --&gt;</span></span><br><span class="line">&#123;% link https://blog.leonus.cn/,Leonus,https://blog.leonus.cn/favicon.ico,进一寸有进一寸的欢喜。 %&#125;</span><br><span class="line"><span class="comment">&lt;!-- 你也可以什么都不填，将会全部使用默认值，如下： --&gt;</span></span><br><span class="line">&#123;% card %&#125;</span><br><span class="line"><span class="comment">&lt;!-- 你也可以省略部分内容，如下： --&gt;</span></span><br><span class="line">&#123;% link https://blog.leonus.cn/ %&#125;</span><br><span class="line"><span class="comment">&lt;!-- 位置在后面的参数不填的话可以直接省略，但是如果中间的不想填必须留空，如下： --&gt;</span></span><br><span class="line">&#123;% link https://blog.leonus.cn/,,,进一寸有进一寸的欢喜。 %&#125;</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>链接</td>
+<td>如果连接中包含http则新标签打开，否则本标签页打开</td>
+<td>无</td>
+</tr>
+<tr>
+<td>标题</td>
+<td>网站的标题</td>
+<td>点击直达链接</td>
+</tr>
+<tr>
+<td>图标</td>
+<td>网站favicon<code>链接</code></td>
+<td><svg t="1670307855063" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="19066" width="40px" height="40px"><path d="M504.064 516.608m-384.256 0a384.256 384.256 0 1 0 768.512 0 384.256 384.256 0 1 0-768.512 0Z" fill="#009CF5" p-id="19068"></path><path d="M746.112 270.464L472.448 485.12l63.104 63.104L750.08 274.56c2.304-2.688-1.28-6.144-3.968-4.096z" fill="#FF4C3A" p-id="19069"></path><path d="M262.016 762.752l273.664-214.528-63.104-63.104-214.656 273.536c-2.176 2.688 1.28 6.144 4.096 4.096z" fill="#FFFFFF" p-id="19070"></path><path d="M505.216 155.136c-3.2 0-5.888 2.56-5.888 5.888v53.504c0 3.2 2.56 5.888 5.888 5.888s5.888-2.56 5.888-5.888v-53.504c-0.128-3.2-2.688-5.888-5.888-5.888zM442.368 160.512c-3.2 0.512-5.376 3.584-4.736 6.784l9.344 52.736c0.512 3.2 3.584 5.376 6.784 4.736 3.2-0.512 5.376-3.584 4.736-6.784l-9.344-52.736c-0.512-3.2-3.584-5.376-6.784-4.736zM396.288 234.368c1.152 3.072 4.48 4.608 7.552 3.456 3.072-1.152 4.608-4.48 3.456-7.552l-18.304-50.304c-1.152-3.072-4.48-4.608-7.552-3.456-3.072 1.152-4.608 4.48-3.456 7.552l18.304 50.304zM348.928 257.408c1.664 2.816 5.248 3.712 7.936 2.176s3.712-5.248 2.176-7.936l-26.752-46.336c-1.664-2.816-5.248-3.712-7.936-2.176-2.816 1.664-3.712 5.248-2.176 7.936l26.752 46.336zM306.304 288.256c2.048 2.432 5.76 2.816 8.192 0.768 2.432-2.048 2.816-5.76 0.768-8.192l-34.432-40.96c-2.048-2.432-5.76-2.816-8.192-0.768-2.432 2.048-2.816 5.76-0.768 8.192l34.432 40.96zM269.696 326.144c2.432 2.048 6.144 1.792 8.192-0.768 2.048-2.432 1.792-6.144-0.768-8.192l-40.96-34.432c-2.432-2.048-6.144-1.792-8.192 0.768-2.048 2.432-1.792 6.144 0.768 8.192l40.96 34.432zM193.792 342.912l46.336 26.752c2.816 1.664 6.4 0.64 7.936-2.176 1.664-2.816 0.64-6.4-2.176-8.064L199.552 332.8c-2.816-1.664-6.4-0.64-7.936 2.176-1.664 2.688-0.64 6.272 2.176 7.936zM168.32 399.488l50.304 18.304c3.072 1.152 6.4-0.512 7.552-3.456 1.152-3.072-0.512-6.4-3.456-7.552l-50.304-18.304c-3.072-1.152-6.4 0.512-7.552 3.456-1.152 3.072 0.384 6.4 3.456 7.552zM207.872 457.344l-52.736-9.344c-3.2-0.512-6.272 1.536-6.784 4.736-0.512 3.2 1.536 6.272 4.736 6.784l52.736 9.344c3.2 0.512 6.272-1.536 6.784-4.736 0.512-3.2-1.536-6.272-4.736-6.784zM201.984 509.568H148.48c-3.2 0-5.888 2.56-5.888 5.888 0 3.2 2.56 5.888 5.888 5.888h53.504c3.2 0 5.888-2.56 5.888-5.888 0-3.2-2.56-5.888-5.888-5.888zM205.44 562.176l-52.736 9.344c-3.2 0.512-5.376 3.584-4.736 6.784 0.512 3.2 3.584 5.376 6.784 4.736l52.736-9.344c3.2-0.512 5.376-3.584 4.736-6.784s-3.584-5.248-6.784-4.736zM217.856 613.376l-50.304 18.304c-3.072 1.152-4.608 4.48-3.456 7.552 1.152 3.072 4.48 4.608 7.552 3.456l50.304-18.304c3.072-1.152 4.608-4.48 3.456-7.552-1.152-3.072-4.48-4.608-7.552-3.456zM238.976 661.504l-46.336 26.752c-2.816 1.664-3.712 5.248-2.176 8.064 1.664 2.816 5.248 3.712 8.064 2.176l46.336-26.752c2.816-1.664 3.712-5.248 2.176-8.064-1.664-2.816-5.248-3.712-8.064-2.176zM268.16 705.408l-40.96 34.432c-2.432 2.048-2.816 5.76-0.768 8.192 2.048 2.432 5.76 2.816 8.192 0.768l40.96-34.432c2.432-2.048 2.816-5.76 0.768-8.192-1.92-2.56-5.632-2.816-8.192-0.768zM304.512 743.424l-34.432 40.96c-2.048 2.432-1.792 6.144 0.768 8.192 2.432 2.048 6.144 1.792 8.192-0.768l34.432-40.96c2.048-2.432 1.792-6.144-0.768-8.192-2.304-1.92-6.016-1.664-8.192 0.768zM347.008 774.656l-26.752 46.336c-1.664 2.816-0.64 6.4 2.176 7.936 2.816 1.664 6.4 0.64 8.064-2.176l26.752-46.336c1.664-2.816 0.64-6.4-2.176-7.936-2.816-1.536-6.4-0.64-8.064 2.176zM394.24 798.08l-18.304 50.304c-1.152 3.072 0.512 6.4 3.456 7.552 3.072 1.152 6.4-0.512 7.552-3.456l18.304-50.304c1.152-3.072-0.512-6.4-3.456-7.552-3.072-1.152-6.528 0.384-7.552 3.456zM440.192 872.32c3.2 0.512 6.272-1.536 6.784-4.736l9.344-52.736c0.512-3.2-1.536-6.272-4.736-6.784-3.2-0.512-6.272 1.536-6.784 4.736l-9.344 52.736c-0.64 3.2 1.536 6.272 4.736 6.784zM502.912 878.08c3.2 0 5.888-2.56 5.888-5.888v-53.504c0-3.2-2.56-5.888-5.888-5.888-3.2 0-5.888 2.56-5.888 5.888v53.504c0 3.2 2.688 5.888 5.888 5.888zM549.632 815.232l9.344 52.736c0.512 3.2 3.584 5.376 6.784 4.736 3.2-0.512 5.376-3.584 4.736-6.784l-9.344-52.736c-0.512-3.2-3.584-5.376-6.784-4.736-3.2 0.512-5.248 3.584-4.736 6.784zM600.832 802.816l18.304 50.304c1.152 3.072 4.48 4.608 7.552 3.456 3.072-1.152 4.608-4.48 3.456-7.552L611.84 798.72c-1.152-3.072-4.48-4.608-7.552-3.456-3.072 1.152-4.608 4.48-3.456 7.552zM649.088 781.696l26.752 46.336c1.664 2.816 5.248 3.712 8.064 2.176 2.816-1.664 3.712-5.248 2.176-8.064l-26.88-46.336c-1.664-2.816-5.248-3.712-8.064-2.176-2.816 1.664-3.712 5.248-2.048 8.064zM692.864 752.384l34.432 40.96c2.048 2.432 5.76 2.816 8.192 0.768 2.432-2.048 2.816-5.76 0.768-8.192l-34.432-40.96c-2.048-2.432-5.76-2.816-8.192-0.768-2.56 2.048-2.816 5.76-0.768 8.192zM730.88 716.032l40.96 34.432c2.432 2.048 6.144 1.792 8.192-0.768 2.048-2.432 1.792-6.144-0.768-8.192l-40.96-34.432c-2.432-2.048-6.144-1.792-8.192 0.768-1.92 2.432-1.664 6.144 0.768 8.192zM762.112 673.664l46.336 26.752c2.816 1.664 6.4 0.64 8.064-2.176 1.664-2.816 0.64-6.4-2.176-7.936L768 663.552c-2.816-1.664-6.4-0.64-8.064 2.176-1.536 2.688-0.64 6.272 2.176 7.936zM785.536 626.432l50.304 18.304c3.072 1.152 6.4-0.512 7.552-3.456 1.152-3.072-0.512-6.4-3.456-7.552l-50.304-18.304c-3.072-1.152-6.4 0.512-7.552 3.456-1.152 3.072 0.384 6.4 3.456 7.552zM800.256 575.872l52.736 9.344c3.2 0.512 6.272-1.536 6.784-4.736 0.512-3.2-1.536-6.272-4.736-6.784l-52.736-9.344c-3.2-0.512-6.272 1.536-6.784 4.736-0.512 3.2 1.536 6.272 4.736 6.784zM800.256 517.76c0 3.2 2.56 5.888 5.888 5.888h53.504c3.2 0 5.888-2.56 5.888-5.888 0-3.2-2.56-5.888-5.888-5.888h-53.504c-3.328 0-5.888 2.56-5.888 5.888zM802.688 471.04l52.736-9.344c3.2-0.512 5.376-3.584 4.736-6.784-0.512-3.2-3.584-5.376-6.784-4.736l-52.736 9.344c-3.2 0.512-5.376 3.584-4.736 6.784 0.512 3.2 3.584 5.248 6.784 4.736zM790.272 419.84l50.304-18.304c3.072-1.152 4.608-4.48 3.456-7.552-1.152-3.072-4.48-4.608-7.552-3.456l-50.304 18.304c-3.072 1.152-4.608 4.48-3.456 7.552 1.152 2.944 4.48 4.608 7.552 3.456zM769.152 371.584l46.336-26.752c2.816-1.664 3.712-5.248 2.176-7.936-1.664-2.816-5.248-3.712-8.064-2.176l-46.336 26.752c-2.816 1.664-3.712 5.248-2.176 8.064 1.664 2.688 5.248 3.712 8.064 2.048zM739.84 327.808l40.96-34.432c2.432-2.048 2.816-5.76 0.768-8.192-2.048-2.432-5.76-2.816-8.192-0.768l-40.96 34.432c-2.432 2.048-2.816 5.76-0.768 8.192 2.048 2.56 5.76 2.816 8.192 0.768zM703.488 289.664l34.432-40.96c2.048-2.432 1.792-6.144-0.768-8.192-2.432-2.048-6.144-1.792-8.192 0.768l-34.432 40.96c-2.048 2.432-1.792 6.144 0.768 8.192 2.432 2.048 6.144 1.792 8.192-0.768zM661.12 258.56l26.752-46.336c1.664-2.816 0.64-6.4-2.176-7.936-2.816-1.664-6.4-0.64-8.064 2.176l-26.752 46.336c-1.664 2.816-0.64 6.4 2.176 7.936 2.816 1.536 6.4 0.64 8.064-2.176zM613.888 235.136l18.304-50.304c1.152-3.072-0.512-6.4-3.456-7.552-3.072-1.152-6.4 0.512-7.552 3.456L602.88 231.168c-1.152 3.072 0.512 6.4 3.456 7.552 3.072 1.024 6.4-0.512 7.552-3.584zM556.544 225.152c3.2 0.512 6.272-1.536 6.784-4.736l9.344-52.736c0.512-3.2-1.536-6.272-4.736-6.784-3.2-0.512-6.272 1.536-6.784 4.736l-9.344 52.736c-0.512 3.2 1.536 6.144 4.736 6.784zM273.536 290.432c2.432 2.432 6.528 2.432 8.96 0 2.432-2.432 2.432-6.528 0-8.96l-21.12-21.12c-2.432-2.432-6.528-2.432-8.96 0-2.432 2.432-2.432 6.528 0 8.96l21.12 21.12zM237.824 333.824c2.944 2.048 6.912 1.28 8.832-1.536 2.048-2.944 1.28-6.912-1.536-8.832l-24.448-17.152c-2.944-2.048-6.912-1.28-8.832 1.536s-1.28 6.912 1.536 8.832l24.448 17.152zM183.04 370.176l27.136 12.672c3.2 1.536 7.04 0.128 8.448-3.072 1.536-3.2 0.128-7.04-3.072-8.448l-27.136-12.672c-3.2-1.536-7.04-0.128-8.448 3.072-1.536 3.2-0.128 7.04 3.072 8.448zM194.688 423.68l-28.928-7.68c-3.456-0.896-6.912 1.152-7.808 4.48-0.896 3.456 1.152 6.912 4.48 7.808l28.928 7.68c3.456 0.896 6.912-1.152 7.808-4.48 0.896-3.456-1.152-6.912-4.48-7.808zM183.168 478.72l-29.824-2.56c-3.456-0.256-6.656 2.304-6.912 5.76-0.256 3.456 2.304 6.656 5.76 6.912l29.824 2.56c3.456 0.256 6.656-2.304 6.912-5.76 0.384-3.456-2.176-6.528-5.76-6.912zM181.504 535.04l-29.824 2.56c-3.456 0.256-6.144 3.456-5.76 6.912 0.256 3.456 3.456 6.144 6.912 5.76l29.824-2.56c3.456-0.256 6.144-3.456 5.76-6.912-0.256-3.456-3.328-6.016-6.912-5.76zM191.36 590.72l-28.928 7.68c-3.456 0.896-5.376 4.352-4.48 7.808 0.896 3.456 4.352 5.376 7.808 4.48l28.928-7.68c3.456-0.896 5.376-4.352 4.48-7.808-0.896-3.328-4.352-5.376-7.808-4.48zM207.232 644.224l-27.136 12.672c-3.2 1.536-4.608 5.248-3.072 8.448 1.536 3.2 5.248 4.608 8.448 3.072l27.136-12.672c3.2-1.536 4.608-5.248 3.072-8.448-1.408-3.2-5.248-4.48-8.448-3.072zM233.984 693.888l-24.448 17.152c-2.944 2.048-3.584 6.016-1.536 8.832 2.048 2.944 6.016 3.584 8.832 1.536l24.448-17.152c2.944-2.048 3.584-6.016 1.536-8.832-2.048-2.944-6.016-3.584-8.832-1.536zM310.912 775.552L293.76 800c-2.048 2.944-1.28 6.912 1.536 8.832 2.944 2.048 6.912 1.28 8.832-1.536l17.152-24.448c2.048-2.944 1.28-6.912-1.536-8.832-2.816-2.048-6.912-1.408-8.832 1.536zM349.184 840.704c3.2 1.536 7.04 0.128 8.448-3.072l12.672-27.136c1.536-3.2 0.128-7.04-3.072-8.448-3.2-1.536-7.04-0.128-8.448 3.072l-12.672 27.136c-1.408 3.2-0.128 6.912 3.072 8.448zM407.808 862.72c3.456 0.896 6.912-1.152 7.808-4.48l7.68-28.928c0.896-3.456-1.152-6.912-4.48-7.808-3.456-0.896-6.912 1.152-7.808 4.48l-7.68 28.928c-0.896 3.328 1.152 6.912 4.48 7.808zM469.376 874.112c3.456 0.256 6.656-2.304 6.912-5.76l2.56-29.824c0.256-3.456-2.304-6.656-5.76-6.912-3.456-0.256-6.656 2.304-6.912 5.76l-2.56 29.824c-0.256 3.584 2.304 6.656 5.76 6.912zM522.496 839.168l2.56 29.824c0.256 3.456 3.456 6.144 6.912 5.76 3.456-0.256 6.144-3.456 5.76-6.912l-2.56-29.824c-0.256-3.456-3.456-6.144-6.912-5.76-3.456 0.256-6.016 3.328-5.76 6.912zM578.176 830.976l7.68 28.928c0.896 3.456 4.352 5.376 7.808 4.48 3.456-0.896 5.376-4.352 4.48-7.808l-7.68-28.928c-0.896-3.456-4.352-5.376-7.808-4.48-3.328 0.896-5.376 4.48-4.48 7.808zM631.68 813.312l12.672 27.136c1.536 3.2 5.248 4.608 8.448 3.072 3.2-1.536 4.608-5.248 3.072-8.448l-12.672-27.136c-1.536-3.2-5.248-4.608-8.448-3.072-3.2 1.536-4.48 5.248-3.072 8.448zM681.344 786.688l17.152 24.448c2.048 2.944 6.016 3.584 8.832 1.536 2.944-2.048 3.584-6.016 1.536-8.832l-17.152-24.448c-2.048-2.944-6.016-3.584-8.832-1.536-2.944 1.92-3.584 5.888-1.536 8.832zM725.504 751.744l21.12 21.12c2.432 2.432 6.528 2.432 8.96 0 2.432-2.432 2.432-6.528 0-8.96l-21.12-21.12c-2.432-2.432-6.528-2.432-8.96 0-2.432 2.432-2.432 6.528 0 8.96zM763.008 709.76l24.448 17.152c2.944 2.048 6.912 1.28 8.832-1.536 2.048-2.944 1.28-6.912-1.536-8.832l-24.448-17.152c-2.944-2.048-6.912-1.28-8.832 1.536-2.048 2.816-1.408 6.784 1.536 8.832zM792.576 661.888l27.136 12.672c3.2 1.536 7.04 0.128 8.448-3.072 1.536-3.2 0.128-7.04-3.072-8.448l-27.136-12.672c-3.2-1.536-7.04-0.128-8.448 3.072-1.536 3.2-0.128 6.912 3.072 8.448zM813.44 609.536l28.928 7.68c3.456 0.896 6.912-1.152 7.808-4.48 0.896-3.456-1.152-6.912-4.48-7.808l-28.928-7.68c-3.456-0.896-6.912 1.152-7.808 4.48-0.896 3.456 1.024 6.912 4.48 7.808zM824.832 554.368l29.824 2.56c3.456 0.256 6.656-2.304 6.912-5.76 0.256-3.456-2.304-6.656-5.76-6.912l-29.824-2.56c-3.456-0.256-6.656 2.304-6.912 5.76-0.256 3.584 2.304 6.656 5.76 6.912zM826.624 498.176l29.824-2.56c3.456-0.256 6.144-3.456 5.76-6.912-0.256-3.456-3.456-6.144-6.912-5.76l-29.824 2.56c-3.456 0.256-6.144 3.456-5.76 6.912 0.256 3.456 3.328 6.016 6.912 5.76zM818.432 442.368l28.928-7.68c3.456-0.896 5.376-4.352 4.48-7.808-0.896-3.456-4.352-5.376-7.808-4.48l-28.928 7.68c-3.456 0.896-5.376 4.352-4.48 7.808 0.896 3.456 4.48 5.376 7.808 4.48zM800.768 388.992l27.136-12.672c3.2-1.536 4.608-5.248 3.072-8.448-1.536-3.2-5.248-4.608-8.448-3.072l-27.136 12.672c-3.2 1.536-4.608 5.248-3.072 8.448 1.536 3.072 5.248 4.48 8.448 3.072zM774.144 339.328l24.448-17.152c2.944-2.048 3.584-6.016 1.536-8.832-2.048-2.944-6.016-3.584-8.832-1.536L766.848 328.96c-2.944 2.048-3.584 6.016-1.536 8.832 1.92 2.816 5.888 3.584 8.832 1.536zM697.216 257.664l17.152-24.448c2.048-2.944 1.28-6.912-1.536-8.832-2.944-2.048-6.912-1.28-8.832 1.536l-17.152 24.448c-2.048 2.944-1.28 6.912 1.536 8.832 2.816 2.048 6.784 1.408 8.832-1.536zM658.944 192.512c-3.2-1.536-7.04-0.128-8.448 3.072l-12.672 27.136c-1.536 3.2-0.128 7.04 3.072 8.448 3.2 1.536 7.04 0.128 8.448-3.072l12.672-27.136c1.408-3.2 0-7.04-3.072-8.448zM600.192 170.496c-3.456-0.896-6.912 1.152-7.808 4.48l-7.68 28.928c-0.896 3.456 1.152 6.912 4.48 7.808 3.456 0.896 6.912-1.152 7.808-4.48l7.68-28.928c1.024-3.328-1.024-6.912-4.48-7.808zM534.912 201.6c3.456 0.256 6.656-2.304 6.912-5.76l2.56-29.824c0.256-3.456-2.304-6.656-5.76-6.912-3.456-0.256-6.656 2.304-6.912 5.76l-2.56 29.824c-0.256 3.456 2.304 6.528 5.76 6.912zM476.032 158.464c-3.456 0.256-6.144 3.456-5.76 6.912l2.56 29.824c0.256 3.456 3.456 6.144 6.912 5.76 3.456-0.256 6.144-3.456 5.76-6.912l-2.56-29.824c-0.256-3.456-3.328-6.016-6.912-5.76zM422.144 173.312c-0.896-3.456-4.352-5.376-7.808-4.48-3.456 0.896-5.376 4.352-4.48 7.808l7.68 28.928c0.896 3.456 4.352 5.376 7.808 4.48 3.456-0.896 5.376-4.352 4.48-7.808l-7.68-28.928zM376.448 219.776l-12.672-27.136c-1.536-3.2-5.248-4.608-8.448-3.072-3.2 1.536-4.608 5.248-3.072 8.448L364.8 225.28c1.536 3.2 5.248 4.608 8.448 3.072 3.2-1.536 4.608-5.376 3.2-8.576zM316.416 253.824c2.048 2.944 6.016 3.584 8.832 1.536 2.944-2.048 3.584-6.016 1.536-8.832l-17.152-24.448c-2.048-2.944-6.016-3.584-8.832-1.536-2.944 2.048-3.584 6.016-1.536 8.832l17.152 24.448z" fill="#FFFFFF" p-id="19071"></path></svg></td>
+</tr>
+<tr>
+<td>介绍</td>
+<td>网站的description</td>
+<td>无</td>
+</tr>
+</tbody>
+</table>
+</div></details></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://aizhiqian.github.io">AiGuoHou</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://aizhiqian.github.io/posts/672b4a87/">https://aizhiqian.github.io/posts/672b4a87/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow noreferrer" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://aizhiqian.github.io" target="_blank">XiaoYang の Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%BE%8E%E5%8C%96/">美化</a><a class="post-meta__tags" href="/tags/hexo/">hexo</a></div><div class="post_share"><div class="social-share" data-image="https://file.crazywong.com/gh/aizhiqian/hexo_resources@main/cover_and_img/8.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://file.crazywong.com/npm/butterfly-extsrc@latest/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://file.crazywong.com/npm/butterfly-extsrc@latest/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src= "/img/loading.gif" data-lazy-src="/img/wechat.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src= "/img/loading.gif" data-lazy-src="/img/alipay.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/ecf98aaa/" title="文章封面支持添加随机图 API"><img class="cover" src= "/img/loading.gif" data-lazy-src="https://api.aiguohou5.repl.co/anime?6147" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">文章封面支持添加随机图 API</div></div></a></div><div class="next-post pull-right"><a href="/posts/487ef9ca/" title="添加个人信息卡片渐变色"><img class="cover" src= "/img/loading.gif" data-lazy-src="https://file.crazywong.com/gh/aizhiqian/hexo_resources@main/cover_and_img/4.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">添加个人信息卡片渐变色</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/posts/ca2ce3bc/" title="Hexo自定义字体"><img class="cover" src= "/img/loading.gif" data-lazy-src="https://file.crazywong.com/gh/aizhiqian/hexo_resources@main/cover_and_img/2.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-07-04</div><div class="title">Hexo自定义字体</div></div></a></div><div><a href="/posts/75895afb/" title="博客一图流"><img class="cover" src= "/img/loading.gif" data-lazy-src="https://file.crazywong.com/gh/aizhiqian/hexo_resources@main/cover_and_img/7.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-07-04</div><div class="title">博客一图流</div></div></a></div><div><a href="/posts/ecf98aaa/" title="文章封面支持添加随机图 API"><img class="cover" src= "/img/loading.gif" data-lazy-src="https://api.aiguohou5.repl.co/anime?6147" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-07-05</div><div class="title">文章封面支持添加随机图 API</div></div></a></div><div><a href="/posts/be246de6/" title="文章置顶滚动栏"><img class="cover" src= "/img/loading.gif" data-lazy-src="https://file.crazywong.com/gh/aizhiqian/hexo_resources@main/cover_and_img/3.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-07-04</div><div class="title">文章置顶滚动栏</div></div></a></div><div><a href="/posts/487ef9ca/" title="添加个人信息卡片渐变色"><img class="cover" src= "/img/loading.gif" data-lazy-src="https://file.crazywong.com/gh/aizhiqian/hexo_resources@main/cover_and_img/4.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-07-04</div><div class="title">添加个人信息卡片渐变色</div></div></a></div><div><a href="/posts/2e57d1d6/" title="Hexo博客添加自定义css和js文件"><img class="cover" src= "/img/loading.gif" data-lazy-src="https://file.crazywong.com/gh/aizhiqian/image@main/202307022302011.webp" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-07-02</div><div class="title">Hexo博客添加自定义css和js文件</div></div></a></div></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "/img/loading.gif" data-lazy-src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">AiGuoHou</div><div class="author-info__description">记录生活</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">22</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">15</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><a id="card-info-btn" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/aizhiqian"><i class="fa-brands fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/aizhiqian" rel="external nofollow noreferrer" target="_blank" title="Github"><i class="fa-brands fa-github fa-beat-fade" style="color: #24292e;"></i></a><a class="social-icon" href="https://www.youtube.com/@aiguohou" rel="external nofollow noreferrer" target="_blank" title="YouTube"><i class="fa-brands fa-youtube fa-bounce" style="color: #ff0000;"></i></a><a class="social-icon" href="https://space.bilibili.com/696732872" rel="external nofollow noreferrer" target="_blank" title="Bilibili"><i class="fa-brands fa-bilibili fa-fade" style="color: #ff5ca1;"></i></a><a class="social-icon" href="https://pan.aiguohou1.repl.co" rel="external nofollow noreferrer" target="_blank" title="AList"><i class="fa-solid fa-cloud-arrow-down fa-flip" style="color: #26a9ea;"></i></a><a class="social-icon" href="https://aizhiqian.github.io/atom.xml" target="_blank" title="RSS"><i class="fa-solid fa-rss fa-shake" style="color: #000000;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">Welcome to my Blog! 本站共有三个站点同步更新 <div class="social-button"> <a class="button--animated" href="https://blog11.eu.org/" rel="external nofollow noreferrer" target="_blank">Vercel Pages 👍</a> <a class="button--animated" href="https://aizhiqian.gitee.io/" rel="external nofollow noreferrer" target="_blank">Gitee Pages 👍</a> <a class="button--animated" href="https://aizhiqian.github.io/" target="_blank">GitHub Pages 👍</a> </div></div></div><div class="card-widget" id="card-poem"><div id="poem_sentence"></div><div id="poem_info"><div id="poem_dynasty"></div><div id="poem_author"></div></div></div><script src="https://cdn.jsdelivr.net/npm/js-heo@1.0.11/poem/jinrishici.js" charset="utf-8"></script><script type="text/javascript">jinrishici.load(function(result) {
+var sentence = document.querySelector("#poem_sentence")
+var author = document.querySelector("#poem_author")
+var dynasty = document.querySelector("#poem_dynasty")
+
+var sentenceText = result.data.content
+sentenceText = sentenceText.substr(0, sentenceText.length - 1);
+sentence.innerHTML = sentenceText
+dynasty.innerHTML = result.data.origin.dynasty
+author.innerHTML = result.data.origin.author + '《' + result.data.origin.title + '》'
+});</script><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%B4%E8%BE%BE%E5%BA%95%E9%83%A8%E6%8C%89%E9%92%AE"><span class="toc-number">1.</span> <span class="toc-text">直达底部按钮</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BD%91%E7%AB%99%E6%81%B6%E6%90%9E%E6%A0%87%E9%A2%98"><span class="toc-number">2.</span> <span class="toc-text">网站恶搞标题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9A%8F%E6%9C%BA%E5%A3%81%E7%BA%B8API%E6%B1%87%E6%80%BB"><span class="toc-number">3.</span> <span class="toc-text">随机壁纸API汇总</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%AD%E9%9B%80%E5%90%8C%E6%AC%BE%E9%93%BE%E6%8E%A5%E5%8D%A1%E7%89%87"><span class="toc-number">4.</span> <span class="toc-text">语雀同款链接卡片</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%BA%90%E7%A0%81"><span class="toc-number">4.1.</span> <span class="toc-text">源码</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#link-js"><span class="toc-number">4.1.1.</span> <span class="toc-text">link.js</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#link-styl"><span class="toc-number">4.1.2.</span> <span class="toc-text">link.styl</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%82%E6%95%B0"><span class="toc-number">4.2.</span> <span class="toc-text">参数</span></a></li></ol></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2023 By AiGuoHou</div><div class="footer_custom_text">Hi, welcome to my <a href="https://aizhiqian.github.io/">blog</a>!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button><button id="go-down" type="button" title="直达底部" onclick="btf.scrollToDest(document.body.scrollHeight, 500)"><i class="fas fa-arrow-down"></i></button></div></div><div><script src="https://file.crazywong.com/npm/hexo-theme-butterfly@latest/source/js/utils.min.js"></script><script src="https://file.crazywong.com/npm/hexo-theme-butterfly@latest/source/js/main.min.js"></script><script src="https://file.crazywong.com/npm/hexo-theme-butterfly@latest/source/js/tw_cn.min.js"></script><script src="https://file.crazywong.com/npm/@fancyapps/ui@latest/dist/fancybox/fancybox.umd.min.js"></script><script src="https://file.crazywong.com/npm/instant.page@latest/instantpage.min.js" type="module"></script><script src="https://file.crazywong.com/npm/vanilla-lazyload@latest/dist/lazyload.iife.min.js"></script><script src="https://file.crazywong.com/npm/node-snackbar@latest/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://file.crazywong.com/npm/pangu@latest/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><div class="js-pjax"><script>(() => {
+  const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+  if ($mermaid.length === 0) return
+  const runMermaid = () => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+    Array.from($mermaid).forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
+      const mermaidID = 'mermaid-' + index
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+
+      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+
+      const renderV10 = () => {
+        renderFn.then(({svg}) => {
+          mermaidSrc.insertAdjacentHTML('afterend', svg)
+        })
+      }
+
+      const renderV9 = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+      }
+
+      typeof renderFn === 'string' ? renderV9(renderFn) : renderV10()
+    })
+  }
+
+  const loadMermaid = () => {
+    window.loadMermaid ? runMermaid() : getScript('https://file.crazywong.com/npm/mermaid@latest/dist/mermaid.min.js').then(runMermaid)
+  }
+
+  btf.addModeChange('mermaid', runMermaid)
+
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script><script>(()=>{
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://twikoo.aiguohou.eu.org/',
+      region: '',
+      onCommentLoaded: function () {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      }
+    }, null))
+  }
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'https://twikoo.aiguohou.eu.org/',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(function (res) {
+      countELement.textContent = res[0].count
+    }).catch(function (err) {
+      console.error(err);
+    });
+  }
+
+  const runFn = () => {
+    init()
+    GLOBAL_CONFIG_SITE.isPost && getCount()
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') {
+      setTimeout(runFn,0)
+      return
+    } 
+    getScript('https://file.crazywong.com/npm/twikoo@latest/dist/twikoo.all.min.js').then(runFn)
+  }
+
+  if ('Twikoo' === 'Twikoo' || !false) {
+    if (false) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo()
+  } else {
+    window.loadOtherComment = () => {
+      loadTwikoo()
+    }
+  }
+})()</script></div><script defer src="/_vercel/insights/script.js"></script><script async src="/js/title.js"></script><canvas class="fireworks" mobile="false"></canvas><script src="https://file.crazywong.com/npm/butterfly-extsrc@latest/dist/fireworks.min.js"></script><script src="https://file.crazywong.com/npm/butterfly-extsrc@latest/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script src="https://file.crazywong.com/npm/pjax@latest/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: true,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', 'G-HEW1SJ10QH', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><div id="algolia-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="search-wrap"><div id="algolia-search-input"></div><hr/><div id="algolia-search-results"><div id="algolia-hits"></div><div id="algolia-pagination"></div><div id="algolia-info"><div class="algolia-stats"></div><div class="algolia-poweredBy"></div></div></div></div></div><div id="search-mask"></div><script src="https://file.crazywong.com/npm/algoliasearch@latest/dist/algoliasearch-lite.umd.min.js"></script><script src="https://file.crazywong.com/npm/instantsearch.js@latest/dist/instantsearch.production.min.js"></script><script src="https://file.crazywong.com/npm/hexo-theme-butterfly@latest/source/js/search/algolia.min.js"></script></div></div></body></html>
