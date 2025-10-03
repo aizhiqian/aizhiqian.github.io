@@ -1,0 +1,876 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>【Termux】高级终端安装使用配置教程 3 | 向日葵🌻小站</title><meta name="keywords" content="termux,Android"><meta name="author" content="AiGuoHou"><meta name="copyright" content="AiGuoHou"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="【Termux】高级终端安装使用配置教程 3"><meta name="application-name" content="【Termux】高级终端安装使用配置教程 3"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="article"><meta property="og:title" content="【Termux】高级终端安装使用配置教程 3"><meta property="og:url" content="https://aizhiqian.github.io/posts/46db2752/index.html"><meta property="og:site_name" content="向日葵🌻小站"><meta property="og:description" content="开发环境"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://www.aini.cn.eu.org/meinv?_r_=bd568368-37a0-0f19-5482-b3264f571afe"><meta property="article:author" content="AiGuoHou"><meta property="article:tag" content="blog,博客,知心的博客,Blog,知心,hexo,HEXO"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://www.aini.cn.eu.org/meinv?_r_=bd568368-37a0-0f19-5482-b3264f571afe"><meta name="description" content="开发环境"><link rel="shortcut icon" href="/img/favicon.webp"><link rel="canonical" href="https://aizhiqian.github.io/posts/46db2752/"><link rel="preconnect" href="https://cdn.cbd.int"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin=""/><meta name="google-site-verification" content="fqk9sjcs_vmT9OoAfke2PBIDiHzY5q0-EG_QZ_TQCZ8"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@1.0.17/lib/assets/font-awesome-animation.min.css"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.5.2/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/node-snackbar/0.1.16/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/fancyapps-ui/5.0.36/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-M8DMV2RD7M"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-M8DMV2RD7M');
+</script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: {"enable":true,"title":"与数百名博主无限进步","addFriendPlaceholder":"昵称（请勿包含博客等字样）：\n网站地址（要求博客地址，请勿提交个人主页）：\n头像图片url（请提供尽可能清晰的图片，我会上传到我自己的图床）：\n描述：\n站点截图（可选）：\n"},
+  peoplecanvas: undefined,
+  postHeadAiDescription: undefined,
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)欢迎肥来！"},
+  LA51: {"enable":true,"ck":"3GhQxjQxTts56Kk4","LingQueMonitorID":"3GhRKmii7GGLsKdg"},
+  greetingBox: {"enable":true,"default":"晚上好👋","list":[{"greeting":"晚安😴","startTime":0,"endTime":5},{"greeting":"早上好鸭👋, 祝你一天好心情！","startTime":6,"endTime":9},{"greeting":"上午好👋, 状态很好，鼓励一下～","startTime":10,"endTime":10},{"greeting":"11点多啦, 在坚持一下就吃饭啦～","startTime":11,"endTime":11},{"greeting":"午安👋, 宝贝","startTime":12,"endTime":14},{"greeting":"🌈充实的一天辛苦啦！","startTime":14,"endTime":18},{"greeting":"19点喽, 奖励一顿丰盛的大餐吧🍔。","startTime":19,"endTime":19},{"greeting":"晚上好👋, 在属于自己的时间好好放松😌~","startTime":20,"endTime":24}]},
+  twikooEnvId: 'https://twikoo.aizhiqian.eu.org/',
+  commentBarrageConfig:{"enable":true,"maxBarrage":1,"barrageTime":5000,"accessToken":"72f3212be07145ddae8323935b188b41","mailMd5":""},
+  music_page_default: "nav_music",
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: undefined,
+  navMusic: true,
+  mainTone: {"mode":"api","api":"https://img2color.aizhiqian.eu.org/api?img=","cover_change":true},
+  authorStatus: {"skills":["🤖️ 数码科技爱好者","🔍 分享与热心帮助","🏠 智能家居小能手","🔨 设计开发一条龙","🤝 专修交互与设计","🏃 脚踏实地行动派","🧱 团队小组发动机","💢 壮汉人狠话不多"]},
+  algolia: {"appId":"5S7GRIQ3T3","apiKey":"913ceaabe3454727ddee2ca2a58eb3a4","indexName":"hexo-anzhiyu","hits":{"per_page":6},"languages":{"input_placeholder":"输入关键词后按下回车查找","hits_empty":"找不到您查询的内容：${query}","hits_stats":"找到 ${hits} 条结果，用时 ${time} 毫秒"}},
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":230},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    simplehomepage: false,
+    post: true
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":false,"limitCount":150,"languages":{"author":"作者: AiGuoHou","link":"链接: ","source":"来源: 向日葵🌻小站","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。","copySuccess":"复制成功，复制和转载请标注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#2d3035","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@latest/dist/fjGallery.min.js',
+      css: 'https://cdn.bootcdn.net/ajax/libs/flickr-justified-gallery/2.2.0/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: true,
+  shortcutKey: undefined,
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: '向日葵🌻小站',
+  title: '【Termux】高级终端安装使用配置教程 3',
+  postAI: '',
+  pageFillDescription: '1  编辑器, 1.1 Emacs, 1.2 nano, 1.3 Vim, 1.3.1 解决汉字乱码, 1.3.2 Vim 配色, 2  Apache, 2.1 安装 Apache, 2.2 启动 Apache, 2.3 停止 Apache, 2.4 重启 Apache, 3  Apache 解析 PHP, 3.1 安装 php-apache, 3.2 配置 Apache, 3.3 解决 Apache PHP 报错, 3.4 解析 PHP 测试, 4  C, 4.1 安装 clang, 4.2 编译测试, 5  Java, 5.1 Openjdk-17, 5.2 ECJ, 5.2.1 安装编译工具, 5.2.2 编译生成 class 文件, 5.2.3 编译生成 dex 文件, 5.2.4 使用 dalvikvm 运行, 6  MariaDB (MySQL), 6.1 安装 MariaDB, 6.2 初始化数据库, 6.3 启动 MySQL 服务, 6.4停止 MySQL 服务, 6.5 默认的两个用户, 6.6 修改 root 密码, 6.7 root 用户登录, 6.8 远程登录 MySQL, 7  Nginx, 7.1 安装 Nginx, 7.2 测试 Nginx, 7.3 启动 Nginx, 7.4 重启 Nginx, 7.5 停止 Nginx, 7.5.1 方法一 原生停止, 7.5.2 方法二 杀掉进程, 8  Nginx 解析 PHP, 8.1 安装 php-fpm, 8.2 配置 php-fpm, 8.3 配置 Nginx, 8.4 测试 PHP 解析, 8.5 启动服务, 8.6 访问测试, 9  Nodejs, 9.1 安装 Nodejs, 9.2 Hello World, 9.3 http-server, 9.4 安装报错, 10  PHP, 10.1 安装 PHP, 10.2 运行测试文件, 11  Python, 11.1 安装 Python2, 11.2 安装 Python3, 11.3 注意版本区分, 11.4 升级 PIP 版本, 11.5 iPython, 11.6 Jupyter Notebook编辑器写代码前总得折腾一下编辑器毕竟磨刀不误砍柴工嘛支持多种编辑器完全可以满足日常使用需求据说是神的编辑器国光我这种小菜鸡还不会使用哎但是官方已经封装好了了我们安装起来就会简单很多是一个小而美的编辑器具有如下打开多个文件每行滚动撤消重做语法着色行编号等功能同样安装起来也很简单被称为编辑器之神基本上发行版都会自带这个在前文基本工具已经安装了如果你没有安装的话可以使用如下命令安装并且官方也已经封装了对相关的优化解决汉字乱码如果你的打开汉字出现乱码的话那么在家目录下新建文件添加内容如下然后下变量效果图配色自带了如下的配色配色可以自己一个个尝试一下还是向上面的汉字乱码那样编辑家目录下的文件新增如下内容显示行号颜色主题打开语法高亮下面是国光随便找的几个颜色主题效果感兴趣的朋友可以自己一个个尝试是一个开源网页服务器软件由于其跨平台和安全性被广泛使用是最流行的服务器软件之一安装启动然后浏览器访问访问是否成功启动自带的的网站默认路径为停止重启解析既然都可以成功安装的话那么现在只要配置好解析之后就可以打造一个平台上的平台了配置本小节的内容得确保已经配置好了开发环境没有配置好的可以参加下面小节部分安装默认的是无法解析的我们需要安装相应的包配置上的默认配置文件的路径为直接编辑配置文件配置文件里面搜索没有相关的模块所以需要我们手动添加的模块并在刚刚这个语句下方添加解析器内容如下接着继续往下找配置文件里面配置默认首页的地方我们添加到默认首页的规则里面这表示网站目录的默认首页是如果没有系统会自动寻找做为默认首页了修改完的配置文件后记得使用重启服务然后这个时候回发现我们重启居然报错了不要慌问题不大下面来解决这个问题解决报错先找到如下行给他注释掉为然后找到如下行取消注释最终的示例图如下解析测试在的网站根目录下创建一个测试一下函数能否正常运行然后浏览访问查看效果官方封装了他是一个和编程语言的编译器前端安装编译测试在编译这一块很强大感兴趣的朋友可以去网上查看详细的教程国光这里只演示基本的使用写一个的程序如下编辑完成后使用来编译生成的可执行文件早期原生编译只能使用和了然后使用自带的运行后面官方也封装了这样安装起来就更方便了还有如果想要完整体验环境的话另一个方法就是里面安装一个完整的系统然后在里面运行安装系统部分下面文章会详细介绍这种思路也是可以的当然这个包可能不太稳定遇到相关问题可以去官方的项目下提交安装编译工具国光这里只演示基本的使用写一个的程序如下编译生成文件编译生成文件使用运行格式规范如下文件名类名是关系数据库管理系统的一个复刻由社区开发有商业支持旨在继续保持在下开源开发这个分支的原因之一是甲骨文公司收购了后有将闭源的潜在风险因此社区采用分支的方式来避开这个风险安装官方也封装了所以安装起来很方便这里基本上会安装很顺利但是早期用户可能出现安装失败的情况如果安装失败的话这个时候手动在配置目录下创建文件夹即可初始化数据库早期的安装完是需要初始化数据库的新版本在安装时候就已经初始化了数据库年月日国光今天安装的发现已经存在表了无需初始化启动服务因为正常启动完成后这个会话就一直存活类似与调试一样此时使用中止当前进程也无济于事体验式就一点都不优雅所以这里国光使用自带的命令将其放到后台启动图片上这个此时就是的进程号我们使用如下命令验证一下是否正确可以看到果然是进程的号至于运行的提示这个是正常现象无伤大雅下就这样将就着用吧停止服务下没有好的办法退出服务只能强制杀掉进程了使用如下命令格式可以轻松杀掉进程当然每次查看进程的号再杀掉进程有点繁琐了实际上这一步可以直接这样操作优雅默认的两个用户用户登录的前提是服务在后台运行如果你按照上一小节操作把掉的话请重新启动一下服务新版本的安装初始化数据库的时候包含两个高权限用户一个是无法访问的用户提示拒绝登录另一个用户就是的用户名默认密码为空我们来登录看看可以成功登录并执行语句那么这个无法登录的用户该怎么办呢不要着急继续往下看修改密码老版本的的直接使用可以设置密码但是新版本的安全策略变更了我们在设置密码的时候回提示当前密码不正确所以这条路行不通了这里我们只能使用的另一个用户名即用户名登录然后来修改的密码使用如下命令修改密码登录用户修改密码的语句你设置的密码刷新权限并退出如何和图片上差不的效果那么修改密码就成功了用户登录修改完密码之后我们就可以美滋滋地使用用户来登录了这里输入你的密码远程登录使用后查看地址后尝试电脑端远程访问的数据库发现默认是无法成功连接的这个时候我们需要到数据库手动开启用户的远程访问权限这里的是我的密码执行完成后尝试端远程过去看看是一个高性能的和反向代理服务器用的熟悉的话下面搭建各种网站也就轻而易举了安装安装也很简单一条命令即可安装完成后国光的习惯是查看一下版本信息测试测试检查的配置文件是否正常现在测试肯定是的这个多用于我们修改完的配置文件后的检查启动早期版本的需要在环境下才可以成功启动新版本的可以直接启动还是很方便的在上默认运行的端口号是使用命令也可以查看进程相关的号然后手机本地直接访问查看是否正常启动重启一般当修改完相关的配置文件时我们需要重启使用如下命令即可重启停止方法一原生停止或者是一个优雅的关闭方式在退出前完成已经接受的连接请求是快速关闭不管有没有正在处理的请求方法二杀掉进程只需三番钟里造会干我一样爱象节款游戏扯远了只需要条命令即可优雅的终止掉服务貌似手机党并不好敲这个符号如果实在敲不出来那就分两步走吧查询进程相关的号杀掉查询出的号进程解析下的解析这里单独拿出一级标题来叙述成功解析的话下面安装等网站就会轻松很多安装本身不能处理它只是个服务器当接收到请求后发给解释器处理一般是把请求转发给管理进程处理是一个管理器所以这里得先安装它安装完成顺便检查一下版本信息吧配置编辑的配置文件定位搜索找到将其改为啥你不会使用搜索那就老老实实一个个翻页吧配置编辑的配置文件下面国光贴出配置好的完整配置文件大家可以参考下面这些图只需要两大步骤添加到默认首页的规则里面取消这些注释按照图片上的提示修改里面的默认网站的根目为如果想要修改默认路径的话只需要在配置文件中替换处出现的这个路径即可下面贴一份完整的配置文件测试解析默认网站的根目录为在这个网站根目录下新建内容为启动服务先启动服务然后再启动服务如果你的已经启动了的话使用重启访问测试浏览器访问来看看刚刚新建的测试文件是否解析了是能够在服务器端运行的开放源代码跨平台运行环境安装是长期支持版本如果执行版本后发现报如下错误那么这个时候可以尝试卸载当前版本然后执行下面命令安装长期稳定版本安装完成后使用如下命令查看版本信息新建一个脚本内容如下然后尝试运行是一个基于的简单零配置命令行服务器安装运行尝试电脑端浏览器直接访问看看安装报错早期版本的的安装一些包的时候会报如下错误查了下是这边版本的问题这是一个官方的解决方法如下编辑如下文件我这里修改的是这个好像和有关总之这里的得指定一个数字然后在重新安装下成功是一种开源的脚本语言适用于网络开发语法借鉴吸收语言和等流行计算机语言的特点易于学习是世界上最好的语言手动狗头安装官方封装了所以我们安装起来就很方便安装完成后查看下版本信息运行测试文件自之后内置了一个服务器在下可以很方便地测试文件首先在家目录下建一个文件夹然后在文件夹下新建一个文件内容为完整的步骤如下新建文件夹创建文件编写完成文件后尝试使用内置的直接启动进入家目录启动自己制定端口后浏览器访问效果如下是近几年非常流行的语言相关的书籍和资料也如雨后春笋一般不断涌现带来了活跃了学习氛围安装版本要淘汰了大家简单了解一下就好安装完成后使用命令启动的环境安装安装默认版本是的版本与此同时也顺便安装了安装完成后查看下和的版本注意版本区分如果你同时安装了和版本的话最好向下图中这样验证一下各个版本情况做到心知肚明国光我是先安装然后再安装的如果版本直接混乱的话手动修改目录下的软连接指向的位置即可升级版本保持最新是一个好习惯升级方式很简单升级升级这两条命令分别升级了和到最新版升级完成后你会惊讶的发现你的命令不见了然后这个时候就开始吐槽国光了内心国光非要强迫症升级版本这下好了吧国光不要慌问题不大我们可以手动查看当前有哪些可执行的文件使用如下命令接下来分别查看对应可执行文件的版本现在全都是最新版的了哦是一个的增强版本的交互式支持变量自动补全自动缩进支持命令等内置了许多很有用的功能和函数可以提高我们的学习效率先安装否则直接使用安装会失败报错没有安装的话使用安装手动指定国内清华源提高下载速度执行完上述命令分别安装好对应版本的后然后分别查看对应版本信息此前被称为可以在端提供交互虽然和共享同一个内核但是更强大相关的依赖比较多安装起来较为耗时国光就只用版本来演示了另外请务必要使用国内的源来安装下面官方建议安装的完整的命令如果你一步步跟着本文安装顺序操作的话发现很多工具我们都安装过了国光我真的有先见之明那么直接参考如下命令安装即可手动指定国内中清华源提高下载速度更新是个好习惯切换模拟的环境安装相关依赖安装安装完成退出安装安装好之后查看一下版本信息就安装好了这个比较强大更详细的教程大家可以自行去谷歌或者百度一下国光这里只演示基本的功能先启动然后会看到运行的日志我们复制出提示的复制出的这个地址在浏览器中打开可以看到成功运行了那我们按照图片提示走个形式输出个就跑路运行成功那么回到里面使用组合键中止当前的进程引用站外地址高级终端安装使用配置教程转载自',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-07-23 02:00:35',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><link rel="stylesheet" type="text/css" href="https://npm.elemecdn.com/js-heo@1.0.13/mainColor/heoMainColor.css"><link rel="stylesheet" type="text/css" href="https://npm.elemecdn.com/js-heo@1.0.11/poem/poem.css"><link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'"><meta name="generator" content="Hexo 8.0.0"><link rel="alternate" href="/atom.xml" title="向日葵🌻小站" type="application/atom+xml">
+</head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="/img/yuan-avatar.webp"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@latest/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.bootcdn.net/ajax/libs/pace/1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><div class="back-home-button"><i class="anzhiyufont anzhiyu-icon-grip-vertical"></i><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener external nofollow noreferrer" href="https://www.aizhiqian.eu.org/" title="主页"><img class="back-menu-item-icon" src="https://www.aizhiqian.eu.org/images/icon/favicon.ico" alt="主页"/><span class="back-menu-item-text">主页</span></a><a class="back-menu-item" target="_blank" rel="noopener external nofollow noreferrer" href="https://alist.xivo.eu.org/" title="Alist"><img class="back-menu-item-icon" src="https://p0.meituan.net/csc/9588e334a146defee0191c68b74bc0a5112303.jpg" alt="Alist"/><span class="back-menu-item-text">Alist</span></a><a class="back-menu-item" href="https://aizhiqian.github.io/" title="blog"><img class="back-menu-item-icon" src="https://aizhiqian.github.io/img/favicon.webp" alt="blog"/><span class="back-menu-item-text">blog</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener external nofollow noreferrer" href="https://img.aiguohou.eu.org/" title="知心图床"><img class="back-menu-item-icon" src="https://img.aiguohou.eu.org/favicon.ico" alt="知心图床"/><span class="back-menu-item-text">知心图床</span></a><a class="back-menu-item" target="_blank" rel="noopener external nofollow noreferrer" href="https://memos.xivo.eu.org/" title="memos"><img class="back-menu-item-icon" src="https://memos.xivo.eu.org/logo.webp" alt="memos"/><span class="back-menu-item-text">memos</span></a></div></div></div></div><a id="site-name" href="/" accesskey="h"><div class="title">向日葵🌻小站</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)" rel="external nofollow noreferrer">PAGE_NAME</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友人帐</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()" rel="external nofollow noreferrer"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div></div><div id="nav-right"><div class="nav-button only-home" id="travellings_button" title="随机前往一个开往项目网站"><a class="site-page" onclick="anzhiyu.totraveling()" title="随机前往一个开往项目网站" href="javascript:void(0);" rel="external nofollow" data-pjax-state="external"><i class="anzhiyufont anzhiyu-icon-train"></i></a></div><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" rel="external nofollow noreferrer" title="搜索🔍" accesskey="s"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span> 搜索</span></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="/img/wechat.webp" target="_blank"><img class="post-qr-code-img" alt="微信" src="/img/wechat.webp"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/alipay.webp" target="_blank"><img class="post-qr-code-img" alt="支付宝" src="/img/alipay.webp"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/API/" style="font-size: 1.05rem; color: rgb(45, 129, 130);">API<sup>1</sup></a><a href="/tags/Android/" style="font-size: 1.05rem; color: rgb(66, 71, 65);">Android<sup>5</sup></a><a href="/tags/CDN/" style="font-size: 1.05rem; color: rgb(45, 163, 102);">CDN<sup>1</sup></a><a href="/tags/hexo/" style="font-size: 1.05rem; color: rgb(12, 39, 115);">hexo<sup>14</sup></a><a href="/tags/iOS/" style="font-size: 1.05rem; color: rgb(159, 0, 144);">iOS<sup>1</sup></a><a href="/tags/ios/" style="font-size: 1.05rem; color: rgb(97, 193, 17);">ios<sup>1</sup></a><a href="/tags/npm/" style="font-size: 1.05rem; color: rgb(66, 11, 149);">npm<sup>1</sup></a><a href="/tags/termux/" style="font-size: 1.05rem; color: rgb(63, 117, 62);">termux<sup>5</sup></a><a href="/tags/%E4%BB%A3%E7%90%86/" style="font-size: 1.05rem; color: rgb(137, 176, 160);">代理<sup>2</sup></a><a href="/tags/%E5%91%BD%E4%BB%A4/" style="font-size: 1.05rem; color: rgb(16, 129, 20);">命令<sup>1</sup></a><a href="/tags/%E5%9B%BE%E5%BA%8A/" style="font-size: 1.05rem; color: rgb(141, 111, 47);">图床<sup>2</sup></a><a href="/tags/%E5%AE%89%E8%A3%85/" style="font-size: 1.05rem; color: rgb(158, 171, 168);">安装<sup>1</sup></a><a href="/tags/%E5%AE%9D%E5%A1%94/" style="font-size: 1.05rem; color: rgb(46, 178, 178);">宝塔<sup>1</sup></a><a href="/tags/%E5%BD%B1%E8%A7%86/" style="font-size: 1.05rem; color: rgb(182, 119, 116);">影视<sup>1</sup></a><a href="/tags/%E7%AD%BE%E5%88%B0/" style="font-size: 1.05rem; color: rgb(175, 193, 178);">签到<sup>1</sup></a><a href="/tags/%E7%BE%8E%E5%8C%96/" style="font-size: 1.05rem; color: rgb(124, 123, 37);">美化<sup>8</sup></a><a href="/tags/%E8%84%9A%E6%9C%AC/" style="font-size: 1.05rem; color: rgb(181, 172, 74);">脚本<sup>1</sup></a><a href="/tags/%E8%BD%AF%E4%BB%B6/" style="font-size: 1.05rem; color: rgb(81, 193, 25);">软件<sup>1</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/05/"><span class="card-archive-list-date">五月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/04/"><span class="card-archive-list-date">四月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">3</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/01/"><span class="card-archive-list-date">一月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/11/"><span class="card-archive-list-date">十一月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/10/"><span class="card-archive-list-date">十月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/07/"><span class="card-archive-list-date">七月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">25</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item on" id="consoleCommentBarrage" onclick="anzhiyu.switchCommentBarrage()" title="热评开关"><a class="commentBarrage"><i class="anzhiyufont anzhiyu-icon-message"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="anzhiyu.musicToggle()" title="音乐开关"><a class="music-switch"><i class="anzhiyufont anzhiyu-icon-music"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);" rel="external nofollow noreferrer"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="post-meta-categories"><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/" itemprop="url">实用教程</a></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/termux/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>termux</span></a><a class="article-meta__tags" href="/tags/Android/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>Android</span></a></span></div></div><h1 class="post-title" itemprop="name headline">【Termux】高级终端安装使用配置教程 3<a class="post-edit-link" href="undefined_posts/【Termux】高级终端安装使用配置教程 3.md" title="在 GitHub 上编辑 - 【Termux】高级终端安装使用配置教程 3" target="_blank"><i class="anzhiyufont anzhiyu-icon-pencil"></i></a></h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2023-07-22T18:00:35.000Z" title="发表于 2023-07-23 02:00:35">2023-07-23</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2023-07-22T18:00:35.000Z" title="更新于 2023-07-23 02:00:35">2023-07-23</time></span></div><div class="meta-secondline"><span class="post-meta-separator"></span><span class="post-meta-wordcount"><i class="anzhiyufont anzhiyu-icon-file-word post-meta-icon" title="文章字数"></i><span class="post-meta-label" title="文章字数">字数总计:</span><span class="word-count" title="文章字数">5.3k</span><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-clock post-meta-icon" title="阅读时长"></i><span class="post-meta-label" title="阅读时长">阅读时长:</span><span>20分钟</span></span><span class="post-meta-separator"></span><span id="" data-flag-title="【Termux】高级终端安装使用配置教程 3"><i class="anzhiyufont anzhiyu-icon-fw-eye post-meta-icon"></i><span class="post-meta-label" title="阅读量">阅读量:</span><span id="twikoo_visitors" title="访问量"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-spin"></i></span></span><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为杭州"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>杭州</span><span class="post-meta-separator"></span><span class="post-meta-commentcount"><i class="anzhiyufont anzhiyu-icon-comments post-meta-icon"></i><span class="post-meta-label">评论数:</span><a href="/posts/46db2752/#post-comment" tabindex="-1"><span id="twikoo-count"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-spin"></i></span></a></span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src="https://www.aini.cn.eu.org/meinv?_r_=bd568368-37a0-0f19-5482-b3264f571afe"></div></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container" itemscope itemtype="https://aizhiqian.github.io/posts/46db2752/"><header><a class="post-meta-categories" href="/categories/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/" itemprop="url">实用教程</a><a href="/tags/termux/" tabindex="-1" itemprop="url">termux</a><a href="/tags/Android/" tabindex="-1" itemprop="url">Android</a><h1 id="CrawlerTitle" itemprop="name headline">【Termux】高级终端安装使用配置教程 3</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">AiGuoHou</span><time itemprop="dateCreated datePublished" datetime="2023-07-22T18:00:35.000Z" title="发表于 2023-07-23 02:00:35">2023-07-23</time><time itemprop="dateCreated datePublished" datetime="2023-07-22T18:00:35.000Z" title="更新于 2023-07-23 02:00:35">2023-07-23</time></header><h2 id="1-编辑器">1  编辑器</h2>
+<p>写代码前总得折腾一下编辑器，毕竟磨刀不误砍柴工嘛。Termux 支持多种编辑器，完全可以满足日常使用需求。</p>
+<h3 id="1-1-Emacs">1.1 Emacs</h3>
+<p>据说 Emacs 是神的编辑器，国光我这种小菜鸡还不会使用哎，但是 Termux 官方已经封装好了 Emacs 了，我们安装起来就会简单很多:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pkg install emacs  </span><br></pre></td></tr></table></figure>
+<h3 id="1-2-nano">1.2 nano</h3>
+<p>nano 是一个小而美的编辑器。具有如下：打开多个文件，每行滚动，撤消 / 重做，语法着色，行编号等功能</p>
+<p>同样安装起来也很简单：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pkg install nano</span><br></pre></td></tr></table></figure>
+<h3 id="1-3-Vim">1.3 Vim</h3>
+<p>Vim 被称为编辑器之神，基本上 Linux 发行版都会自带 Vim，这个在前文基本工具已经安装了，如果你没有安装的话，可以使用如下命令安装：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pkg install vim</span><br></pre></td></tr></table></figure>
+<p>并且官方也已经封装了 <code>vim-python</code>，对 Python 相关的优化。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pkg install vim-python</span><br></pre></td></tr></table></figure>
+<h4 id="1-3-1-解决汉字乱码">1.3.1 解决汉字乱码</h4>
+<p>如果你的 Vim 打开汉字出现乱码的话，那么在家目录 (<code>~</code>) 下，新建<code>.vimrc</code> 文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim .vimrc</span><br></pre></td></tr></table></figure>
+<p>添加内容如下：</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">set <span class="attr">fileencodings</span>=utf-<span class="number">8</span>,gb2312,gb18030,gbk,ucs-bom,cp936,latin1</span><br><span class="line">set <span class="attr">enc</span>=utf8</span><br><span class="line">set <span class="attr">fencs</span>=utf8,gbk,gb2312,gb18030</span><br></pre></td></tr></table></figure>
+<p>然后 <code>source</code> 下变量：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> .vimrc</span><br></pre></td></tr></table></figure>
+<p><strong>效果图</strong></p>
+<p><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.3001.net/images/20180501/15251690917140.png" alt="img"></p>
+<h4 id="1-3-2-Vim-配色">1.3.2 Vim 配色</h4>
+<p>Termux Vim 自带了如下的配色：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ls</span> /data/data/com.termux/files/usr/share/vim/vim82/colors</span><br><span class="line"></span><br><span class="line">desert.vim    morning.vim    shine.vim    blue.vim      elflord.vim   murphy.vim     slate.vim    darkblue.vim  evening.vim   pablo.vim      industry.vim  peachpuff.vim  torte.vim    delek.vim     koehler.vim   ron.vim        zellner.vim   </span><br></pre></td></tr></table></figure>
+<p>配色可以自己一个个尝试一下，还是向上面的汉字乱码那样，编辑家目录下的<code>.vimrc</code> 文件：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim ~/.vimrc</span><br></pre></td></tr></table></figure>
+<p>新增如下内容：</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">set number            &quot; 显示行号</span><br><span class="line">colorscheme desert    &quot; 颜色主题</span><br><span class="line">syntax on             &quot; 打开语法高亮</span><br></pre></td></tr></table></figure>
+<p>下面是国光随便找的几个颜色主题效果，感兴趣的朋友可以自己一个个尝试：</p>
+<p><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.3001.net/images/20200419/15872622533864.jpg" alt="slate"></p>
+<p><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.3001.net/images/20200419/15872621751148.jpg" alt="murphy"></p>
+<p><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.3001.net/images/20200419/15872625401164.jpg" alt="peachpuff"></p>
+<h2 id="2-Apache">2  Apache</h2>
+<p>Apache 是一个开源网页服务器软件，由于其跨平台和安全性，被广泛使用，是最流行的 Web 服务器软件之一。</p>
+<h3 id="2-1-安装-Apache">2.1 安装 Apache</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pkg install apache2</span><br></pre></td></tr></table></figure>
+<h3 id="2-2-启动-Apache">2.2 启动 Apache</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apachectl start</span><br></pre></td></tr></table></figure>
+<p>然后浏览器访问: <code>http://127.0.0.1:8080</code> 访问是否成功启动：</p>
+<p><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.3001.net/images/20200424/15876870133939.jpg" alt="img"></p>
+<p>Termux 自带的 Apache 的网站默认路径为：</p>
+<p><strong>$PREFIX/share/apache2/default-site/htdocs/index.html</strong></p>
+<h3 id="2-3-停止-Apache">2.3 停止 Apache</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apachectl stop</span><br></pre></td></tr></table></figure>
+<h3 id="2-4-重启-Apache">2.4 重启 Apache</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apachectl restart</span><br></pre></td></tr></table></figure>
+<h2 id="3-Apache-解析-PHP">3  Apache 解析 PHP</h2>
+<p>既然 Apache、PHP、MySQL 都可以成功安装的话，那么现在只要配置好 Apache 解析 PHP 之后就可以打造一个 Android 平台上的 LAMPP 平台了，配置本小节的内容得确保 Termux 已经配置好了 PHP 开发环境，没有配置好的可以参加下面 PHP 小节部分。</p>
+<h3 id="3-1-安装-php-apache">3.1 安装 php-apache</h3>
+<p>默认的 Apache 是无法解析 PHP 的，我们需要安装相应的包：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pkg install php-apache</span><br></pre></td></tr></table></figure>
+<h3 id="3-2-配置-Apache">3.2 配置 Apache</h3>
+<p>Termux 上的 Apache 默认配置文件的路径为:</p>
+<p><strong>$PREFIX/etc/apache2/httpd.conf</strong></p>
+<p>直接编辑配置文件:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /data/data/com.termux/files/usr/etc/apache2/httpd.conf</span><br></pre></td></tr></table></figure>
+<p>配置文件里面搜索 PHP 没有相关的模块，所以需要我们手动添加 PHP7 的模块:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LoadModule php7_module /data/data/com.termux/files/usr/libexec/apache2/libphp7.so </span><br></pre></td></tr></table></figure>
+<p>并在刚刚这个语句下方添加解析器，内容如下:</p>
+<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">&lt;FilesMatch</span> <span class="string">\.php$&gt;</span></span><br><span class="line">  <span class="attr">SetHandler</span> <span class="string">application/x-httpd-php</span></span><br><span class="line"><span class="attr">&lt;/FilesMatch&gt;</span> <span class="string"></span></span><br></pre></td></tr></table></figure>
+<p>接着继续往下找配置文件里面配置默认首页的地方，我们添加 <code>index.php</code> 到默认首页的规则里面:</p>
+<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">&lt;IfModule</span> <span class="string">dir_module&gt;</span></span><br><span class="line">  <span class="attr">DirectoryIndex</span> <span class="string">index.php index.html</span></span><br><span class="line"><span class="attr">&lt;/IfModule&gt;</span></span><br></pre></td></tr></table></figure>
+<p>这表示网站目录的默认首页是 index.php，如果没有 index.php 系统会自动寻找 index.html 做为默认首页了。</p>
+<p>修改完 Apache 的配置文件后，记得使用 <code>apachectl restart</code> 重启 Apache 服务，然后这个时候回发现我们重启居然报错了：</p>
+<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Apache is running a threaded MPM, but your PHP Module is <span class="keyword">not</span> compiled to be threadsafe.  You need to recompile PHP.</span><br><span class="line">AH00013: Pre-configuration failed</span><br></pre></td></tr></table></figure>
+<p>不要慌问题不大，下面来解决这个问题</p>
+<h3 id="3-3-解决-Apache-PHP-报错">3.3 解决 Apache PHP 报错</h3>
+<p>先找到如下行：</p>
+<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">LoadModule</span> <span class="string">mpm_worker_module libexec/apache2/mod_mpm_worker.so</span></span><br></pre></td></tr></table></figure>
+<p>给他注释掉为：</p>
+<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#LoadModule mpm_worker_module libexec/apache2/mod_mpm_worker.so</span></span><br></pre></td></tr></table></figure>
+<p>然后找到如下行：</p>
+<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#LoadModule mpm_prefork_module libexec/apache2/mod_mpm_prefork.so</span></span><br></pre></td></tr></table></figure>
+<p>取消注释：</p>
+<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">LoadModule</span> <span class="string">mpm_prefork_module libexec/apache2/mod_mpm_prefork.so</span></span><br></pre></td></tr></table></figure>
+<p>最终的示例图如下:</p>
+<p><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.3001.net/images/20200424/15876891812066.jpg" alt="img"></p>
+<h3 id="3-4-解析-PHP-测试">3.4 解析 PHP 测试</h3>
+<p>在 Apache 的网站根目录下，创建一个 index.php ，测试一下 phpinfo () 函数能否正常运行:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;&lt;?php phpinfo(); ?&gt;&#x27;</span> &gt; <span class="variable">$PREFIX</span>/share/apache2/default-site/htdocs/index.php</span><br></pre></td></tr></table></figure>
+<p>然后浏览访问: <code>http://127.0.0.1:8080</code> 查看效果：</p>
+<p><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.3001.net/images/20200424/15876893688277.png" alt="OK"></p>
+<h2 id="4-C">4  C</h2>
+<p>Termux 官方封装了 Clang，他是一个 C、C++、Objective-C 和 Objective-C++ 编程语言的编译器前端。</p>
+<h3 id="4-1-安装-clang">4.1 安装 clang</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pkg install clang</span><br></pre></td></tr></table></figure>
+<h3 id="4-2-编译测试">4.2 编译测试</h3>
+<p>clang 在编译这一块很强大，感兴趣的朋友可以去网上查看详细的教程，国光这里只演示基本的 Hello World 使用。写一个 Hello World 的 C 程序，如下 <code>hello.c</code>：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;Hello World&quot;</span>)</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>编辑完成后，使用 clang 来编译生成 hello 的可执行文件：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">clang hello.c -o hello</span><br></pre></td></tr></table></figure>
+<p><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.3001.net/images/20200419/15872641341258.jpg" alt="效果图"></p>
+<h2 id="5-Java">5  Java</h2>
+<p>Termux 早期原生编译 JAVA 只能使用 <code>ecj</code> (Eclipse Compiler for Java) 和 <code>dx</code> 了，然后使用 Android 自带的 dalvikvm 运行。后面 Termux 官方也封装了 openjdk-17 这样安装起来就更方便了。</p>
+<p>还有如果想要完整体验 JAVA 环境的话，另一个方法就是 Termux 里面安装一个完整的 Linux 系统，然后在 Linux 里面运行 Java，安装系统部分下面文章会详细介绍，这种思路也是可以的。</p>
+<h3 id="5-1-Openjdk-17">5.1 Openjdk-17</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pkg update</span><br><span class="line">pkg install openjdk-17</span><br></pre></td></tr></table></figure>
+<p>当然这个包可能不太稳定，遇到相关问题可以去 Termux 官方的项目下提交 issue：</p>
+<ul>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/termux/termux-packages/issues?q=openjdk">https://github.com/termux/termux-packages/issues?q=openjdk</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/termux/termux-packages/issues?q=java">https://github.com/termux/termux-packages/issues?q=java</a></li>
+</ul>
+<h3 id="5-2-ECJ">5.2 ECJ</h3>
+<h4 id="5-2-1-安装编译工具">5.2.1 安装编译工具</h4>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pkg install ecj dx -y</span><br></pre></td></tr></table></figure>
+<p>国光这里只演示基本的 Hello World 使用。写一个 Hello World 的 JAVA 程序，如下 <code>HelloWorld.java</code>:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">HelloWorld</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Hello Termux&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="5-2-2-编译生成-class-文件">5.2.2 编译生成 class 文件</h4>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ecj HelloWorld.java</span><br></pre></td></tr></table></figure>
+<h4 id="5-2-3-编译生成-dex-文件">5.2.3 编译生成 dex 文件</h4>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dx --dex --output=hello.dex HelloWorld.class</span><br></pre></td></tr></table></figure>
+<h4 id="5-2-4-使用-dalvikvm-运行">5.2.4 使用 dalvikvm 运行</h4>
+<blockquote>
+<p>格式规范如下：<code>dalvikvm -cp dex文件名 类名</code></p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dalvikvm -<span class="built_in">cp</span> hello.dex HelloWorld</span><br></pre></td></tr></table></figure>
+<p><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.3001.net/images/20200419/15872689779426.jpg" alt="效果图"></p>
+<h2 id="6-MariaDB-MySQL">6  MariaDB (MySQL)</h2>
+<p>MariaDB 是 MySQL 关系数据库管理系统的一个复刻，由社区开发，有商业支持，旨在继续保持在 GNU GPL 下开源。开发这个分支的原因之一是：甲骨文公司收购了 MySQL 后，有将 MySQL 闭源的潜在风险，因此社区采用分支的方式来避开这个风险。</p>
+<h3 id="6-1-安装-MariaDB">6.1 安装 MariaDB</h3>
+<p>Termux 官方也封装了 MariaDB，所以安装起来很方便：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pkg install mariadb</span><br></pre></td></tr></table></figure>
+<p><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.3001.net/images/20200419/15872737414317.jpg" alt="img"></p>
+<p>这里基本上会安装很顺利，但是早期用户可能出现安装失败的情况，如果安装失败的话，这个时候手动在配置目录下创建 <code>my.cnf.d</code> 文件夹即可：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> /data/data/com.termux/files/usr/etc/</span><br><span class="line">$ <span class="built_in">mkdir</span> my.cnf.d</span><br></pre></td></tr></table></figure>
+<h3 id="6-2-初始化数据库">6.2 初始化数据库</h3>
+<blockquote>
+<p>早期的 Termux 安装完 MySQL 是需要初始化数据库的，新版本在安装时候就已经初始化了数据库</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql_install_db</span><br></pre></td></tr></table></figure>
+<p>2020 年 4 月 19 日：国光今天安装的 MySQL 发现已经存在 mysql.user 表了，无需初始化：</p>
+<p><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.3001.net/images/20200419/1587274710701.jpg" alt="img"></p>
+<h3 id="6-3-启动-MySQL-服务">6.3 启动 MySQL 服务</h3>
+<p>因为正常启动完成后，MySQL 这个会话就一直存活，类似与 Debug 调试一样，此时使用 <code>Ctrl + C</code> -&gt; 中止当前进程也无济于事，体验式就一点都不优雅，所以这里国光使用 Linux 自带的 <code>nohup</code> 命令将其放到后台启动。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">nohup</span> mysqld &amp;</span><br></pre></td></tr></table></figure>
+<p><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.3001.net/images/20200419/15872759828856.jpg" alt="img"></p>
+<p>图片上这个 <code>17115</code> 此时就是 <code>mysqld</code> 的进程 PID 号，我们使用如下命令验证一下是否正确：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps aux|grep mysql</span><br></pre></td></tr></table></figure>
+<p>可以看到果然是进程的 PID 号：</p>
+<p><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.3001.net/images/20200419/15872772626788.jpg" alt="img"></p>
+<p>至于 nohup 运行的提示</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nohup: ignoring input and appending output to `nohup.out&#x27;</span><br></pre></td></tr></table></figure>
+<p>这个是正常现象，无伤大雅，Termux 下就这样将就着用吧。</p>
+<h3 id="6-4停止-MySQL-服务">6.4停止 MySQL 服务</h3>
+<p>Termux 下没有好的办法退出 MySQL 服务，只能强制杀掉进程了，使用如下命令格式可以轻松杀掉进程：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">kill</span> -9 PID</span><br></pre></td></tr></table></figure>
+<p><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.3001.net/images/20200419/15872774392594.jpg" alt="成功kill掉"></p>
+<p>当然每次查看进程的 PID 号，再杀掉进程有点繁琐了，实际上这一步可以直接这样操作：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">kill</span> -9 `pgrep mysql`</span><br></pre></td></tr></table></figure>
+<p>Awesome ! 优雅！</p>
+<h3 id="6-5-默认的两个用户">6.5 默认的两个用户</h3>
+<blockquote>
+<p>用户登录的前提是 MySQL 服务在后台运行，如果你按照上一小节操作把 MySQL kill 掉的话，请重新启动一下 MySQL 服务</p>
+</blockquote>
+<p>新版本的 Termux 安装初始化数据库的时候包含两个高权限用户，一个是无法访问的 <strong>root</strong> 用户</p>
+<p><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.3001.net/images/20200419/15872785237034.jpg" alt="提示拒绝root登录"></p>
+<p><strong>提示拒绝 root 登录</strong></p>
+<p>另一个用户就是 Termux 的<strong>用户名</strong>，默认密码为<code>空</code>，我们来登录看看：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u $(<span class="built_in">whoami</span>)</span><br></pre></td></tr></table></figure>
+<p><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.3001.net/images/20200419/15872787187162.jpg" alt="可以成功登录 并执行SQL语句"></p>
+<p><strong>可以成功登录 并执行 SQL 语句</strong></p>
+<p>那么这个无法登录的 root 用户该怎么办呢 ？不要着急 继续往下看</p>
+<h3 id="6-6-修改-root-密码">6.6 修改 root 密码</h3>
+<p>老版本的 Termux 的直接使用 <code>mysql_secure_installation</code> 可以设置密码，但是新版本的安全策略变更了 我们在设置密码的时候回提示当前密码不正确，所以这条路行不通了。</p>
+<p>这里我们只能使用 MySQL 的另一个用户名，即 Termux 用户名登录，然后来修改 root 的密码，使用如下命令修改 root 密码:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 登录 Termux 用户</span></span><br><span class="line">mysql -u $(<span class="built_in">whoami</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 修改 root 密码的 SQL语句</span></span><br><span class="line">use mysql;</span><br><span class="line"><span class="built_in">set</span> password <span class="keyword">for</span> <span class="string">&#x27;root&#x27;</span>@<span class="string">&#x27;localhost&#x27;</span> = password(<span class="string">&#x27;你设置的密码&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment"># 刷新权限 并退出</span></span><br><span class="line">flush privileges;</span><br><span class="line">quit; </span><br></pre></td></tr></table></figure>
+<p><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.3001.net/images/20200419/15872812941161.jpg" alt="细节图片"></p>
+<p>OK！ 如何和图片上差不的效果，那么修改 root 密码就成功了。</p>
+<h3 id="6-7-root-用户登录">6.7 root 用户登录</h3>
+<p>修改完密码之后我们就可以美滋滋地使用 root 用户来登录了：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br><span class="line">Enter password: xxxxx（这里输入你的密码)</span><br></pre></td></tr></table></figure>
+<p><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.3001.net/images/20200419/15872811505855.jpg" alt="img"></p>
+<h3 id="6-8-远程登录-MySQL">6.8 远程登录 MySQL</h3>
+<p>使用 <code>ip a</code> 后查看 IP 地址后，尝试电脑端远程访问 Termux 的数据库:</p>
+<p><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.3001.net/images/20200419/15872927348730.jpg" alt="img"></p>
+<p>发现默认是无法成功连接的，这个时候我们需要到数据库手动开启 root 用户的远程访问权限:</p>
+<blockquote>
+<p>这里的 P@ssw0rd 是我的 root 密码</p>
+</blockquote>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">grant</span> <span class="keyword">all</span> <span class="keyword">on</span> <span class="operator">*</span>.<span class="operator">*</span> <span class="keyword">to</span> root@<span class="string">&#x27;%&#x27;</span> identified <span class="keyword">by</span> <span class="string">&#x27;P@ssw0rd&#x27;</span> <span class="keyword">with</span> <span class="keyword">grant</span> option;</span><br><span class="line">flush privileges;</span><br></pre></td></tr></table></figure>
+<p><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.3001.net/images/20200419/15872930045560.jpg" alt="img"></p>
+<p>执行完成后 尝试 PC 端远程过去看看：</p>
+<p><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.3001.net/images/20200419/15872955565240.jpg" alt="img"></p>
+<h2 id="7-Nginx">7  Nginx</h2>
+<p>Nginx 是一个高性能的 Web 和反向代理服务器，Nginx 用的熟悉的话，下面搭建各种网站也就轻而易举了。</p>
+<h3 id="7-1-安装-Nginx">7.1 安装 Nginx</h3>
+<p>Termux 安装 Nginx 也很简单，一条命令即可：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pkg install nginx</span><br></pre></td></tr></table></figure>
+<p>安装完成后，国光的习惯是查看一下版本信息：</p>
+<p><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.3001.net/images/20200419/1587298511654.png" alt="1.17.10 版本"></p>
+<h3 id="7-2-测试-Nginx">7.2 测试 Nginx</h3>
+<p>测试检查 Nginx 的配置文件是否正常:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx -t</span><br></pre></td></tr></table></figure>
+<p><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.3001.net/images/20200419/15872987037951.jpg" alt="img"></p>
+<p>现在测试肯定是 OK 的，这个多用于我们修改完 Nginx 的配置文件后的检查。</p>
+<h3 id="7-3-启动-Nginx">7.3 启动 Nginx</h3>
+<p>早期版本的 Termux 需要在 <code>termux-chroot</code> 环境下才可以成功启动 Nginx ，新版本的 Termux 可以直接启动，还是很方便的：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx</span><br></pre></td></tr></table></figure>
+<p>Termux 在 Nginx 上默认运行的端口号是 8080， 使用 <code>pgrep</code> 命令也可以查看 Nginx 进程相关的 PID 号。</p>
+<p>然后手机本地直接访问 <code>http://127.0.0.1:8080</code> 查看 Nginx 是否正常启动：</p>
+<p><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.3001.net/images/20200419/15872975682196.jpg" alt="img"></p>
+<h3 id="7-4-重启-Nginx">7.4 重启 Nginx</h3>
+<p>一般当修改完 Nginx 相关的配置文件时，我们需要重启 Nginx，使用如下命令即可重启:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx -s reload</span><br></pre></td></tr></table></figure>
+<h3 id="7-5-停止-Nginx">7.5 停止 Nginx</h3>
+<h4 id="7-5-1-方法一-原生停止">7.5.1 方法一 原生停止</h4>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx -s stop</span><br></pre></td></tr></table></figure>
+<p>或者</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx -s quit</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>quit 是一个优雅的关闭方式，Nginx 在退出前完成已经接受的连接请求。Stop 是快速关闭，不管有没有正在处理的请求。</p>
+</blockquote>
+<h4 id="7-5-2-方法二-杀掉进程">7.5.2 方法二 杀掉进程</h4>
+<p><s>只需三番钟，里造会干我一样，爱象节款游戏</s> 扯远了，只需要 1 条命令，即可优雅的终止掉 Nginx 服务:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">kill</span> -9 `pgrep nginx`</span><br></pre></td></tr></table></figure>
+<p>貌似手机党 并不好敲 这个 ` 符号 =，= ，如果实在敲不出来，那就分两步走吧：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查询 nginx 进程相关的 PID 号</span></span><br><span class="line">pgrep nginx</span><br><span class="line"></span><br><span class="line"><span class="comment"># 杀掉 查询出的 PID号进程</span></span><br><span class="line"><span class="built_in">kill</span> -9 PID</span><br></pre></td></tr></table></figure>
+<h2 id="8-Nginx-解析-PHP">8  Nginx 解析 PHP</h2>
+<p>Termux 下的 Nginx 解析 PHP 这里单独拿出一级标题来叙述，成功解析的话，下面安装 wordpress 等 PHP 网站就会轻松很多。</p>
+<h3 id="8-1-安装-php-fpm">8.1 安装 php-fpm</h3>
+<p>Nginx 本身不能处理 PHP，它只是个 Web 服务器，当接收到 PHP 请求后发给 PHP 解释器处理。Nginx 一般是把请求转发给 fastcgi 管理进程处理，PHP-FPM 是一个 PHP FastCGI 管理器，所以这里得先安装它：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pkg install php-fpm</span><br></pre></td></tr></table></figure>
+<p>安装完成顺便检查一下版本信息吧：</p>
+<p><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.3001.net/images/20200419/15873011212729.jpg" alt="img"></p>
+<h3 id="8-2-配置-php-fpm">8.2 配置 php-fpm</h3>
+<p>编辑 php-fpm 的配置文件 <code>www.conf</code>：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim <span class="variable">$PREFIX</span>/etc/php-fpm.d/www.conf</span><br></pre></td></tr></table></figure>
+<p>定位搜索 <code>listen =</code> 找到</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">listen</span> = /data/data/com.termux/files/usr/var/run/php-fpm.sock</span><br></pre></td></tr></table></figure>
+<p>将其改为：</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">listen</span> = <span class="number">127.0</span>.<span class="number">0.1</span>:<span class="number">9000</span></span><br></pre></td></tr></table></figure>
+<p>？？？啥 你不会使用 vim 搜索 ㄟ (▔,▔) ㄏ 那就老老实实一个个翻页吧。</p>
+<h3 id="8-3-配置-Nginx">8.3 配置 Nginx</h3>
+<p>编辑 Nginx 的配置文件 <code>nginx.conf</code>：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim <span class="variable">$PREFIX</span>/etc/nginx/nginx.conf</span><br></pre></td></tr></table></figure>
+<p>下面国光贴出配置好的完整配置文件，大家可以参考下面这些图，只需要两大步骤：</p>
+<ol>
+<li>添加 <code>index.php</code> 到默认首页的规则里面：</li>
+</ol>
+<p><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.3001.net/images/20200419/15873019971725.jpg" alt="img"></p>
+<ol>
+<li>取消 <code>location ~ \.php$</code> 这些注释，按照图片上的 提示修改：</li>
+</ol>
+<p><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.3001.net/images/20200419/15873019943700.jpg" alt="img"></p>
+<p>Termux 里面的 Nginx 默认网站的根目为：</p>
+<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/data/data/com<span class="variable">.termux</span>/files/usr/share/nginx/html</span><br></pre></td></tr></table></figure>
+<p>如果想要修改默认路径的话 只需要在配置文件中 替换 2 处出现的这个路径即可</p>
+<p>下面贴一份完整的配置文件：</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">worker_processes</span>  <span class="number">1</span>;</span><br><span class="line"><span class="section">events</span> &#123;</span><br><span class="line">    <span class="attribute">worker_connections</span>  <span class="number">1024</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="section">http</span> &#123;</span><br><span class="line">    <span class="attribute">include</span>       mime.types;</span><br><span class="line">    <span class="attribute">default_type</span>  application/octet-stream;</span><br><span class="line">    <span class="attribute">sendfile</span>        <span class="literal">on</span>;</span><br><span class="line">    <span class="attribute">keepalive_timeout</span>  <span class="number">65</span>;</span><br><span class="line"></span><br><span class="line">    <span class="section">server</span> &#123;</span><br><span class="line">        <span class="attribute">listen</span>       <span class="number">8080</span>;</span><br><span class="line">        <span class="attribute">server_name</span>  localhost;</span><br><span class="line">        <span class="section">location</span> / &#123;</span><br><span class="line">            <span class="attribute">root</span>   /data/data/com.termux/files/usr/share/nginx/html;</span><br><span class="line">            <span class="attribute">index</span>  index.html index.htm index.php;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="attribute">error_page</span>   <span class="number">500</span> <span class="number">502</span> <span class="number">503</span> <span class="number">504</span>  /50x.html;</span><br><span class="line">        <span class="section">location</span> = /50x.html &#123;</span><br><span class="line">            <span class="attribute">root</span>   /data/data/com.termux/files/usr/share/nginx/html;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="section">location</span> <span class="regexp">~ \.php$</span> &#123;</span><br><span class="line">            <span class="attribute">root</span>           html;</span><br><span class="line">            <span class="attribute">fastcgi_pass</span>   <span class="number">127.0.0.1:9000</span>;</span><br><span class="line">            <span class="attribute">fastcgi_index</span>  index.php;</span><br><span class="line">            <span class="attribute">fastcgi_param</span>  SCRIPT_FILENAME  /data/data/com.termux/files/usr/share/nginx/html<span class="variable">$fastcgi_script_name</span>;</span><br><span class="line">            <span class="attribute">include</span>        fastcgi_params;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="8-4-测试-PHP-解析">8.4 测试 PHP 解析</h3>
+<p>Nginx 默认网站的根目录为：</p>
+<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/data/data/com<span class="variable">.termux</span>/files/usr/share/nginx/html</span><br></pre></td></tr></table></figure>
+<p>在这个网站根目录下新建 <code>info.php</code> 内容为：<code>&lt;?php phpinfo(); ?&gt;</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;&lt;?php phpinfo(); ?&gt;&#x27;</span> &gt; <span class="variable">$PREFIX</span>/share/nginx/html/info.php</span><br></pre></td></tr></table></figure>
+<h3 id="8-5-启动服务">8.5 启动服务</h3>
+<p>先启动 php-fpm 服务：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">php-fpm</span><br></pre></td></tr></table></figure>
+<p>然后再启动 Nginx 服务：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>如果你的 Nginx 已经启动了的话，使用 <code>nginx -s reload</code> 重启 Nginx</p>
+</blockquote>
+<h3 id="8-6-访问测试">8.6 访问测试</h3>
+<p>浏览器访问 <code>http://127.0.0.1:8080/info.php</code> 来看看刚刚新建的测试文件是否解析了：</p>
+<p><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.3001.net/images/20200419/15873036887325.jpg" alt="哇哦~ awesome"></p>
+<h2 id="9-Nodejs">9  Nodejs</h2>
+<p>Node.js 是能够在服务器端运行 JavaScript 的开放源代码、跨平台 JavaScript 运行环境。</p>
+<h3 id="9-1-安装-Nodejs">9.1 安装 Nodejs</h3>
+<p><code>nodejs-lts</code> 是长期支持版本，如果执行 <code>pkg install nodejs</code> 版本后，发现 npm 报如下错误:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">segmentation fault</span><br></pre></td></tr></table></figure>
+<p>那么这个时候可以尝试卸载当前版本 <code>pkg uninstall nodejs</code> 然后执行下面命令安装长期稳定版本：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pkg install nodejs-lts</span><br></pre></td></tr></table></figure>
+<p>安装完成后使用如下命令查看版本信息：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node -V</span><br><span class="line">npm -V</span><br></pre></td></tr></table></figure>
+<h3 id="9-2-Hello-World">9.2 Hello World</h3>
+<p>新建一个 <code>hello.js</code> 脚本，内容如下:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;Hello Termux&#x27;</span>);</span><br></pre></td></tr></table></figure>
+<p>然后尝试运行：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ node hello.js</span><br><span class="line">Hello Termux</span><br></pre></td></tr></table></figure>
+<h3 id="9-3-http-server">9.3 http-server</h3>
+<p>http-server 是一个基于 Node.js 的简单零配置命令行 HTTP 服务器。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装 http-server</span></span><br><span class="line">npm install -g http-server</span><br><span class="line"></span><br><span class="line"><span class="comment"># 运行 http-server</span></span><br><span class="line">http-server</span><br></pre></td></tr></table></figure>
+<p><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.3001.net/images/20200421/15874464701156.jpg" alt="img"></p>
+<p>尝试电脑端浏览器直接访问看看：</p>
+<p><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.3001.net/images/20200421/15874465807370.jpg" alt="OK"></p>
+<h3 id="9-4-安装报错">9.4 安装报错</h3>
+<p>早期版本的 Termux 的 npm 安装一些包的时候会报如下错误：</p>
+<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Cannot read <span class="keyword">property</span> &#x27;length&#x27; of undefined</span><br></pre></td></tr></table></figure>
+<p>查了下是这边版本的问题：</p>
+<p><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.3001.net/images/20180501/15251603187936.png" alt="新版本貌似npm正常"></p>
+<p>这是一个 BUG，官方的解决方法如下：</p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/rvagg/node-worker-farm/commit/0b2349c6c7ed5c51e234e418fad226875313e773">disable concurrency in case of libuv/libuv#1459</a></p>
+<p><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.3001.net/images/20180501/15251607456224.png" alt="img"></p>
+<p>编辑如下文件：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim <span class="variable">$PREFIX</span>/lib/node_modules/npm/node_modules/worker-farm/lib/farm.js</span><br></pre></td></tr></table></figure>
+<p>我这里修改 length 的是 <code>4</code>，这个好像和 CPU 有关，总之这里的 length 得指定一个数字：</p>
+<p><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.3001.net/images/20180501/15251608278605.png" alt="新版本貌似npm正常"></p>
+<p>然后在重新安装下 <code>npm install hexo-cli -g</code> 成功。</p>
+<h2 id="10-PHP">10  PHP</h2>
+<p>PHP 是一种开源的脚本语言，适用于网络开发。语法借鉴吸收 C 语言、Java 和 Perl 等流行计算机语言的特点，易于学习，PHP 是世界上最好的语言（手动狗头）。</p>
+<h3 id="10-1-安装-PHP">10.1 安装 PHP</h3>
+<p>Termux 官方封装了 PHP，所以我们安装起来就很方便：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pkg install php</span><br></pre></td></tr></table></figure>
+<p>安装完成后查看下版本信息：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">php --version</span><br></pre></td></tr></table></figure>
+<p><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.3001.net/images/20200419/15872714538915.jpg" alt="img"></p>
+<h3 id="10-2-运行测试文件">10.2 运行测试文件</h3>
+<blockquote>
+<p>自 <code>PHP5.4</code> 之后 PHP 内置了一个 Web 服务器。在 Termux 下可以很方便地测试 PHP 文件</p>
+</blockquote>
+<p>首先在家 (<code>~</code>) 目录下建一个 <code>www</code> 文件夹，然后在 <code>www</code> 文件夹下新建一个 <code>index.php</code> 文件，内容为：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> <span class="title function_ invoke__">phpinfo</span>();<span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<p>完整的步骤如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 新建 www 文件夹</span></span><br><span class="line"><span class="built_in">mkdir</span> ~/www</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建 inedx.php 文件</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;&lt;?php phpinfo();?&gt;&#x27;</span> &gt; ~/www/index.php</span><br></pre></td></tr></table></figure>
+<p>编写完成 <code>index.php</code> 文件后，尝试使用 PHP 内置的 WebServer 直接启动：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 进入家目录</span></span><br><span class="line"><span class="built_in">cd</span> ~</span><br><span class="line"></span><br><span class="line"><span class="comment"># 启动 WebServer</span></span><br><span class="line">php -S 0.0.0.0:8888 -t www/</span><br></pre></td></tr></table></figure>
+<p>自己制定端口后，浏览器访问 <code>http://127.0.0.1:8888</code> 效果如下：</p>
+<p><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.3001.net/images/20200419/15872720841994.jpg" alt="img"></p>
+<h2 id="11-Python">11  Python</h2>
+<p>Python 是近几年非常流行的语言，Python 相关的书籍和资料也如雨后春笋一般不断涌现，带来了活跃了 Python 学习氛围。</p>
+<h3 id="11-1-安装-Python2">11.1 安装 Python2</h3>
+<p>Python2 版本要淘汰了，大家简单了解一下就好：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pkg install python2 -y</span><br></pre></td></tr></table></figure>
+<p>安装完成后，使用 <code>python2</code> 命令启动 Python2.7 的环境。</p>
+<h3 id="11-2-安装-Python3">11.2 安装 Python3</h3>
+<p>Termux 安装 Python 默认版本是 Python3 的版本，与此同时也顺便安装了 <code>clang</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pkg install python -y</span><br></pre></td></tr></table></figure>
+<p>安装完成后，查看下 <code>clang</code> 和 <code>Python</code> 的版本：</p>
+<p><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.3001.net/images/20200418/15872152256508.jpg" alt="img"></p>
+<h3 id="11-3-注意版本区分">11.3 注意版本区分</h3>
+<p>如果你同时安装了 Python3 和 Python2 版本的话，最好向下图中这样验证一下各个版本情况，做到心知肚明，国光我是先安装 Python3 然后再安装 Python2 的：</p>
+<p><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.3001.net/images/20200418/15872154301353.jpg" alt="安装顺序不一样 pip 这种图片应该也就不一样"></p>
+<p>如果版本直接混乱的话，手动修改 bin 目录下的软连接指向的位置即可。</p>
+<h3 id="11-4-升级-PIP-版本">11.4 升级 PIP 版本</h3>
+<p>PIP 保持最新是一个好习惯，升级方式很简单：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 升级 pip2 </span></span><br><span class="line">python2 -m pip install --upgrade pip -i https://pypi.tuna.tsinghua.edu.cn/simple some-package</span><br><span class="line"></span><br><span class="line"><span class="comment"># 升级 pip3</span></span><br><span class="line">python -m pip install --upgrade pip -i https://pypi.tuna.tsinghua.edu.cn/simple some-package</span><br></pre></td></tr></table></figure>
+<p>这两条命令分别升级了 <code>pip2</code> 和 <code>pip3</code> 到最新版。升级完成后你会惊讶的发现你的 <code>pip3</code> 命令不见了？？？然后这个时候就开始吐槽国光了（内心 OS：国光 非要强迫症升级 pip 版本，这下好了吧！）</p>
+<p>国光：不要慌 问题不大，我们可以手动查看当前有哪些可执行的 pip 文件，使用如下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ls</span> /data/data/com.termux/files/usr/bin|grep pip</span><br></pre></td></tr></table></figure>
+<p><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.3001.net/images/20200418/15872207482231.jpg" alt="原来我们的pip3变成了pip3.8了啊"></p>
+<p>接下来分别查看对应 pip 可执行文件的版本：</p>
+<p><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.3001.net/images/20200418/15872208776206.jpg" alt="img"></p>
+<p>现在全都是最新版的 pip 了哦</p>
+<h3 id="11-5-iPython">11.5 iPython</h3>
+<p>iPython 是一个 Python 的增强版本的交互式 shell，支持变量自动补全，自动缩进，支持 shell 命令等，内置了许多很有用的功能和函数。iPython 可以提高我们的学习效率！</p>
+<blockquote>
+<p>先安装 <code>clang</code>, 否则直接使用 <code>pip</code> 安装 <code>ipython</code> 会失败报错。没有安装的话使用 <code>pkg install clang</code> 安装</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -i 手动指定国内清华 pip 源 提高下载速度</span></span><br><span class="line">pip install ipython -i https://pypi.tuna.tsinghua.edu.cn/simple some-package</span><br><span class="line">pip3.8 install ipython -i https://pypi.tuna.tsinghua.edu.cn/simple some-package</span><br></pre></td></tr></table></figure>
+<p>执行完上述命令分别安装好对应版本的 <code>iPython</code> 后，然后分别查看对应版本信息：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ipython2 -V</span><br><span class="line">ipython -V</span><br></pre></td></tr></table></figure>
+<h3 id="11-6-Jupyter-Notebook">11.6 Jupyter Notebook</h3>
+<p>Jupyter Notebook（此前被称为 iPython notebook）可以在 Web 端提供 Python 交互，虽然和 iPython 共享同一个内核，但是更强大。</p>
+<blockquote>
+<p>Jupyter notebook 相关的依赖比较多 安装起来较为耗时 国光就只用 Python3 版本来演示了，另外请务必要使用国内的 pip 源来安装</p>
+</blockquote>
+<p>下面官方建议安装的完整的命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">pkg update</span><br><span class="line">pkg install proot</span><br><span class="line">termux-chroot</span><br><span class="line">apt install git clang</span><br><span class="line">apt install pkg-config</span><br><span class="line">apt install python python3-dev </span><br><span class="line">apt install libclang libclang-dev</span><br><span class="line">apt install libzmq libzmq-dev</span><br><span class="line">apt install ipython </span><br><span class="line">pip install jupyter </span><br></pre></td></tr></table></figure>
+<p>如果你一步步跟着本文安装顺序操作的话，发现很多工具我们都安装过了（国光我真的有先见之明…），那么直接参考如下命令安装即可：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -i 手动指定国内中清华 pip 源 提高下载速度</span></span><br><span class="line"><span class="comment"># 更新是个好习惯</span></span><br><span class="line">pkg update</span><br><span class="line"></span><br><span class="line"><span class="comment"># 切换模拟的 root 环境</span></span><br><span class="line">termux-chroot</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装相关依赖</span></span><br><span class="line">pkg install libclang</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装 jupyter</span></span><br><span class="line">pip3 install jupyter -i https://pypi.tuna.tsinghua.edu.cn/simple some-package</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装完成退出 chroot</span></span><br><span class="line"><span class="built_in">exit</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装 jupyterlab</span></span><br><span class="line">pip3 install jupyterlab -i https://pypi.tuna.tsinghua.edu.cn/simple some-package</span><br></pre></td></tr></table></figure>
+<p>安装好之后查看一下版本信息：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jupyter --version</span><br></pre></td></tr></table></figure>
+<p><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.3001.net/images/20200419/15872568247791.jpg" alt="所有插件均安装完成"></p>
+<p>Jupyter Notebook 就安装好了，这个比较强大更详细的教程大家可以自行去谷歌或者百度一下，国光这里只演示基本的功能。</p>
+<p>先启动 notebook</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jupyter notebook</span><br></pre></td></tr></table></figure>
+<p>然后会看到运行的日志，我们复制出 提示的 URL：</p>
+<p><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.3001.net/images/20200419/15872589383675.jpg" alt="img"></p>
+<p>复制出的这个 URL 地址 在浏览器中打开：</p>
+<p><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.3001.net/images/20200419/15872590622420.jpg" alt="img"></p>
+<p>可以看到成功运行了，那我们按照图片提示走个形式，输出个 Hello World 就跑路：</p>
+<p><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.3001.net/images/20200419/15872592274410.jpg" alt="img"></p>
+<p>OK 运行成功，那么回到 Termux 里面使用组合键 <code>Ctrl + C</code> -&gt; 中止当前的 Jupyter 进程。</p>
+<hr>
+<p><div calss='anzhiyu-tag-link'><a class="tag-Link" target="_blank" href="/%3Ca%20href=https:/www.sqlsec.com/2018/05/termux.html#%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%3Ehttps:/www.sqlsec.com/2018/05/termux.html#%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%3C/a%3E">
+    <div class="tag-link-tips">引用站外地址</div>
+    <div class="tag-link-bottom">
+        <div class="tag-link-left" style="background-image: url(<a href=https://image.3001.net/images/20200922/16007336487809.jpg>https://image.3001.net/images/20200922/16007336487809.jpg</a>)">
+          <i class="anzhiyufont anzhiyu-icon-link" style="display: none"></i>
+        </div>
+        <div class="tag-link-right">
+            <div class="tag-link-title">Termux 高级终端安装使用配置教程</div>
+            <div class="tag-link-sitename"> 转载自</div>
+        </div>
+        <i class="anzhiyufont anzhiyu-icon-angle-right"></i>
+    </div>
+    </a></div></p>
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/yuan-avatar.webp" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/yuan-avatar.webp" title="头像" alt="头像"></a><div class="post-copyright__author_name">AiGuoHou</div><div class="post-copyright__author_desc">今日事，今日毕</div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="https://aizhiqian.github.io/posts/46db2752/">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('https://aizhiqian.github.io/posts/46db2752/')">【Termux】高级终端安装使用配置教程 3</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"><div class="post-reward" onclick="anzhiyu.addRewardMask()"><div class="reward-button button--animated" title="赞赏作者"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill"></i>打赏作者</div><div class="reward-main"><div class="reward-all"><span class="reward-title">感谢你赐予我前进的力量</span><ul class="reward-group"><li class="reward-item"><a href="/img/wechat.webp" target="_blank"><img class="post-qr-code-img" src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/wechat.webp" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/alipay.webp" target="_blank"><img class="post-qr-code-img" src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/alipay.webp" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul><a class="reward-main-btn" href="/about/#about-reward" target="_blank"><div class="reward-text">赞赏者名单</div><div class="reward-dec">因为你们的支持让我意识到写文章的价值🙏</div></a></div></div></div><div id="quit-box" onclick="anzhiyu.removeRewardMask()" style="display: none"></div></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="https://aizhiqian.github.io/posts/46db2752/"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=【Termux】高级终端安装使用配置教程 3&amp;url=https://aizhiqian.github.io/posts/46db2752/&amp;pic=https://www.aini.cn.eu.org/meinv?_r_=bd568368-37a0-0f19-5482-b3264f571afe" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><script>function copyCurrentPageUrl() {
+  var currentPageUrl = window.location.href;
+  var input = document.createElement("input");
+  input.setAttribute("value", currentPageUrl);
+  document.body.appendChild(input);
+  input.select();
+  input.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.body.removeChild(input);
+}</script><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="copyCurrentPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow noreferrer" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://aizhiqian.github.io" target="_blank">向日葵🌻小站</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"><a class="post-meta__box__tags" href="/tags/termux/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>termux<span class="tagsPageCount">5</span></a><a class="post-meta__box__tags" href="/tags/Android/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>Android<span class="tagsPageCount">5</span></a></div></div></div><div class="post_share"><div class="social-share" data-image="https://www.aini.cn.eu.org/meinv?_r_=9c0801df-4e9c-8763-c849-cfb1e87f7a74" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/butterfly-extsrc/1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"/><script src="https://cdn.bootcdn.net/ajax/libs/butterfly-extsrc/1.1.3/sharejs/dist/js/social-share.min.js" defer="defer"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/38280779/"><img class="prev-cover" src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://www.aini.cn.eu.org/meinv?_r_=333ccd63-2f63-4df9-61b4-5059b478fa14" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">【Termux】高级终端安装使用配置教程 2</div></div></a></div><div class="next-post pull-right"><a href="/posts/bc98c85d/"><img class="next-cover" src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://www.aini.cn.eu.org/meinv?_r_=2f7f89ca-63eb-5526-a096-4e8e79521694" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">【Termux】高级终端安装使用配置教程 4</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="anzhiyufont anzhiyu-icon-thumbs-up fa-fw" style="font-size: 1.5rem; margin-right: 4px"></i><span>喜欢这篇文章的人也看了</span></div><div class="relatedPosts-list"><div><a href="/posts/97199c1b/" title="【Termux】高级终端安装使用配置教程 1"><img class="cover" src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://www.aini.cn.eu.org/meinv?_r_=064c1749-ae3e-9821-f9d0-a61df1521821" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2023-07-23</div><div class="title">【Termux】高级终端安装使用配置教程 1</div></div></a></div><div><a href="/posts/38280779/" title="【Termux】高级终端安装使用配置教程 2"><img class="cover" src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://www.aini.cn.eu.org/meinv?_r_=333ccd63-2f63-4df9-61b4-5059b478fa14" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2023-07-23</div><div class="title">【Termux】高级终端安装使用配置教程 2</div></div></a></div><div><a href="/posts/bc98c85d/" title="【Termux】高级终端安装使用配置教程 4"><img class="cover" src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://www.aini.cn.eu.org/meinv?_r_=2f7f89ca-63eb-5526-a096-4e8e79521694" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2023-07-23</div><div class="title">【Termux】高级终端安装使用配置教程 4</div></div></a></div><div><a href="/posts/ba339f20/" title="【Termux】高级终端安装使用配置教程 5"><img class="cover" src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://www.aini.cn.eu.org/meinv?_r_=d4ded71c-b4ad-8fa3-056a-41c6d84a1c76" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2023-07-23</div><div class="title">【Termux】高级终端安装使用配置教程 5</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="anzhiyufont anzhiyu-icon-comments"></i><span> 评论</span></div><div class="comment-randomInfo"><a onclick="anzhiyu.addRandomCommentInfo()" href="javascript:void(0)" rel="external nofollow noreferrer" style="display: none">匿名评论</a><a href="/privacy" style="margin-left: 4px">隐私政策</a></div><div class="comment-tips" id="comment-tips"><span>✅ 你无需删除空行，直接评论以获取最佳展示效果</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div><div class="comment-barrage"></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info__sayhi" id="author-info__sayhi" onclick="anzhiyu.changeSayHelloText()"></div><div class="author-info-avatar"><img class="avatar-img" src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/yuan-avatar.webp" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-status"><img class="g-status" src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2021/03/03/d7c475de07d04.png" alt="status"/></div></div><div class="author-info__description"><div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">向日葵🌻小站</div><div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">这是一个分享<b style="color:#fff">日常学习</b>与<b style="color:#fff">代码生活</b>的博客</div><div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);"><b style="color:#ffcd25">荷风送香气﹐竹露滴清响</b></div></div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" href="/"><h1 class="author-info__name">AiGuoHou</h1><div class="author-info__desc">今日事，今日毕</div></a><div class="card-info-social-icons is-center"><a class="social-icon faa-parent animated-hover" href="https://github.com/aizhiqian" rel="external nofollow noreferrer" target="_blank" title="Github"><i class="anzhiyufont anzhiyu-icon-github"></i></a><a class="social-icon faa-parent animated-hover" href="https://space.bilibili.com/696732872" rel="external nofollow noreferrer" target="_blank" title="BiliBili"><i class="anzhiyufont anzhiyu-icon-bilibili"></i></a></div></div></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bullhorn anzhiyu-shake"></i><span>公告</span></div><div class="announcement_content"><center><p style="text-align:center;"><b>欢迎来看我的博客鸭~</b></p><b>--- 主域名 ---<br/>🍧<a target="_blank" rel="noopener external nofollow noreferrer" href="https://blog.aizhiqian.xyz" title="此线路部署于 Vercel" class="anno_content"><font color="#5ea6e5">blog.aizhiqian.xyz</font></a>🍧<br/>--- 备用域名 ---<br/><a href="https://aizhiqian.github.io" title="此线路部署于 Github Pages" class="anno_content"><font color="#5ea6e5">aizhiqian.github.io</font></a><br/><a target="_blank" rel="noopener external nofollow noreferrer" href="https://vercel.aizhiqian.eu.org" title="此线路部署于 Vercel" class="anno_content"><font color="#5ea6e5">vercel.aizhiqian.eu.org</font></a><br/><a target="_blank" rel="noopener external nofollow noreferrer" href="https://netlify.aizhiqian.eu.org" title="此线路部署于 Netlify" class="anno_content"><font color="#5ea6e5">netlify.aizhiqian.eu.org</font></a></b></center></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E7%BC%96%E8%BE%91%E5%99%A8"><span class="toc-text">1  编辑器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-Emacs"><span class="toc-text">1.1 Emacs</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-nano"><span class="toc-text">1.2 nano</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-Vim"><span class="toc-text">1.3 Vim</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3-1-%E8%A7%A3%E5%86%B3%E6%B1%89%E5%AD%97%E4%B9%B1%E7%A0%81"><span class="toc-text">1.3.1 解决汉字乱码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3-2-Vim-%E9%85%8D%E8%89%B2"><span class="toc-text">1.3.2 Vim 配色</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Apache"><span class="toc-text">2  Apache</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E5%AE%89%E8%A3%85-Apache"><span class="toc-text">2.1 安装 Apache</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E5%90%AF%E5%8A%A8-Apache"><span class="toc-text">2.2 启动 Apache</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-%E5%81%9C%E6%AD%A2-Apache"><span class="toc-text">2.3 停止 Apache</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-%E9%87%8D%E5%90%AF-Apache"><span class="toc-text">2.4 重启 Apache</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Apache-%E8%A7%A3%E6%9E%90-PHP"><span class="toc-text">3  Apache 解析 PHP</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E5%AE%89%E8%A3%85-php-apache"><span class="toc-text">3.1 安装 php-apache</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E9%85%8D%E7%BD%AE-Apache"><span class="toc-text">3.2 配置 Apache</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-%E8%A7%A3%E5%86%B3-Apache-PHP-%E6%8A%A5%E9%94%99"><span class="toc-text">3.3 解决 Apache PHP 报错</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-%E8%A7%A3%E6%9E%90-PHP-%E6%B5%8B%E8%AF%95"><span class="toc-text">3.4 解析 PHP 测试</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-C"><span class="toc-text">4  C</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-%E5%AE%89%E8%A3%85-clang"><span class="toc-text">4.1 安装 clang</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-%E7%BC%96%E8%AF%91%E6%B5%8B%E8%AF%95"><span class="toc-text">4.2 编译测试</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-Java"><span class="toc-text">5  Java</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-Openjdk-17"><span class="toc-text">5.1 Openjdk-17</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-ECJ"><span class="toc-text">5.2 ECJ</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#5-2-1-%E5%AE%89%E8%A3%85%E7%BC%96%E8%AF%91%E5%B7%A5%E5%85%B7"><span class="toc-text">5.2.1 安装编译工具</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-2-2-%E7%BC%96%E8%AF%91%E7%94%9F%E6%88%90-class-%E6%96%87%E4%BB%B6"><span class="toc-text">5.2.2 编译生成 class 文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-2-3-%E7%BC%96%E8%AF%91%E7%94%9F%E6%88%90-dex-%E6%96%87%E4%BB%B6"><span class="toc-text">5.2.3 编译生成 dex 文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-2-4-%E4%BD%BF%E7%94%A8-dalvikvm-%E8%BF%90%E8%A1%8C"><span class="toc-text">5.2.4 使用 dalvikvm 运行</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-MariaDB-MySQL"><span class="toc-text">6  MariaDB (MySQL)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#6-1-%E5%AE%89%E8%A3%85-MariaDB"><span class="toc-text">6.1 安装 MariaDB</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-%E5%88%9D%E5%A7%8B%E5%8C%96%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-text">6.2 初始化数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-3-%E5%90%AF%E5%8A%A8-MySQL-%E6%9C%8D%E5%8A%A1"><span class="toc-text">6.3 启动 MySQL 服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-4%E5%81%9C%E6%AD%A2-MySQL-%E6%9C%8D%E5%8A%A1"><span class="toc-text">6.4停止 MySQL 服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-5-%E9%BB%98%E8%AE%A4%E7%9A%84%E4%B8%A4%E4%B8%AA%E7%94%A8%E6%88%B7"><span class="toc-text">6.5 默认的两个用户</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-6-%E4%BF%AE%E6%94%B9-root-%E5%AF%86%E7%A0%81"><span class="toc-text">6.6 修改 root 密码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-7-root-%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95"><span class="toc-text">6.7 root 用户登录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-8-%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%BD%95-MySQL"><span class="toc-text">6.8 远程登录 MySQL</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-Nginx"><span class="toc-text">7  Nginx</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-1-%E5%AE%89%E8%A3%85-Nginx"><span class="toc-text">7.1 安装 Nginx</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-2-%E6%B5%8B%E8%AF%95-Nginx"><span class="toc-text">7.2 测试 Nginx</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-3-%E5%90%AF%E5%8A%A8-Nginx"><span class="toc-text">7.3 启动 Nginx</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-4-%E9%87%8D%E5%90%AF-Nginx"><span class="toc-text">7.4 重启 Nginx</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-5-%E5%81%9C%E6%AD%A2-Nginx"><span class="toc-text">7.5 停止 Nginx</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#7-5-1-%E6%96%B9%E6%B3%95%E4%B8%80-%E5%8E%9F%E7%94%9F%E5%81%9C%E6%AD%A2"><span class="toc-text">7.5.1 方法一 原生停止</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-5-2-%E6%96%B9%E6%B3%95%E4%BA%8C-%E6%9D%80%E6%8E%89%E8%BF%9B%E7%A8%8B"><span class="toc-text">7.5.2 方法二 杀掉进程</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-Nginx-%E8%A7%A3%E6%9E%90-PHP"><span class="toc-text">8  Nginx 解析 PHP</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#8-1-%E5%AE%89%E8%A3%85-php-fpm"><span class="toc-text">8.1 安装 php-fpm</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-2-%E9%85%8D%E7%BD%AE-php-fpm"><span class="toc-text">8.2 配置 php-fpm</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-3-%E9%85%8D%E7%BD%AE-Nginx"><span class="toc-text">8.3 配置 Nginx</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-4-%E6%B5%8B%E8%AF%95-PHP-%E8%A7%A3%E6%9E%90"><span class="toc-text">8.4 测试 PHP 解析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-5-%E5%90%AF%E5%8A%A8%E6%9C%8D%E5%8A%A1"><span class="toc-text">8.5 启动服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-6-%E8%AE%BF%E9%97%AE%E6%B5%8B%E8%AF%95"><span class="toc-text">8.6 访问测试</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-Nodejs"><span class="toc-text">9  Nodejs</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#9-1-%E5%AE%89%E8%A3%85-Nodejs"><span class="toc-text">9.1 安装 Nodejs</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-2-Hello-World"><span class="toc-text">9.2 Hello World</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-3-http-server"><span class="toc-text">9.3 http-server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-4-%E5%AE%89%E8%A3%85%E6%8A%A5%E9%94%99"><span class="toc-text">9.4 安装报错</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-PHP"><span class="toc-text">10  PHP</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#10-1-%E5%AE%89%E8%A3%85-PHP"><span class="toc-text">10.1 安装 PHP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-2-%E8%BF%90%E8%A1%8C%E6%B5%8B%E8%AF%95%E6%96%87%E4%BB%B6"><span class="toc-text">10.2 运行测试文件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-Python"><span class="toc-text">11  Python</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#11-1-%E5%AE%89%E8%A3%85-Python2"><span class="toc-text">11.1 安装 Python2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-2-%E5%AE%89%E8%A3%85-Python3"><span class="toc-text">11.2 安装 Python3</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-3-%E6%B3%A8%E6%84%8F%E7%89%88%E6%9C%AC%E5%8C%BA%E5%88%86"><span class="toc-text">11.3 注意版本区分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-4-%E5%8D%87%E7%BA%A7-PIP-%E7%89%88%E6%9C%AC"><span class="toc-text">11.4 升级 PIP 版本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-5-iPython"><span class="toc-text">11.5 iPython</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-6-Jupyter-Notebook"><span class="toc-text">11.6 Jupyter Notebook</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/82ca8098/" title="【笔记】如何发布一个新的 NPM 包及其后续更新"><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://www.aini.cn.eu.org/meinv?_r_=9c0801df-4e9c-8763-c849-cfb1e87f7a74" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【笔记】如何发布一个新的 NPM 包及其后续更新"/></a><div class="content"><a class="title" href="/posts/82ca8098/" title="【笔记】如何发布一个新的 NPM 包及其后续更新">【笔记】如何发布一个新的 NPM 包及其后续更新</a><time datetime="2024-05-14T11:03:24.000Z" title="发表于 2024-05-14 19:03:24">2024-05-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/e1d32862/" title="【Windows】装机必备软件"><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://www.aini.cn.eu.org/meinv?_r_=6931bbc9-4fc9-59ab-a2fa-c051445f1988" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【Windows】装机必备软件"/></a><div class="content"><a class="title" href="/posts/e1d32862/" title="【Windows】装机必备软件">【Windows】装机必备软件</a><time datetime="2024-05-05T09:16:27.000Z" title="发表于 2024-05-05 17:16:27">2024-05-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/cb3d58ea/" title="【教程】五分钟注册美区AppleID，手把手教，稳定且耐用！"><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://www.aini.cn.eu.org/meinv?_r_=20f32bfe-e51f-9e1a-c6d9-b867ffc501c7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【教程】五分钟注册美区AppleID，手把手教，稳定且耐用！"/></a><div class="content"><a class="title" href="/posts/cb3d58ea/" title="【教程】五分钟注册美区AppleID，手把手教，稳定且耐用！">【教程】五分钟注册美区AppleID，手把手教，稳定且耐用！</a><time datetime="2024-04-27T09:09:01.000Z" title="发表于 2024-04-27 17:09:01">2024-04-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/9d78f097/" title="【教程】Shadowrocket详细介绍"><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://www.aini.cn.eu.org/meinv?_r_=a29cedfb-73be-20dc-ea3f-e06a31f245f6" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【教程】Shadowrocket详细介绍"/></a><div class="content"><a class="title" href="/posts/9d78f097/" title="【教程】Shadowrocket详细介绍">【教程】Shadowrocket详细介绍</a><time datetime="2024-04-27T07:32:27.000Z" title="发表于 2024-04-27 15:32:27">2024-04-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/f51fdc33/" title="【资源】影视网址合集"><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://www.aini.cn.eu.org/meinv?_r_=80c51d54-912e-1c16-4a28-5d18ad27b2fd" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【资源】影视网址合集"/></a><div class="content"><a class="title" href="/posts/f51fdc33/" title="【资源】影视网址合集">【资源】影视网址合集</a><time datetime="2024-04-09T09:22:24.000Z" title="发表于 2024-04-09 17:22:24">2024-04-09</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div id="footer_deal"><a class="deal_link" href="mailto:3332664073@qq.com" rel="external nofollow noreferrer" title="email"><i class="anzhiyufont anzhiyu-icon-envelope"></i></a><a class="deal_link" target="_blank" rel="noopener external nofollow noreferrer" href="https://weibo.com/u/7479204922" title="微博"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a><a class="deal_link" target="_blank" rel="noopener external nofollow noreferrer" href="https://www.youtube.com/@aiguohou" title="YouTube"><i class="fa-brands fa-youtube"></i></a><a class="deal_link" href="/atom.xml" title="RSS"><i class="anzhiyufont anzhiyu-icon-rss"></i></a><img class="footer_mini_logo" title="返回顶部" alt="返回顶部" onclick="anzhiyu.scrollToDest(0, 500)" src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://jihulab.com/ainiz/img1/-/raw/main/touxiang/yuan-tou/yuan-touxiang2.webp" size="50px"/><a class="deal_link" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/aizhiqian" title="Github"><i class="anzhiyufont anzhiyu-icon-github"></i></a><a class="deal_link" target="_blank" rel="noopener external nofollow noreferrer" href="https://space.bilibili.com/696732872" title="Bilibili"><i class="anzhiyufont anzhiyu-icon-bilibili"></i></a><a class="deal_link" target="_blank" rel="noopener external nofollow noreferrer" href="https://v.douyin.com/iprm72B/" title="抖音"><i class="anzhiyufont anzhiyu-icon-tiktok"></i></a><a class="deal_link" href="/copyright" title="CC"><i class="anzhiyufont anzhiyu-icon-copyright-line"></i></a></div><div id="anzhiyu-footer"><div class="footer-group"><div class="footer-title">服务</div><div class="footer-links"><a class="footer-item" title="51la统计" target="_blank" rel="noopener external nofollow noreferrer" href="https://v6.51.la/">51la统计</a><a class="footer-item" title="十年之约" target="_blank" rel="noopener external nofollow noreferrer" href="https://www.foreverblog.cn/">十年之约</a><a class="footer-item" title="开往" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/travellings-link/travellings">开往</a></div></div><div class="footer-group"><div class="footer-title">主题</div><div class="footer-links"><a class="footer-item" title="文档" target="_blank" rel="noopener external nofollow noreferrer" href="https://docs.anheyu.com/">文档</a><a class="footer-item" title="源码" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu">源码</a><a class="footer-item" title="标签外挂" target="_blank" rel="noopener external nofollow noreferrer" href="https://blog.anheyu.com/posts/d50a.html">标签外挂</a><a class="footer-item" title="更新日志" target="_blank" rel="noopener external nofollow noreferrer" href="https://blog.anheyu.com/update/">更新日志</a></div></div><div class="footer-group"><div class="footer-title">导航</div><div class="footer-links"><a class="footer-item" title="Telegraph-Image" target="_blank" rel="noopener external nofollow noreferrer" href="https://img.aiguohou.eu.org/">Telegraph-Image</a><a class="footer-item" title="memos" target="_blank" rel="noopener external nofollow noreferrer" href="https://memos.xivo.eu.org/">memos</a></div></div><div class="footer-group"><div class="footer-title">协议</div><div class="footer-links"><a class="footer-item" title="隐私协议" href="/privacy/">隐私协议</a><a class="footer-item" title="Cookies" href="/cookies/">Cookies</a><a class="footer-item" title="版权协议" href="/copyright/">版权协议</a></div></div><div class="footer-group"><div class="footer-title-group"><div class="footer-title">友链</div><a class="random-friends-btn" id="footer-random-friends-btn" href="javascript:addFriendLinksInFooter();" rel="external nofollow noreferrer" title="换一批友情链接"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right"></i></a></div><div class="footer-links" id="friend-links-in-footer"></div></div></div><p id="ghbdages"><a class="github-badge" target="_blank" href="https://hexo.io/" rel="external nofollow noreferrer" style="margin-inline:5px" data-title="博客框架为 Hexo_v7.0.0" title="博客框架为 Hexo_v7.0.0"><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.1.5/img/badge/Frame-Hexo.svg" alt="博客框架为 Hexo_v7.0.0"/></a><a class="github-badge" target="_blank" href="https://blog.anheyu.com/" rel="external nofollow noreferrer" style="margin-inline:5px" data-title="本站使用 AnZhiYu 主题" title="本站使用 AnZhiYu 主题"><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.9/img/Theme-AnZhiYu-2E67D3.svg" alt="本站使用 AnZhiYu 主题"/></a><a class="github-badge" target="_blank" href="https://vercel.com/" rel="external nofollow noreferrer" style="margin-inline:5px" data-title="本站由 Vercel 托管" title="本站由 Vercel 托管"><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://sourcebucket.s3.bitiful.net/badge/Hosted-Vercel-brightgreen.svg" alt="本站由 Vercel 托管"/></a><a class="github-badge" target="_blank" href="https://github.com/" rel="external nofollow noreferrer" style="margin-inline:5px" data-title="本站由 Github 托管" title="本站由 Github 托管"><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.1.5/img/badge/Source-Github.svg" alt="本站由 Github 托管"/></a><a class="github-badge" target="_blank" href="https://user.51.la/" rel="external nofollow noreferrer" style="margin-inline:5px" data-title="本站数据分析得益于51la技术支持" title="本站数据分析得益于51la技术支持"><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://sourcebucket.s3.bitiful.net/badge/Analytics-51la-3db1eb.svg" alt="本站数据分析得益于51la技术支持"/></a><a class="github-badge" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow noreferrer" style="margin-inline:5px" data-title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.2.0/img/badge/Copyright-BY-NC-SA.svg" alt="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"/></a></p></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2022 - 2025 By <a class="footer-bar-link" href="/" title="AiGuoHou" target="_blank">AiGuoHou</a></div></div><div id="footer-type-tips"></div><div class="js-pjax"><script>function subtitleType () {
+  fetch('https://v1.hitokoto.cn')
+    .then(response => response.json())
+    .then(data => {
+      if (true) {
+        const from = '出自 ' + data.from
+        const sub = []
+        sub.unshift(data.hitokoto, from)
+        window.typed = new Typed('#footer-type-tips', {
+          strings: sub,
+          startDelay: 300,
+          typeSpeed: 150,
+          loop: true,
+          backSpeed: 50,
+        })
+      } else {
+        document.getElementById('footer-type-tips').innerHTML = data.hitokoto
+      }
+    })
+}
+
+if (true) {
+  if (typeof Typed === 'function') {
+    subtitleType()
+  } else {
+    getScript('https://cdn.bootcdn.net/ajax/libs/typed.js/2.1.0/typed.umd.min.js').then(subtitleType)
+  }
+} else {
+  subtitleType()
+}
+</script></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu" title="主题">主题</a><a class="footer-bar-link" target="_blank" rel="noopener external nofollow noreferrer" href="https://img.aiguohou.eu.org" title="图床">图床</a><a class="footer-bar-link cc" href="/copyright" title="cc协议"><i class="anzhiyufont anzhiyu-icon-copyright-line"></i><i class="anzhiyufont anzhiyu-icon-creative-commons-by-line"></i><i class="anzhiyufont anzhiyu-icon-creative-commons-nc-line"></i><i class="anzhiyufont anzhiyu-icon-creative-commons-nd-line"></i></a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">33</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">18</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">6</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" rel="external nofollow noreferrer" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener external nofollow noreferrer" href="https://www.aizhiqian.eu.org/" title="主页"><img class="back-menu-item-icon" src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://www.aizhiqian.eu.org/images/icon/favicon.ico" alt="主页"/><span class="back-menu-item-text">主页</span></a><a class="back-menu-item" target="_blank" rel="noopener external nofollow noreferrer" href="https://alist.xivo.eu.org/" title="Alist"><img class="back-menu-item-icon" src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://p0.meituan.net/csc/9588e334a146defee0191c68b74bc0a5112303.jpg" alt="Alist"/><span class="back-menu-item-text">Alist</span></a><a class="back-menu-item" href="https://aizhiqian.github.io/" title="blog"><img class="back-menu-item-icon" src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://aizhiqian.github.io/img/favicon.webp" alt="blog"/><span class="back-menu-item-text">blog</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener external nofollow noreferrer" href="https://img.aiguohou.eu.org/" title="知心图床"><img class="back-menu-item-icon" src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img.aiguohou.eu.org/favicon.ico" alt="知心图床"/><span class="back-menu-item-text">知心图床</span></a><a class="back-menu-item" target="_blank" rel="noopener external nofollow noreferrer" href="https://memos.xivo.eu.org/" title="memos"><img class="back-menu-item-icon" src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://memos.xivo.eu.org/logo.webp" alt="memos"/><span class="back-menu-item-text">memos</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友人帐</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()" rel="external nofollow noreferrer"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/API/" style="font-size: 0.88rem; color: rgb(51, 117, 194);">API<sup>1</sup></a><a href="/tags/Android/" style="font-size: 0.88rem; color: rgb(113, 75, 49);">Android<sup>5</sup></a><a href="/tags/CDN/" style="font-size: 0.88rem; color: rgb(51, 89, 31);">CDN<sup>1</sup></a><a href="/tags/hexo/" style="font-size: 0.88rem; color: rgb(21, 168, 107);">hexo<sup>14</sup></a><a href="/tags/iOS/" style="font-size: 0.88rem; color: rgb(14, 56, 11);">iOS<sup>1</sup></a><a href="/tags/ios/" style="font-size: 0.88rem; color: rgb(7, 73, 89);">ios<sup>1</sup></a><a href="/tags/npm/" style="font-size: 0.88rem; color: rgb(60, 121, 168);">npm<sup>1</sup></a><a href="/tags/termux/" style="font-size: 0.88rem; color: rgb(18, 172, 197);">termux<sup>5</sup></a><a href="/tags/%E4%BB%A3%E7%90%86/" style="font-size: 0.88rem; color: rgb(158, 92, 135);">代理<sup>2</sup></a><a href="/tags/%E5%91%BD%E4%BB%A4/" style="font-size: 0.88rem; color: rgb(113, 127, 78);">命令<sup>1</sup></a><a href="/tags/%E5%9B%BE%E5%BA%8A/" style="font-size: 0.88rem; color: rgb(118, 100, 92);">图床<sup>2</sup></a><a href="/tags/%E5%AE%89%E8%A3%85/" style="font-size: 0.88rem; color: rgb(117, 126, 111);">安装<sup>1</sup></a><a href="/tags/%E5%AE%9D%E5%A1%94/" style="font-size: 0.88rem; color: rgb(5, 180, 136);">宝塔<sup>1</sup></a><a href="/tags/%E5%BD%B1%E8%A7%86/" style="font-size: 0.88rem; color: rgb(185, 191, 40);">影视<sup>1</sup></a><a href="/tags/%E7%AD%BE%E5%88%B0/" style="font-size: 0.88rem; color: rgb(195, 43, 111);">签到<sup>1</sup></a><a href="/tags/%E7%BE%8E%E5%8C%96/" style="font-size: 0.88rem; color: rgb(118, 187, 73);">美化<sup>8</sup></a><a href="/tags/%E8%84%9A%E6%9C%AC/" style="font-size: 0.88rem; color: rgb(163, 135, 100);">脚本<sup>1</sup></a><a href="/tags/%E8%BD%AF%E4%BB%B6/" style="font-size: 0.88rem; color: rgb(0, 33, 145);">软件<sup>1</sup></a></div></div><hr/></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="anzhiyufont anzhiyu-icon-comments"></i></a><a id="switch-commentBarrage" href="javascript:anzhiyu.switchCommentBarrage();" rel="external nofollow noreferrer" title="开关弹幕"><i class="anzhiyufont anzhiyu-icon-danmu"></i></a><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="nav-music"><a id="nav-music-hoverTips" onclick="anzhiyu.musicToggle()" accesskey="m">播放音乐</a><div id="console-music-bg"></div><meting-js id="9025983609" server="tencent" type="playlist" mutex="true" preload="none" theme="var(--anzhiyu-main)" data-lrctype="0" order="random" volume="0.5"></meting-js></div><div id="algolia-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><button class="search-close-button"><i class="anzhiyufont anzhiyu-icon-xmark"></i></button></nav><div class="search-wrap"><div id="algolia-search-input"></div><hr/><div id="algolia-search-results"><div id="algolia-hits"></div><div id="algolia-pagination"></div><div id="algolia-info"><div class="algolia-stats"></div><div class="algolia-poweredBy"></div></div></div></div></div><div id="search-mask"></div></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/9025983609&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="https://s4.zstatic.net/ajax/libs/hexo-theme-anzhiyu/1.6.14/js/utils.min.js"></script><script src="https://s4.zstatic.net/ajax/libs/hexo-theme-anzhiyu/1.6.14/js/main.min.js"></script><script src="https://s4.zstatic.net/ajax/libs/hexo-theme-anzhiyu/1.6.14/js/tw_cn.min.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@latest/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.bootcdn.net/ajax/libs/instant.page/5.2.0/instantpage.min.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@latest/dist/lazyload.iife.min.js"></script><script src="https://cdn.bootcdn.net/ajax/libs/node-snackbar/0.1.16/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.bootcdn.net/ajax/libs/pangu/4.0.7/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("07/22/2023 14:57:21"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2022 By 安知鱼 V1.6.14",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 AiGuoHou 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><script src="https://s4.zstatic.net/ajax/libs/algoliasearch/5.8.0/algoliasearch.umd.min.js"></script><script src="https://cdn.cbd.int/instantsearch.js@latest/dist/instantsearch.production.min.js"></script><script src="https://s4.zstatic.net/ajax/libs/hexo-theme-anzhiyu/1.6.14/js/search/algolia.min.js"></script><div class="js-pjax"><script>(() => {
+  const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+  if ($mermaid.length === 0) return
+  const runMermaid = () => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+    Array.from($mermaid).forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
+      const mermaidID = 'mermaid-' + index
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+
+      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+
+      const renderV10 = () => {
+        renderFn.then(({svg}) => {
+          mermaidSrc.insertAdjacentHTML('afterend', svg)
+        })
+      }
+
+      const renderV9 = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+      }
+
+      typeof renderFn === 'string' ? renderV9(renderFn) : renderV10()
+    })
+  }
+
+  const loadMermaid = () => {
+    window.loadMermaid ? runMermaid() : getScript('https://cdn.bootcdn.net/ajax/libs/mermaid/10.9.0/mermaid.min.js').then(runMermaid)
+  }
+
+  anzhiyu.addGlobalFn('themeChange', runMermaid, 'mermaid')
+
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script><script>(() => {
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://twikoo.aizhiqian.eu.org/',
+      region: '',
+      onCommentLoaded: () => {
+        anzhiyu.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      }
+    }, null))
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') setTimeout(runFn,0)
+    else getScript('https://s4.zstatic.net/ajax/libs/twikoo/1.6.39/twikoo.all.min.js').then(runFn)
+  }
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'https://twikoo.aizhiqian.eu.org/',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(res => {
+      countELement.textContent = res[0].count
+    }).catch(err => {
+      console.error(err)
+    })
+  }
+
+  const runFn = () => {
+    init();
+    GLOBAL_CONFIG_SITE.isPost && getCount()
+  }
+
+  if ('Twikoo' === 'Twikoo' || !false) {
+    if (false) anzhiyu.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else {
+      loadTwikoo()
+    }
+  } else {
+    window.loadOtherComment = loadTwikoo
+  }
+})()</script><input type="hidden" name="page-type" id="page-type" value="post"><script async src="https://s4.zstatic.net/ajax/libs/hexo-theme-anzhiyu/1.6.14/js/anzhiyu/comment_barrage.min.js"></script></div><script async data-pjax src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.1/bubble/bubble.js"></script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@latest/waterfall/waterfall.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/qrcodejs/1.0.0/qrcode.min.js"></script><script src="https://s4.zstatic.net/ajax/libs/hexo-theme-anzhiyu/1.6.14/js/anzhiyu/right_click_menu.min.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@latest/icon/ali_iconfont_css.css"><script defer src="/_vercel/insights/script.js"></script><script defer src="/_vercel/speed-insights/script.js"></script><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.bootcdn.net/ajax/libs/butterfly-extsrc/1.1.3/fireworks.min.js"></script><script src="https://cdn.bootcdn.net/ajax/libs/butterfly-extsrc/1.1.3/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@latest/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.3/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@latest/assets/js/Meting2.min.js"></script><script src="https://cdn.bootcdn.net/ajax/libs/pjax/0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["meta[property=\"og:image\"]","meta[property=\"og:title\"]","meta[property=\"og:url\"]","meta[property=\"og:type\"]","meta[property=\"og:site_name\"]","meta[property=\"og:description\"]","head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: true,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', 'G-M8DMV2RD7M', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404')
+  }
+})</script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div></body></html>

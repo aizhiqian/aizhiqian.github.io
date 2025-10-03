@@ -1,0 +1,675 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>【安装】Git详细安装教程 | 向日葵🌻小站</title><meta name="keywords" content="安装"><meta name="author" content="AiGuoHou"><meta name="copyright" content="AiGuoHou"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="【安装】Git详细安装教程"><meta name="application-name" content="【安装】Git详细安装教程"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="article"><meta property="og:title" content="【安装】Git详细安装教程"><meta property="og:url" content="https://aizhiqian.github.io/posts/c13c4f52/index.html"><meta property="og:site_name" content="向日葵🌻小站"><meta property="og:description" content="1  Git的下载 进入到 git 的主页 【点击前往】，点击右侧的下载按钮，会自动匹配你的操作系统。本文中的安装版本为 2.42.0  2  Git的安装 2.1 打开应用程序  2.2 使用许可声明 双击下载后的 Git-2.42.0.2-64-bit.exe，开始安装，这个界面主要展示了 GP"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://www.aini.cn.eu.org/meinv?_r_=5c3759af-bb5f-8a19-154b-f98204fecbd9"><meta property="article:author" content="AiGuoHou"><meta property="article:tag" content="blog,博客,知心的博客,Blog,知心,hexo,HEXO"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://www.aini.cn.eu.org/meinv?_r_=5c3759af-bb5f-8a19-154b-f98204fecbd9"><meta name="description" content="1  Git的下载 进入到 git 的主页 【点击前往】，点击右侧的下载按钮，会自动匹配你的操作系统。本文中的安装版本为 2.42.0  2  Git的安装 2.1 打开应用程序  2.2 使用许可声明 双击下载后的 Git-2.42.0.2-64-bit.exe，开始安装，这个界面主要展示了 GP"><link rel="shortcut icon" href="/img/favicon.webp"><link rel="canonical" href="https://aizhiqian.github.io/posts/c13c4f52/"><link rel="preconnect" href="https://cdn.cbd.int"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin=""/><meta name="google-site-verification" content="fqk9sjcs_vmT9OoAfke2PBIDiHzY5q0-EG_QZ_TQCZ8"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@1.0.17/lib/assets/font-awesome-animation.min.css"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.5.2/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/node-snackbar/0.1.16/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/fancyapps-ui/5.0.36/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-M8DMV2RD7M"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-M8DMV2RD7M');
+</script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: {"enable":true,"title":"与数百名博主无限进步","addFriendPlaceholder":"昵称（请勿包含博客等字样）：\n网站地址（要求博客地址，请勿提交个人主页）：\n头像图片url（请提供尽可能清晰的图片，我会上传到我自己的图床）：\n描述：\n站点截图（可选）：\n"},
+  peoplecanvas: undefined,
+  postHeadAiDescription: undefined,
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)欢迎肥来！"},
+  LA51: {"enable":true,"ck":"3GhQxjQxTts56Kk4","LingQueMonitorID":"3GhRKmii7GGLsKdg"},
+  greetingBox: {"enable":true,"default":"晚上好👋","list":[{"greeting":"晚安😴","startTime":0,"endTime":5},{"greeting":"早上好鸭👋, 祝你一天好心情！","startTime":6,"endTime":9},{"greeting":"上午好👋, 状态很好，鼓励一下～","startTime":10,"endTime":10},{"greeting":"11点多啦, 在坚持一下就吃饭啦～","startTime":11,"endTime":11},{"greeting":"午安👋, 宝贝","startTime":12,"endTime":14},{"greeting":"🌈充实的一天辛苦啦！","startTime":14,"endTime":18},{"greeting":"19点喽, 奖励一顿丰盛的大餐吧🍔。","startTime":19,"endTime":19},{"greeting":"晚上好👋, 在属于自己的时间好好放松😌~","startTime":20,"endTime":24}]},
+  twikooEnvId: 'https://twikoo.aizhiqian.eu.org/',
+  commentBarrageConfig:{"enable":true,"maxBarrage":1,"barrageTime":5000,"accessToken":"72f3212be07145ddae8323935b188b41","mailMd5":""},
+  music_page_default: "nav_music",
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: undefined,
+  navMusic: true,
+  mainTone: {"mode":"api","api":"https://img2color.aizhiqian.eu.org/api?img=","cover_change":true},
+  authorStatus: {"skills":["🤖️ 数码科技爱好者","🔍 分享与热心帮助","🏠 智能家居小能手","🔨 设计开发一条龙","🤝 专修交互与设计","🏃 脚踏实地行动派","🧱 团队小组发动机","💢 壮汉人狠话不多"]},
+  algolia: {"appId":"5S7GRIQ3T3","apiKey":"913ceaabe3454727ddee2ca2a58eb3a4","indexName":"hexo-anzhiyu","hits":{"per_page":6},"languages":{"input_placeholder":"输入关键词后按下回车查找","hits_empty":"找不到您查询的内容：${query}","hits_stats":"找到 ${hits} 条结果，用时 ${time} 毫秒"}},
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":230},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    simplehomepage: false,
+    post: true
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":false,"limitCount":150,"languages":{"author":"作者: AiGuoHou","link":"链接: ","source":"来源: 向日葵🌻小站","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。","copySuccess":"复制成功，复制和转载请标注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#2d3035","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@latest/dist/fjGallery.min.js',
+      css: 'https://cdn.bootcdn.net/ajax/libs/flickr-justified-gallery/2.2.0/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: true,
+  shortcutKey: undefined,
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: '向日葵🌻小站',
+  title: '【安装】Git详细安装教程',
+  postAI: '',
+  pageFillDescription: '1  Git的下载, 2  Git的安装, 2.1 打开应用程序, 2.2 使用许可声明, 2.3 安装路径选择, 2.4 选择安装组件, 2.5 开始菜单文件夹, 2.6 默认编辑器, 2.7 默认分支, 2.8 调整 path 环境变量, 2.9 选择 SSH 执行文件, 2.10 选择HTTPS后端传输, 2.11 配置行尾符号转换, 2.12 配置终端模拟器, 2.13 默认的 git pull 行为, 2.14 凭证帮助程序, 2.15 配置额外的选项, 2.16 配置实验性选项, 3  测试, 3.1 Windows Terminal, 3.2 Git 的功能介绍, 3.2.1 Git Bash, 3.2.2 Git CMD, 3.2.3 Git FAQs, 3.2.4 Git GUI, 3.2.5 Git Release Note, 4  Git 优秀教程推荐的下载进入到的主页点击前往点击右侧的下载按钮会自动匹配你的操作系统本文中的安装版本为的安装打开应用程序使用许可声明双击下载后的开始安装这个界面主要展示了第版协议的内容点击到第二步安装路径选择第一步选择安装路径第二步选择安装组件添加桌面图标可以右键选择使用和两种方式的客户端大文件支持关联后缀文件关联文件每天检查版本更新将添加到中新开发的一种大规模仓库管理注意倒数第二个选项打勾的话需要下载配合使用如图开始菜单文件夹在开始菜单栏创建文件夹可以修改来重新命名文件夹也可以点击添加到别的已有文件夹也可以勾选来选择不创建文件夹安装成功后在开始菜单里的图如下默认编辑器安装程序里面内置了种编辑器供你挑选比如等等默认的是选择后可以直接进行到下一步但是是纯命令行操作有点难度需要学习如果选其他编辑器则还需要去其官网安装后才能进行下一步下图为默认编辑器如果你不想用当默认编辑器换一个比如那么你需要点击下面的蓝色字体去其官网下载安装好才能进行下一步本教程选择编辑器安装后还要配置在我的电脑属性高级系统设置高级环境变量系统变量编辑添加的安装地址如这样才能在里面直接调用文件名后缀在调用打开文件新手建议使用这两个比自带的记事本功能多太多了默认分支第一种是让自己选择名字是但是未来也有可能会改为其他名字第二种是我们自行决定默认是当然你也可以改为其他的名字一般默认第一种注第二个选项下面有个说很多团队已经重命名他们的默认主干名为这是因为年非裔男子乔治弗洛伊德因白人警察暴力执法惨死而掀起的黑人的命也是命运动很多人认为不尊重黑人呼吁改为调整环境变量翻译如下仅从使用这是最谨慎的选择因为您的根本不会被修改您将只能使用中的命令行工具从命令行以及第三方软件进行推荐此选项仅将一些最小的包装器添加到中以避免使用可选的工具使环境混乱您将能够使用中的命令提示符和以及在中寻找的任何第三方软件使用命令提示符中的和可选的工具和可选的工具都将添加到您的中警告这将覆盖工具例如仅在了解其含义后使用此选项第一种是仅从使用这个的意思就是你只能通过安装后的来使用其他的什么命令提示符啊等第三方软件都不行第二种是从命令行以及第三方软件进行这个就是在第一种基础上进行第三方支持你将能够从命令提示符和以及可以从系统环境变量中寻找的任何第三方软件中使用推荐使用这个第三种是从命令提示符使用和可选的工具选择这种将覆盖工具如和只有在了解其含义后才使用此选项一句话适合比较懂的人折腾选择执行文件勾选默认即可翻译如下选择可执行文件使用捆绑开放它使用附带的使用外部操作系统新的这将使用外部的不会安装它自己的和相关的二进制文件而是像在路径上找到的那样使用它们选择后端传输翻译如下使用库服务器证书将使用文件进行验证使用本机安全通道库服务器证书将使用证书存储进行验证此选项还允许您使用公司内部分发的内部根证书例如通过域服务作为普通用户只是用来访问等网站选择前者就行了点击到下一步配置行尾符号转换签出样式提交样式的行结尾签出文本文件时会将转换为提交文本文件时将转换为对于跨平台项目这是上的建议设置设置为按原样签出提交样式的行结尾在签出文本文件时不会执行任何转换提交文本文件时将转换为对于跨平台项目这是在上的建议设置设置为按原样签出按原样提交在签出或提交文本文件时不会执行任何转换不建议跨平台项目选择此选项设置为那样式和样式到底有什么区别呢引用入门与实践第页内容中公开的代码大部分都是以或中的换行然而由于中是以换行的所以在非对应的编辑器中将不能正常显示可以通过设置自动转换这些换行符使用环境的各位请选择推荐的选项换行符在签出时会自动转换为在提交时则会自动转换为上面说的翻译过来就是换行符用表示换行符的值为的是回车换行用表示回车符的值为这上下两者是不一样的所以这就需要转换了至于为什么选第一项这还用问吗我们现在的教程就是介绍怎么安装版肯定选第一项啦至于回车和换行这两个概念的来历和区别引用一下阮一峰老师博客的部分内容在计算机还没有出现之前有一种叫做电传打字机的玩意每秒钟可以打个字符但是它有一个问题就是打字机打完一行换行的时候要用去秒正好可以打两个字符要是在这秒里面又有新的字符传过来那么这个字符将丢失于是研制人员想了个办法解决这个问题就是在每行后面加两个表示结束的字符一个叫做回车告诉打字机把打印头定位在左边界另一个叫做换行告诉打字机把纸向下移一行配置终端模拟器使用的默认终端将使用作为终端仿真器该仿真器具有可调整大小的窗口非矩形选择和字体控制台程序例如交互式必须通过启动才能在中运行使用的默认控制台窗口将使用的默认控制台窗口该窗口可与控制台程序例如交互式或一起使用但默认回滚非常有限需要将其配置为使用字体才能正确显示非字符并且在之前其窗口不可随意调整大小并且仅允许选择矩形文本建议选择第一种功能比多只不过比更适合处理的一些接口问题这个对用处不大除此之外的默认控制台窗口有很多劣势比如具有非常有限的默认历史记录回滚堆栈和糟糕的字体编码等等相比之下具有可调整大小的窗口和其他有用的可配置选项可以通过右键单击的工具栏来打开它们点击到下一步默认的行为默认快进或合并这是的标准行为在可能的情况下将当前分支快进到获取的分支否则创建合并提交变基将当前分支变基到获取的分支上如果没有本地提交要变基则等同于快进只能快进快进到获取的分支如果不可能则失败是什么意思呢就是获取最新的远程仓库分支到本地并与本地分支合并上面给了三个的行为第一个是第二个是第三个是直接获取第一种第二种第三种这个没试过纯属猜测一般默认选择第一项绝大部分程序员都用不好或者不懂而且风险很大但是很多会用的人也很推崇但是用不好就是灾难只是拉取远程分支并与本地分支合并而只是拉取远程分支怎么合并选择还是可以再做选择凭证帮助程序凭证管理使用跨平台的凭证管理在此处查看有关凭证管理未来的更多信息不使用凭证助手一共两个选项凭证管理不使用凭证助手第一个选项是提供登录凭证帮助的有时需要用户的凭据才能执行操作例如可能需要输入用户名和密码才能通过访问远程存储库等等配置额外的选项启用文件系统缓存将批量读取文件系统数据并将其缓存在内存中以进行某些操作设置为这可以显着提高性能启用符号链接启用符号链接需要权限请注意现有存储库不受此设置的影响有两个选项启用文件系统缓存就是将批量读取文件系统数据并将其缓存在内存中以进行某些操作可以显著提升性能这个选项默认开启启用符号链接符号链接是一类特殊的文件其包含有一条以绝对路径或者相对路径的形式指向其它文件或者目录的引用类似于的快捷方式不完全等同类如的符号链接因为该功能的支持需要一些条件所以默认不开启配置实验性选项启用对伪控制台的实验性支持新功能这允许在不使用的情况下在窗口中运行诸如或之类的本机控制台程序但是它仍然存在已知的启用实验性内置文件系统监视器新自动运行内置文件系统监视器以加快包含许多文件的工作树中的常见操作例如等这是实验性功能可能会有一些小错误之类的建议不用开启点击进行安装测试查看版本查看路径的功能介绍是基于的在的基础上增添一些新的命令与功能平时主要用这个功能很丰富不能说和完全一样只能说一模一样功能少得可怜就是常问问题访问地址就是的图形化界面可以通过它快速创建新仓库项目克隆存在的仓库项目打开存在的仓库仓库这个我用的很少建议还是用命令行学习就是版本说明增加了什么功能修复了什么之类的优秀教程推荐廖雪峰教程访问量新手必看入门与实践密码电子书特别棒的入门书籍年后的感悟强烈建议看这个简明指南图形化模式简单易懂图解一样是图形化教程的奇技淫巧图形化命令的作用域',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-05-05 17:48:26',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><link rel="stylesheet" type="text/css" href="https://npm.elemecdn.com/js-heo@1.0.13/mainColor/heoMainColor.css"><link rel="stylesheet" type="text/css" href="https://npm.elemecdn.com/js-heo@1.0.11/poem/poem.css"><link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'"><meta name="generator" content="Hexo 8.0.0"><link rel="alternate" href="/atom.xml" title="向日葵🌻小站" type="application/atom+xml">
+</head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="/img/yuan-avatar.webp"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@latest/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.bootcdn.net/ajax/libs/pace/1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><div class="back-home-button"><i class="anzhiyufont anzhiyu-icon-grip-vertical"></i><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener external nofollow noreferrer" href="https://www.aizhiqian.eu.org/" title="主页"><img class="back-menu-item-icon" src="https://www.aizhiqian.eu.org/images/icon/favicon.ico" alt="主页"/><span class="back-menu-item-text">主页</span></a><a class="back-menu-item" target="_blank" rel="noopener external nofollow noreferrer" href="https://alist.xivo.eu.org/" title="Alist"><img class="back-menu-item-icon" src="https://p0.meituan.net/csc/9588e334a146defee0191c68b74bc0a5112303.jpg" alt="Alist"/><span class="back-menu-item-text">Alist</span></a><a class="back-menu-item" href="https://aizhiqian.github.io/" title="blog"><img class="back-menu-item-icon" src="https://aizhiqian.github.io/img/favicon.webp" alt="blog"/><span class="back-menu-item-text">blog</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener external nofollow noreferrer" href="https://img.aiguohou.eu.org/" title="知心图床"><img class="back-menu-item-icon" src="https://img.aiguohou.eu.org/favicon.ico" alt="知心图床"/><span class="back-menu-item-text">知心图床</span></a><a class="back-menu-item" target="_blank" rel="noopener external nofollow noreferrer" href="https://memos.xivo.eu.org/" title="memos"><img class="back-menu-item-icon" src="https://memos.xivo.eu.org/logo.webp" alt="memos"/><span class="back-menu-item-text">memos</span></a></div></div></div></div><a id="site-name" href="/" accesskey="h"><div class="title">向日葵🌻小站</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)" rel="external nofollow noreferrer">PAGE_NAME</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友人帐</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()" rel="external nofollow noreferrer"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div></div><div id="nav-right"><div class="nav-button only-home" id="travellings_button" title="随机前往一个开往项目网站"><a class="site-page" onclick="anzhiyu.totraveling()" title="随机前往一个开往项目网站" href="javascript:void(0);" rel="external nofollow" data-pjax-state="external"><i class="anzhiyufont anzhiyu-icon-train"></i></a></div><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" rel="external nofollow noreferrer" title="搜索🔍" accesskey="s"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span> 搜索</span></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="/img/wechat.webp" target="_blank"><img class="post-qr-code-img" alt="微信" src="/img/wechat.webp"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/alipay.webp" target="_blank"><img class="post-qr-code-img" alt="支付宝" src="/img/alipay.webp"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/API/" style="font-size: 1.05rem; color: rgb(45, 129, 130);">API<sup>1</sup></a><a href="/tags/Android/" style="font-size: 1.05rem; color: rgb(66, 71, 65);">Android<sup>5</sup></a><a href="/tags/CDN/" style="font-size: 1.05rem; color: rgb(45, 163, 102);">CDN<sup>1</sup></a><a href="/tags/hexo/" style="font-size: 1.05rem; color: rgb(12, 39, 115);">hexo<sup>14</sup></a><a href="/tags/iOS/" style="font-size: 1.05rem; color: rgb(159, 0, 144);">iOS<sup>1</sup></a><a href="/tags/ios/" style="font-size: 1.05rem; color: rgb(97, 193, 17);">ios<sup>1</sup></a><a href="/tags/npm/" style="font-size: 1.05rem; color: rgb(66, 11, 149);">npm<sup>1</sup></a><a href="/tags/termux/" style="font-size: 1.05rem; color: rgb(63, 117, 62);">termux<sup>5</sup></a><a href="/tags/%E4%BB%A3%E7%90%86/" style="font-size: 1.05rem; color: rgb(137, 176, 160);">代理<sup>2</sup></a><a href="/tags/%E5%91%BD%E4%BB%A4/" style="font-size: 1.05rem; color: rgb(16, 129, 20);">命令<sup>1</sup></a><a href="/tags/%E5%9B%BE%E5%BA%8A/" style="font-size: 1.05rem; color: rgb(141, 111, 47);">图床<sup>2</sup></a><a href="/tags/%E5%AE%89%E8%A3%85/" style="font-size: 1.05rem; color: rgb(158, 171, 168);">安装<sup>1</sup></a><a href="/tags/%E5%AE%9D%E5%A1%94/" style="font-size: 1.05rem; color: rgb(46, 178, 178);">宝塔<sup>1</sup></a><a href="/tags/%E5%BD%B1%E8%A7%86/" style="font-size: 1.05rem; color: rgb(182, 119, 116);">影视<sup>1</sup></a><a href="/tags/%E7%AD%BE%E5%88%B0/" style="font-size: 1.05rem; color: rgb(175, 193, 178);">签到<sup>1</sup></a><a href="/tags/%E7%BE%8E%E5%8C%96/" style="font-size: 1.05rem; color: rgb(124, 123, 37);">美化<sup>8</sup></a><a href="/tags/%E8%84%9A%E6%9C%AC/" style="font-size: 1.05rem; color: rgb(181, 172, 74);">脚本<sup>1</sup></a><a href="/tags/%E8%BD%AF%E4%BB%B6/" style="font-size: 1.05rem; color: rgb(81, 193, 25);">软件<sup>1</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/05/"><span class="card-archive-list-date">五月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/04/"><span class="card-archive-list-date">四月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">3</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/01/"><span class="card-archive-list-date">一月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/11/"><span class="card-archive-list-date">十一月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/10/"><span class="card-archive-list-date">十月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/07/"><span class="card-archive-list-date">七月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">25</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item on" id="consoleCommentBarrage" onclick="anzhiyu.switchCommentBarrage()" title="热评开关"><a class="commentBarrage"><i class="anzhiyufont anzhiyu-icon-message"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="anzhiyu.musicToggle()" title="音乐开关"><a class="music-switch"><i class="anzhiyufont anzhiyu-icon-music"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);" rel="external nofollow noreferrer"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="post-meta-categories"><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/" itemprop="url">实用教程</a></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E5%AE%89%E8%A3%85/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>安装</span></a></span></div></div><h1 class="post-title" itemprop="name headline">【安装】Git详细安装教程<a class="post-edit-link" href="undefined_posts/【安装】Git详细安装教程.md" title="在 GitHub 上编辑 - 【安装】Git详细安装教程" target="_blank"><i class="anzhiyufont anzhiyu-icon-pencil"></i></a></h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2023-10-03T16:50:30.000Z" title="发表于 2023-10-04 00:50:30">2023-10-04</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2024-05-05T09:48:26.000Z" title="更新于 2024-05-05 17:48:26">2024-05-05</time></span></div><div class="meta-secondline"><span class="post-meta-separator"></span><span class="post-meta-wordcount"><i class="anzhiyufont anzhiyu-icon-file-word post-meta-icon" title="文章字数"></i><span class="post-meta-label" title="文章字数">字数总计:</span><span class="word-count" title="文章字数">4.4k</span><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-clock post-meta-icon" title="阅读时长"></i><span class="post-meta-label" title="阅读时长">阅读时长:</span><span>16分钟</span></span><span class="post-meta-separator"></span><span id="" data-flag-title="【安装】Git详细安装教程"><i class="anzhiyufont anzhiyu-icon-fw-eye post-meta-icon"></i><span class="post-meta-label" title="阅读量">阅读量:</span><span id="twikoo_visitors" title="访问量"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-spin"></i></span></span><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为杭州"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>杭州</span><span class="post-meta-separator"></span><span class="post-meta-commentcount"><i class="anzhiyufont anzhiyu-icon-comments post-meta-icon"></i><span class="post-meta-label">评论数:</span><a href="/posts/c13c4f52/#post-comment" tabindex="-1"><span id="twikoo-count"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-spin"></i></span></a></span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src="https://www.aini.cn.eu.org/meinv?_r_=5c3759af-bb5f-8a19-154b-f98204fecbd9"></div></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container" itemscope itemtype="https://aizhiqian.github.io/posts/c13c4f52/"><header><a class="post-meta-categories" href="/categories/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/" itemprop="url">实用教程</a><a href="/tags/%E5%AE%89%E8%A3%85/" tabindex="-1" itemprop="url">安装</a><h1 id="CrawlerTitle" itemprop="name headline">【安装】Git详细安装教程</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">AiGuoHou</span><time itemprop="dateCreated datePublished" datetime="2023-10-03T16:50:30.000Z" title="发表于 2023-10-04 00:50:30">2023-10-04</time><time itemprop="dateCreated datePublished" datetime="2024-05-05T09:48:26.000Z" title="更新于 2024-05-05 17:48:26">2024-05-05</time></header><h1>1  Git的下载</h1>
+<p>进入到 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://git-scm.com/">git</a> 的主页 【<a target="_blank" rel="noopener external nofollow noreferrer" href="https://git-scm.com/">点击前往</a>】，点击右侧的下载按钮，会自动匹配你的操作系统。本文中的安装版本为 2.42.0</p>
+<p><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://jihulab.com/ainiz/img1/-/raw/main/2023/10/3/202310032343848.png" alt=""></p>
+<h1>2  Git的安装</h1>
+<h2 id="2-1-打开应用程序">2.1 打开应用程序</h2>
+<p><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://jihulab.com/ainiz/img1/-/raw/main/2023/10/4/202310040042062.webp" alt=""></p>
+<h2 id="2-2-使用许可声明">2.2 使用许可声明</h2>
+<p>双击下载后的 <code>Git-2.42.0.2-64-bit.exe</code>，开始安装，这个界面主要展示了 GPL第 2 版协议的内容，点击 [next] 到第二步。</p>
+<p><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://jihulab.com/ainiz/img1/-/raw/main/2023/10/4/202310040044718.webp" alt=""></p>
+<h2 id="2-3-安装路径选择">2.3 安装路径选择</h2>
+<p>第一步：选择安装路径</p>
+<p>第二步：Next</p>
+<p><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://jihulab.com/ainiz/img1/-/raw/main/2023/10/4/202310040044582.webp" alt=""></p>
+<h2 id="2-4-选择安装组件">2.4 选择安装组件</h2>
+<ul>
+<li>
+<p>Additional Icons 添加桌面图标</p>
+<ul>
+<li>On the Desktop</li>
+</ul>
+</li>
+<li>
+<p>Windows Explorer integration 可以右键选择使用Git Bash和Git GUI两种方式的客户端</p>
+<ul>
+<li>
+<p>Git Bash Here</p>
+</li>
+<li>
+<p>Git GUI Here</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Git LFS （Large File Support）大文件支持</p>
+</li>
+<li>
+<p>Associate .git* configuration files with the default text editor 关联.git后缀文件</p>
+</li>
+<li>
+<p>Associate .sh files to be run with Bash 关联.sh文件</p>
+</li>
+<li>
+<p>Check daily for Git for Windows updates 每天检查版本更新</p>
+</li>
+<li>
+<p>(NEW!) Add a Git Bash Profile to Windows Terminal 将Git Bash添加到Windows Terminal中</p>
+</li>
+<li>
+<p>(NEW!)Scalar (Git add-on to manage large-scale repositories) Windows新开发的一种大规模仓库管理</p>
+</li>
+</ul>
+<p><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://jihulab.com/ainiz/img1/-/raw/main/2023/10/4/202310040044257.webp" alt=""></p>
+<blockquote>
+<p>注意：倒数第二个选项打勾的话，需要下载 Windows Terminal 配合 Git Bash使用，如图：</p>
+</blockquote>
+<p><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://jihulab.com/ainiz/img1/-/raw/main/2023/10/4/202310041010121.webp" alt=""></p>
+<h2 id="2-5-开始菜单文件夹">2.5 开始菜单文件夹</h2>
+<p>在开始菜单栏创建Git文件夹，可以修改“Git”来重新命名文件夹，也可以点击“<code>Browser</code>”添加到别的已有文件夹，也可以勾选“<code>Don't create a Start Menu folder</code>”来选择不创建文件夹</p>
+<p><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://jihulab.com/ainiz/img1/-/raw/main/2023/10/4/202310040044516.webp" alt=""></p>
+<p>安装成功后在开始菜单里的图如下：</p>
+<p><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://jihulab.com/ainiz/img1/-/raw/main/2023/10/4/202310040044453.webp" alt=""></p>
+<h2 id="2-6-默认编辑器">2.6 默认编辑器</h2>
+<p>Git 安装程序里面内置了10种编辑器供你挑选，比如 <code>Atom</code>、<code>Notepad</code>、<code>Notepad++</code>、<code>Sublime Text</code>、<code>Visual Studio Code</code>、<code>Vim</code> 等等，默认的是 Vim ，选择 Vim 后可以直接进行到下一步，但是 Vim 是纯命令行，操作有点难度，需要学习。如果选其他编辑器，则还需要去其官网安装后才能进行下一步。</p>
+<p>下图为默认编辑器 <code>Vim</code></p>
+<p><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://jihulab.com/ainiz/img1/-/raw/main/2023/10/4/202310040044106.webp" alt=""></p>
+<p>如果你不想用 <code>Vim</code> 当默认编辑器，换一个，比如 <code>Notepad++</code> ，那么你需要点击下面的蓝色字体 &quot; Notepad++ &quot; 去其官网下载安装好才能进行下一步 [next].</p>
+<p><strong>本教程选择Notepad++编辑器</strong></p>
+<p><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://jihulab.com/ainiz/img1/-/raw/main/2023/10/4/202310040045474.webp" alt=""></p>
+<p>安装后还要配置在<code>我的电脑-&gt;属性-&gt;高级系统设置-&gt;高级-&gt;环境变量-&gt;系统变量-&gt;Path-&gt;编辑添加</code> Notepad++ 的安装地址，如 C:\Program Files\notepad++<br>
+这样才能在 Git Bash 里面直接调用 Notepad++</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">notepad++ 文件名.后缀  //在 git bash 调用 notepad++ 打开文件</span><br></pre></td></tr></table></figure>
+<p>新手建议使用 <code>Notepad++</code> 、<code>Sublime Text</code>，这两个比 Windows 自带的记事本功能多太多了。</p>
+<h2 id="2-7-默认分支">2.7 默认分支</h2>
+<p>第一种是让 Git 自己选择，名字是<code>master</code>，但是未来也有可能会改为其他名字；第二种是我们自行决定，默认是<code>main</code>，当然，你也可以改为其他的名字。一般默认第一种。</p>
+<blockquote>
+<p>注： 第二个选项下面有个 NEW！ ，说很多团队已经重命名他们的默认主干名为 main . 这是因为2020 年非裔男子乔治·弗洛伊德因白人警察暴力执法惨死而掀起的 Black Lives Matter(黑人的命也是命)运动，很多人认为 master 不尊重黑人，呼吁改为 main.</p>
+</blockquote>
+<p><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://jihulab.com/ainiz/img1/-/raw/main/2023/10/4/202310040045381.webp" alt=""></p>
+<h2 id="2-8-调整-path-环境变量">2.8 调整 path 环境变量</h2>
+<p><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://jihulab.com/ainiz/img1/-/raw/main/2023/10/4/202310040045253.webp" alt=""></p>
+<p>翻译如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">Use Git from Git Bash only </span><br><span class="line">This is the most cautious choice as your PATH will not be modified at all. You w only be able to use the Git command line tools from Git Bash.</span><br><span class="line">仅从 Git Bash 使用 Git</span><br><span class="line">这是最谨慎的选择，因为您的 PATH 根本不会被修改。您将只能使用 Git Bash 中的 Git 命令行工具。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Git from the command line and also from 3rd-party software</span><br><span class="line">(Recommended) This option adds only some minimal Git wrappers to your PATH to avoid cluttering your environment with optional Unix tools.</span><br><span class="line">You will be able to use Git from Git Bash, the Command Prompt and the Windov PowerShell as well as any third-party software looking for Git in PATH.</span><br><span class="line">从命令行以及第三方软件进行 Git</span><br><span class="line">（推荐）此选项仅将一些最小的 Git 包装器添加到PATH中，以避免使用可选的 Unix 工具使环境混乱。</span><br><span class="line">您将能够使用 Git Bash 中的 Git，命令提示符和 Windov PowerShell 以及在 PATH 中寻找 Git 的任何第三方软件。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Use Git and optional Unix tools from the Command Prompt </span><br><span class="line">Both Git and the optional Unix tools will be added to your PATH.</span><br><span class="line">Warning: This will override Windows tools like &quot;find&quot;and &quot;sort&quot;. Only use this option if you understand the implications.</span><br><span class="line">使用命令提示符中的 Git 和可选的 Unix 工具</span><br><span class="line">Git 和可选的 Unix 工具都将添加到您的 PATH 中。</span><br><span class="line">警告：这将覆盖 Windows 工具，例如 &quot;find&quot; and &quot;sort&quot;. 仅在了解其含义后使用此选项。</span><br></pre></td></tr></table></figure>
+<p>第一种是仅从 Git Bash 使用 Git。这个的意思就是你只能通过 Git 安装后的 Git Bash 来使用 Git ，其他的什么命令提示符啊等第三方软件都不行。</p>
+<p>第二种是从命令行以及第三方软件进行 Git。这个就是在第一种基础上进行第三方支持，你将能够从 Git Bash，命令提示符(cmd) 和 Windows PowerShell 以及可以从 Windows 系统环境变量中寻找 Git 的任何第三方软件中使用 Git。推荐使用这个。</p>
+<p>第三种是从命令提示符使用 Git 和可选的 Unix 工具。选择这种将覆盖 Windows 工具，如 “ find 和 sort ”。只有在了解其含义后才使用此选项。一句话，适合比较懂的人折腾。</p>
+<h2 id="2-9-选择-SSH-执行文件">2.9 选择 SSH 执行文件</h2>
+<p>勾选默认即可</p>
+<p><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://jihulab.com/ainiz/img1/-/raw/main/2023/10/4/202310040045364.webp" alt=""></p>
+<p>翻译如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">choosing the SSH executable</span><br><span class="line">选择SSH可执行文件</span><br><span class="line"></span><br><span class="line">use bundled opensSH</span><br><span class="line">使用捆绑开放SH</span><br><span class="line">This uses ssh.exe that comes with Git.</span><br><span class="line">它使用Git附带的ssh.exe。</span><br><span class="line"></span><br><span class="line">Use external opensSH</span><br><span class="line">使用外部操作系统SH</span><br><span class="line">NEW!This uses an external ssh.exe.Git will not install its own OpenSSH(and related) binaries but use them as found on the PATH.</span><br><span class="line">新的！这将使用外部的ssh.exe.Git不会安装它自己的OpenSSH(和相关的)二进制文件，而是像在路径上找到的那样使用它们。</span><br></pre></td></tr></table></figure>
+<h2 id="2-10-选择HTTPS后端传输">2.10 选择HTTPS后端传输</h2>
+<p><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://jihulab.com/ainiz/img1/-/raw/main/2023/10/4/202310040045898.webp" alt=""></p>
+<p>翻译如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">use the OpenSSL library </span><br><span class="line">Server certificates will be validated using the ca-bundle. crt file.</span><br><span class="line">使用 OpenSSL 库</span><br><span class="line">服务器证书将使用 ca-bundle.crt 文件进行验证。</span><br><span class="line">	</span><br><span class="line">Use the native Windows Secure Channel library </span><br><span class="line">Server certificates will be validated using Windows Certificate Stores.</span><br><span class="line">This option also allows you to use your company&#x27;s internal Root CA certificates distributed e.g. via Active Directory Domain Services.</span><br><span class="line">使用本机 Windows 安全通道库</span><br><span class="line">服务器证书将使用 Windows 证书存储进行验证。</span><br><span class="line">此选项还允许您使用公司内部分发的内部根 CA 证书，例如通过 Active Directory 域服务。</span><br></pre></td></tr></table></figure>
+<p>作为普通用户，只是用 Git 来访问 <em>Github、Gitlab</em> 等网站，选择前者就行了。点击到下一步</p>
+<h2 id="2-11-配置行尾符号转换">2.11 配置行尾符号转换</h2>
+<p><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://jihulab.com/ainiz/img1/-/raw/main/2023/10/4/202310040045764.webp" alt=""></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">Checkout Windows-style, commit Unix-style line endings </span><br><span class="line">Git will convert LF to CRLF when checking out text files. </span><br><span class="line">When committing text files, CRLF will be converted to LF. For cross-platform projects, this is the recommended setting on Windows(&quot;core. autocrif&quot;is set to &quot;true&quot;).</span><br><span class="line">签出 Windows 样式，提交 Unix 样式的行结尾</span><br><span class="line">Git 签出文本文件时，会将 LF 转换为 CRLF。</span><br><span class="line">提交文本文件时，CRLF 将转换为 LF。</span><br><span class="line">对于跨平台项目，这是 Windows 上的建议设置（&quot;core.autocrif&quot; 设置为 &quot;true&quot;）。</span><br><span class="line"></span><br><span class="line">Checkout as-is, commit Unix-style line endings </span><br><span class="line">Git will not perform any conversion when checking out text files. </span><br><span class="line">When committing text files, CRLF will be converted to LF. For cross-platform projects, this is the recommended setting on Unix(&quot;core.autocrif&quot; is set to &quot;input&quot;).</span><br><span class="line">按原样签出，提交 Unix 样式的行结尾</span><br><span class="line">Git 在签出文本文件时不会执行任何转换。提交文本文件时，CRLF 将转换为 LF。</span><br><span class="line">对于跨平台项目，这是在 Unix 上的建议设置（&quot;core.autocrif&quot; 设置为 &quot;input&quot;）。</span><br><span class="line"></span><br><span class="line">Checkout as-is, commit as-is </span><br><span class="line">Git will not perform any conversions when checking out or committing text files. </span><br><span class="line">Choosing this option is not recommended for cross-platform projects(&quot;core. autocrif&quot;is set to &quot;false&quot;).</span><br><span class="line">按原样签出，按原样提交</span><br><span class="line">Git 在签出或提交文本文件时不会执行任何转换。</span><br><span class="line">不建议跨平台项目选择此选项（&quot;core.autocrif&quot; 设置为 &quot;false&quot;）。</span><br></pre></td></tr></table></figure>
+<p>那 Windows 样式和 Unix 样式到底有什么区别呢？</p>
+<p>引用 《<a href="https://link.zhihu.com/?target=https%3A//book.douban.com/subject/26462816/" rel="external nofollow noreferrer">GitHub 入门与实践</a>》 第50页内容：</p>
+<blockquote>
+<p>GitHub 中公开的代码大部分都是以 Mac 或 Linux 中的 LF（Line Feed）换行。然而，由于 Windows 中是以 CRLF（Carriage Return+ Line Feed）换行的，所以在非对应的编辑器中将不能正常显示。</p>
+<p>Git 可以通过设置自动转换这些换行符。使用 Windows 环境的各位，请选择推荐的 “Checkout Windows-style，commit Unix-style line endings” 选项。换行符在签出时会自动转换为 CRLF，在提交时则会自动转换为 LF .</p>
+</blockquote>
+<p>上面说 Mac 、Linux、Unix 的 Line Feed ，翻译过来就是换行符，用 “\n” 表示，换行符 “\n” 的 ASCII 值为10；</p>
+<p>Windows 的是 Carriage Return+ Line Feed（回车+换行），用 “\r\n” 表示，回车符 “\r” 的 ASCII 值为13；这上下两者是不一样的。</p>
+<p>所以这就需要转换了，至于为什么选第一项？</p>
+<p>这还用问吗？我们现在的教程就是介绍怎么安装 Windows 版 Git，肯定选第一项啦。</p>
+<p>至于 “回车”（carriage return）和 “换行”（line feed）这两个概念的来历和区别？</p>
+<p>引用一下 <a href="https://link.zhihu.com/?target=https%3A//link.csdn.net/%3Ftarget%3Dhttp%3A%2F%2Fwww.ruanyifeng.com%2Fblog%2F2006%2F04%2Fpost_213.html" rel="external nofollow noreferrer">阮一峰老师博客</a> 的部分内容：</p>
+<blockquote>
+<p>在计算机还没有出现之前，有一种叫做电传打字机（Teletype Model 33）的玩意，每秒钟可以打 10 个字符。但是它有一个问题，就是打字机打完一行换行的时候，要用去 0.2 秒，正好可以打两个字符。要是在这 0.2 秒里面，又有新的字符传过来，那么这个字符将丢失。<br>
+于是，研制人员想了个办法解决这个问题，就是在每行后面加两个表示结束的字符。一个叫做 “回车”，告诉打字机把打印头定位在左边界；另一个叫做 “换行”，告诉打字机把纸向下移一行。</p>
+</blockquote>
+<h2 id="2-12-配置终端模拟器">2.12 配置终端模拟器</h2>
+<p><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://jihulab.com/ainiz/img1/-/raw/main/2023/10/4/202310040045306.webp" alt=""></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">Use MinTTY(the default terminal of MSYS2) </span><br><span class="line">Git Bash will use MinTTY as terminal emulator, which sports a resizable window</span><br><span class="line">non-rectangular selections and a Unicode font.Windows console programs(such</span><br><span class="line">as interactive Python) must be launched via &#x27;winpty&#x27; to work in MinTTY.</span><br><span class="line">使用 MinTTY（MSYS2的默认终端）</span><br><span class="line">Git Bash 将使用 MinTTY 作为终端仿真器，该仿真器具有可调整大小的窗口非矩形选择和 Unicode 字体。</span><br><span class="line">Windows 控制台程序（例如交互式 Python）必须通过 &quot;winpty&quot; 启动才能在 MinTTY 中运行。</span><br><span class="line"></span><br><span class="line">Use Windows&#x27; default console window</span><br><span class="line">Git will use the default console window of Windows(&quot;cmd.exe&quot;), which works well</span><br><span class="line">with Win32 console programs such as interactive Python or node. js, but has a</span><br><span class="line">very limited default scroll-back,needs to be configured to use a Unicode font in </span><br><span class="line">order to display non-ASCII characters correctly, and prior to Windows 10 its </span><br><span class="line">window was not freely resizable and it only allowed rectangular text selections.</span><br><span class="line">使用 Windows 的默认控制台窗口</span><br><span class="line">Git 将使用 Windows 的默认控制台窗口（&quot;cmd.exe&quot;），该窗口可与 Win32 控制台程序（例如交互式Python 或 </span><br><span class="line">node.js）一起使用，但默认回滚非常有限，需要将其配置为使用 Unicode 字体才能正确显示非 ASCII 字符，并且在 </span><br><span class="line">Windows 10 之前，其窗口不可随意调整大小，并且仅允许选择矩形文本。</span><br></pre></td></tr></table></figure>
+<p>建议选择第一种，MinTTY 3功能比 cmd 多，cmd 只不过 比 MinTTY 更适合处理 Windows 的一些接口问题，这个对 Git 用处不大，除此之外 Windows 的默认控制台窗口（cmd）有很多劣势，比如 cmd 具有非常有限的默认历史记录回滚堆栈和糟糕的字体编码等等。</p>
+<p>相比之下，MinTTY 具有可调整大小的窗口和其他有用的可配置选项，可以通过右键单击的工具栏来打开它们 git-bash 。点击 [next] 到下一步。</p>
+<h2 id="2-13-默认的-“git-pull”-行为">2.13 默认的 “git pull” 行为</h2>
+<p><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://jihulab.com/ainiz/img1/-/raw/main/2023/10/4/202310040045323.webp" alt=""></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">Default(fast-forward or merge)</span><br><span class="line">This is the standard behavior ofgit pull&quot;: fast-forward the current branch to </span><br><span class="line">the fetched branch when possible, otherwise create a merge commit.</span><br><span class="line">默认（快进或合并）</span><br><span class="line">这是 &quot;git pull&quot; 的标准行为：在可能的情况下将 当前分支 快进到 获取的分支，否则创建合并提交。</span><br><span class="line"></span><br><span class="line">Rebase </span><br><span class="line">Rebase the current branch onto the fetched branch. If there are no local </span><br><span class="line">commits to rebase, this is equivalent to a fast-forward.</span><br><span class="line">变基将当前分支变基到获取的分支上。如果没有本地提交要变基，则等同于快进。</span><br><span class="line"></span><br><span class="line">Only ever fast-forward </span><br><span class="line">Fast-forward to the fetched branch. Fail if that is not possible.</span><br><span class="line">只能快进快进到获取的分支。如果不可能，则失败。</span><br></pre></td></tr></table></figure>
+<p>“git pull” 是什么意思呢？<br>
+git pull 就是获取最新的远程仓库分支到本地，并与本地分支合并</p>
+<p>上面给了三个 “git pull” 的行为：<br>
+第一个是 merge<br>
+第二个是 rebase<br>
+第三个是 直接获取</p>
+<p>第一种 <code>git pull = git fetch + git merge</code><br>
+第二种 <code>git pull = git fetch + git rebase</code><br>
+第三种 <code>git pull = git fetch</code> ？(这个没试过，纯属猜测)</p>
+<p>一般默认选择第一项，git rebase 绝大部分程序员都用不好或者不懂，而且风险很大，但是很多会用的人也很推崇，但是用不好就是灾难。</p>
+<p>git pull 只是拉取远程分支并与本地分支合并，而 git fetch 只是拉取远程分支，怎么合并，选择 merge 还是 rebase ，可以再做选择。</p>
+<h2 id="2-14-凭证帮助程序">2.14 凭证帮助程序</h2>
+<p><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://jihulab.com/ainiz/img1/-/raw/main/2023/10/4/202310040045379.webp" alt=""></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Git Credential Manager </span><br><span class="line">Use the cross-platform Git Credential Manager.</span><br><span class="line">See more information about the future of Git Credential Manager here.</span><br><span class="line">Git 凭证管理</span><br><span class="line">使用跨平台的 Git  凭证管理。</span><br><span class="line">在此处查看有关 Git 凭证管理未来的更多信息。</span><br><span class="line"></span><br><span class="line">None </span><br><span class="line">Do not use a credential helper.</span><br><span class="line">不使用凭证助手。</span><br></pre></td></tr></table></figure>
+<p>一共两个选项：<br>
+<code>Git 凭证管理</code><br>
+<code>不使用凭证助手</code></p>
+<p>第一个选项是提供<code>登录凭证</code>帮助的，Git 有时需要用户的凭据才能执行操作；例如，可能需要输入<code>用户名</code>和<code>密码</code>才能通过 HTTP 访问远程存储库（GitHub，GItLab 等等）。</p>
+<h2 id="2-15-配置额外的选项">2.15 配置额外的选项</h2>
+<p><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://jihulab.com/ainiz/img1/-/raw/main/2023/10/4/202310040046833.webp" alt=""></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">Enable file system caching </span><br><span class="line">File system data will be read in bulk and cached in memory for certain operations(&quot;core.fscache&quot; is set to &quot;true&quot;). </span><br><span class="line">This provides a significant performance boost.</span><br><span class="line">启用文件系统缓存</span><br><span class="line">将批量读取文件系统数据并将其缓存在内存中以进行某些操作（&quot;core.fscache” 设置为 &quot;true&quot;）。</span><br><span class="line">这可以显着提高性能。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Enable symbolic links </span><br><span class="line">Enable symbolic links(requires the SeCreateSymbolicLink permission).</span><br><span class="line">Please note that existing repositories are unaffected by this setting.</span><br><span class="line">启用符号链接</span><br><span class="line">启用符号链接（需要SeCreateSymbolicLink权限）。</span><br><span class="line">请注意，现有存储库不受此设置的影响。</span><br></pre></td></tr></table></figure>
+<p>有两个选项：</p>
+<p><code>启用文件系统缓存</code>就是将批量读取文件系统数据并将其缓存在内存中以进行某些操作，可以显著提升性能。这个选项默认开启。</p>
+<p><code>启用符号链接</code>，符号链接是一类特殊的文件，其包含有一条以绝对路径或者相对路径的形式指向其它文件或者目录的引用，类似于 Windows 的快捷方式，不完全等同类Unix（如 Linux的符号链接。因为该功能的支持需要一些条件，所以默认不开启。</p>
+<h2 id="2-16-配置实验性选项">2.16 配置实验性选项</h2>
+<p><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://jihulab.com/ainiz/img1/-/raw/main/2023/10/4/202310040046742.webp" alt=""></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Enable experimental support for pseudo consoles.</span><br><span class="line">(NEW!) This allows running native console programs like Node or Python in a Git Bash window without using winpty, </span><br><span class="line">but it still has known bugs.</span><br><span class="line">启用对伪控制台的实验性支持。</span><br><span class="line">(新功能!) 这允许在不使用 winpty 的情况下在 Git Bash 窗口中运行诸如 Node 或 Python 之类的本机控制台程序，</span><br><span class="line">但是它仍然存在已知的 bug。</span><br><span class="line"></span><br><span class="line">Enable experimental built-in file system monitor</span><br><span class="line">(NEW!) Automatically run a built-in file system watcher, to speed up common operations such as &#x27; git status&#x27;, &#x27; git add&#x27;, &#x27; git commit&#x27;, etc in worktrees containing many files.</span><br><span class="line">启用实验性内置文件系统监视器</span><br><span class="line">（新！）自动运行内置文件系统监视器，以加快包含许多文件的工作树中的常见操作，例如 &#x27;git status&#x27;、&#x27;git add&#x27;、&#x27;git commit&#x27; 等.</span><br></pre></td></tr></table></figure>
+<p>这是实验性功能，可能会有一些小错误之类的，建议不用开启。</p>
+<p>点击 [install] 进行安装。</p>
+<h1>3  测试</h1>
+<h2 id="3-1-Windows-Terminal">3.1 Windows Terminal</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 查看Git版本</span><br><span class="line">git --version</span><br><span class="line"></span><br><span class="line"># 查看Git路径</span><br><span class="line">where git</span><br></pre></td></tr></table></figure>
+<p><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://jihulab.com/ainiz/img1/-/raw/main/2023/10/4/202310040047233.webp" alt=""></p>
+<h2 id="3-2-Git-的功能介绍">3.2 Git 的功能介绍</h2>
+<h3 id="3-2-1-Git-Bash">3.2.1 Git Bash</h3>
+<p><code>Git Bash</code> 是基于CMD的，在CMD的基础上增添一些新的命令与功能，平时主要用这个，功能很丰富</p>
+<h3 id="3-2-2-Git-CMD">3.2.2 Git CMD</h3>
+<p><code>Git CMD</code> 不能说和 cmd 完全一样，只能说一模一样，功能少得可怜</p>
+<h3 id="3-2-3-Git-FAQs">3.2.3 Git FAQs</h3>
+<p><code>Git FAQs</code> 就是 Git Frequently Asked Questions（常问问题），访问地址：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/git-for-windows/git/wiki/FAQ">https://github.com/git-for-windows/git/wiki/FAQ</a></p>
+<h3 id="3-2-4-Git-GUI">3.2.4 Git GUI</h3>
+<p><code>Git GUI</code> 就是 Git 的图形化界面</p>
+<p>可以通过它快速<code>创建新仓库（项目），克隆存在的仓库（项目），打开存在的仓库（仓库）</code>这个我用的很少，建议还是用命令行学习Git。</p>
+<h3 id="3-2-5-Git-Release-Note">3.2.5 Git Release Note</h3>
+<p><code>Git Release Note</code> 就是版本说明，增加了什么功能，修复了什么 bug 之类的。</p>
+<h1>4  Git 优秀教程推荐</h1>
+<ul>
+<li>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.liaoxuefeng.com/wiki/896043488029600">廖雪峰-Git教程</a>   [<code>访问量: 30941698172，新手必看</code>]</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://wwc.lanzouo.com/i4BWko0gfje">GitHub入门与实践</a> [<code>密码:7aik，电子书，特别棒的入门书籍，2年后的感悟，强烈建议看这个</code>]</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://rogerdudler.github.io/git-guide/index.zh.html">git-简明指南</a>      [<code>图形化模式，简单易懂</code>]</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="http://marklodato.github.io/visual-git-guide/index-zh-cn.html">图解Git</a>          [<code>一样是图形化教程</code>]</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/521xueweihan/git-tips">Git的奇技淫巧</a>    [<code>GitHub 14.9k stars</code>]</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://ndpsoftware.com/git-cheatsheet.html#loc=stas">git-cheatsheeth</a>   [<code>图形化 Git 命令的作用域</code>]</p>
+</li>
+</ul>
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/yuan-avatar.webp" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/yuan-avatar.webp" title="头像" alt="头像"></a><div class="post-copyright__author_name">AiGuoHou</div><div class="post-copyright__author_desc">今日事，今日毕</div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="https://aizhiqian.github.io/posts/c13c4f52/">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('https://aizhiqian.github.io/posts/c13c4f52/')">【安装】Git详细安装教程</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"><div class="post-reward" onclick="anzhiyu.addRewardMask()"><div class="reward-button button--animated" title="赞赏作者"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill"></i>打赏作者</div><div class="reward-main"><div class="reward-all"><span class="reward-title">感谢你赐予我前进的力量</span><ul class="reward-group"><li class="reward-item"><a href="/img/wechat.webp" target="_blank"><img class="post-qr-code-img" src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/wechat.webp" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/alipay.webp" target="_blank"><img class="post-qr-code-img" src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/alipay.webp" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul><a class="reward-main-btn" href="/about/#about-reward" target="_blank"><div class="reward-text">赞赏者名单</div><div class="reward-dec">因为你们的支持让我意识到写文章的价值🙏</div></a></div></div></div><div id="quit-box" onclick="anzhiyu.removeRewardMask()" style="display: none"></div></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="https://aizhiqian.github.io/posts/c13c4f52/"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=【安装】Git详细安装教程&amp;url=https://aizhiqian.github.io/posts/c13c4f52/&amp;pic=https://www.aini.cn.eu.org/meinv?_r_=5c3759af-bb5f-8a19-154b-f98204fecbd9" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><script>function copyCurrentPageUrl() {
+  var currentPageUrl = window.location.href;
+  var input = document.createElement("input");
+  input.setAttribute("value", currentPageUrl);
+  document.body.appendChild(input);
+  input.select();
+  input.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.body.removeChild(input);
+}</script><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="copyCurrentPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow noreferrer" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://aizhiqian.github.io" target="_blank">向日葵🌻小站</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"><a class="post-meta__box__tags" href="/tags/%E5%AE%89%E8%A3%85/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>安装<span class="tagsPageCount">1</span></a></div></div></div><div class="post_share"><div class="social-share" data-image="https://www.aini.cn.eu.org/meinv?_r_=9c0801df-4e9c-8763-c849-cfb1e87f7a74" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/butterfly-extsrc/1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"/><script src="https://cdn.bootcdn.net/ajax/libs/butterfly-extsrc/1.1.3/sharejs/dist/js/social-share.min.js" defer="defer"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/e4fbd1cb/"><img class="prev-cover" src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://www.aini.cn.eu.org/meinv?_r_=a1ed04b6-4ac2-0dcc-d022-939b73046aad" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">【Hexo】美化教程合集 3</div></div></a></div><div class="next-post pull-right"><a href="/posts/20eb6109/"><img class="next-cover" src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://www.aini.cn.eu.org/meinv?_r_=acf33a07-c3a2-bf3c-4f9d-6e651ada0ec0" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">【宝塔】搭建随机图API</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="anzhiyufont anzhiyu-icon-comments"></i><span> 评论</span></div><div class="comment-randomInfo"><a onclick="anzhiyu.addRandomCommentInfo()" href="javascript:void(0)" rel="external nofollow noreferrer" style="display: none">匿名评论</a><a href="/privacy" style="margin-left: 4px">隐私政策</a></div><div class="comment-tips" id="comment-tips"><span>✅ 你无需删除空行，直接评论以获取最佳展示效果</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div><div class="comment-barrage"></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info__sayhi" id="author-info__sayhi" onclick="anzhiyu.changeSayHelloText()"></div><div class="author-info-avatar"><img class="avatar-img" src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/yuan-avatar.webp" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-status"><img class="g-status" src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2021/03/03/d7c475de07d04.png" alt="status"/></div></div><div class="author-info__description"><div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">向日葵🌻小站</div><div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">这是一个分享<b style="color:#fff">日常学习</b>与<b style="color:#fff">代码生活</b>的博客</div><div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);"><b style="color:#ffcd25">荷风送香气﹐竹露滴清响</b></div></div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" href="/"><h1 class="author-info__name">AiGuoHou</h1><div class="author-info__desc">今日事，今日毕</div></a><div class="card-info-social-icons is-center"><a class="social-icon faa-parent animated-hover" href="https://github.com/aizhiqian" rel="external nofollow noreferrer" target="_blank" title="Github"><i class="anzhiyufont anzhiyu-icon-github"></i></a><a class="social-icon faa-parent animated-hover" href="https://space.bilibili.com/696732872" rel="external nofollow noreferrer" target="_blank" title="BiliBili"><i class="anzhiyufont anzhiyu-icon-bilibili"></i></a></div></div></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bullhorn anzhiyu-shake"></i><span>公告</span></div><div class="announcement_content"><center><p style="text-align:center;"><b>欢迎来看我的博客鸭~</b></p><b>--- 主域名 ---<br/>🍧<a target="_blank" rel="noopener external nofollow noreferrer" href="https://blog.aizhiqian.xyz" title="此线路部署于 Vercel" class="anno_content"><font color="#5ea6e5">blog.aizhiqian.xyz</font></a>🍧<br/>--- 备用域名 ---<br/><a href="https://aizhiqian.github.io" title="此线路部署于 Github Pages" class="anno_content"><font color="#5ea6e5">aizhiqian.github.io</font></a><br/><a target="_blank" rel="noopener external nofollow noreferrer" href="https://vercel.aizhiqian.eu.org" title="此线路部署于 Vercel" class="anno_content"><font color="#5ea6e5">vercel.aizhiqian.eu.org</font></a><br/><a target="_blank" rel="noopener external nofollow noreferrer" href="https://netlify.aizhiqian.eu.org" title="此线路部署于 Netlify" class="anno_content"><font color="#5ea6e5">netlify.aizhiqian.eu.org</font></a></b></center></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">1  Git的下载</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">2  Git的安装</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-%E6%89%93%E5%BC%80%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F"><span class="toc-text">2.1 打开应用程序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-%E4%BD%BF%E7%94%A8%E8%AE%B8%E5%8F%AF%E5%A3%B0%E6%98%8E"><span class="toc-text">2.2 使用许可声明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-%E5%AE%89%E8%A3%85%E8%B7%AF%E5%BE%84%E9%80%89%E6%8B%A9"><span class="toc-text">2.3 安装路径选择</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-4-%E9%80%89%E6%8B%A9%E5%AE%89%E8%A3%85%E7%BB%84%E4%BB%B6"><span class="toc-text">2.4 选择安装组件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-5-%E5%BC%80%E5%A7%8B%E8%8F%9C%E5%8D%95%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="toc-text">2.5 开始菜单文件夹</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-6-%E9%BB%98%E8%AE%A4%E7%BC%96%E8%BE%91%E5%99%A8"><span class="toc-text">2.6 默认编辑器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-7-%E9%BB%98%E8%AE%A4%E5%88%86%E6%94%AF"><span class="toc-text">2.7 默认分支</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-8-%E8%B0%83%E6%95%B4-path-%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="toc-text">2.8 调整 path 环境变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-9-%E9%80%89%E6%8B%A9-SSH-%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6"><span class="toc-text">2.9 选择 SSH 执行文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-10-%E9%80%89%E6%8B%A9HTTPS%E5%90%8E%E7%AB%AF%E4%BC%A0%E8%BE%93"><span class="toc-text">2.10 选择HTTPS后端传输</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-11-%E9%85%8D%E7%BD%AE%E8%A1%8C%E5%B0%BE%E7%AC%A6%E5%8F%B7%E8%BD%AC%E6%8D%A2"><span class="toc-text">2.11 配置行尾符号转换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-12-%E9%85%8D%E7%BD%AE%E7%BB%88%E7%AB%AF%E6%A8%A1%E6%8B%9F%E5%99%A8"><span class="toc-text">2.12 配置终端模拟器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-13-%E9%BB%98%E8%AE%A4%E7%9A%84-%E2%80%9Cgit-pull%E2%80%9D-%E8%A1%8C%E4%B8%BA"><span class="toc-text">2.13 默认的 “git pull” 行为</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-14-%E5%87%AD%E8%AF%81%E5%B8%AE%E5%8A%A9%E7%A8%8B%E5%BA%8F"><span class="toc-text">2.14 凭证帮助程序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-15-%E9%85%8D%E7%BD%AE%E9%A2%9D%E5%A4%96%E7%9A%84%E9%80%89%E9%A1%B9"><span class="toc-text">2.15 配置额外的选项</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-16-%E9%85%8D%E7%BD%AE%E5%AE%9E%E9%AA%8C%E6%80%A7%E9%80%89%E9%A1%B9"><span class="toc-text">2.16 配置实验性选项</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">3  测试</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-Windows-Terminal"><span class="toc-text">3.1 Windows Terminal</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-Git-%E7%9A%84%E5%8A%9F%E8%83%BD%E4%BB%8B%E7%BB%8D"><span class="toc-text">3.2 Git 的功能介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-1-Git-Bash"><span class="toc-text">3.2.1 Git Bash</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-2-Git-CMD"><span class="toc-text">3.2.2 Git CMD</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-3-Git-FAQs"><span class="toc-text">3.2.3 Git FAQs</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-4-Git-GUI"><span class="toc-text">3.2.4 Git GUI</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-5-Git-Release-Note"><span class="toc-text">3.2.5 Git Release Note</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">4  Git 优秀教程推荐</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/82ca8098/" title="【笔记】如何发布一个新的 NPM 包及其后续更新"><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://www.aini.cn.eu.org/meinv?_r_=9c0801df-4e9c-8763-c849-cfb1e87f7a74" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【笔记】如何发布一个新的 NPM 包及其后续更新"/></a><div class="content"><a class="title" href="/posts/82ca8098/" title="【笔记】如何发布一个新的 NPM 包及其后续更新">【笔记】如何发布一个新的 NPM 包及其后续更新</a><time datetime="2024-05-14T11:03:24.000Z" title="发表于 2024-05-14 19:03:24">2024-05-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/e1d32862/" title="【Windows】装机必备软件"><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://www.aini.cn.eu.org/meinv?_r_=6931bbc9-4fc9-59ab-a2fa-c051445f1988" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【Windows】装机必备软件"/></a><div class="content"><a class="title" href="/posts/e1d32862/" title="【Windows】装机必备软件">【Windows】装机必备软件</a><time datetime="2024-05-05T09:16:27.000Z" title="发表于 2024-05-05 17:16:27">2024-05-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/cb3d58ea/" title="【教程】五分钟注册美区AppleID，手把手教，稳定且耐用！"><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://www.aini.cn.eu.org/meinv?_r_=20f32bfe-e51f-9e1a-c6d9-b867ffc501c7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【教程】五分钟注册美区AppleID，手把手教，稳定且耐用！"/></a><div class="content"><a class="title" href="/posts/cb3d58ea/" title="【教程】五分钟注册美区AppleID，手把手教，稳定且耐用！">【教程】五分钟注册美区AppleID，手把手教，稳定且耐用！</a><time datetime="2024-04-27T09:09:01.000Z" title="发表于 2024-04-27 17:09:01">2024-04-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/9d78f097/" title="【教程】Shadowrocket详细介绍"><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://www.aini.cn.eu.org/meinv?_r_=a29cedfb-73be-20dc-ea3f-e06a31f245f6" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【教程】Shadowrocket详细介绍"/></a><div class="content"><a class="title" href="/posts/9d78f097/" title="【教程】Shadowrocket详细介绍">【教程】Shadowrocket详细介绍</a><time datetime="2024-04-27T07:32:27.000Z" title="发表于 2024-04-27 15:32:27">2024-04-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/f51fdc33/" title="【资源】影视网址合集"><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://www.aini.cn.eu.org/meinv?_r_=80c51d54-912e-1c16-4a28-5d18ad27b2fd" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【资源】影视网址合集"/></a><div class="content"><a class="title" href="/posts/f51fdc33/" title="【资源】影视网址合集">【资源】影视网址合集</a><time datetime="2024-04-09T09:22:24.000Z" title="发表于 2024-04-09 17:22:24">2024-04-09</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div id="footer_deal"><a class="deal_link" href="mailto:3332664073@qq.com" rel="external nofollow noreferrer" title="email"><i class="anzhiyufont anzhiyu-icon-envelope"></i></a><a class="deal_link" target="_blank" rel="noopener external nofollow noreferrer" href="https://weibo.com/u/7479204922" title="微博"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a><a class="deal_link" target="_blank" rel="noopener external nofollow noreferrer" href="https://www.youtube.com/@aiguohou" title="YouTube"><i class="fa-brands fa-youtube"></i></a><a class="deal_link" href="/atom.xml" title="RSS"><i class="anzhiyufont anzhiyu-icon-rss"></i></a><img class="footer_mini_logo" title="返回顶部" alt="返回顶部" onclick="anzhiyu.scrollToDest(0, 500)" src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://jihulab.com/ainiz/img1/-/raw/main/touxiang/yuan-tou/yuan-touxiang2.webp" size="50px"/><a class="deal_link" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/aizhiqian" title="Github"><i class="anzhiyufont anzhiyu-icon-github"></i></a><a class="deal_link" target="_blank" rel="noopener external nofollow noreferrer" href="https://space.bilibili.com/696732872" title="Bilibili"><i class="anzhiyufont anzhiyu-icon-bilibili"></i></a><a class="deal_link" target="_blank" rel="noopener external nofollow noreferrer" href="https://v.douyin.com/iprm72B/" title="抖音"><i class="anzhiyufont anzhiyu-icon-tiktok"></i></a><a class="deal_link" href="/copyright" title="CC"><i class="anzhiyufont anzhiyu-icon-copyright-line"></i></a></div><div id="anzhiyu-footer"><div class="footer-group"><div class="footer-title">服务</div><div class="footer-links"><a class="footer-item" title="51la统计" target="_blank" rel="noopener external nofollow noreferrer" href="https://v6.51.la/">51la统计</a><a class="footer-item" title="十年之约" target="_blank" rel="noopener external nofollow noreferrer" href="https://www.foreverblog.cn/">十年之约</a><a class="footer-item" title="开往" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/travellings-link/travellings">开往</a></div></div><div class="footer-group"><div class="footer-title">主题</div><div class="footer-links"><a class="footer-item" title="文档" target="_blank" rel="noopener external nofollow noreferrer" href="https://docs.anheyu.com/">文档</a><a class="footer-item" title="源码" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu">源码</a><a class="footer-item" title="标签外挂" target="_blank" rel="noopener external nofollow noreferrer" href="https://blog.anheyu.com/posts/d50a.html">标签外挂</a><a class="footer-item" title="更新日志" target="_blank" rel="noopener external nofollow noreferrer" href="https://blog.anheyu.com/update/">更新日志</a></div></div><div class="footer-group"><div class="footer-title">导航</div><div class="footer-links"><a class="footer-item" title="Telegraph-Image" target="_blank" rel="noopener external nofollow noreferrer" href="https://img.aiguohou.eu.org/">Telegraph-Image</a><a class="footer-item" title="memos" target="_blank" rel="noopener external nofollow noreferrer" href="https://memos.xivo.eu.org/">memos</a></div></div><div class="footer-group"><div class="footer-title">协议</div><div class="footer-links"><a class="footer-item" title="隐私协议" href="/privacy/">隐私协议</a><a class="footer-item" title="Cookies" href="/cookies/">Cookies</a><a class="footer-item" title="版权协议" href="/copyright/">版权协议</a></div></div><div class="footer-group"><div class="footer-title-group"><div class="footer-title">友链</div><a class="random-friends-btn" id="footer-random-friends-btn" href="javascript:addFriendLinksInFooter();" rel="external nofollow noreferrer" title="换一批友情链接"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right"></i></a></div><div class="footer-links" id="friend-links-in-footer"></div></div></div><p id="ghbdages"><a class="github-badge" target="_blank" href="https://hexo.io/" rel="external nofollow noreferrer" style="margin-inline:5px" data-title="博客框架为 Hexo_v7.0.0" title="博客框架为 Hexo_v7.0.0"><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.1.5/img/badge/Frame-Hexo.svg" alt="博客框架为 Hexo_v7.0.0"/></a><a class="github-badge" target="_blank" href="https://blog.anheyu.com/" rel="external nofollow noreferrer" style="margin-inline:5px" data-title="本站使用 AnZhiYu 主题" title="本站使用 AnZhiYu 主题"><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.9/img/Theme-AnZhiYu-2E67D3.svg" alt="本站使用 AnZhiYu 主题"/></a><a class="github-badge" target="_blank" href="https://vercel.com/" rel="external nofollow noreferrer" style="margin-inline:5px" data-title="本站由 Vercel 托管" title="本站由 Vercel 托管"><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://sourcebucket.s3.bitiful.net/badge/Hosted-Vercel-brightgreen.svg" alt="本站由 Vercel 托管"/></a><a class="github-badge" target="_blank" href="https://github.com/" rel="external nofollow noreferrer" style="margin-inline:5px" data-title="本站由 Github 托管" title="本站由 Github 托管"><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.1.5/img/badge/Source-Github.svg" alt="本站由 Github 托管"/></a><a class="github-badge" target="_blank" href="https://user.51.la/" rel="external nofollow noreferrer" style="margin-inline:5px" data-title="本站数据分析得益于51la技术支持" title="本站数据分析得益于51la技术支持"><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://sourcebucket.s3.bitiful.net/badge/Analytics-51la-3db1eb.svg" alt="本站数据分析得益于51la技术支持"/></a><a class="github-badge" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow noreferrer" style="margin-inline:5px" data-title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.2.0/img/badge/Copyright-BY-NC-SA.svg" alt="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"/></a></p></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2022 - 2025 By <a class="footer-bar-link" href="/" title="AiGuoHou" target="_blank">AiGuoHou</a></div></div><div id="footer-type-tips"></div><div class="js-pjax"><script>function subtitleType () {
+  fetch('https://v1.hitokoto.cn')
+    .then(response => response.json())
+    .then(data => {
+      if (true) {
+        const from = '出自 ' + data.from
+        const sub = []
+        sub.unshift(data.hitokoto, from)
+        window.typed = new Typed('#footer-type-tips', {
+          strings: sub,
+          startDelay: 300,
+          typeSpeed: 150,
+          loop: true,
+          backSpeed: 50,
+        })
+      } else {
+        document.getElementById('footer-type-tips').innerHTML = data.hitokoto
+      }
+    })
+}
+
+if (true) {
+  if (typeof Typed === 'function') {
+    subtitleType()
+  } else {
+    getScript('https://cdn.bootcdn.net/ajax/libs/typed.js/2.1.0/typed.umd.min.js').then(subtitleType)
+  }
+} else {
+  subtitleType()
+}
+</script></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu" title="主题">主题</a><a class="footer-bar-link" target="_blank" rel="noopener external nofollow noreferrer" href="https://img.aiguohou.eu.org" title="图床">图床</a><a class="footer-bar-link cc" href="/copyright" title="cc协议"><i class="anzhiyufont anzhiyu-icon-copyright-line"></i><i class="anzhiyufont anzhiyu-icon-creative-commons-by-line"></i><i class="anzhiyufont anzhiyu-icon-creative-commons-nc-line"></i><i class="anzhiyufont anzhiyu-icon-creative-commons-nd-line"></i></a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">33</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">18</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">6</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" rel="external nofollow noreferrer" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener external nofollow noreferrer" href="https://www.aizhiqian.eu.org/" title="主页"><img class="back-menu-item-icon" src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://www.aizhiqian.eu.org/images/icon/favicon.ico" alt="主页"/><span class="back-menu-item-text">主页</span></a><a class="back-menu-item" target="_blank" rel="noopener external nofollow noreferrer" href="https://alist.xivo.eu.org/" title="Alist"><img class="back-menu-item-icon" src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://p0.meituan.net/csc/9588e334a146defee0191c68b74bc0a5112303.jpg" alt="Alist"/><span class="back-menu-item-text">Alist</span></a><a class="back-menu-item" href="https://aizhiqian.github.io/" title="blog"><img class="back-menu-item-icon" src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://aizhiqian.github.io/img/favicon.webp" alt="blog"/><span class="back-menu-item-text">blog</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener external nofollow noreferrer" href="https://img.aiguohou.eu.org/" title="知心图床"><img class="back-menu-item-icon" src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img.aiguohou.eu.org/favicon.ico" alt="知心图床"/><span class="back-menu-item-text">知心图床</span></a><a class="back-menu-item" target="_blank" rel="noopener external nofollow noreferrer" href="https://memos.xivo.eu.org/" title="memos"><img class="back-menu-item-icon" src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://memos.xivo.eu.org/logo.webp" alt="memos"/><span class="back-menu-item-text">memos</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友人帐</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()" rel="external nofollow noreferrer"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/API/" style="font-size: 0.88rem; color: rgb(51, 117, 194);">API<sup>1</sup></a><a href="/tags/Android/" style="font-size: 0.88rem; color: rgb(113, 75, 49);">Android<sup>5</sup></a><a href="/tags/CDN/" style="font-size: 0.88rem; color: rgb(51, 89, 31);">CDN<sup>1</sup></a><a href="/tags/hexo/" style="font-size: 0.88rem; color: rgb(21, 168, 107);">hexo<sup>14</sup></a><a href="/tags/iOS/" style="font-size: 0.88rem; color: rgb(14, 56, 11);">iOS<sup>1</sup></a><a href="/tags/ios/" style="font-size: 0.88rem; color: rgb(7, 73, 89);">ios<sup>1</sup></a><a href="/tags/npm/" style="font-size: 0.88rem; color: rgb(60, 121, 168);">npm<sup>1</sup></a><a href="/tags/termux/" style="font-size: 0.88rem; color: rgb(18, 172, 197);">termux<sup>5</sup></a><a href="/tags/%E4%BB%A3%E7%90%86/" style="font-size: 0.88rem; color: rgb(158, 92, 135);">代理<sup>2</sup></a><a href="/tags/%E5%91%BD%E4%BB%A4/" style="font-size: 0.88rem; color: rgb(113, 127, 78);">命令<sup>1</sup></a><a href="/tags/%E5%9B%BE%E5%BA%8A/" style="font-size: 0.88rem; color: rgb(118, 100, 92);">图床<sup>2</sup></a><a href="/tags/%E5%AE%89%E8%A3%85/" style="font-size: 0.88rem; color: rgb(117, 126, 111);">安装<sup>1</sup></a><a href="/tags/%E5%AE%9D%E5%A1%94/" style="font-size: 0.88rem; color: rgb(5, 180, 136);">宝塔<sup>1</sup></a><a href="/tags/%E5%BD%B1%E8%A7%86/" style="font-size: 0.88rem; color: rgb(185, 191, 40);">影视<sup>1</sup></a><a href="/tags/%E7%AD%BE%E5%88%B0/" style="font-size: 0.88rem; color: rgb(195, 43, 111);">签到<sup>1</sup></a><a href="/tags/%E7%BE%8E%E5%8C%96/" style="font-size: 0.88rem; color: rgb(118, 187, 73);">美化<sup>8</sup></a><a href="/tags/%E8%84%9A%E6%9C%AC/" style="font-size: 0.88rem; color: rgb(163, 135, 100);">脚本<sup>1</sup></a><a href="/tags/%E8%BD%AF%E4%BB%B6/" style="font-size: 0.88rem; color: rgb(0, 33, 145);">软件<sup>1</sup></a></div></div><hr/></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="anzhiyufont anzhiyu-icon-comments"></i></a><a id="switch-commentBarrage" href="javascript:anzhiyu.switchCommentBarrage();" rel="external nofollow noreferrer" title="开关弹幕"><i class="anzhiyufont anzhiyu-icon-danmu"></i></a><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="nav-music"><a id="nav-music-hoverTips" onclick="anzhiyu.musicToggle()" accesskey="m">播放音乐</a><div id="console-music-bg"></div><meting-js id="9025983609" server="tencent" type="playlist" mutex="true" preload="none" theme="var(--anzhiyu-main)" data-lrctype="0" order="random" volume="0.5"></meting-js></div><div id="algolia-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><button class="search-close-button"><i class="anzhiyufont anzhiyu-icon-xmark"></i></button></nav><div class="search-wrap"><div id="algolia-search-input"></div><hr/><div id="algolia-search-results"><div id="algolia-hits"></div><div id="algolia-pagination"></div><div id="algolia-info"><div class="algolia-stats"></div><div class="algolia-poweredBy"></div></div></div></div></div><div id="search-mask"></div></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/9025983609&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="https://s4.zstatic.net/ajax/libs/hexo-theme-anzhiyu/1.6.14/js/utils.min.js"></script><script src="https://s4.zstatic.net/ajax/libs/hexo-theme-anzhiyu/1.6.14/js/main.min.js"></script><script src="https://s4.zstatic.net/ajax/libs/hexo-theme-anzhiyu/1.6.14/js/tw_cn.min.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@latest/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.bootcdn.net/ajax/libs/instant.page/5.2.0/instantpage.min.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@latest/dist/lazyload.iife.min.js"></script><script src="https://cdn.bootcdn.net/ajax/libs/node-snackbar/0.1.16/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.bootcdn.net/ajax/libs/pangu/4.0.7/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("07/22/2023 14:57:21"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2022 By 安知鱼 V1.6.14",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 AiGuoHou 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><script src="https://s4.zstatic.net/ajax/libs/algoliasearch/5.8.0/algoliasearch.umd.min.js"></script><script src="https://cdn.cbd.int/instantsearch.js@latest/dist/instantsearch.production.min.js"></script><script src="https://s4.zstatic.net/ajax/libs/hexo-theme-anzhiyu/1.6.14/js/search/algolia.min.js"></script><div class="js-pjax"><script>(() => {
+  const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+  if ($mermaid.length === 0) return
+  const runMermaid = () => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+    Array.from($mermaid).forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
+      const mermaidID = 'mermaid-' + index
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+
+      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+
+      const renderV10 = () => {
+        renderFn.then(({svg}) => {
+          mermaidSrc.insertAdjacentHTML('afterend', svg)
+        })
+      }
+
+      const renderV9 = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+      }
+
+      typeof renderFn === 'string' ? renderV9(renderFn) : renderV10()
+    })
+  }
+
+  const loadMermaid = () => {
+    window.loadMermaid ? runMermaid() : getScript('https://cdn.bootcdn.net/ajax/libs/mermaid/10.9.0/mermaid.min.js').then(runMermaid)
+  }
+
+  anzhiyu.addGlobalFn('themeChange', runMermaid, 'mermaid')
+
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script><script>(() => {
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://twikoo.aizhiqian.eu.org/',
+      region: '',
+      onCommentLoaded: () => {
+        anzhiyu.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      }
+    }, null))
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') setTimeout(runFn,0)
+    else getScript('https://s4.zstatic.net/ajax/libs/twikoo/1.6.39/twikoo.all.min.js').then(runFn)
+  }
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'https://twikoo.aizhiqian.eu.org/',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(res => {
+      countELement.textContent = res[0].count
+    }).catch(err => {
+      console.error(err)
+    })
+  }
+
+  const runFn = () => {
+    init();
+    GLOBAL_CONFIG_SITE.isPost && getCount()
+  }
+
+  if ('Twikoo' === 'Twikoo' || !false) {
+    if (false) anzhiyu.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else {
+      loadTwikoo()
+    }
+  } else {
+    window.loadOtherComment = loadTwikoo
+  }
+})()</script><input type="hidden" name="page-type" id="page-type" value="post"><script async src="https://s4.zstatic.net/ajax/libs/hexo-theme-anzhiyu/1.6.14/js/anzhiyu/comment_barrage.min.js"></script></div><script async data-pjax src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.1/bubble/bubble.js"></script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@latest/waterfall/waterfall.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/qrcodejs/1.0.0/qrcode.min.js"></script><script src="https://s4.zstatic.net/ajax/libs/hexo-theme-anzhiyu/1.6.14/js/anzhiyu/right_click_menu.min.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@latest/icon/ali_iconfont_css.css"><script defer src="/_vercel/insights/script.js"></script><script defer src="/_vercel/speed-insights/script.js"></script><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.bootcdn.net/ajax/libs/butterfly-extsrc/1.1.3/fireworks.min.js"></script><script src="https://cdn.bootcdn.net/ajax/libs/butterfly-extsrc/1.1.3/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@latest/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.3/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@latest/assets/js/Meting2.min.js"></script><script src="https://cdn.bootcdn.net/ajax/libs/pjax/0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["meta[property=\"og:image\"]","meta[property=\"og:title\"]","meta[property=\"og:url\"]","meta[property=\"og:type\"]","meta[property=\"og:site_name\"]","meta[property=\"og:description\"]","head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: true,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', 'G-M8DMV2RD7M', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404')
+  }
+})</script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div></body></html>

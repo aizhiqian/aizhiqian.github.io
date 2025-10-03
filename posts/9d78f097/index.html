@@ -1,0 +1,1369 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>【教程】Shadowrocket详细介绍 | 向日葵🌻小站</title><meta name="keywords" content="代理,iOS"><meta name="author" content="AiGuoHou"><meta name="copyright" content="AiGuoHou"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="【教程】Shadowrocket详细介绍"><meta name="application-name" content="【教程】Shadowrocket详细介绍"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="article"><meta property="og:title" content="【教程】Shadowrocket详细介绍"><meta property="og:url" content="https://aizhiqian.github.io/posts/9d78f097/index.html"><meta property="og:site_name" content="向日葵🌻小站"><meta property="og:description" content="Shadowrocket快速使用方法： 1.首页 - 添加节点。 2.设置 - 延迟测试方法，选择CONNECT。 3.首页 - 连通性测试，选择可用节点连接。 首次启动会提示【安装VPN配置文件】 请点击【好】和【允许】才能正常使用  1  首页 1.1 添加节点   首页 - 右上角➕ - 类"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://www.aini.cn.eu.org/meinv?_r_=a29cedfb-73be-20dc-ea3f-e06a31f245f6"><meta property="article:author" content="AiGuoHou"><meta property="article:tag" content="blog,博客,知心的博客,Blog,知心,hexo,HEXO"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://www.aini.cn.eu.org/meinv?_r_=a29cedfb-73be-20dc-ea3f-e06a31f245f6"><meta name="description" content="Shadowrocket快速使用方法： 1.首页 - 添加节点。 2.设置 - 延迟测试方法，选择CONNECT。 3.首页 - 连通性测试，选择可用节点连接。 首次启动会提示【安装VPN配置文件】 请点击【好】和【允许】才能正常使用  1  首页 1.1 添加节点   首页 - 右上角➕ - 类"><link rel="shortcut icon" href="/img/favicon.webp"><link rel="canonical" href="https://aizhiqian.github.io/posts/9d78f097/"><link rel="preconnect" href="https://cdn.cbd.int"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin=""/><meta name="google-site-verification" content="fqk9sjcs_vmT9OoAfke2PBIDiHzY5q0-EG_QZ_TQCZ8"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@1.0.17/lib/assets/font-awesome-animation.min.css"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.5.2/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/node-snackbar/0.1.16/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/fancyapps-ui/5.0.36/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-M8DMV2RD7M"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-M8DMV2RD7M');
+</script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: {"enable":true,"title":"与数百名博主无限进步","addFriendPlaceholder":"昵称（请勿包含博客等字样）：\n网站地址（要求博客地址，请勿提交个人主页）：\n头像图片url（请提供尽可能清晰的图片，我会上传到我自己的图床）：\n描述：\n站点截图（可选）：\n"},
+  peoplecanvas: undefined,
+  postHeadAiDescription: undefined,
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)欢迎肥来！"},
+  LA51: {"enable":true,"ck":"3GhQxjQxTts56Kk4","LingQueMonitorID":"3GhRKmii7GGLsKdg"},
+  greetingBox: {"enable":true,"default":"晚上好👋","list":[{"greeting":"晚安😴","startTime":0,"endTime":5},{"greeting":"早上好鸭👋, 祝你一天好心情！","startTime":6,"endTime":9},{"greeting":"上午好👋, 状态很好，鼓励一下～","startTime":10,"endTime":10},{"greeting":"11点多啦, 在坚持一下就吃饭啦～","startTime":11,"endTime":11},{"greeting":"午安👋, 宝贝","startTime":12,"endTime":14},{"greeting":"🌈充实的一天辛苦啦！","startTime":14,"endTime":18},{"greeting":"19点喽, 奖励一顿丰盛的大餐吧🍔。","startTime":19,"endTime":19},{"greeting":"晚上好👋, 在属于自己的时间好好放松😌~","startTime":20,"endTime":24}]},
+  twikooEnvId: 'https://twikoo.aizhiqian.eu.org/',
+  commentBarrageConfig:{"enable":true,"maxBarrage":1,"barrageTime":5000,"accessToken":"72f3212be07145ddae8323935b188b41","mailMd5":""},
+  music_page_default: "nav_music",
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: undefined,
+  navMusic: true,
+  mainTone: {"mode":"api","api":"https://img2color.aizhiqian.eu.org/api?img=","cover_change":true},
+  authorStatus: {"skills":["🤖️ 数码科技爱好者","🔍 分享与热心帮助","🏠 智能家居小能手","🔨 设计开发一条龙","🤝 专修交互与设计","🏃 脚踏实地行动派","🧱 团队小组发动机","💢 壮汉人狠话不多"]},
+  algolia: {"appId":"5S7GRIQ3T3","apiKey":"913ceaabe3454727ddee2ca2a58eb3a4","indexName":"hexo-anzhiyu","hits":{"per_page":6},"languages":{"input_placeholder":"输入关键词后按下回车查找","hits_empty":"找不到您查询的内容：${query}","hits_stats":"找到 ${hits} 条结果，用时 ${time} 毫秒"}},
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":230},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    simplehomepage: false,
+    post: true
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":false,"limitCount":150,"languages":{"author":"作者: AiGuoHou","link":"链接: ","source":"来源: 向日葵🌻小站","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。","copySuccess":"复制成功，复制和转载请标注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#2d3035","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@latest/dist/fjGallery.min.js',
+      css: 'https://cdn.bootcdn.net/ajax/libs/flickr-justified-gallery/2.2.0/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: true,
+  shortcutKey: undefined,
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: '向日葵🌻小站',
+  title: '【教程】Shadowrocket详细介绍',
+  postAI: '',
+  pageFillDescription: '1  首页, 1.1 添加节点, 1.2 添加WireGuard节点, 1.3 更新订阅节点, 1.4 节点排序, 1.5 SSL错误, 1.6 节点旗帜, 1.7 节点感叹号, 1.8 节点分享与整理, 1.9 订阅节点筛选, 1.10 代理通过/代理链, 1.11 全局路由区别, 1.12 连通性测试, 1.13 修改测试地址, 1.14 场景, 1.15 简单模式, 1.16 启用回退, 2  配置, 2.1 配置文件, 2.2 扩展配置, 2.3 通用参数, 2.4 添加规则, 2.5 规则类型, 2.6 规则策略, 2.7 app分流, 2.8 更新规则集, 2.9 修改DNS, 2.10 no-resolve的作用, 2.11 代理分组/策略组, 2.12 代理分组类型, 2.13 自动切换节点, 2.14 HTTPS解密, 2.15 负载均衡, 2.16 模块, 2.17 证书模块, 2.18 模块消失, 2.19 身份证书密码, 2.20 微信转圈, 3  数据, 3.1 代理日志, 3.2 DNS日志, 3.3 iCloud自动同步, 3.4 节点数据管理, 3.5 流量统计信息, 4  设置, 4.1 延迟测试方法, 4.2 小组件, 4.3 按需求连接, 4.4 VPN自动断开, 4.5 前置代理, 4.6 代理共享, 4.7 检测代理, 4.8 代理类型, 4.9 开启UDP转发, 4.10 隐藏VPN图标, 4.11 GEOIP数据库, 5  其他, 5.1 定位权限, 5.2 编译原因, 5.3 下载Shadowrocket, 6  参考链接快速使用方法首页添加节点设置延迟测试方法选择首页连通性测试选择可用节点连接首次启动会提示安装配置文件请点击好和允许才能正常使用首页添加节点首页右上角类型栏输入机场订阅链接保存订阅链接后面加上可以重复添加同一个订阅首页右上角选择对应节点类型填写节点配置信息并保存已支持的类型订阅复制节点链接如等打开时会自动识别导入首页左上角扫码添加添加节点方法一首页右上角类型选择填写配置信息方法二复制如下格式的配置信息打开时会自动弹出添加对话框点击添加如果没有自动弹出对话框可能是因为设置中的允许检测剪贴板被关闭了您可以重新打开或者点击首页连通性测试下方的粘贴按钮手动添加配置信息更新订阅节点订阅右滑更新点击首页的更新订阅按钮设置订阅打开时更新刷掉后台重新打开应用程序时会自动更新订阅设置订阅自动后台更新需在系统设置通用后台刷新中开启对的允许更新周期为小时提供了更新订阅的快捷指令可以实现自动化操作长按屏幕的应用图标更新订阅添加更新订阅时异常原因表示订阅被重置或令牌错误表示路径信息错误表示域名信息错误或域名被运营商屏蔽节点排序设置订阅根据排序错误添加更新订阅链接时如果提示发生了错误无法建立与该服务器的安全连接可以尝试的解决方法全局路由选代理使用另外一个节点来添加更新订阅链接切换网络后再添加更新订阅链接检查订阅链接是否错误或失效节点旗帜节点优先根据备注名称匹配旗帜如果匹配不成功由节点地址解析出通过数据库判断该的国家或地区然后显示对应的旗帜节点后面地址栏的图标可以手动修改旗帜订阅后面订阅链接后面利用脚本也能批量修改旗帜如果把旗帜的放在节点备注开头保存时会自动显示对应的旗帜节点感叹号节点显示感叹号原因您的节点使用了地址是却没有设这是错误的为了可以访问会主动开启允许不安全上一版本关闭了此功能造成很多人无法使用节点允许不安全将跳过证书验证这将导致一些安全问题如果您使用自签名证书请将证书导入系统并信任它否则请及时续订服务器端证书以防止证书过期节点分享与整理节点分享长按节点拷贝可以把节点链接分享给其他设备左滑节点二维码其他设备可以通过扫码添加节点二维码页面点击右上角的分享按钮可以选择其他形式传送二维码节点二维码缺乏统一标准某些协议的节点当使用其他代理工具扫码添加时可能会丢失部分节点信息导致不能连接如果遇到此问题请仔细检查同一个节点的各项配置信息是否一致点击节点后面滑动至页面底部有多种分享节点的菜单展开节点列表点击连通性测试下方的编辑按钮勾选需要分享的节点点击左上角的复制可以把多个节点链接同时分享给其他设备节点整理调整顺序点击编辑按钮长按订阅后面的图标可以调整订阅之间的上下顺序本地节点默认置顶位置节点分类非订阅形式添加的节点默认会归类为本地节点如果需要重新对本地节点进行分类可以使用折叠功能点击编辑按钮勾选节点点击左上角的折叠为新分类的节点组命名折叠功能可以选择本地节点或者订阅节点删除节点点击编辑按钮点击左上角的删除可以选择删除全部节点或者删除连通性测试结果中的超时节点滑动菜单向右滑动订阅可以选择测试当前订阅节点的连通性或者更新当前订阅节点向右滑动节点点击测试可以获取单个节点的连通性测试结果点击复制可以在当前节点列表中新增一个同样配置信息的节点订阅节点筛选首页订阅后面订阅链接后面保留节点名称含有关键词和的节点保留节点名称含有关键词或的节点排除节点名称含有关键词或的节点保留节点名称含有关键词并排除含有关键词的节点分组代理分组的正则写法与此相同但需删除前后符号代理通过代理链使用代理链方法代理通过当前代理通过另一个代理转发支持多级代理使用节点连接点击节点后面代理通过选择节点流量走向全局路由区别配置流量根据规则进行分配有些需要通过节点连接有些则不需要代理全部流量都通过同一个节点连接直连全部流量都不通过节点连接场景根据不同的网络连接类型蜂窝数据自动切换到预先设置的路由模式并选择对应的配置文件和节点连接连通性测试点击首页的连通性测试节点列表将会显示以毫秒为单位的延迟数字这是数据包的传输时间不同的延迟测试方法对应不同的计算结果长按首页的连通性测试可以临时调整测试方法仅对本次测试生效设置延迟测试方法建立连接的往返时间发送回显请求报文和接收回显应答报文的往返时间向测试发送一个请求测量从发送请求到接收响应头部信息的往返时间请优先选择因为它更能准确反映节点的连通性延迟大小与网络上传下载速度没有直接关系测速请使用其他方法如修改测试地址用于首页和分组节点的延迟测试首页全局路由分组测试设置用于代理分组节点的延迟测试点击配置文件代理分组右上角最底下栏场景场景是根据不同的网络连接类型蜂窝数据自动切换到预先设置的路由模式并选择对应的配置文件和节点连接首页全局路由设置的场景添加场景为指定的网络连接类型设置对应的路由模式配置直连代理类型节点分组配置文件备注网络连接类型分别为蜂窝数据默认选择类型时需填写名称首页全局路由选择场景首次添加场景可能会弹出申请权限的对话框具体原因请看定位权限当没有允许定位权限时场景列表的标记不会随着网络类型的切换而自动切换但这不影响场景功能的正常生效简单模式首页全局路由分组简单模式简单模式的功能是自动测试并选择延迟低节点节点的范围是什么当开启简单模式此时下方会出现分组选项如果没有继续添加分组的操作节点范围就是首页全部节点如果添加分组范围就变成分组里的节点自动测试的周期是多久延迟低的判断依据是什么首页全局路由分组测试设置这里规定了测试的间隔时间默认即表示每分钟自动进行一次节点延迟测试相邻两次测试结果中最小延迟值的对比根据公差机制决定是否切换节点公差越大触发节点切换的频次越低默认即表示只要后面测试结果的最低延迟节点比前面测试结果的最低延迟节点延迟小就会自动切换切换的节点给什么规则使用内置策略简单模式时自动切换的节点使用于所有指向策略的规则简单模式是自动切换延迟低节点代理分组的类型也是自动切换延迟低节点两者有何不同代理分组创建后需要在规则中修改策略指向而简单模式已经关联策略节省了修改规则的步骤全局路由选择代理时将导致所有代理分组失效而简单模式依然能够实现自动切换节点添加分组时测速开关是什么作用开启测速这个分组才允许自动切换节点不开启测速这个分组只能手动选择节点启用回退首页全局路由启用回退启用回退的功能是当节点连接失败时自动切换其他可用节点连接失败次才会触发回退机制节点只满足可用性不要求是最低延迟节点随机切换不按照节点顺序选择策略为节点切换范围就是首页全部节点如果开启简单模式并选择分组则范围缩小至分组内节点策略为分组代理分组节点切换范围就是分组或代理分组内节点具体切换到哪个节点请查看代理日志配置配置文件内置了一个配置文件其中包含了国内外网站的分流规则满足大多数用户的基本需求此配置文件的内容跟随应用更新而做不定期的调整如果在使用过程中错误修改或误删配置文件可以点击配置恢复默认配置添加配置文件方法从下载配置配置右上角粘贴配置链接下载点击对应的配置文件使用配置兼容使用格式的配置文件从本地存储或云盘导入配置从云导入点击对应存储路径的配置文件点击配置文件显示操作菜单使用配置编辑纯文本更新配置扩展配置重新命名导出点击配置文件的图标进入编辑菜单通用规则重写解密脚本代理分组脚本规则集复制替换策略测试规则配置文件的纯文本编写方法请参考懒人配置懒人配置含策略组扩展配置从配置扩展出配置此时默认关系是包含也可以理解为继承了的内容配置优先级高于配置该功能是对配置建立包含关系以满足同时使用多个配置的需求点击配置文件通用包含配置可以修改或解除包含关系通用参数旁路系统如果禁用此选项可能会导致一些系统问题如推送通知延迟跳过代理此选项强制域名或的连接范围由接口来处理而不是代理服务器此选项用于解决一些应用程序的一些兼容性问题旁路路由接口只能处理协议使用此选项可以绕过指定的范围让其他协议通过覆写使用普通或加密如等覆盖默认的系统有些支持所以尝试查询如果支持就切换到可在链接后面加上关闭强制通过查询的写法是将改成如备用当覆写查询失败或查询时间超过秒会自动回退备用如需指定多个可用逗号分隔表示回退到系统启用支持表示不启用表示启用即使不启用此选项当本地网络环境支持并且节点域名支持解析也会使用节点的地址进行访问解决方法是关闭节点域名的解析或者在配置文件的项目下为节点域名指定地址首选优先向的服务器查询记录优先使用记录表示不启用直连的域名类规则使用系统进行查询表示不启用数据包自动回复不开启时重写的策略默认只有在配置模式下生效开启后可以令该策略在其他全局路由模式下都生效私有应答如果不启用该选项域名解析返回私有会认为该域名被劫持而强制使用代理直连域名解析失败后使用代理表示不启用包含路由默认情况下接口会声明自己为默认路由但由于接口的路由较小有些流量可能不会通过接口使用此选项可以添加一个较小的路由表总是真实这个选项要求在处理请求时返回一个真实的地址而不是假的地址劫持有些设备或软件总是使用硬编码的服务器例如通过或发送请求您可以使用此选项来劫持查询当流量匹配到规则里不支持转发的节点策略时重新选择回退行为可选行为包括表示直连转发流量表示拒绝转发流量包含配置表示当前配置包含另一个配置的内容当前配置的优先级高于被包含配置该选项是对配置建立包含关系以满足同时使用多个配置的需求带符号的参数只能通过配置文件的纯文本模式进行设置没有操作选项添加规则点击配置文件规则右上角根据需求选择规则类型和规则策略填写规则内容数据代理启用日志记录产生网络活动后回到该页面从最近的日志中查看网络活动记录点击任一记录查看详情点击右上角选择类型添加规则规则匹配的优先级上面规则优先于下面规则域名规则优先于规则规则类型匹配请求域名的后缀如可以匹配到匹配请求域名的关键词如可以匹配到匹配请求的完整域名如只能匹配到匹配用户代理字符串支持使用通配符如可以匹配到匹配正则式如可以匹配到匹配或地址如可以匹配到段当域名请求遇到类规则时会向本地服务器发送查询请求以判断主机是否匹配规则若类规则加如则域名请求将会跳过此规则不会触发本地查询匹配地址隶属的编号如可以匹配到属于网络的地址匹配规则集内容规则集的组成部分需包含规则类型匹配域名集内容域名集的组成部分不包含规则类型匹配脚本名称匹配目标主机名的端口号如可以匹配到目标端口匹配数据库如可以匹配到归属地为的地址兜底策略如表示当其他所有规则都匹配不到时才使用规则的策略逻辑规则与规则如可以匹配到逻辑规则非规则如可以匹配到除了端口的其他所有请求逻辑规则或规则如可以匹配到或端口的所有请求匹配传输协议类型类型不支持单独使用只能作为子规则类型嵌套于逻辑规则当中如规则策略代理通过代理服务器转发流量直连连接不经过任何代理服务器拒绝返回状态码没有内容拒绝返回状态码内容为空的对象拒绝返回状态码内容为空的数组拒绝返回状态码没有内容拒绝返回状态码内容为像素拒绝返回状态码内容为像素拒绝丢弃包拒绝返回端口不可达除此之外规则策略还可以选择代理分组订阅名称分组服务器节点分流根据不同指定分流规则的方法示例分流走代理复制的规则集链接点击配置文件规则右上角类型选择策略选择输入框内粘贴规则集链接保存完成策略可以根据需求使用其他选项系统没有常规分应用代理的操作只能通过域名规则实现分流效果可自行抓包或者订阅的规则集如果引用的链接是域名集添加规则时类型请选择更新规则集点击配置文件使用配置修改点击配置文件通用覆写删除添加也可以使用加密如备用当覆写的查询失败后回退备用进行查询如需指定多个可用逗号分隔表示回退到系统的作用当域名请求遇到类规则时会向本地服务器发送查询请求以判断主机是否匹配规则若类规则加则域名请求将会跳过此规则不触发本地查询如代理分组策略组点击配置文件代理分组右上角填写名称根据需求选择类型通过正则匹配策略或者从策略输入框后面的手动添加策略保存策略是规则的组成部分创建的代理分组只有放到规则里才能发挥作用进入对应规则的详情页点击策略选项从列表中选择代理分组保存首页下拉可以快捷进入代理分组界面代理分组类型手动切换节点自动切换延迟最低节点节点挂掉时自动切换其他可用节点不同规则的请求使用分组里的不同节点进行连接相同的域名会使用同一个节点随机使用分组里的不同节点进行连接自动切换节点自动切换延迟低的节点方法一首页全局路由分组简单模式打开方法二点击配置文件代理分组右上角类型解密打开解密方法点击配置文件解密证书生成新的证书安装证书系统设置已下载描述文件安装系统设置通用关于本机证书信任设置开启对应证书信任负载均衡使用负载均衡策略类型方法点击配置文件代理分组右上角类型选择表示不同规则的请求使用分组里的不同节点进行连接相同的域名会使用同一个节点模块添加模块方法本地新建模块模块跟配置的语法相同您可以在模块里调整通用设置以及添加规则重写脚本证书内容解密主机名下载远程模块模块右上角填写模块链接下载模块部分写法主机名加表示把内容插入到配置中不加时会覆盖配置中对应内容并影响其他模块功能请对正在使用的配置开启解密模块才能完整生效证书模块切换配置文件时免除重复安装证书方法点击已安装证书的配置文件后面解密证书后面复制新建模块证书名字可更改证书密码即已安装证书的配置文件的证书密码默认密码是证书内容即剪贴板复制的内容原本是可以省略这行参数但由于引用的配置文件可能已经包含了证书密码且证书密码可能不是为防止出错因此才增加参数来覆盖引用的配置文件的证书密码模块消失模块页面已经开启保存到如果出现模块消失的问题请检查系统设置使用的中确保云盘已经打开同步文件云盘确定其中包含和两个子文件夹文件云盘如果的本地缓存被清理此时模块文件是未下载状态请等待自动下载或手动下载身份证书密码安装证书时如果遇到输入证书身份证书的密码页面可以尝试输入微信转圈如果使用时微信一直显示连接中收取中可以尝试的解决方法微信分流走直连点击配置文件通用启用关闭数据代理日志代理日志记录了网络活动过程中处理请求的具体信息数据代理启用日志记录产生网络活动时返回数据代理页面查看日志文件每条记录包含信息请求请求匹配的规则策略请求传输协议请求发送时间记录显示表示请求域名已启用解密点击每条记录查看详情详情页右上角可以选择类型添加规则数据代理页面右上角可以手动删除所有日志文件日志文件页面右上角可以选择导出数据自动删除打开程序会自动删除天前的日志文件已连接状态手动删除将保留最新的日志文件未连接时手动删除所有日志日志记录了网络活动过程中服务器处理域名查询请求的具体信息数据代理启用日志记录产生网络活动时返回数据页面查看日志文件每条记录包含信息请求域名查询结果响应时间处理请求的旗帜是根据返回地址的地理位置信息自动显示覆写不可用或未返回有效响应时回退备用来查询域名记录信息中如果响应时间超过秒意味着系统正在触发回退机制自动同步支持将服务器节点配置文件模块和脚本文件等数据类型自动同步至云端数据自动同步打开设备设置账号确保使用的列表中已经开启和云盘项目否则会出现自动同步失败的提示同步成功时点击文件可以看到存储云端的配置文件文件云盘可以看到存储云端的所有数据其中的文件包含服务器节点的配置信息服务中断网络连接问题以及其他复杂原因可能导致同步异常这种情况建议选择手动删除备份并重新同步数据如果用户删除首页某个节点后发现它又自动恢复可以尝试以下解决方法数据服务器节点下面点击删除备份和同步服务器节点添加的场景和分组不属于自动同步的数据类型需要手动备份下载才能在设备间共享数据节点数据管理导出节点将首页的所有节点数据整合成一个文件选择存储在本地或云端也可以通过其他共享方式传输文件导入节点将存储在本地或云端文件中的节点数据解析并添加到首页删除本地节点一键删除首页所有节点数据流量统计信息统计是开启连接后接管设备所有网络传输的流量统计信息数据统计统计包含信息开始时间连接时间和蜂窝数据的上下行流量流量分流的柱形图统计默认记录所有流量统计信息打开启用存档将会单独记录每一次连接的流量统计信息关闭首页连接后可以从归档查看点击右上角可以重置统计信息首页订阅支持显示流量统计信息方法是在订阅链接指向的纯文本编码前添加或字段这样订阅名称下方就能显示自定义信息如果没有添加字段或者隐藏用户代理字符串可能导致不返回相关统计信息只显示时间设置延迟测试方法详见词条连通性测试小组件设置小组件服务器节点根据需求添加个常用节点点击小组件右上角的可以展开查看方便手动切换节点显示值启用后长按小组件中心位置可以测试服务器节点连通性并显示延迟数字根据排序启用后长按小组件中心位置可以测试服务器节点连通性并依延迟大小自动排序添加小组件方法小组件负一屏编辑自定点击旁边的添加按钮屏幕小组件长按屏幕左上角选择合适类型添加系统要求更新后如果找不到小组件添加按钮请尝试重启手机如果小组件显示无法加载请尝试以下方法系统设置通用语言与地区添加或删除一种其他语言按需求连接始终开启保持连接状态意外断开或者重启设备也会自动连接通过应用首页临时关闭连接设备设置中的状态以及小组件开关不能直接关闭脚本模块解密等需求比较多时建议开启按需求连接根据添加的按需求规则自动切换状态默认规则是任意网络类型下保持连接状态相当于始终开启按需求规则当访问列表中的域名时系统会向发送请求如果响应成功自动连接网络中指定的通常认为是网络运营商路由器提供的服务器地址与列表任一内容相匹配时自动连接或断开填写需要匹配的名称连接行为可以通过网络类型域名条件触发断开行为不能通过域名条件触发从上到下依次匹配添加的按需求规则添加按需求规则后打开按需求连接开关规则才能生效同时打开始终开启和按需求连接只有始终开启选项能够生效睡眠时断开当设备进入睡眠状态自动断开连接响应系统发送的睡眠指令才会断开连接有时候熄屏的系统未必处于睡眠状态显示断开信息显示断开连接的通知信息自动断开系统版本低于处理复杂请求加解密数据运行脚本等因素相互作用之下可能导致内存占用过高从而造成自动断开解决方法设置按需求连接打开始终开启前置代理设置代理前置代理前置代理表示所有流量先通过代理转发再根据配置规则向节点服务器发送请求代理共享局域网条件下设备设置代理代理共享启用共享设备系统设置名称后面代理手动输入代理共享的和端口使用热点条件下设备开启热点设备连接热点然后按照局域网条件下方法进行设置检测代理如果在使用的时候遇到某些提示需关闭代理才能使用可以在设置代理类型选择代理类型代理类型设置代理代理类型系统代理模式对于不支持的程序会交给接管网络连接模式全部网络请求都将通过接口进行处理开启转发设置开启转发打开首页订阅后面转发打开首页节点后面转发打开隐藏图标设置排除路由打开数据库设置数据库方法一填写官网注册的账户和密钥点击下方的更新按钮方法二关注的数据库项目复制格式的下载链接粘贴在国家对应的位置点击更新按钮当点击重置时可以恢复为系统自带的数据库的数据库的数据库的数据库的数据库其他定位权限系统的要求开启定位权限才能获取名称如果不需要在里看到信息那么就可以不用开启编译原因之前的版本是使用编译的年月份以后苹果官方要求开发者在提交应用到时必须至少使用编译所以以下系统无法使用下一个版本将设置最低安装要求然后停止版本低版本用户就可以方便安装版本下载只有版本和系列芯片的才能下载开发者是没有安卓版本下载方法非国区登陆搜索购买后下载是买断制的付费软件美区价格美元使用美区时地址建议填免税州五个免税州俄勒冈州蒙大拿州特拉华州新罕布什尔州阿拉斯加州部分区域参考链接美国地址生成器美区注册方法官网购买礼品卡方法支付宝购买美区礼品卡教程美区下载链接',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-04-27 18:23:40',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><link rel="stylesheet" type="text/css" href="https://npm.elemecdn.com/js-heo@1.0.13/mainColor/heoMainColor.css"><link rel="stylesheet" type="text/css" href="https://npm.elemecdn.com/js-heo@1.0.11/poem/poem.css"><link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'"><meta name="generator" content="Hexo 8.0.0"><link rel="alternate" href="/atom.xml" title="向日葵🌻小站" type="application/atom+xml">
+</head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="/img/yuan-avatar.webp"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@latest/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.bootcdn.net/ajax/libs/pace/1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><div class="back-home-button"><i class="anzhiyufont anzhiyu-icon-grip-vertical"></i><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener external nofollow noreferrer" href="https://www.aizhiqian.eu.org/" title="主页"><img class="back-menu-item-icon" src="https://www.aizhiqian.eu.org/images/icon/favicon.ico" alt="主页"/><span class="back-menu-item-text">主页</span></a><a class="back-menu-item" target="_blank" rel="noopener external nofollow noreferrer" href="https://alist.xivo.eu.org/" title="Alist"><img class="back-menu-item-icon" src="https://p0.meituan.net/csc/9588e334a146defee0191c68b74bc0a5112303.jpg" alt="Alist"/><span class="back-menu-item-text">Alist</span></a><a class="back-menu-item" href="https://aizhiqian.github.io/" title="blog"><img class="back-menu-item-icon" src="https://aizhiqian.github.io/img/favicon.webp" alt="blog"/><span class="back-menu-item-text">blog</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener external nofollow noreferrer" href="https://img.aiguohou.eu.org/" title="知心图床"><img class="back-menu-item-icon" src="https://img.aiguohou.eu.org/favicon.ico" alt="知心图床"/><span class="back-menu-item-text">知心图床</span></a><a class="back-menu-item" target="_blank" rel="noopener external nofollow noreferrer" href="https://memos.xivo.eu.org/" title="memos"><img class="back-menu-item-icon" src="https://memos.xivo.eu.org/logo.webp" alt="memos"/><span class="back-menu-item-text">memos</span></a></div></div></div></div><a id="site-name" href="/" accesskey="h"><div class="title">向日葵🌻小站</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)" rel="external nofollow noreferrer">PAGE_NAME</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友人帐</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()" rel="external nofollow noreferrer"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div></div><div id="nav-right"><div class="nav-button only-home" id="travellings_button" title="随机前往一个开往项目网站"><a class="site-page" onclick="anzhiyu.totraveling()" title="随机前往一个开往项目网站" href="javascript:void(0);" rel="external nofollow" data-pjax-state="external"><i class="anzhiyufont anzhiyu-icon-train"></i></a></div><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" rel="external nofollow noreferrer" title="搜索🔍" accesskey="s"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span> 搜索</span></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="/img/wechat.webp" target="_blank"><img class="post-qr-code-img" alt="微信" src="/img/wechat.webp"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/alipay.webp" target="_blank"><img class="post-qr-code-img" alt="支付宝" src="/img/alipay.webp"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/API/" style="font-size: 1.05rem; color: rgb(45, 129, 130);">API<sup>1</sup></a><a href="/tags/Android/" style="font-size: 1.05rem; color: rgb(66, 71, 65);">Android<sup>5</sup></a><a href="/tags/CDN/" style="font-size: 1.05rem; color: rgb(45, 163, 102);">CDN<sup>1</sup></a><a href="/tags/hexo/" style="font-size: 1.05rem; color: rgb(12, 39, 115);">hexo<sup>14</sup></a><a href="/tags/iOS/" style="font-size: 1.05rem; color: rgb(159, 0, 144);">iOS<sup>1</sup></a><a href="/tags/ios/" style="font-size: 1.05rem; color: rgb(97, 193, 17);">ios<sup>1</sup></a><a href="/tags/npm/" style="font-size: 1.05rem; color: rgb(66, 11, 149);">npm<sup>1</sup></a><a href="/tags/termux/" style="font-size: 1.05rem; color: rgb(63, 117, 62);">termux<sup>5</sup></a><a href="/tags/%E4%BB%A3%E7%90%86/" style="font-size: 1.05rem; color: rgb(137, 176, 160);">代理<sup>2</sup></a><a href="/tags/%E5%91%BD%E4%BB%A4/" style="font-size: 1.05rem; color: rgb(16, 129, 20);">命令<sup>1</sup></a><a href="/tags/%E5%9B%BE%E5%BA%8A/" style="font-size: 1.05rem; color: rgb(141, 111, 47);">图床<sup>2</sup></a><a href="/tags/%E5%AE%89%E8%A3%85/" style="font-size: 1.05rem; color: rgb(158, 171, 168);">安装<sup>1</sup></a><a href="/tags/%E5%AE%9D%E5%A1%94/" style="font-size: 1.05rem; color: rgb(46, 178, 178);">宝塔<sup>1</sup></a><a href="/tags/%E5%BD%B1%E8%A7%86/" style="font-size: 1.05rem; color: rgb(182, 119, 116);">影视<sup>1</sup></a><a href="/tags/%E7%AD%BE%E5%88%B0/" style="font-size: 1.05rem; color: rgb(175, 193, 178);">签到<sup>1</sup></a><a href="/tags/%E7%BE%8E%E5%8C%96/" style="font-size: 1.05rem; color: rgb(124, 123, 37);">美化<sup>8</sup></a><a href="/tags/%E8%84%9A%E6%9C%AC/" style="font-size: 1.05rem; color: rgb(181, 172, 74);">脚本<sup>1</sup></a><a href="/tags/%E8%BD%AF%E4%BB%B6/" style="font-size: 1.05rem; color: rgb(81, 193, 25);">软件<sup>1</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/05/"><span class="card-archive-list-date">五月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/04/"><span class="card-archive-list-date">四月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">3</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/01/"><span class="card-archive-list-date">一月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/11/"><span class="card-archive-list-date">十一月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/10/"><span class="card-archive-list-date">十月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/07/"><span class="card-archive-list-date">七月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">25</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item on" id="consoleCommentBarrage" onclick="anzhiyu.switchCommentBarrage()" title="热评开关"><a class="commentBarrage"><i class="anzhiyufont anzhiyu-icon-message"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="anzhiyu.musicToggle()" title="音乐开关"><a class="music-switch"><i class="anzhiyufont anzhiyu-icon-music"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);" rel="external nofollow noreferrer"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="post-meta-categories"><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/" itemprop="url">实用教程</a></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E4%BB%A3%E7%90%86/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>代理</span></a><a class="article-meta__tags" href="/tags/iOS/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>iOS</span></a></span></div></div><h1 class="post-title" itemprop="name headline">【教程】Shadowrocket详细介绍<a class="post-edit-link" href="undefined_posts/【教程】Shadowrocket详细介绍.md" title="在 GitHub 上编辑 - 【教程】Shadowrocket详细介绍" target="_blank"><i class="anzhiyufont anzhiyu-icon-pencil"></i></a></h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2024-04-27T07:32:27.000Z" title="发表于 2024-04-27 15:32:27">2024-04-27</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2024-04-27T10:23:40.000Z" title="更新于 2024-04-27 18:23:40">2024-04-27</time></span></div><div class="meta-secondline"><span class="post-meta-separator"></span><span class="post-meta-wordcount"><i class="anzhiyufont anzhiyu-icon-file-word post-meta-icon" title="文章字数"></i><span class="post-meta-label" title="文章字数">字数总计:</span><span class="word-count" title="文章字数">8.9k</span><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-clock post-meta-icon" title="阅读时长"></i><span class="post-meta-label" title="阅读时长">阅读时长:</span><span>28分钟</span></span><span class="post-meta-separator"></span><span id="" data-flag-title="【教程】Shadowrocket详细介绍"><i class="anzhiyufont anzhiyu-icon-fw-eye post-meta-icon"></i><span class="post-meta-label" title="阅读量">阅读量:</span><span id="twikoo_visitors" title="访问量"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-spin"></i></span></span><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为杭州"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>杭州</span><span class="post-meta-separator"></span><span class="post-meta-commentcount"><i class="anzhiyufont anzhiyu-icon-comments post-meta-icon"></i><span class="post-meta-label">评论数:</span><a href="/posts/9d78f097/#post-comment" tabindex="-1"><span id="twikoo-count"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-spin"></i></span></a></span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src="https://www.aini.cn.eu.org/meinv?_r_=a29cedfb-73be-20dc-ea3f-e06a31f245f6"></div></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container" itemscope itemtype="https://aizhiqian.github.io/posts/9d78f097/"><header><a class="post-meta-categories" href="/categories/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/" itemprop="url">实用教程</a><a href="/tags/%E4%BB%A3%E7%90%86/" tabindex="-1" itemprop="url">代理</a><a href="/tags/iOS/" tabindex="-1" itemprop="url">iOS</a><h1 id="CrawlerTitle" itemprop="name headline">【教程】Shadowrocket详细介绍</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">AiGuoHou</span><time itemprop="dateCreated datePublished" datetime="2024-04-27T07:32:27.000Z" title="发表于 2024-04-27 15:32:27">2024-04-27</time><time itemprop="dateCreated datePublished" datetime="2024-04-27T10:23:40.000Z" title="更新于 2024-04-27 18:23:40">2024-04-27</time></header><blockquote>
+<p>Shadowrocket快速使用方法：<br>
+1.首页 - 添加节点。<br>
+2.设置 - 延迟测试方法，选择CONNECT。<br>
+3.首页 - 连通性测试，选择可用节点连接。</p>
+<p>首次启动会提示【安装VPN配置文件】<br>
+请点击【好】和【允许】才能正常使用</p>
+</blockquote>
+<h2 id="1-首页">1  首页</h2>
+<h3 id="1-1-添加节点">1.1 添加节点</h3>
+<ul>
+<li>
+<p>首页 - 右上角➕ - 类型Subscribe - URL栏输入机场订阅链接 - 保存。</p>
+<blockquote>
+<p>订阅链接后面加上#1、#2、#3…，可以重复添加同一个订阅。</p>
+</blockquote>
+</li>
+<li>
+<p>首页 - 右上角➕，选择对应节点类型，填写节点配置信息并保存。</p>
+<blockquote>
+<p>Shadowrocket已支持的类型：Shadowsocks、ShadowsocksR、Subscribe（订阅）、Vmess、VLESS、Relay、Socks5、Socks5 Over TLS、HTTP、HTTPS、HTTP2、Trojan、Hysteria、Hysteria2、TUIC、Juicity、WireGuard、Snell、Brook、Lua。</p>
+</blockquote>
+</li>
+<li>
+<p>复制节点链接，如<code>trojan://xxx</code>、<code>vmess://xxx</code>、<code>vless://xxx</code>等，打开Shadowrocket时会自动识别导入。</p>
+</li>
+<li>
+<p>首页 - 左上角 - 扫码添加。</p>
+</li>
+</ul>
+<h3 id="1-2-添加WireGuard节点">1.2 添加WireGuard节点</h3>
+<p>方法一</p>
+<ul>
+<li>首页 - 右上角➕ - 类型选择WireGuard，填写配置信息。</li>
+</ul>
+<p>方法二</p>
+<ul>
+<li>复制如下格式的WireGuard配置信息，打开Shadowrocket时会自动弹出“添加对话框”，点击添加。</li>
+</ul>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[Interface]</span></span><br><span class="line"><span class="attr">PrivateKey</span> = xxxxxx</span><br><span class="line"><span class="attr">Address</span> = <span class="number">172.16</span>.<span class="number">0.2</span>/<span class="number">32</span></span><br><span class="line"><span class="attr">DNS</span> = <span class="number">1.1</span>.<span class="number">1.1</span></span><br><span class="line"><span class="attr">MTU</span> = <span class="number">1420</span></span><br><span class="line"><span class="section">[Peer]</span></span><br><span class="line"><span class="attr">PublicKey</span> = xxxxxx</span><br><span class="line"><span class="attr">AllowedIPs</span> = <span class="number">0.0</span>.<span class="number">0.0</span>/<span class="number">0</span></span><br><span class="line"><span class="attr">AllowedIPs</span> = ::/<span class="number">0</span></span><br><span class="line"><span class="attr">Endpoint</span> = engage.cloudflareclient.com:<span class="number">2408</span></span><br><span class="line"><span class="attr">Reserved</span> = <span class="number">12</span>,<span class="number">34</span>,<span class="number">56</span></span><br></pre></td></tr></table></figure>
+<p>如果没有自动弹出对话框，可能是因为设置中的<code>允许检测剪贴板</code>被关闭了，您可以重新打开，或者点击首页<code>连通性测试</code>下方的<code>粘贴</code>按钮，手动添加配置信息。</p>
+<h3 id="1-3-更新订阅节点">1.3 更新订阅节点</h3>
+<ul>
+<li>
+<p>订阅右滑 - 更新。</p>
+</li>
+<li>
+<p>点击首页的更新订阅按钮🔄。</p>
+</li>
+<li>
+<p>设置 - 订阅 - 打开时更新（刷掉后台，重新打开应用程序时会自动更新订阅）。</p>
+</li>
+<li>
+<p>设置 - 订阅 - 自动后台更新（需在系统<code>设置</code>-<code>通用</code>-<code>后台App刷新</code>中开启对Shadowrocket的允许，更新周期为12小时）。</p>
+</li>
+<li>
+<p>Shadowrocket提供了「更新订阅」的快捷指令，可以实现自动化操作。</p>
+</li>
+<li>
+<p>长按屏幕的应用图标 - 更新订阅。</p>
+</li>
+</ul>
+<blockquote>
+<p>添加/更新订阅时异常原因：<br>
+forbidden 表示订阅被重置或令牌（token）错误。<br>
+not found 表示路径信息错误。<br>
+service unavailable 表示域名信息错误或域名被运营商屏蔽。</p>
+</blockquote>
+<h3 id="1-4-节点排序">1.4 节点排序</h3>
+<p>设置 - 订阅 - 根据Ping排序。</p>
+<h3 id="1-5-SSL错误">1.5 SSL错误</h3>
+<p>添加/更新订阅链接时，如果提示<code>发生了SSL错误，无法建立与该服务器的安全连接</code>，可以尝试的解决方法：</p>
+<ul>
+<li>
+<p>全局路由选代理，使用另外一个节点来添加/更新订阅链接。</p>
+</li>
+<li>
+<p>切换网络后再添加/更新订阅链接。</p>
+</li>
+<li>
+<p>检查订阅链接是否错误或失效。</p>
+</li>
+</ul>
+<h3 id="1-6-节点旗帜">1.6 节点旗帜</h3>
+<p>节点优先根据备注名称匹配旗帜，如果匹配不成功，由节点地址解析出IP，通过数据库判断该IP的国家或地区，然后显示对应的旗帜。</p>
+<ul>
+<li>
+<p>节点后面ⓘ - 地址栏的图标，可以手动修改旗帜。</p>
+</li>
+<li>
+<p>订阅后面ⓘ - 订阅链接后面ⓘ，利用脚本也能批量修改旗帜。</p>
+<blockquote>
+<p>如果把旗帜的Emoji放在节点备注开头，保存时会自动显示对应的旗帜。</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="1-7-节点感叹号">1.7 节点感叹号</h3>
+<p>节点显示感叹号原因：</p>
+<p>您的节点使用了TLS，地址是IP，却没有设 SNI。</p>
+<p>这是错误的，为了可以访问，Shadowrocket会主动开启允许不安全。上一版本<code>2.2.23</code>关闭了此功能造成很多人无法使用节点。</p>
+<p><code>允许不安全</code>将跳过TLS证书验证，这将导致一些安全问题。如果您使用自签名证书，请将证书导入系统并信任它，否则请及时续订服务器端证书，以防止证书过期。</p>
+<h3 id="1-8-节点分享与整理">1.8 节点分享与整理</h3>
+<p>节点分享</p>
+<ul>
+<li>
+<p>长按节点 - 拷贝，可以把节点链接分享给其他设备。</p>
+</li>
+<li>
+<p>左滑节点 - 二维码，其他设备可以通过扫码添加节点（二维码页面点击右上角的<code>分享</code>按钮，可以选择其他形式传送二维码）。</p>
+<blockquote>
+<p>节点二维码缺乏统一标准。某些协议（Vmess）的节点，当使用其他代理工具扫码添加时，可能会丢失部分节点信息，导致不能连接。如果遇到此问题，请仔细检查同一个节点的各项配置信息是否一致。</p>
+</blockquote>
+</li>
+<li>
+<p>点击节点后面ⓘ，滑动至页面底部，有多种分享节点的菜单。</p>
+</li>
+<li>
+<p>展开节点列表，点击连通性测试下方的编辑按钮<code>•••</code>，勾选需要分享的节点，点击左上角的<code>复制</code>，可以把多个节点链接同时分享给其他设备。</p>
+</li>
+</ul>
+<p>节点整理</p>
+<ul>
+<li>
+<p><strong>调整顺序</strong>：点击编辑按钮<code>•••</code>，长按订阅后面的<code>≡</code>图标可以调整订阅之间的上下顺序（本地节点默认置顶位置）。</p>
+</li>
+<li>
+<p><strong>节点分类</strong>：非订阅形式添加的节点，默认会归类为<code>本地节点</code>。如果需要重新对本地节点进行分类，可以使用<code>折叠</code>功能。点击编辑按钮<code>•••</code>，勾选节点，点击左上角的<code>折叠</code>，为新分类的节点组命名（<code>折叠</code>功能可以选择本地节点或者订阅节点）。</p>
+</li>
+<li>
+<p><strong>删除节点</strong>：点击编辑按钮<code>•••</code>，点击左上角的<code>删除</code>，可以选择删除全部节点或者删除连通性测试结果中的超时节点。</p>
+</li>
+<li>
+<p><strong>滑动菜单</strong>：向右滑动订阅，可以选择<code>测试</code>当前订阅节点的连通性，或者<code>更新</code>当前订阅节点。向右滑动节点，点击<code>测试</code>可以获取单个节点的连通性测试结果，点击<code>复制</code>，可以在当前节点列表中新增一个同样配置信息的节点。</p>
+</li>
+</ul>
+<h3 id="1-9-订阅节点筛选">1.9 订阅节点筛选</h3>
+<p>首页 - 订阅后面ⓘ - 订阅链接后面ⓘ。</p>
+<ul>
+<li>保留节点名称含有关键词A和B的节点:</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/(?=.*(A))^(?=.*(B))^.*$/</span><br></pre></td></tr></table></figure>
+<ul>
+<li>保留节点名称含有关键词A或B的节点:</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">A|B</span><br></pre></td></tr></table></figure>
+<ul>
+<li>排除节点名称含有关键词A或B的节点:</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/^((?!(A|B)).)*$/</span><br></pre></td></tr></table></figure>
+<ul>
+<li>保留节点名称含有关键词A并排除含有关键词B的节点:</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/(?=.*(A).)^((?!(B)).)*$/</span><br></pre></td></tr></table></figure>
+<p>分组、代理分组的正则写法与此相同，但需删除前后<code>/</code>符号。</p>
+<h3 id="1-10-代理通过-代理链">1.10 代理通过/代理链</h3>
+<p>使用代理链方法：</p>
+<ul>
+<li>
+<p><strong>代理通过</strong>：当前代理通过另一个代理转发，支持多级代理。</p>
+</li>
+<li>
+<p>使用节点A连接，点击节点A后面ⓘ，<code>代理通过</code>选择节点B，流量走向：<code>Client</code> - <code>B</code> - <code>A</code> - <code>Web server</code></p>
+</li>
+</ul>
+<h3 id="1-11-全局路由区别">1.11 全局路由区别</h3>
+<ul>
+<li>
+<p><strong>配置</strong>：流量根据规则进行分配，有些需要通过节点连接，有些则不需要。</p>
+</li>
+<li>
+<p><strong>代理</strong>：全部流量都通过同一个节点连接。</p>
+</li>
+<li>
+<p><strong>直连</strong>：全部流量都不通过节点连接。</p>
+</li>
+<li>
+<p><strong>场景</strong>：根据不同的网络连接类型（Wi-Fi、蜂窝数据）自动切换到预先设置的路由模式，并选择对应的配置文件和节点连接。</p>
+</li>
+</ul>
+<h3 id="1-12-连通性测试">1.12 连通性测试</h3>
+<p>点击首页的<code>连通性测试</code>，节点列表将会显示以毫秒（ms）为单位的延迟数字，这是数据包的传输时间，不同的<code>延迟测试方法</code>对应不同的计算结果。长按首页的<code>连通性测试</code>，可以临时调整测试方法，仅对本次测试生效。</p>
+<p>设置 - 延迟测试方法。</p>
+<ul>
+<li>
+<p><strong>TCP</strong>：建立TCP连接的往返时间。</p>
+</li>
+<li>
+<p><strong>ICMP</strong>：发送ICMP回显请求报文和接收ICMP回显应答报文的往返时间。</p>
+</li>
+<li>
+<p><strong>CONNECT</strong>：向测试URL发送一个HTTP HEAD请求，测量从发送请求到接收响应头部信息的往返时间。</p>
+<blockquote>
+<p>请优先选择CONNECT，因为它更能准确反映节点的连通性。</p>
+</blockquote>
+</li>
+</ul>
+<p>延迟大小与网络上传下载速度没有直接关系，测速请使用其他方法，如：<br>
+<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.speedtest.net">https://www.speedtest.net</a></p>
+<h3 id="1-13-修改测试地址">1.13 修改测试地址</h3>
+<p>用于首页和分组节点的延迟测试</p>
+<ul>
+<li>首页 - 全局路由 - 分组 - URL测试设置。</li>
+</ul>
+<p>用于代理分组节点的延迟测试</p>
+<ul>
+<li>点击配置文件ⓘ - 代理分组 - 右上角➕ - 最底下URL栏。</li>
+</ul>
+<h3 id="1-14-场景">1.14 场景</h3>
+<p>场景是根据不同的网络连接类型（Wi-Fi、蜂窝数据）自动切换到预先设置的路由模式，并选择对应的配置文件和节点连接。</p>
+<ul>
+<li>
+<p>首页 - 全局路由 - 设置的<code>场景</code> - 添加场景。</p>
+</li>
+<li>
+<p>为指定的网络连接类型设置对应的路由模式（<code>配置</code>、<code>直连</code>、<code>代理</code>），类型（<code>节点</code>、<code>分组</code>），<code>配置文件</code>，<code>备注</code>。</p>
+</li>
+<li>
+<p>网络连接类型分别为：Wi-Fi、蜂窝数据、默认。选择Wi-Fi类型时，SSID需填写Wi-Fi名称。</p>
+</li>
+<li>
+<p>首页 - 全局路由 - 选择<code>场景</code>。</p>
+</li>
+</ul>
+<p>首次添加场景，可能会弹出申请权限的对话框，具体原因请看<code>5.1 定位权限</code>。当没有允许定位权限时，场景列表的☑️标记不会随着网络类型的切换而自动切换，但这不影响场景功能的正常生效。</p>
+<h3 id="1-15-简单模式">1.15 简单模式</h3>
+<p>首页 - 全局路由 - 分组 - 简单模式。</p>
+<p><code>简单模式</code>的功能是自动测试并选择延迟低节点。</p>
+<ul>
+<li>节点的范围是什么？</li>
+</ul>
+<blockquote>
+<p>当开启简单模式，此时下方会出现分组选项，如果没有继续添加分组的操作，节点范围就是首页全部节点，如果添加分组，范围就变成分组里的节点。</p>
+</blockquote>
+<ul>
+<li>自动测试的周期是多久？延迟低的判断依据是什么？</li>
+</ul>
+<blockquote>
+<p><code>首页</code> - <code>全局路由</code> - <code>分组</code> - <code>URL测试设置</code>，这里规定了测试的间隔时间，默认600s，即表示每10分钟自动进行一次节点延迟测试。相邻两次测试结果中最小延迟值的对比，根据公差机制决定是否切换节点，公差越大，触发节点切换的频次越低，默认0ms，即表示只要后面测试结果的最低延迟节点比前面测试结果的最低延迟节点延迟小就会自动切换。</p>
+</blockquote>
+<ul>
+<li>切换的节点给什么规则使用？</li>
+</ul>
+<blockquote>
+<p>Shadowrocket内置策略proxy，简单模式时自动切换的节点使用于所有指向proxy策略的规则。</p>
+</blockquote>
+<ul>
+<li>简单模式是自动切换延迟低节点，代理分组的url-test类型也是自动切换延迟低节点，两者有何不同？</li>
+</ul>
+<blockquote>
+<p>代理分组创建后，需要在规则中修改策略指向，而简单模式已经关联proxy策略，节省了修改规则的步骤。</p>
+<p><code>全局路由</code>选择<code>代理</code>时将导致所有<code>代理分组</code>失效，而简单模式依然能够实现自动切换节点。</p>
+</blockquote>
+<ul>
+<li>添加分组时，<code>测速</code>开关是什么作用？</li>
+</ul>
+<blockquote>
+<p>开启测速，这个分组才允许自动切换节点。不开启测速，这个分组只能手动选择节点。</p>
+</blockquote>
+<h3 id="1-16-启用回退">1.16 启用回退</h3>
+<p>首页 - 全局路由 - 启用回退。</p>
+<p><code>启用回退</code>的功能是当节点连接失败时自动切换其他可用节点。</p>
+<ul>
+<li>
+<p>连接失败3次才会触发回退机制。</p>
+</li>
+<li>
+<p>节点只满足可用性，不要求是最低延迟节点。</p>
+</li>
+<li>
+<p>随机切换，不按照节点顺序选择。</p>
+</li>
+<li>
+<p>策略为proxy，节点切换范围就是首页全部节点，如果开启简单模式并选择分组，则范围缩小至分组内节点。</p>
+</li>
+<li>
+<p>策略为分组/代理分组，节点切换范围就是分组或代理分组内节点。</p>
+</li>
+<li>
+<p>具体切换到哪个节点，请查看<code>3.1 代理日志</code>。</p>
+</li>
+</ul>
+<h2 id="2-配置">2  配置</h2>
+<h3 id="2-1-配置文件">2.1 配置文件</h3>
+<p>Shadowrocket内置了一个配置文件<code>default.conf</code>，其中包含了国内外网站的分流规则，满足大多数用户的基本需求。此配置文件的内容跟随应用更新而做不定期的调整。如果在使用过程中错误修改或误删配置文件，可以点击<code>配置</code> - <code>恢复默认配置</code>。</p>
+<p>添加配置文件方法：</p>
+<ul>
+<li>
+<p>从URL下载配置</p>
+<ul>
+<li>配置 - 右上角➕ - 粘贴配置链接 - 下载 - 点击对应的配置文件 - 使用配置。</li>
+<li>Shadowrocket兼容使用<code>Clash YAML格式</code>的配置文件。</li>
+</ul>
+</li>
+<li>
+<p>从本地存储或云盘导入</p>
+<ul>
+<li>配置 - 从云导入，点击对应存储路径的配置文件。</li>
+</ul>
+</li>
+</ul>
+<p>点击配置文件，显示操作菜单：</p>
+<ul>
+<li>使用配置</li>
+<li>编辑纯文本</li>
+<li>更新配置</li>
+<li>扩展配置</li>
+<li>重新命名</li>
+<li>导出</li>
+</ul>
+<p>点击配置文件的ⓘ图标，进入编辑菜单：</p>
+<ul>
+<li>通用</li>
+<li>规则</li>
+<li>Hosts</li>
+<li>URL重写</li>
+<li>HTTPS解密</li>
+<li>脚本</li>
+<li>代理分组</li>
+<li>脚本URL</li>
+<li>规则集URL</li>
+<li>复制</li>
+<li>替换策略</li>
+<li>测试规则</li>
+</ul>
+<p>配置文件的纯文本编写方法，请参考：</p>
+<ul>
+<li>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://johnshall.github.io/Shadowrocket-ADBlock-Rules-Forever/lazy.conf">懒人配置</a></p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://johnshall.github.io/Shadowrocket-ADBlock-Rules-Forever/lazy_group.conf">懒人配置（含策略组）</a></p>
+</li>
+</ul>
+<h3 id="2-2-扩展配置">2.2 扩展配置</h3>
+<ul>
+<li>
+<p>从配置a扩展出配置b，此时默认关系是b包含a，也可以理解为b继承了a的内容。</p>
+</li>
+<li>
+<p>配置b优先级高于配置a，该功能是对配置建立包含关系，以满足同时使用多个配置的需求。</p>
+</li>
+<li>
+<p>点击配置文件ⓘ - 通用 - 包含配置，可以修改或解除包含关系。</p>
+</li>
+</ul>
+<h3 id="2-3-通用参数">2.3 通用参数</h3>
+<p><strong>旁路系统（bypass-system）</strong>：如果禁用此选项，可能会导致一些系统问题，如推送通知延迟。</p>
+<p><strong>跳过代理（skip-proxy）</strong>：此选项强制域名或IP的连接范围由Shadowrocket TUN接口来处理，而不是Shadowrocket代理服务器。此选项用于解决一些应用程序的一些兼容性问题。</p>
+<p><strong>TUN旁路路由（tun-excluded-routes）</strong>：Shadowrocket TUN接口只能处理TCP协议。使用此选项可以绕过指定的IP范围，让其他协议通过。</p>
+<p><strong>DNS覆写（dns-server）</strong>：使用普通DNS或加密DNS（如doh、doq、dot等）覆盖默认的系统DNS。有些dns over https支持http3，所以尝试查询，如果支持就切换到http3，可在doh链接后面加上<code>#no-h3</code>关闭。doh强制通过h3查询的写法是将<code>https</code>改成<code>h3</code>，如<code>h3://dns.alidns.com/dns-query</code>。</p>
+<p><strong>备用DNS（fallback-dns-server）</strong>：当覆写DNS查询失败或查询时间超过2秒，Shadowrocket会自动回退备用DNS。如需指定多个DNS，可用逗号分隔。system表示回退到系统DNS。</p>
+<p><strong>启用IPv6支持（ipv6）</strong>：false表示不启用，true表示启用。即使不启用此选项，当本地网络环境支持IPv6，并且节点域名支持IPv6解析，Shadowrocket也会使用节点的IPv6地址进行访问。解决方法是关闭节点域名的IPv6解析，或者在配置文件的<code>[Host]</code>项目下为节点域名指定IP地址。</p>
+<p><strong>首选IPv6（prefer-ipv6）</strong>：优先向IPv6的DNS服务器查询AAAA记录，优先使用AAAA记录。false表示不启用。</p>
+<p>💡 <strong>dns-direct-system</strong>：直连的域名类规则使用系统dns进行查询。false表示不启用。</p>
+<p>💡 <strong>icmp-auto-reply</strong>：ping数据包自动回复。</p>
+<p>💡 <strong>always-reject-url-rewrite</strong>：不开启时，「重写的REJECT策略」默认只有在配置模式下生效。开启后，可以令该策略在其他全局路由模式下都生效。</p>
+<p><strong>私有IP应答（private-ip-answer）</strong>：如果不启用该选项，域名解析返回私有IP，Shadowrocket会认为该域名被劫持而强制使用代理。</p>
+<p>💡 <strong>dns-direct-fallback-proxy</strong>：直连域名解析失败后使用代理。false表示不启用。</p>
+<p><strong>TUN包含路由（tun-included-routes）</strong>：默认情况下，Shadowrocket接口会声明自己为默认路由，但由于Wi-Fi接口的路由较小，有些流量可能不会通过Shadowrocket接口。使用此选项可以添加一个较小的路由表。</p>
+<p><strong>总是真实IP（always-real-ip）</strong>：这个选项要求Shadowrocket在TUN处理DNS请求时返回一个真实的IP地址而不是假的IP地址。</p>
+<p><strong>DNS劫持（hijack-dns）</strong>：有些设备或软件总是使用硬编码的DNS服务器，例如Netflix通过Google DNS(<code>8.8.8.8</code>或<code>8.8.4.4</code>)发送请求，您可以使用此选项来劫持查询。</p>
+<p>💡 <strong>udp-policy-not-supported-behaviour</strong>：当UDP流量匹配到规则里不支持UDP转发的节点策略时重新选择回退行为，可选行为包括DIRECT、REJECT。DIRECT表示直连转发UDP流量，REJECT表示拒绝转发UDP流量。</p>
+<p><strong>包含配置（include）</strong>：表示当前配置包含另一个配置的内容，当前配置的优先级高于被包含配置。该选项是对配置建立包含关系，以满足同时使用多个配置的需求。</p>
+<blockquote>
+<p>带💡符号的参数只能通过配置文件的纯文本模式进行设置，没有UI操作选项。</p>
+</blockquote>
+<h3 id="2-4-添加规则">2.4 添加规则</h3>
+<ul>
+<li>
+<p>点击配置文件ⓘ - 规则 - 右上角➕，根据需求选择<code>规则类型</code>和<code>规则策略</code>，填写规则内容。</p>
+</li>
+<li>
+<p>数据 - 代理 - 启用日志记录，产生网络活动后回到该页面，从最近的日志中查看网络活动记录，点击任一记录查看详情，点击右上角<code>•••</code>选择类型添加规则。</p>
+</li>
+<li>
+<p>规则匹配的优先级：</p>
+<ul>
+<li>上面规则优先于下面规则。</li>
+<li>域名规则优先于IP规则。</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-5-规则类型">2.5 规则类型</h3>
+<p><strong>DOMAIN-SUFFIX</strong>：匹配请求域名的后缀。</p>
+<p>如<code>DOMAIN-SUFFIX,example.com,DIRECT</code>可以匹配到<code>a.example.com</code>、<code>a.b.example.com</code>。</p>
+<p><strong>DOMAIN-KEYWORD</strong>：匹配请求域名的关键词。</p>
+<p>如<code>DOMAIN-KEYWORD,exa,DIRECT</code>可以匹配到<code>a.example.com</code>、<code>a.b.example.com</code>。</p>
+<p><strong>DOMAIN</strong>：匹配请求的完整域名。</p>
+<p>如<code>DOMAIN,www.example.com,DIRECT</code>只能匹配到<code>www.example.com</code>。</p>
+<p><strong>USER-AGENT</strong>：匹配用户代理字符串，支持使用通配符<code>*</code>。</p>
+<p>如<code>USER-AGENT,MicroMessenger*,DIRECT</code>可以匹配到<code>MicroMessenger Client</code>。</p>
+<p><strong>URL-REGEX</strong>：匹配URL正则式。</p>
+<p>如<code>URL-REGEX,^https?://.+/item.+,REJECT</code>可以匹配到<code>https://www.example.com/item/abc/123</code>。</p>
+<p><strong>IP-CIDR</strong>：匹配IPv4或IPv6地址。</p>
+<p>如<code>IP-CIDR,192.168.1.0/24,DIRECT</code>可以匹配到IP段<code>192.168.1.1～192.168.1.254</code>。当域名请求遇到IP类规则时，Shadowrocket会向本地DNS服务器发送查询请求，以判断主机IP是否匹配规则。若IP类规则加<code>no-resolve</code>(如：<code>IP-CIDR,172.16.0.0/12,DIRECT,no-resolve</code>)，则域名请求将会跳过此规则，不会触发本地DNS查询。</p>
+<p><strong>IP-ASN</strong>：匹配IP地址隶属的ASN编号。</p>
+<p>如<code>IP-ASN,56040,DIRECT</code>可以匹配到属于China Mobile Communications Corporation网络的IP地址。</p>
+<p><strong>RULE-SET</strong>：匹配规则集内容。规则集的组成部分需包含规则类型。</p>
+<p><strong>DOMAIN-SET</strong>：匹配域名集内容。域名集的组成部分不包含规则类型。</p>
+<p><strong>SCRIPT</strong>：匹配脚本名称。</p>
+<p><strong>DST-PORT</strong>：匹配目标主机名的端口号。</p>
+<p>如<code>DST-PORT,443,DIRECT</code>可以匹配到443目标端口。</p>
+<p><strong>GEOIP</strong>：匹配IP数据库。</p>
+<p>如<code>GEOIP,CN,DIRECT</code>可以匹配到归属地为CN的IP地址。</p>
+<p><strong>FINAL</strong>：兜底策略。</p>
+<p>如<code>FINAL,PROXY</code>表示当其他所有规则都匹配不到时才使用FINAL规则的策略。</p>
+<p><strong>AND</strong>：逻辑规则，与规则。</p>
+<p>如<code>AND,((DOMAIN,www.example.com),(DST-PORT,123)),DIRECT</code>可以匹配到<code>www.example.com:123</code>。</p>
+<p><strong>NOT</strong>：逻辑规则，非规则。</p>
+<p>如<code>NOT,((DST-PORT,123)),DIRECT</code>可以匹配到除了<code>123</code>端口的其他所有请求。</p>
+<p><strong>OR</strong>：逻辑规则，或规则。</p>
+<p>如<code>OR,((DST-PORT,123),(DST-PORT,456)),DIRECT</code>可以匹配到<code>123</code>或<code>456</code>端口的所有请求。</p>
+<p><strong>PROTOCOL</strong>：匹配传输协议类型。</p>
+<p><code>PROTOCOL</code>类型不支持单独使用，只能作为子规则类型嵌套于逻辑规则当中。如<code>AND,((PROTOCOL,UDP),(DST-PORT,443)),REJECT-NO-DROP</code>。</p>
+<h3 id="2-6-规则策略">2.6 规则策略</h3>
+<p><strong>PROXY</strong>：代理。通过代理服务器转发流量。</p>
+<p><strong>DIRECT</strong>：直连。连接不经过任何代理服务器。</p>
+<p><strong>REJECT</strong>：拒绝。返回HTTP状态码404，没有内容。</p>
+<p><strong>REJECT-DICT</strong>：拒绝。返回HTTP状态码200，内容为空的JSON对象。</p>
+<p><strong>REJECT-ARRAY</strong>：拒绝。返回HTTP状态码200，内容为空的JSON数组。</p>
+<p><strong>REJECT-200</strong>：拒绝。返回HTTP状态码200，没有内容。</p>
+<p><strong>REJECT-IMG</strong>：拒绝。返回HTTP状态码200，内容为1像素GIF。</p>
+<p><strong>REJECT-TINYGIF</strong>：拒绝。返回HTTP状态码200，内容为1像素GIF。</p>
+<p><strong>REJECT-DROP</strong>：拒绝。丢弃IP包。</p>
+<p><strong>REJECT-NO-DROP</strong>：拒绝。返回ICMP端口不可达。</p>
+<p>除此之外，规则策略还可以选择<code>代理分组</code>、<code>订阅名称</code>、<code>分组</code>、<code>服务器节点</code>。</p>
+<h3 id="2-7-app分流">2.7 app分流</h3>
+<p>根据不同app指定分流规则的方法。</p>
+<p>示例：YouTube app 分流走代理。</p>
+<ul>
+<li>复制YouTube的规则集链接</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/YouTube/YouTube.list</span><br></pre></td></tr></table></figure>
+<ul>
+<li>点击配置文件ⓘ - 规则 - 右上角➕，类型选择<code>RULE-SET</code>，策略选择<code>PROXY</code>，输入框内粘贴“规则集链接”，保存完成（策略可以根据需求使用其他选项）。</li>
+</ul>
+<p>iOS系统没有常规分应用代理的操作，只能通过<code>域名</code> / <code>ip</code> / <code>ua</code>规则实现app分流效果。可自行抓包，或者订阅<a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/blackmatrix7">blackmatrix7</a>的<a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Shadowrocket">规则集</a>。如果引用的链接是域名集，添加规则时，类型请选择<code>DOMAIN-SET</code>。</p>
+<h3 id="2-8-更新规则集">2.8 更新规则集</h3>
+<p>点击配置文件 - 使用配置。</p>
+<h3 id="2-9-修改DNS">2.9 修改DNS</h3>
+<ul>
+<li>
+<p>点击配置文件ⓘ - 通用 - DNS覆写，删除<code>system</code>，添加 <code>223.5.5.5,119.29.29.29</code>。也可以使用加密DNS，如<code>DNS-over-TLS</code>、<code>DNS-over-HTTPS</code>、<code>DNS-over-QUIC</code>。</p>
+</li>
+<li>
+<p><strong>备用DNS</strong>：当覆写的DNS查询失败后回退备用DNS进行查询。如需指定多个DNS，可用逗号分隔。<code>system</code>表示回退到系统DNS。</p>
+</li>
+</ul>
+<h3 id="2-10-no-resolve的作用">2.10 no-resolve的作用</h3>
+<ul>
+<li>
+<p>当域名请求遇到IP类规则时，Shadowrocket会向本地DNS服务器发送查询请求，以判断主机IP是否匹配规则。</p>
+</li>
+<li>
+<p>若IP类规则加<code>no-resolve</code>，则域名请求将会跳过此规则，不触发本地DNS查询。如：</p>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">IP-CIDR,172.16.0.0/12,DIRECT,no-resolve</span><br></pre></td></tr></table></figure>
+<h3 id="2-11-代理分组-策略组">2.11 代理分组/策略组</h3>
+<ul>
+<li>
+<p>点击配置文件ⓘ - 代理分组 - 右上角➕。填写名称，根据需求选择类型，通过<code>正则</code>匹配策略，或者从策略输入框后面的<code>•••</code>手动添加策略，保存。</p>
+</li>
+<li>
+<p>策略是规则的组成部分，创建的代理分组只有放到规则里才能发挥作用。<br>
+进入对应规则的详情页，点击策略选项，从列表中选择代理分组，保存。</p>
+</li>
+<li>
+<p>首页下拉，可以快捷进入代理分组界面。</p>
+</li>
+</ul>
+<h3 id="2-12-代理分组类型">2.12 代理分组类型</h3>
+<ul>
+<li>
+<p><strong>select</strong>：手动切换节点。</p>
+</li>
+<li>
+<p><strong>url-test</strong>：自动切换延迟最低节点。</p>
+</li>
+<li>
+<p><strong>fallback</strong>：节点挂掉时自动切换其他可用节点。</p>
+</li>
+<li>
+<p><strong>load-balance</strong>：不同规则的请求使用分组里的不同节点进行连接，相同的域名会使用同一个节点。</p>
+</li>
+<li>
+<p><strong>random</strong>：随机使用分组里的不同节点进行连接。</p>
+</li>
+</ul>
+<h3 id="2-13-自动切换节点">2.13 自动切换节点</h3>
+<p>自动切换延迟低的节点：</p>
+<p>方法一</p>
+<ul>
+<li>首页 - 全局路由 - 分组 - 简单模式 - 打开。</li>
+</ul>
+<p>方法二</p>
+<ul>
+<li>点击配置文件ⓘ - 代理分组 - 右上角➕ - 类型<code>url-test</code>。</li>
+</ul>
+<h3 id="2-14-HTTPS解密">2.14 HTTPS解密</h3>
+<p>打开HTTPS解密方法：</p>
+<ul>
+<li>
+<p>点击配置文件ⓘ - HTTPS解密 - 证书 - 生成新的CA证书 - 安装证书。</p>
+</li>
+<li>
+<p>系统设置 - 已下载描述文件 - 安装。</p>
+</li>
+<li>
+<p>系统设置 - 通用 - 关于本机 - 证书信任设置 - 开启对应Shadowrocket证书信任。</p>
+</li>
+</ul>
+<h3 id="2-15-负载均衡">2.15 负载均衡</h3>
+<p>使用负载均衡策略类型方法：</p>
+<p>点击配置文件ⓘ - 代理分组 - 右上角➕，类型选择<code>load-balance</code>。</p>
+<p>「load-balance」表示不同规则的请求使用分组里的不同节点进行连接，相同的域名会使用同一个节点。</p>
+<h3 id="2-16-模块">2.16 模块</h3>
+<p>添加模块方法:</p>
+<p>本地新建模块</p>
+<ul>
+<li>模块跟配置的语法相同。您可以在模块里调整通用设置以及添加规则、Hosts、重写、脚本、证书内容、解密主机名。</li>
+</ul>
+<p>下载远程模块</p>
+<ul>
+<li>模块 - 右上角➕ - 填写模块链接 - 下载。</li>
+<li>模块 <code>[MITM]</code> 部分写法：</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hostname = %APPEND% 主机名</span><br></pre></td></tr></table></figure>
+<ul>
+<li>加 <code>%APPEND%</code> 表示把内容插入到配置中，不加时会覆盖配置中对应内容，并影响其他模块功能。</li>
+</ul>
+<p>请对正在使用的配置开启HTTPS解密，模块才能完整生效。</p>
+<h3 id="2-17-证书模块">2.17 证书模块</h3>
+<p>切换配置文件时免除重复安装CA证书方法：</p>
+<ul>
+<li>
+<p>点击「已安装证书的配置文件」后面ⓘ - HTTPS解密 - 证书后面ⓘ - 复制。</p>
+</li>
+<li>
+<p>新建模块：</p>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#!name=证书（名字可更改）</span><br><span class="line">[MITM]</span><br><span class="line">enable=true</span><br><span class="line">ca-passphrase=证书密码（即「已安装证书的配置文件」的证书密码，默认密码是Shadowrocket）</span><br><span class="line">ca-p12=证书内容（即剪贴板复制的内容）</span><br></pre></td></tr></table></figure>
+<p>原本是可以省略<code>ca-passphrase</code>这行参数。但由于引用的配置文件可能已经包含了证书密码，且证书密码可能不是<code>Shadowrocket</code>，为防止出错，因此才增加<code>ca-passphrase</code>参数来覆盖引用的配置文件的证书密码。</p>
+<h3 id="2-18-模块消失">2.18 模块消失</h3>
+<p>模块页面已经开启<code>保存到iCloud</code>，如果出现模块消失的问题，请检查：</p>
+<ul>
+<li>
+<p>系统设置 - Apple ID - iCloud - 使用iCloud的APP中，确保Shadowrocket/iCloud云盘已经打开同步。</p>
+</li>
+<li>
+<p>文件app - iCloud云盘 - Shadowrocket，确定其中包含<code>Modules</code>和<code>Script</code>两个子文件夹。</p>
+</li>
+<li>
+<p>文件app - iCloud云盘 - Shadowrocket - Modules，如果iCloud的本地缓存被清理，此时模块文件是未下载状态，请等待自动下载或手动下载。</p>
+</li>
+</ul>
+<h3 id="2-19-身份证书密码">2.19 身份证书密码</h3>
+<p>Shadowrocket安装CA证书时，如果遇到「输入证书<code>身份证书</code>的密码」页面，可以尝试输入：<code>Shadowrocket</code></p>
+<h3 id="2-20-微信转圈">2.20 微信转圈</h3>
+<p>如果使用Shadowrocket时微信一直显示<code>连接中/收取中</code>，可以尝试的解决方法：</p>
+<ul>
+<li>
+<p>微信分流走直连。</p>
+</li>
+<li>
+<p>点击配置文件ⓘ - 通用 - 启用IPv6 - 关闭。</p>
+</li>
+</ul>
+<h2 id="3-数据">3  数据</h2>
+<h3 id="3-1-代理日志">3.1 代理日志</h3>
+<p><code>代理日志</code>记录了网络活动过程中Shadowrocket处理请求的具体信息。</p>
+<ul>
+<li>
+<p>数据 - 代理 - 启用日志记录。</p>
+</li>
+<li>
+<p>产生网络活动时，返回<code>数据</code> - <code>代理</code>页面查看日志文件。</p>
+</li>
+<li>
+<p>每条记录包含信息：</p>
+<ul>
+<li>请求URL</li>
+<li>请求匹配的规则策略</li>
+<li>请求传输协议</li>
+<li>请求发送时间</li>
+</ul>
+</li>
+<li>
+<p>记录显示<code>MITM</code>，表示请求域名已启用解密。</p>
+</li>
+<li>
+<p>点击每条记录查看详情，详情页右上角<code>•••</code>可以选择类型添加规则。</p>
+</li>
+<li>
+<p><code>数据</code> - <code>代理</code>页面，右上角<code>•••</code>可以手动删除所有日志文件。日志文件页面，右上角<code>•••</code>可以选择导出。</p>
+<blockquote>
+<p>数据 - 自动删除 - 打开，程序会自动删除7天前的日志文件。Shadowrocket已连接状态，手动删除将保留最新的日志文件，未连接时，手动删除所有。</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="3-2-DNS日志">3.2 DNS日志</h3>
+<p><code>DNS日志</code>记录了网络活动过程中DNS服务器处理域名查询请求的具体信息。</p>
+<ul>
+<li>
+<p>数据 - 代理 - DNS - 启用日志记录。</p>
+</li>
+<li>
+<p>产生网络活动时，返回<code>数据</code> - <code>DNS</code>页面查看日志文件。</p>
+</li>
+<li>
+<p>每条记录包含信息：</p>
+<ul>
+<li>请求域名</li>
+<li>查询结果</li>
+<li>DNS响应时间</li>
+<li>处理请求的DNS</li>
+</ul>
+</li>
+<li>
+<p>旗帜是根据返回IP地址的地理位置信息自动显示。</p>
+</li>
+<li>
+<p><code>覆写DNS</code>不可用或未返回有效响应时，回退<code>备用DNS</code>来查询域名。</p>
+<blockquote>
+<p>记录信息中如果响应时间超过2秒，意味着系统正在触发回退机制。</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="3-3-iCloud自动同步">3.3 iCloud自动同步</h3>
+<p>Shadowrocket支持将服务器节点、配置文件、模块和脚本文件等数据类型自动同步至iCloud云端。</p>
+<ul>
+<li>
+<p>数据 - iCloud - 自动同步 - 打开。</p>
+</li>
+<li>
+<p>设备<code>设置</code> - <code>账号</code> - <code>iCloud</code>，确保使用iCloud的APP列表中已经开启<code>Shadowrocket</code>和<code>iCloud云盘</code>项目，否则会出现<code>iCloud自动同步失败</code>的提示。</p>
+</li>
+<li>
+<p>同步成功时，点击<code>iCloud文件</code>可以看到存储云端的配置文件。</p>
+</li>
+<li>
+<p><code>文件app</code> - <code>iCloud云盘</code> - <code>Shadowrocket</code>，可以看到存储云端的所有数据。其中的<code>shadowrocket.v2.model</code>文件包含服务器节点的配置信息。</p>
+</li>
+<li>
+<p>iCloud服务中断、网络连接问题以及其他复杂原因可能导致iCloud同步异常，这种情况建议选择手动删除iCloud备份并重新同步数据。</p>
+<blockquote>
+<p>如果用户删除首页某个节点后发现它又自动恢复，可以尝试以下解决方法：数据 - iCloud，服务器节点下面点击删除iCloud备份和同步服务器节点。</p>
+</blockquote>
+</li>
+<li>
+<p>添加的<code>场景</code>和<code>分组</code>不属于iCloud自动同步的数据类型，需要手动备份下载，才能在设备间共享数据。</p>
+</li>
+</ul>
+<h3 id="3-4-节点数据管理">3.4 节点数据管理</h3>
+<ul>
+<li>
+<p><strong>导出节点</strong>：将首页的所有节点数据整合成一个JSON文件，选择存储在本地或云端，也可以通过其他共享方式传输文件。</p>
+</li>
+<li>
+<p><strong>导入节点</strong>：将存储在本地或云端JSON文件中的节点数据解析并添加到首页。</p>
+</li>
+<li>
+<p><strong>删除本地节点</strong>：一键删除首页所有节点数据。</p>
+</li>
+</ul>
+<h3 id="3-5-流量统计信息">3.5 流量统计信息</h3>
+<p><code>统计</code>是Shadowrocket开启连接后接管设备所有网络传输的流量统计信息。</p>
+<ul>
+<li>
+<p>数据 - 统计。</p>
+</li>
+<li>
+<p>统计包含信息：</p>
+<ul>
+<li>开始时间</li>
+<li>连接时间</li>
+<li>Wi-Fi和蜂窝数据的上下行流量</li>
+<li>流量分流的柱形图统计</li>
+</ul>
+</li>
+<li>
+<p>默认记录所有流量统计信息。打开<code>启用存档</code>将会单独记录每一次连接的流量统计信息，关闭首页连接后可以从<code>归档</code>查看。</p>
+</li>
+<li>
+<p>点击右上角<code>•••</code>可以重置统计信息。</p>
+</li>
+</ul>
+<p>首页<code>订阅</code>支持显示流量统计信息。方法是在订阅链接指向的纯文本base64编码前添加<code>STATUS=xxx</code>或<code>REMARKS=xxx</code>字段，这样订阅名称下方就能显示自定义信息。如果没有添加字段或者隐藏用户代理字符串，可能导致不返回相关统计信息，只显示时间。</p>
+<h2 id="4-设置">4  设置</h2>
+<h3 id="4-1-延迟测试方法">4.1 延迟测试方法</h3>
+<p>详见词条<code>1.12 连通性测试</code></p>
+<h3 id="4-2-小组件">4.2 小组件</h3>
+<ul>
+<li>
+<p>设置 - 小组件。</p>
+</li>
+<li>
+<p><strong>服务器节点</strong>：根据需求添加6个常用节点，点击Today小组件右上角的<code>&gt;</code>可以展开查看，方便手动切换节点。</p>
+</li>
+<li>
+<p><strong>显示Ping值</strong>：启用后，长按Today小组件中心位置可以测试<code>服务器节点</code>连通性并显示延迟数字。</p>
+</li>
+<li>
+<p><strong>根据Ping排序</strong>：启用后，长按Today小组件中心位置可以测试<code>服务器节点</code>连通性并依延迟大小自动排序。</p>
+</li>
+</ul>
+<p>添加小组件方法：</p>
+<p>Today小组件</p>
+<ul>
+<li>负一屏 - 编辑 - 自定 - 点击Shadowrocket旁边的“添加”按钮 ➕。</li>
+</ul>
+<p>屏幕小组件</p>
+<ul>
+<li>长按屏幕 - 左上角➕ - Shadowrocket，选择合适类型添加。（系统要求≥ iOS 17）</li>
+</ul>
+<p>更新Shadowrocket后，如果找不到小组件添加按钮，请尝试重启手机。如果小组件显示“无法加载”，请尝试以下方法：</p>
+<ul>
+<li>系统设置 - 通用 - 语言与地区，添加或删除一种其他语言。</li>
+</ul>
+<h3 id="4-3-按需求连接">4.3 按需求连接</h3>
+<p><strong>始终开启</strong></p>
+<ul>
+<li>
+<p>VPN保持连接状态。意外断开或者重启设备，也会自动连接。</p>
+</li>
+<li>
+<p>通过应用<code>首页</code>临时关闭连接。设备设置中的VPN状态以及小组件开关不能直接关闭。</p>
+</li>
+<li>
+<p><code>脚本</code>/<code>模块</code>/<code>解密</code>等需求比较多时建议开启。</p>
+</li>
+</ul>
+<p><strong>按需求连接</strong></p>
+<ul>
+<li>
+<p>根据添加的<code>按需求规则</code>自动切换VPN状态。默认规则是任意网络类型下保持连接状态，相当于<code>始终开启</code>。</p>
+</li>
+<li>
+<p>按需求规则：</p>
+<ul>
+<li>当访问列表中的<code>域名</code>时，系统会向Shadowrocket发送请求，如果响应成功，VPN自动连接。</li>
+<li>网络中指定的<code>DNS</code>（通常认为是网络运营商/Wi-Fi路由器提供的DNS服务器地址）与列表任一内容相匹配时，VPN自动连接或断开。</li>
+<li><code>SSIDS</code>填写需要匹配的Wi-Fi名称。</li>
+<li>VPN连接行为可以通过<code>网络类型</code>/<code>域名</code>/<code>DNS</code>条件触发。</li>
+<li>VPN断开行为不能通过<code>域名</code>条件触发。</li>
+<li>从上到下依次匹配添加的<code>按需求规则</code>。</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>添加<code>按需求规则</code>后，打开<code>按需求连接</code>开关，规则才能生效。</li>
+</ul>
+<ul>
+<li>同时打开<code>始终开启</code>和<code>按需求连接</code>，只有<code>始终开启</code>选项能够生效。</li>
+</ul>
+<p><strong>睡眠时断开</strong></p>
+<ul>
+<li>
+<p>当设备进入睡眠状态，VPN自动断开连接。</p>
+</li>
+<li>
+<p>Shadowrocket响应系统发送的睡眠指令才会断开连接，有时候熄屏的系统未必处于睡眠状态。</p>
+</li>
+</ul>
+<p><strong>显示断开信息</strong></p>
+<ul>
+<li>显示VPN断开连接的通知信息。</li>
+</ul>
+<h3 id="4-4-VPN自动断开">4.4 VPN自动断开</h3>
+<p>系统版本低于<code>iOS 15</code>、处理复杂请求、加解密数据、运行脚本等因素相互作用之下可能导致NE内存占用过高，从而造成VPN自动断开，解决方法：</p>
+<p><code>设置</code> - <code>按需求连接</code> - 打开 <code>始终开启</code>。</p>
+<h3 id="4-5-前置代理">4.5 前置代理</h3>
+<p>设置 - 代理 - 前置代理。</p>
+<p>「前置代理」表示所有流量先通过HTTP/SOCKS5代理转发，再根据配置规则向节点服务器发送请求。</p>
+<h3 id="4-6-代理共享">4.6 代理共享</h3>
+<p>局域网条件下</p>
+<ul>
+<li>
+<p>A设备：设置 - 代理 - 代理共享 - 启用共享。</p>
+</li>
+<li>
+<p>B设备：系统设置 - WiFi - WiFi名称后面ⓘ - HTTP代理 - 手动输入Shadowrocket「代理共享」的IP和端口。</p>
+</li>
+</ul>
+<p>使用热点条件下</p>
+<ul>
+<li>
+<p>A设备：开启热点。</p>
+</li>
+<li>
+<p>B设备：连接热点。</p>
+</li>
+<li>
+<p>然后按照局域网条件下方法进行设置。</p>
+</li>
+</ul>
+<h3 id="4-7-检测代理">4.7 检测代理</h3>
+<p>如果在使用 Shadowrocket 的时候，遇到某些 APP 提示需关闭代理才能使用，可以在 <code>Shadowrocket</code> - <code>设置</code> - <code>代理类型</code> - 选择 <code>None</code>。</p>
+<h3 id="4-8-代理类型">4.8 代理类型</h3>
+<p>Shadowrocket代理类型：</p>
+<ul>
+<li>
+<p>设置 - 代理 - 代理类型。</p>
+</li>
+<li>
+<p><strong>HTTP</strong>：系统代理模式，对于不支持的程序会交给tun接管网络连接。</p>
+</li>
+<li>
+<p><strong>None</strong>：tun模式，全部网络请求都将通过tun接口进行处理。</p>
+</li>
+</ul>
+<h3 id="4-9-开启UDP转发">4.9 开启UDP转发</h3>
+<ul>
+<li>
+<p>设置 - UDP - 开启转发- 打开。</p>
+</li>
+<li>
+<p>首页 - 订阅后面ⓘ - UDP转发 - 打开。</p>
+</li>
+<li>
+<p>首页 - 节点后面ⓘ - UDP转发 - 打开。</p>
+</li>
+</ul>
+<h3 id="4-10-隐藏VPN图标">4.10 隐藏VPN图标</h3>
+<p>设置 - 排除路由0.0.0.0/31 - 打开。</p>
+<h3 id="4-11-GEOIP数据库">4.11 GEOIP数据库</h3>
+<p>设置 - GeoLite2数据库。</p>
+<p>方法一</p>
+<ul>
+<li>填写<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.maxmind.com">MaxMind官网</a>注册的账户ID和密钥，点击下方的<code>更新</code>按钮。</li>
+</ul>
+<p>方法二</p>
+<ul>
+<li>关注GitHub的IP数据库项目，复制mmdb格式的下载链接，粘贴在国家/ASN对应的URL位置，点击<code>更新</code>按钮。当点击<code>重置</code>时，可以恢复为系统自带的数据库。</li>
+</ul>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/Loyalsoldier/geoip">Loyalsoldier</a>的IP数据库：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://raw.githubusercontent.com/Loyalsoldier/geoip/release/Country.mmdb</span><br></pre></td></tr></table></figure>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/Hackl0us/GeoIP2-CN">Hackl0us</a>的IP数据库：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/Hackl0us/GeoIP2-CN/raw/release/Country.mmdb</span><br></pre></td></tr></table></figure>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/Masaiki/GeoIP2-CN">Masaiki</a>的IP数据库：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/Masaiki/GeoIP2-CN/raw/release/Country.mmdb</span><br></pre></td></tr></table></figure>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/P3TERX/GeoLite.mmdb">P3TERX</a>的ASN数据库：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/P3TERX/GeoLite.mmdb/raw/download/GeoLite2-ASN.mmdb</span><br></pre></td></tr></table></figure>
+<h2 id="5-其他">5  其他</h2>
+<h3 id="5-1-定位权限">5.1 定位权限</h3>
+<ul>
+<li>
+<p>iOS系统的要求，开启定位权限才能获取Wi-Fi名称。</p>
+</li>
+<li>
+<p>如果不需要在Shadowrocket里看到Wi-Fi信息，那么就可以不用开启。</p>
+</li>
+</ul>
+<h3 id="5-2-编译原因">5.2 编译原因</h3>
+<p>Shadowrocket2.2.29之前的版本是使用Xcode 13.2.1编译的。</p>
+<p>2023年4月份以后，苹果官方要求开发者在提交应用到App Store时必须至少使用Xcode 14编译，所以iOS12以下系统无法使用。</p>
+<p>Shadowrocket下一个版本<code>2.2.30</code>将设置最低安装要求iOS12，然后停止<code>2.2.29</code>版本，iOS低版本用户就可以方便安装<code>2.2.28</code>版本。</p>
+<h3 id="5-3-下载Shadowrocket">5.3 下载Shadowrocket</h3>
+<p>Shadowrocket只有iOS/iPadOS/tvOS版本和M系列芯片的Mac才能下载，开发者是<code>Shadow Launch Technology Limited</code>。<strong>Shadowrocket没有安卓/Windows版本！</strong></p>
+<p>下载方法：</p>
+<ul>
+<li>
+<p>非国区ID登陆App Store，搜索<code>Shadowrocket</code>，购买后下载。</p>
+</li>
+<li>
+<p>Shadowrocket是买断制的付费软件。</p>
+</li>
+<li>
+<p>美区价格：2.99美元。</p>
+</li>
+<li>
+<p>使用美区ID时，地址建议填免税州。</p>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">五个免税州：</span><br><span class="line">俄勒冈州（Oregon）</span><br><span class="line">蒙大拿州（Montana）</span><br><span class="line">特拉华州（Delaware）</span><br><span class="line">新罕布什尔州（New Hampshire）</span><br><span class="line">阿拉斯加州（Alaska）部分区域</span><br></pre></td></tr></table></figure>
+<h2 id="6-参考链接">6  参考链接</h2>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.meiguodizhi.com">美国地址生成器</a></p>
+<a href="/posts/cb3d58ea/" title="【教程】五分钟注册美区AppleID，手把手教，稳定且耐用！">美区Apple ID注册方法</a>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://blog.skylershu.com/post/apple-gift-card">Apple官网购买礼品卡方法</a></p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://youtu.be/W3chc223K-w">支付宝购买美区礼品卡教程</a></p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://apps.apple.com/us/app/shadowrocket/id932747118?l=zh">美区Shadowrocket下载链接</a></p>
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/yuan-avatar.webp" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/yuan-avatar.webp" title="头像" alt="头像"></a><div class="post-copyright__author_name">AiGuoHou</div><div class="post-copyright__author_desc">今日事，今日毕</div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="https://aizhiqian.github.io/posts/9d78f097/">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('https://aizhiqian.github.io/posts/9d78f097/')">【教程】Shadowrocket详细介绍</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"><div class="post-reward" onclick="anzhiyu.addRewardMask()"><div class="reward-button button--animated" title="赞赏作者"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill"></i>打赏作者</div><div class="reward-main"><div class="reward-all"><span class="reward-title">感谢你赐予我前进的力量</span><ul class="reward-group"><li class="reward-item"><a href="/img/wechat.webp" target="_blank"><img class="post-qr-code-img" src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/wechat.webp" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/alipay.webp" target="_blank"><img class="post-qr-code-img" src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/alipay.webp" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul><a class="reward-main-btn" href="/about/#about-reward" target="_blank"><div class="reward-text">赞赏者名单</div><div class="reward-dec">因为你们的支持让我意识到写文章的价值🙏</div></a></div></div></div><div id="quit-box" onclick="anzhiyu.removeRewardMask()" style="display: none"></div></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="https://aizhiqian.github.io/posts/9d78f097/"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=【教程】Shadowrocket详细介绍&amp;url=https://aizhiqian.github.io/posts/9d78f097/&amp;pic=https://www.aini.cn.eu.org/meinv?_r_=a29cedfb-73be-20dc-ea3f-e06a31f245f6" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><script>function copyCurrentPageUrl() {
+  var currentPageUrl = window.location.href;
+  var input = document.createElement("input");
+  input.setAttribute("value", currentPageUrl);
+  document.body.appendChild(input);
+  input.select();
+  input.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.body.removeChild(input);
+}</script><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="copyCurrentPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow noreferrer" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://aizhiqian.github.io" target="_blank">向日葵🌻小站</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"><a class="post-meta__box__tags" href="/tags/%E4%BB%A3%E7%90%86/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>代理<span class="tagsPageCount">2</span></a><a class="post-meta__box__tags" href="/tags/iOS/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>iOS<span class="tagsPageCount">1</span></a></div></div></div><div class="post_share"><div class="social-share" data-image="https://www.aini.cn.eu.org/meinv?_r_=9c0801df-4e9c-8763-c849-cfb1e87f7a74" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/butterfly-extsrc/1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"/><script src="https://cdn.bootcdn.net/ajax/libs/butterfly-extsrc/1.1.3/sharejs/dist/js/social-share.min.js" defer="defer"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/f51fdc33/"><img class="prev-cover" src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://www.aini.cn.eu.org/meinv?_r_=80c51d54-912e-1c16-4a28-5d18ad27b2fd" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">【资源】影视网址合集</div></div></a></div><div class="next-post pull-right"><a href="/posts/cb3d58ea/"><img class="next-cover" src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://www.aini.cn.eu.org/meinv?_r_=20f32bfe-e51f-9e1a-c6d9-b867ffc501c7" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">【教程】五分钟注册美区AppleID，手把手教，稳定且耐用！</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="anzhiyufont anzhiyu-icon-thumbs-up fa-fw" style="font-size: 1.5rem; margin-right: 4px"></i><span>喜欢这篇文章的人也看了</span></div><div class="relatedPosts-list"><div><a href="/posts/da84be3e/" title="【Windows】终端配置代理"><img class="cover" src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://www.aini.cn.eu.org/meinv?_r_=fbd59987-8dca-c9bb-c5d0-82f38e5cfc1f" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2023-07-22</div><div class="title">【Windows】终端配置代理</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="anzhiyufont anzhiyu-icon-comments"></i><span> 评论</span></div><div class="comment-randomInfo"><a onclick="anzhiyu.addRandomCommentInfo()" href="javascript:void(0)" rel="external nofollow noreferrer" style="display: none">匿名评论</a><a href="/privacy" style="margin-left: 4px">隐私政策</a></div><div class="comment-tips" id="comment-tips"><span>✅ 你无需删除空行，直接评论以获取最佳展示效果</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div><div class="comment-barrage"></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info__sayhi" id="author-info__sayhi" onclick="anzhiyu.changeSayHelloText()"></div><div class="author-info-avatar"><img class="avatar-img" src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/yuan-avatar.webp" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-status"><img class="g-status" src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2021/03/03/d7c475de07d04.png" alt="status"/></div></div><div class="author-info__description"><div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">向日葵🌻小站</div><div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">这是一个分享<b style="color:#fff">日常学习</b>与<b style="color:#fff">代码生活</b>的博客</div><div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);"><b style="color:#ffcd25">荷风送香气﹐竹露滴清响</b></div></div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" href="/"><h1 class="author-info__name">AiGuoHou</h1><div class="author-info__desc">今日事，今日毕</div></a><div class="card-info-social-icons is-center"><a class="social-icon faa-parent animated-hover" href="https://github.com/aizhiqian" rel="external nofollow noreferrer" target="_blank" title="Github"><i class="anzhiyufont anzhiyu-icon-github"></i></a><a class="social-icon faa-parent animated-hover" href="https://space.bilibili.com/696732872" rel="external nofollow noreferrer" target="_blank" title="BiliBili"><i class="anzhiyufont anzhiyu-icon-bilibili"></i></a></div></div></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bullhorn anzhiyu-shake"></i><span>公告</span></div><div class="announcement_content"><center><p style="text-align:center;"><b>欢迎来看我的博客鸭~</b></p><b>--- 主域名 ---<br/>🍧<a target="_blank" rel="noopener external nofollow noreferrer" href="https://blog.aizhiqian.xyz" title="此线路部署于 Vercel" class="anno_content"><font color="#5ea6e5">blog.aizhiqian.xyz</font></a>🍧<br/>--- 备用域名 ---<br/><a href="https://aizhiqian.github.io" title="此线路部署于 Github Pages" class="anno_content"><font color="#5ea6e5">aizhiqian.github.io</font></a><br/><a target="_blank" rel="noopener external nofollow noreferrer" href="https://vercel.aizhiqian.eu.org" title="此线路部署于 Vercel" class="anno_content"><font color="#5ea6e5">vercel.aizhiqian.eu.org</font></a><br/><a target="_blank" rel="noopener external nofollow noreferrer" href="https://netlify.aizhiqian.eu.org" title="此线路部署于 Netlify" class="anno_content"><font color="#5ea6e5">netlify.aizhiqian.eu.org</font></a></b></center></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E9%A6%96%E9%A1%B5"><span class="toc-text">1  首页</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E6%B7%BB%E5%8A%A0%E8%8A%82%E7%82%B9"><span class="toc-text">1.1 添加节点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E6%B7%BB%E5%8A%A0WireGuard%E8%8A%82%E7%82%B9"><span class="toc-text">1.2 添加WireGuard节点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-%E6%9B%B4%E6%96%B0%E8%AE%A2%E9%98%85%E8%8A%82%E7%82%B9"><span class="toc-text">1.3 更新订阅节点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-%E8%8A%82%E7%82%B9%E6%8E%92%E5%BA%8F"><span class="toc-text">1.4 节点排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-5-SSL%E9%94%99%E8%AF%AF"><span class="toc-text">1.5 SSL错误</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-6-%E8%8A%82%E7%82%B9%E6%97%97%E5%B8%9C"><span class="toc-text">1.6 节点旗帜</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-7-%E8%8A%82%E7%82%B9%E6%84%9F%E5%8F%B9%E5%8F%B7"><span class="toc-text">1.7 节点感叹号</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-8-%E8%8A%82%E7%82%B9%E5%88%86%E4%BA%AB%E4%B8%8E%E6%95%B4%E7%90%86"><span class="toc-text">1.8 节点分享与整理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-9-%E8%AE%A2%E9%98%85%E8%8A%82%E7%82%B9%E7%AD%9B%E9%80%89"><span class="toc-text">1.9 订阅节点筛选</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-10-%E4%BB%A3%E7%90%86%E9%80%9A%E8%BF%87-%E4%BB%A3%E7%90%86%E9%93%BE"><span class="toc-text">1.10 代理通过&#x2F;代理链</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-11-%E5%85%A8%E5%B1%80%E8%B7%AF%E7%94%B1%E5%8C%BA%E5%88%AB"><span class="toc-text">1.11 全局路由区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-12-%E8%BF%9E%E9%80%9A%E6%80%A7%E6%B5%8B%E8%AF%95"><span class="toc-text">1.12 连通性测试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-13-%E4%BF%AE%E6%94%B9%E6%B5%8B%E8%AF%95%E5%9C%B0%E5%9D%80"><span class="toc-text">1.13 修改测试地址</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-14-%E5%9C%BA%E6%99%AF"><span class="toc-text">1.14 场景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-15-%E7%AE%80%E5%8D%95%E6%A8%A1%E5%BC%8F"><span class="toc-text">1.15 简单模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-16-%E5%90%AF%E7%94%A8%E5%9B%9E%E9%80%80"><span class="toc-text">1.16 启用回退</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E9%85%8D%E7%BD%AE"><span class="toc-text">2  配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-text">2.1 配置文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E6%89%A9%E5%B1%95%E9%85%8D%E7%BD%AE"><span class="toc-text">2.2 扩展配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-%E9%80%9A%E7%94%A8%E5%8F%82%E6%95%B0"><span class="toc-text">2.3 通用参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-%E6%B7%BB%E5%8A%A0%E8%A7%84%E5%88%99"><span class="toc-text">2.4 添加规则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-%E8%A7%84%E5%88%99%E7%B1%BB%E5%9E%8B"><span class="toc-text">2.5 规则类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-6-%E8%A7%84%E5%88%99%E7%AD%96%E7%95%A5"><span class="toc-text">2.6 规则策略</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-7-app%E5%88%86%E6%B5%81"><span class="toc-text">2.7 app分流</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-8-%E6%9B%B4%E6%96%B0%E8%A7%84%E5%88%99%E9%9B%86"><span class="toc-text">2.8 更新规则集</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-9-%E4%BF%AE%E6%94%B9DNS"><span class="toc-text">2.9 修改DNS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-10-no-resolve%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="toc-text">2.10 no-resolve的作用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-11-%E4%BB%A3%E7%90%86%E5%88%86%E7%BB%84-%E7%AD%96%E7%95%A5%E7%BB%84"><span class="toc-text">2.11 代理分组&#x2F;策略组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-12-%E4%BB%A3%E7%90%86%E5%88%86%E7%BB%84%E7%B1%BB%E5%9E%8B"><span class="toc-text">2.12 代理分组类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-13-%E8%87%AA%E5%8A%A8%E5%88%87%E6%8D%A2%E8%8A%82%E7%82%B9"><span class="toc-text">2.13 自动切换节点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-14-HTTPS%E8%A7%A3%E5%AF%86"><span class="toc-text">2.14 HTTPS解密</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-15-%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1"><span class="toc-text">2.15 负载均衡</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-16-%E6%A8%A1%E5%9D%97"><span class="toc-text">2.16 模块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-17-%E8%AF%81%E4%B9%A6%E6%A8%A1%E5%9D%97"><span class="toc-text">2.17 证书模块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-18-%E6%A8%A1%E5%9D%97%E6%B6%88%E5%A4%B1"><span class="toc-text">2.18 模块消失</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-19-%E8%BA%AB%E4%BB%BD%E8%AF%81%E4%B9%A6%E5%AF%86%E7%A0%81"><span class="toc-text">2.19 身份证书密码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-20-%E5%BE%AE%E4%BF%A1%E8%BD%AC%E5%9C%88"><span class="toc-text">2.20 微信转圈</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E6%95%B0%E6%8D%AE"><span class="toc-text">3  数据</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E4%BB%A3%E7%90%86%E6%97%A5%E5%BF%97"><span class="toc-text">3.1 代理日志</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-DNS%E6%97%A5%E5%BF%97"><span class="toc-text">3.2 DNS日志</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-iCloud%E8%87%AA%E5%8A%A8%E5%90%8C%E6%AD%A5"><span class="toc-text">3.3 iCloud自动同步</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-%E8%8A%82%E7%82%B9%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86"><span class="toc-text">3.4 节点数据管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-5-%E6%B5%81%E9%87%8F%E7%BB%9F%E8%AE%A1%E4%BF%A1%E6%81%AF"><span class="toc-text">3.5 流量统计信息</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E8%AE%BE%E7%BD%AE"><span class="toc-text">4  设置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-%E5%BB%B6%E8%BF%9F%E6%B5%8B%E8%AF%95%E6%96%B9%E6%B3%95"><span class="toc-text">4.1 延迟测试方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-%E5%B0%8F%E7%BB%84%E4%BB%B6"><span class="toc-text">4.2 小组件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-%E6%8C%89%E9%9C%80%E6%B1%82%E8%BF%9E%E6%8E%A5"><span class="toc-text">4.3 按需求连接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-VPN%E8%87%AA%E5%8A%A8%E6%96%AD%E5%BC%80"><span class="toc-text">4.4 VPN自动断开</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-5-%E5%89%8D%E7%BD%AE%E4%BB%A3%E7%90%86"><span class="toc-text">4.5 前置代理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-6-%E4%BB%A3%E7%90%86%E5%85%B1%E4%BA%AB"><span class="toc-text">4.6 代理共享</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-7-%E6%A3%80%E6%B5%8B%E4%BB%A3%E7%90%86"><span class="toc-text">4.7 检测代理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-8-%E4%BB%A3%E7%90%86%E7%B1%BB%E5%9E%8B"><span class="toc-text">4.8 代理类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-9-%E5%BC%80%E5%90%AFUDP%E8%BD%AC%E5%8F%91"><span class="toc-text">4.9 开启UDP转发</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-10-%E9%9A%90%E8%97%8FVPN%E5%9B%BE%E6%A0%87"><span class="toc-text">4.10 隐藏VPN图标</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-11-GEOIP%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-text">4.11 GEOIP数据库</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E5%85%B6%E4%BB%96"><span class="toc-text">5  其他</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-%E5%AE%9A%E4%BD%8D%E6%9D%83%E9%99%90"><span class="toc-text">5.1 定位权限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-%E7%BC%96%E8%AF%91%E5%8E%9F%E5%9B%A0"><span class="toc-text">5.2 编译原因</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-3-%E4%B8%8B%E8%BD%BDShadowrocket"><span class="toc-text">5.3 下载Shadowrocket</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E5%8F%82%E8%80%83%E9%93%BE%E6%8E%A5"><span class="toc-text">6  参考链接</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/82ca8098/" title="【笔记】如何发布一个新的 NPM 包及其后续更新"><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://www.aini.cn.eu.org/meinv?_r_=9c0801df-4e9c-8763-c849-cfb1e87f7a74" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【笔记】如何发布一个新的 NPM 包及其后续更新"/></a><div class="content"><a class="title" href="/posts/82ca8098/" title="【笔记】如何发布一个新的 NPM 包及其后续更新">【笔记】如何发布一个新的 NPM 包及其后续更新</a><time datetime="2024-05-14T11:03:24.000Z" title="发表于 2024-05-14 19:03:24">2024-05-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/e1d32862/" title="【Windows】装机必备软件"><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://www.aini.cn.eu.org/meinv?_r_=6931bbc9-4fc9-59ab-a2fa-c051445f1988" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【Windows】装机必备软件"/></a><div class="content"><a class="title" href="/posts/e1d32862/" title="【Windows】装机必备软件">【Windows】装机必备软件</a><time datetime="2024-05-05T09:16:27.000Z" title="发表于 2024-05-05 17:16:27">2024-05-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/cb3d58ea/" title="【教程】五分钟注册美区AppleID，手把手教，稳定且耐用！"><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://www.aini.cn.eu.org/meinv?_r_=20f32bfe-e51f-9e1a-c6d9-b867ffc501c7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【教程】五分钟注册美区AppleID，手把手教，稳定且耐用！"/></a><div class="content"><a class="title" href="/posts/cb3d58ea/" title="【教程】五分钟注册美区AppleID，手把手教，稳定且耐用！">【教程】五分钟注册美区AppleID，手把手教，稳定且耐用！</a><time datetime="2024-04-27T09:09:01.000Z" title="发表于 2024-04-27 17:09:01">2024-04-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/9d78f097/" title="【教程】Shadowrocket详细介绍"><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://www.aini.cn.eu.org/meinv?_r_=a29cedfb-73be-20dc-ea3f-e06a31f245f6" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【教程】Shadowrocket详细介绍"/></a><div class="content"><a class="title" href="/posts/9d78f097/" title="【教程】Shadowrocket详细介绍">【教程】Shadowrocket详细介绍</a><time datetime="2024-04-27T07:32:27.000Z" title="发表于 2024-04-27 15:32:27">2024-04-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/f51fdc33/" title="【资源】影视网址合集"><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://www.aini.cn.eu.org/meinv?_r_=80c51d54-912e-1c16-4a28-5d18ad27b2fd" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【资源】影视网址合集"/></a><div class="content"><a class="title" href="/posts/f51fdc33/" title="【资源】影视网址合集">【资源】影视网址合集</a><time datetime="2024-04-09T09:22:24.000Z" title="发表于 2024-04-09 17:22:24">2024-04-09</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div id="footer_deal"><a class="deal_link" href="mailto:3332664073@qq.com" rel="external nofollow noreferrer" title="email"><i class="anzhiyufont anzhiyu-icon-envelope"></i></a><a class="deal_link" target="_blank" rel="noopener external nofollow noreferrer" href="https://weibo.com/u/7479204922" title="微博"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a><a class="deal_link" target="_blank" rel="noopener external nofollow noreferrer" href="https://www.youtube.com/@aiguohou" title="YouTube"><i class="fa-brands fa-youtube"></i></a><a class="deal_link" href="/atom.xml" title="RSS"><i class="anzhiyufont anzhiyu-icon-rss"></i></a><img class="footer_mini_logo" title="返回顶部" alt="返回顶部" onclick="anzhiyu.scrollToDest(0, 500)" src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://jihulab.com/ainiz/img1/-/raw/main/touxiang/yuan-tou/yuan-touxiang2.webp" size="50px"/><a class="deal_link" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/aizhiqian" title="Github"><i class="anzhiyufont anzhiyu-icon-github"></i></a><a class="deal_link" target="_blank" rel="noopener external nofollow noreferrer" href="https://space.bilibili.com/696732872" title="Bilibili"><i class="anzhiyufont anzhiyu-icon-bilibili"></i></a><a class="deal_link" target="_blank" rel="noopener external nofollow noreferrer" href="https://v.douyin.com/iprm72B/" title="抖音"><i class="anzhiyufont anzhiyu-icon-tiktok"></i></a><a class="deal_link" href="/copyright" title="CC"><i class="anzhiyufont anzhiyu-icon-copyright-line"></i></a></div><div id="anzhiyu-footer"><div class="footer-group"><div class="footer-title">服务</div><div class="footer-links"><a class="footer-item" title="51la统计" target="_blank" rel="noopener external nofollow noreferrer" href="https://v6.51.la/">51la统计</a><a class="footer-item" title="十年之约" target="_blank" rel="noopener external nofollow noreferrer" href="https://www.foreverblog.cn/">十年之约</a><a class="footer-item" title="开往" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/travellings-link/travellings">开往</a></div></div><div class="footer-group"><div class="footer-title">主题</div><div class="footer-links"><a class="footer-item" title="文档" target="_blank" rel="noopener external nofollow noreferrer" href="https://docs.anheyu.com/">文档</a><a class="footer-item" title="源码" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu">源码</a><a class="footer-item" title="标签外挂" target="_blank" rel="noopener external nofollow noreferrer" href="https://blog.anheyu.com/posts/d50a.html">标签外挂</a><a class="footer-item" title="更新日志" target="_blank" rel="noopener external nofollow noreferrer" href="https://blog.anheyu.com/update/">更新日志</a></div></div><div class="footer-group"><div class="footer-title">导航</div><div class="footer-links"><a class="footer-item" title="Telegraph-Image" target="_blank" rel="noopener external nofollow noreferrer" href="https://img.aiguohou.eu.org/">Telegraph-Image</a><a class="footer-item" title="memos" target="_blank" rel="noopener external nofollow noreferrer" href="https://memos.xivo.eu.org/">memos</a></div></div><div class="footer-group"><div class="footer-title">协议</div><div class="footer-links"><a class="footer-item" title="隐私协议" href="/privacy/">隐私协议</a><a class="footer-item" title="Cookies" href="/cookies/">Cookies</a><a class="footer-item" title="版权协议" href="/copyright/">版权协议</a></div></div><div class="footer-group"><div class="footer-title-group"><div class="footer-title">友链</div><a class="random-friends-btn" id="footer-random-friends-btn" href="javascript:addFriendLinksInFooter();" rel="external nofollow noreferrer" title="换一批友情链接"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right"></i></a></div><div class="footer-links" id="friend-links-in-footer"></div></div></div><p id="ghbdages"><a class="github-badge" target="_blank" href="https://hexo.io/" rel="external nofollow noreferrer" style="margin-inline:5px" data-title="博客框架为 Hexo_v7.0.0" title="博客框架为 Hexo_v7.0.0"><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.1.5/img/badge/Frame-Hexo.svg" alt="博客框架为 Hexo_v7.0.0"/></a><a class="github-badge" target="_blank" href="https://blog.anheyu.com/" rel="external nofollow noreferrer" style="margin-inline:5px" data-title="本站使用 AnZhiYu 主题" title="本站使用 AnZhiYu 主题"><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.9/img/Theme-AnZhiYu-2E67D3.svg" alt="本站使用 AnZhiYu 主题"/></a><a class="github-badge" target="_blank" href="https://vercel.com/" rel="external nofollow noreferrer" style="margin-inline:5px" data-title="本站由 Vercel 托管" title="本站由 Vercel 托管"><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://sourcebucket.s3.bitiful.net/badge/Hosted-Vercel-brightgreen.svg" alt="本站由 Vercel 托管"/></a><a class="github-badge" target="_blank" href="https://github.com/" rel="external nofollow noreferrer" style="margin-inline:5px" data-title="本站由 Github 托管" title="本站由 Github 托管"><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.1.5/img/badge/Source-Github.svg" alt="本站由 Github 托管"/></a><a class="github-badge" target="_blank" href="https://user.51.la/" rel="external nofollow noreferrer" style="margin-inline:5px" data-title="本站数据分析得益于51la技术支持" title="本站数据分析得益于51la技术支持"><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://sourcebucket.s3.bitiful.net/badge/Analytics-51la-3db1eb.svg" alt="本站数据分析得益于51la技术支持"/></a><a class="github-badge" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow noreferrer" style="margin-inline:5px" data-title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.2.0/img/badge/Copyright-BY-NC-SA.svg" alt="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"/></a></p></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2022 - 2025 By <a class="footer-bar-link" href="/" title="AiGuoHou" target="_blank">AiGuoHou</a></div></div><div id="footer-type-tips"></div><div class="js-pjax"><script>function subtitleType () {
+  fetch('https://v1.hitokoto.cn')
+    .then(response => response.json())
+    .then(data => {
+      if (true) {
+        const from = '出自 ' + data.from
+        const sub = []
+        sub.unshift(data.hitokoto, from)
+        window.typed = new Typed('#footer-type-tips', {
+          strings: sub,
+          startDelay: 300,
+          typeSpeed: 150,
+          loop: true,
+          backSpeed: 50,
+        })
+      } else {
+        document.getElementById('footer-type-tips').innerHTML = data.hitokoto
+      }
+    })
+}
+
+if (true) {
+  if (typeof Typed === 'function') {
+    subtitleType()
+  } else {
+    getScript('https://cdn.bootcdn.net/ajax/libs/typed.js/2.1.0/typed.umd.min.js').then(subtitleType)
+  }
+} else {
+  subtitleType()
+}
+</script></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu" title="主题">主题</a><a class="footer-bar-link" target="_blank" rel="noopener external nofollow noreferrer" href="https://img.aiguohou.eu.org" title="图床">图床</a><a class="footer-bar-link cc" href="/copyright" title="cc协议"><i class="anzhiyufont anzhiyu-icon-copyright-line"></i><i class="anzhiyufont anzhiyu-icon-creative-commons-by-line"></i><i class="anzhiyufont anzhiyu-icon-creative-commons-nc-line"></i><i class="anzhiyufont anzhiyu-icon-creative-commons-nd-line"></i></a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">33</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">18</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">6</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" rel="external nofollow noreferrer" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener external nofollow noreferrer" href="https://www.aizhiqian.eu.org/" title="主页"><img class="back-menu-item-icon" src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://www.aizhiqian.eu.org/images/icon/favicon.ico" alt="主页"/><span class="back-menu-item-text">主页</span></a><a class="back-menu-item" target="_blank" rel="noopener external nofollow noreferrer" href="https://alist.xivo.eu.org/" title="Alist"><img class="back-menu-item-icon" src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://p0.meituan.net/csc/9588e334a146defee0191c68b74bc0a5112303.jpg" alt="Alist"/><span class="back-menu-item-text">Alist</span></a><a class="back-menu-item" href="https://aizhiqian.github.io/" title="blog"><img class="back-menu-item-icon" src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://aizhiqian.github.io/img/favicon.webp" alt="blog"/><span class="back-menu-item-text">blog</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener external nofollow noreferrer" href="https://img.aiguohou.eu.org/" title="知心图床"><img class="back-menu-item-icon" src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img.aiguohou.eu.org/favicon.ico" alt="知心图床"/><span class="back-menu-item-text">知心图床</span></a><a class="back-menu-item" target="_blank" rel="noopener external nofollow noreferrer" href="https://memos.xivo.eu.org/" title="memos"><img class="back-menu-item-icon" src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://memos.xivo.eu.org/logo.webp" alt="memos"/><span class="back-menu-item-text">memos</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友人帐</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()" rel="external nofollow noreferrer"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/API/" style="font-size: 0.88rem; color: rgb(51, 117, 194);">API<sup>1</sup></a><a href="/tags/Android/" style="font-size: 0.88rem; color: rgb(113, 75, 49);">Android<sup>5</sup></a><a href="/tags/CDN/" style="font-size: 0.88rem; color: rgb(51, 89, 31);">CDN<sup>1</sup></a><a href="/tags/hexo/" style="font-size: 0.88rem; color: rgb(21, 168, 107);">hexo<sup>14</sup></a><a href="/tags/iOS/" style="font-size: 0.88rem; color: rgb(14, 56, 11);">iOS<sup>1</sup></a><a href="/tags/ios/" style="font-size: 0.88rem; color: rgb(7, 73, 89);">ios<sup>1</sup></a><a href="/tags/npm/" style="font-size: 0.88rem; color: rgb(60, 121, 168);">npm<sup>1</sup></a><a href="/tags/termux/" style="font-size: 0.88rem; color: rgb(18, 172, 197);">termux<sup>5</sup></a><a href="/tags/%E4%BB%A3%E7%90%86/" style="font-size: 0.88rem; color: rgb(158, 92, 135);">代理<sup>2</sup></a><a href="/tags/%E5%91%BD%E4%BB%A4/" style="font-size: 0.88rem; color: rgb(113, 127, 78);">命令<sup>1</sup></a><a href="/tags/%E5%9B%BE%E5%BA%8A/" style="font-size: 0.88rem; color: rgb(118, 100, 92);">图床<sup>2</sup></a><a href="/tags/%E5%AE%89%E8%A3%85/" style="font-size: 0.88rem; color: rgb(117, 126, 111);">安装<sup>1</sup></a><a href="/tags/%E5%AE%9D%E5%A1%94/" style="font-size: 0.88rem; color: rgb(5, 180, 136);">宝塔<sup>1</sup></a><a href="/tags/%E5%BD%B1%E8%A7%86/" style="font-size: 0.88rem; color: rgb(185, 191, 40);">影视<sup>1</sup></a><a href="/tags/%E7%AD%BE%E5%88%B0/" style="font-size: 0.88rem; color: rgb(195, 43, 111);">签到<sup>1</sup></a><a href="/tags/%E7%BE%8E%E5%8C%96/" style="font-size: 0.88rem; color: rgb(118, 187, 73);">美化<sup>8</sup></a><a href="/tags/%E8%84%9A%E6%9C%AC/" style="font-size: 0.88rem; color: rgb(163, 135, 100);">脚本<sup>1</sup></a><a href="/tags/%E8%BD%AF%E4%BB%B6/" style="font-size: 0.88rem; color: rgb(0, 33, 145);">软件<sup>1</sup></a></div></div><hr/></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="anzhiyufont anzhiyu-icon-comments"></i></a><a id="switch-commentBarrage" href="javascript:anzhiyu.switchCommentBarrage();" rel="external nofollow noreferrer" title="开关弹幕"><i class="anzhiyufont anzhiyu-icon-danmu"></i></a><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="nav-music"><a id="nav-music-hoverTips" onclick="anzhiyu.musicToggle()" accesskey="m">播放音乐</a><div id="console-music-bg"></div><meting-js id="9025983609" server="tencent" type="playlist" mutex="true" preload="none" theme="var(--anzhiyu-main)" data-lrctype="0" order="random" volume="0.5"></meting-js></div><div id="algolia-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><button class="search-close-button"><i class="anzhiyufont anzhiyu-icon-xmark"></i></button></nav><div class="search-wrap"><div id="algolia-search-input"></div><hr/><div id="algolia-search-results"><div id="algolia-hits"></div><div id="algolia-pagination"></div><div id="algolia-info"><div class="algolia-stats"></div><div class="algolia-poweredBy"></div></div></div></div></div><div id="search-mask"></div></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/9025983609&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="https://s4.zstatic.net/ajax/libs/hexo-theme-anzhiyu/1.6.14/js/utils.min.js"></script><script src="https://s4.zstatic.net/ajax/libs/hexo-theme-anzhiyu/1.6.14/js/main.min.js"></script><script src="https://s4.zstatic.net/ajax/libs/hexo-theme-anzhiyu/1.6.14/js/tw_cn.min.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@latest/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.bootcdn.net/ajax/libs/instant.page/5.2.0/instantpage.min.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@latest/dist/lazyload.iife.min.js"></script><script src="https://cdn.bootcdn.net/ajax/libs/node-snackbar/0.1.16/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.bootcdn.net/ajax/libs/pangu/4.0.7/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("07/22/2023 14:57:21"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2022 By 安知鱼 V1.6.14",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 AiGuoHou 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><script src="https://s4.zstatic.net/ajax/libs/algoliasearch/5.8.0/algoliasearch.umd.min.js"></script><script src="https://cdn.cbd.int/instantsearch.js@latest/dist/instantsearch.production.min.js"></script><script src="https://s4.zstatic.net/ajax/libs/hexo-theme-anzhiyu/1.6.14/js/search/algolia.min.js"></script><div class="js-pjax"><script>(() => {
+  const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+  if ($mermaid.length === 0) return
+  const runMermaid = () => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+    Array.from($mermaid).forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
+      const mermaidID = 'mermaid-' + index
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+
+      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+
+      const renderV10 = () => {
+        renderFn.then(({svg}) => {
+          mermaidSrc.insertAdjacentHTML('afterend', svg)
+        })
+      }
+
+      const renderV9 = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+      }
+
+      typeof renderFn === 'string' ? renderV9(renderFn) : renderV10()
+    })
+  }
+
+  const loadMermaid = () => {
+    window.loadMermaid ? runMermaid() : getScript('https://cdn.bootcdn.net/ajax/libs/mermaid/10.9.0/mermaid.min.js').then(runMermaid)
+  }
+
+  anzhiyu.addGlobalFn('themeChange', runMermaid, 'mermaid')
+
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script><script>(() => {
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://twikoo.aizhiqian.eu.org/',
+      region: '',
+      onCommentLoaded: () => {
+        anzhiyu.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      }
+    }, null))
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') setTimeout(runFn,0)
+    else getScript('https://s4.zstatic.net/ajax/libs/twikoo/1.6.39/twikoo.all.min.js').then(runFn)
+  }
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'https://twikoo.aizhiqian.eu.org/',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(res => {
+      countELement.textContent = res[0].count
+    }).catch(err => {
+      console.error(err)
+    })
+  }
+
+  const runFn = () => {
+    init();
+    GLOBAL_CONFIG_SITE.isPost && getCount()
+  }
+
+  if ('Twikoo' === 'Twikoo' || !false) {
+    if (false) anzhiyu.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else {
+      loadTwikoo()
+    }
+  } else {
+    window.loadOtherComment = loadTwikoo
+  }
+})()</script><input type="hidden" name="page-type" id="page-type" value="post"><script async src="https://s4.zstatic.net/ajax/libs/hexo-theme-anzhiyu/1.6.14/js/anzhiyu/comment_barrage.min.js"></script></div><script async data-pjax src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.1/bubble/bubble.js"></script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@latest/waterfall/waterfall.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/qrcodejs/1.0.0/qrcode.min.js"></script><script src="https://s4.zstatic.net/ajax/libs/hexo-theme-anzhiyu/1.6.14/js/anzhiyu/right_click_menu.min.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@latest/icon/ali_iconfont_css.css"><script defer src="/_vercel/insights/script.js"></script><script defer src="/_vercel/speed-insights/script.js"></script><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.bootcdn.net/ajax/libs/butterfly-extsrc/1.1.3/fireworks.min.js"></script><script src="https://cdn.bootcdn.net/ajax/libs/butterfly-extsrc/1.1.3/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@latest/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.3/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@latest/assets/js/Meting2.min.js"></script><script src="https://cdn.bootcdn.net/ajax/libs/pjax/0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["meta[property=\"og:image\"]","meta[property=\"og:title\"]","meta[property=\"og:url\"]","meta[property=\"og:type\"]","meta[property=\"og:site_name\"]","meta[property=\"og:description\"]","head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: true,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', 'G-M8DMV2RD7M', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404')
+  }
+})</script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div></body></html>
